@@ -191,3 +191,8 @@ Based on my past experience, most of the samples I've collected are from the IT 
 - **Headline:** Cut cloud spend, scale smarter.
 - **Sub-headline:** One platform to automate & streamline cloud infrastructure optimization.
 - **Update Date:** 2024.9.26
+## E-commerce
+### [Shopify](https://www.shopify.com/)
+- **Headline:** Be the next big thing/one to watch/category creator/unicorn startup/household name/global empire/solo flier/store they line up for/
+- **Sub-headline:** Dream big, build fast, and grow far on Shopify.
+- **Update Date:** 2024.10.17
