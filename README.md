@@ -143,4 +143,47 @@ Based on my past experience, most of the samples I've collected are from the IT 
 - **Headline:** Find the meaning in your data
 - **Sub-headline:** OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale
 - **Update Date:** 2024.9.26
-  
+### [Portworx](https://portworx.com/)
+- **Headline:** Kubernetes Storage & Data Management
+- **Sub-headline:** Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment
+- **Update Date:** 2024.9.26
+### [Scaleway](https://www.scaleway.com/en/)
+- **Headline:** Europe's empowering cloud provider
+- **Sub-headline:** Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem.
+- **Update Date:** 2024.9.26
+### [ScaleOps](https://scaleops.com/)
+- **Headline:** Automated Kubernetes Resource Optimization
+- **Sub-headline:** Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance.
+- **Update Date:** 2024.10.17
+### [Snyk](https://snyk.io/)
+- **Headline:** Develop fast. Stay secure.
+- **Sub-headline:** Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk.
+- **Update Date:** 2024.9.26
+### [Solo.io](https://www.solo.io/)
+- **Headline:** Connect, Observe, Secure APIs in the Cloud Native Era
+- **Sub-headline:** Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions
+- **Update Date:** 2024.9.26
+### [Spacelift](https://spacelift.io/)
+- **Headline:** Govern/Provision/Configure with a single automated workflow
+- **Sub-headline:** Orchestrate Terraform, OpenTofu, Ansible and more to deliver secure, cost-effective, and high-performance infrastructure. Fast.
+- **Update Date:** 2024.9.26
+### [Steadybit](https://steadybit.com/)
+- **Headline:** Build reliable systems ready for anything
+- **Sub-headline:** The Chaos Engineering tool that makes it easy and safe to test System Resilience
+- **Update Date:** 2024.10.17
+### [Traefik](https://traefik.io/)
+- **Headline:** Run APIs Easily. Anywhere.
+- **Sub-headline:** Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models.
+- **Update Date:** 2024.9.26
+### [Upwind](https://www.upwind.io/)
+- **Headline:** The Future of Cloud Security is Runtime
+- **Sub-headline:** Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks.
+- **Update Date:** 2024.9.26
+### [Wiz](https://www.wiz.io/)
+- **Headline:** Secure Everything You Build and Run in the Cloud
+- **Sub-headline:** Use the Wiz Cloud Security Platform to build faster in the cloud, enabling security, dev and devops to work together in a self-service model built for the scale and speed of your cloud development.
+- **Update Date:** 2024.9.26
+### [Zesty](https://zesty.co/)
+- **Headline:** Cut cloud spend, scale smarter.
+- **Sub-headline:** One platform to automate & streamline cloud infrastructure optimization.
+- **Update Date:** 2024.9.26
