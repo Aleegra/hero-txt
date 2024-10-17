@@ -119,3 +119,28 @@ Based on my past experience, most of the samples I've collected are from the IT 
 - **Headline:** Modern Observability Powered by AI
 - **Sub-headline:** /
 - **Update Date:** 2024.9.26
+### [Lumigo](https://lumigo.io/)
+- **Headline:** Solve complex microservice issues 80% faster
+- **Sub-headline:** The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds
+- **Update Date:** 2024.9.26
+### [Mirantis](https://www.mirantis.com/)
+- **Headline:** CONTROL YOUR STRATEGIC INFRASTRUCTURE WITH OPEN SOURCE
+- **Sub-headline:** Move from VMware to truly open and flexible infrastructure that radically lowers your IT costs
+- **Update Date:** 2024.9.26
+### [nOps](https://www.nops.io/)
+- **Headline:** Al-Powered AWS FinOps Platform
+- **Sub-headline:** Discover how much you can save in just 10 minutes!
+- **Update Date:** 2024.10.17
+### [neo4j](https://neo4j.com/)
+- **Headline:** GenAI apps, grounded in your data
+- **Sub-headline:** Power your applications with knowledge graphs. Backed by the only graph database with vector search.
+- **Update Date:** 2024.9.26
+### [Octopus Deploy](https://octopus.com/)
+- **Headline:** Deploy your software to multi-cloud, hybrid, and on-premises environments with ease
+- **Sub-headline:** Make your complex deployments simple, reliable, and auditable with Octopus Deploy.
+- **Update Date:** 2024.9.26
+### [OpenSearch](https://opensearch.org/)
+- **Headline:** Find the meaning in your data
+- **Sub-headline:** OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale
+- **Update Date:** 2024.9.26
+  
