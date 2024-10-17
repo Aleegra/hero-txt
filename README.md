@@ -175,6 +175,10 @@ Based on my past experience, most of the samples I've collected are from the IT 
 - **Headline:** Run APIs Easily. Anywhere.
 - **Sub-headline:** Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models.
 - **Update Date:** 2024.9.26
+### [Upbound](https://www.upbound.io/)
+- **Headline:** Crossplane reinvented for the enterprise cloud
+- **Sub-headline:** Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.
+- **Update Date:** 2024.9.26
 ### [Upwind](https://www.upwind.io/)
 - **Headline:** The Future of Cloud Security is Runtime
 - **Sub-headline:** Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks.
