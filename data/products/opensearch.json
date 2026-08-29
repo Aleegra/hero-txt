@@ -1,0 +1,14 @@
+{
+  "id": "opensearch",
+  "name": "OpenSearch",
+  "url": "https://opensearch.org/",
+  "category": "observability",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Find the meaning in your data",
+      "subheadline": "OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale",
+      "screenshot": null
+    }
+  ]
+}

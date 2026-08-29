@@ -1,0 +1,14 @@
+{
+  "id": "diagrid",
+  "name": "Diagrid",
+  "url": "https://www.diagrid.io/",
+  "category": "platform-eng",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "APIs for building secure & reliable microservices",
+      "subheadline": "dapr allows you to build state-of-the-art apps in half the time and never worry about missing a deadline or delivering insecure & unreliable code",
+      "screenshot": null
+    }
+  ]
+}

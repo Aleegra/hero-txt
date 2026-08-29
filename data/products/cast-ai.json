@@ -1,0 +1,14 @@
+{
+  "id": "cast-ai",
+  "name": "CAST AI",
+  "url": "https://cast.ai/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Cut your cloud cost in half",
+      "subheadline": "CAST AI is the leading Kubernetes automation platform that cuts AWS, Azure, and GCP customers’ cloud costs by over 50%.",
+      "screenshot": null
+    }
+  ]
+}

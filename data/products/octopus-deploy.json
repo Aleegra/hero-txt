@@ -1,0 +1,14 @@
+{
+  "id": "octopus-deploy",
+  "name": "Octopus Deploy",
+  "url": "https://octopus.com/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Deploy your software to multi-cloud, hybrid, and on-premises environments with ease",
+      "subheadline": "Make your complex deployments simple, reliable, and auditable with Octopus Deploy.",
+      "screenshot": null
+    }
+  ]
+}

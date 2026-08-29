@@ -1,0 +1,14 @@
+{
+  "id": "scaleway",
+  "name": "Scaleway",
+  "url": "https://www.scaleway.com/en/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Europe's empowering cloud provider",
+      "subheadline": "Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem.",
+      "screenshot": null
+    }
+  ]
+}

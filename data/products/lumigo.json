@@ -1,0 +1,14 @@
+{
+  "id": "lumigo",
+  "name": "Lumigo",
+  "url": "https://lumigo.io/",
+  "category": "observability",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Solve complex microservice issues 80% faster",
+      "subheadline": "The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "snyk",
+  "name": "Snyk",
+  "url": "https://snyk.io/",
+  "category": "security",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Develop fast. Stay secure.",
+      "subheadline": "Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk.",
+      "screenshot": null
+    }
+  ]
+}

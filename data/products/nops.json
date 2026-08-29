@@ -1,0 +1,14 @@
+{
+  "id": "nops",
+  "name": "nOps",
+  "url": "https://www.nops.io/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-10-17",
+      "headline": "Al-Powered AWS FinOps Platform",
+      "subheadline": "Discover how much you can save in just 10 minutes!",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "portworx",
+  "name": "Portworx",
+  "url": "https://portworx.com/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Kubernetes Storage & Data Management",
+      "subheadline": "Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment",
+      "screenshot": null
+    }
+  ]
+}

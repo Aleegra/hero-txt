@@ -1,0 +1,107 @@
+[
+  {
+    "id": "inference",
+    "name": "Inference & Model Serving",
+    "group": "AI & Agents",
+    "blurb": "Run open models as an API — throughput, latency, and cost per token.",
+    "color": "#FF6B4A"
+  },
+  {
+    "id": "ai-cloud",
+    "name": "AI Cloud & GPU Infrastructure",
+    "group": "AI & Agents",
+    "blurb": "Rent the machines that training and inference run on.",
+    "color": "#FFB01F"
+  },
+  {
+    "id": "agent-runtime",
+    "name": "Agent Runtime & Dev Sandboxes",
+    "group": "AI & Agents",
+    "blurb": "Isolated environments where agents (and developers) execute untrusted code.",
+    "color": "#3DBE8B"
+  },
+  {
+    "id": "agent-harness",
+    "name": "Agent Harness & Frameworks",
+    "group": "AI & Agents",
+    "blurb": "The scaffolding that turns a model into an agent: loops, tools, orchestration.",
+    "color": "#4A9EFF"
+  },
+  {
+    "id": "coding-agents",
+    "name": "Coding Agents & App Builders",
+    "group": "AI & Agents",
+    "blurb": "Describe software in English, get software back.",
+    "color": "#8B5CF6"
+  },
+  {
+    "id": "agent-memory",
+    "name": "Agent Memory & Knowledge",
+    "group": "AI & Agents",
+    "blurb": "Give agents something to remember between runs.",
+    "color": "#EC4899"
+  },
+  {
+    "id": "browser-use",
+    "name": "Browser Use & Web Agents",
+    "group": "AI & Agents",
+    "blurb": "Let agents drive a real browser and read the live web.",
+    "color": "#06B6D4"
+  },
+  {
+    "id": "agent-eval",
+    "name": "Agent Eval & LLM Observability",
+    "group": "AI & Agents",
+    "blurb": "Trace, score, and debug what the agent actually did.",
+    "color": "#14B8A6"
+  },
+  {
+    "id": "security",
+    "name": "Cloud, App & Agent Security",
+    "group": "Cloud & DevOps",
+    "blurb": "Find and fix risk across code, containers, cloud, and now agent identity.",
+    "color": "#EF4444"
+  },
+  {
+    "id": "observability",
+    "name": "Observability & Incident Response",
+    "group": "Cloud & DevOps",
+    "blurb": "Know when production breaks, and why.",
+    "color": "#F97316"
+  },
+  {
+    "id": "cicd",
+    "name": "CI/CD & Software Delivery",
+    "group": "Cloud & DevOps",
+    "blurb": "Build, test, package, and ship code to production.",
+    "color": "#22C55E"
+  },
+  {
+    "id": "platform-eng",
+    "name": "Platform Engineering & IaC",
+    "group": "Cloud & DevOps",
+    "blurb": "Paved paths and declarative infrastructure for internal developer platforms.",
+    "color": "#0EA5E9"
+  },
+  {
+    "id": "k8s-finops",
+    "name": "Kubernetes Ops & Cloud FinOps",
+    "group": "Cloud & DevOps",
+    "blurb": "Run Kubernetes well and stop overpaying for it.",
+    "color": "#6366F1"
+  },
+  {
+    "id": "cloud-network",
+    "name": "Cloud Platforms & Networking",
+    "group": "Cloud & DevOps",
+    "blurb": "The compute underneath, and the traffic routed across it.",
+    "color": "#A855F7"
+  },
+  {
+    "id": "dev-work-tools",
+    "name": "Developer & Work Tools",
+    "group": "Cloud & DevOps",
+    "blurb": "Everyday software for building and running a business.",
+    "color": "#64748B"
+  }
+]

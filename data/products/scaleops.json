@@ -1,0 +1,14 @@
+{
+  "id": "scaleops",
+  "name": "ScaleOps",
+  "url": "https://scaleops.com/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-10-17",
+      "headline": "Automated Kubernetes Resource Optimization",
+      "subheadline": "Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance.",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "armo",
+  "name": "ARMO",
+  "url": "https://www.armosec.io/",
+  "category": "security",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Unifying AppSec, CloudSec and DevSec",
+      "subheadline": "The only runtime-driven, open-source first, cloud security platform Powered by Kubescape & eBPF",
+      "screenshot": null
+    }
+  ]
+}

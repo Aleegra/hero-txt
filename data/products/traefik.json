@@ -1,0 +1,14 @@
+{
+  "id": "traefik",
+  "name": "Traefik",
+  "url": "https://traefik.io/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Run APIs Easily. Anywhere.",
+      "subheadline": "Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models.",
+      "screenshot": null
+    }
+  ]
+}
