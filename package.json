@@ -1,0 +1,25 @@
+{
+  "name": "hero-txt",
+  "version": "2.0.0",
+  "description": "A library of real hero-section copy from live product websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleegra/hero-txt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Aleegra/hero-txt/issues"
+  },
+  "homepage": "https://github.com/Aleegra/hero-txt#readme",
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "sharp": "^0.35.4"
+  }
+}
