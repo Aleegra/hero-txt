@@ -3,5 +3,13 @@
   "name": "E2B",
   "url": "https://e2b.dev/",
   "category": "agent-runtime",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/e2b/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "32e08717f481b405"
 }

@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/opensearch/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Find the meaning in your data",
       "subheadline": "OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "024aa1b18376f13f"
 }

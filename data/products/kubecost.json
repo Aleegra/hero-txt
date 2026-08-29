@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/kubecost/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Monitor & reduce Kubernetes spend",
       "subheadline": "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "2c78434232751f3d"
 }

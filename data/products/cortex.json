@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/cortex/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Unblock Engineers. Unlock Productivity.",
       "subheadline": "Cortex is the Internal Developer Portal eliminating “developer tax” with paved paths to production. Create, catalog, score, and drive action to continuously improve software.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "cbf42a3189039792"
 }

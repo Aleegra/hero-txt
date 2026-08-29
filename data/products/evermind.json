@@ -3,5 +3,13 @@
   "name": "Evermind",
   "url": "https://evermind.ai/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/evermind/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "9b82fee3c76284d8"
 }

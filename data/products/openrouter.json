@@ -3,5 +3,13 @@
   "name": "OpenRouter",
   "url": "https://openrouter.ai/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/openrouter/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "aaff615e316524dd"
 }

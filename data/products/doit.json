@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/doit/2026-08-29.webp"
+    },
+    {
       "date": "2024-10-11",
       "headline": "Intelligence to optimize your cloud",
       "subheadline": "DoiT’s cloud development platform ensures your AWS, Google Cloud, and Microsoft Azure infrastructure is working optimally for your business – from planning to production.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "63c9b1eace8c9b6a"
 }

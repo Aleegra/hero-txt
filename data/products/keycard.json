@@ -3,5 +3,13 @@
   "name": "Keycard",
   "url": "https://www.keycard.ai/",
   "category": "security",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/keycard/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "4aca952f0d525178"
 }

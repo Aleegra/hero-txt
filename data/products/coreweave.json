@@ -3,5 +3,13 @@
   "name": "CoreWeave",
   "url": "https://coreweave.com/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/coreweave/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "9c1e8862dedfa43c"
 }

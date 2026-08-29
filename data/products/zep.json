@@ -3,5 +3,13 @@
   "name": "Zep",
   "url": "https://www.getzep.com/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/zep/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "63cf735cdae3ed5e"
 }

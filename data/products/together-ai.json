@@ -3,5 +3,13 @@
   "name": "Together AI",
   "url": "https://www.together.ai/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/together-ai/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "5c20cc8cb862a281"
 }

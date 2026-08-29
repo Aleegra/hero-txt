@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/giant-swarm/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Smarter Platform Engineering",
       "subheadline": "Platform teams of all sizes partner with Giant Swarm to increase developer productivity.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "6cd3ec8b997a22be"
 }

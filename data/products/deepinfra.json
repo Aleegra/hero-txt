@@ -3,5 +3,13 @@
   "name": "DeepInfra",
   "url": "https://deepinfra.com/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/deepinfra/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "1e9ce57fb474a51c"
 }

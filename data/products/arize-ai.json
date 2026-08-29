@@ -3,5 +3,13 @@
   "name": "Arize AI",
   "url": "https://arize.com/",
   "category": "agent-eval",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/arize-ai/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "e0ca5b303da5119b"
 }

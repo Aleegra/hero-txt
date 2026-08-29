@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/nops/2026-08-29.webp"
+    },
+    {
       "date": "2024-10-17",
       "headline": "Al-Powered AWS FinOps Platform",
       "subheadline": "Discover how much you can save in just 10 minutes!",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "8b0074afea7d55e1"
 }

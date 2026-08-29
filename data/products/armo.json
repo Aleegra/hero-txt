@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/armo/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Unifying AppSec, CloudSec and DevSec",
       "subheadline": "The only runtime-driven, open-source first, cloud security platform Powered by Kubescape & eBPF",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "e70d9a55e1d5bfc7"
 }

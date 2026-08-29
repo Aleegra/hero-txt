@@ -3,5 +3,13 @@
   "name": "GMI Cloud",
   "url": "https://www.gmicloud.ai/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/gmi-cloud/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "12ef63fdb94a3b6a"
 }

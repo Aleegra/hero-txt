@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/akeyless/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Vaultless Secrets Management",
       "subheadline": "Centralize and secure credentials, certificates, and keys across your CI/CD pipeline, reducing both the cost and complexity of vault management.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "564d046d47c2c7f6"
 }

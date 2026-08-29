@@ -5,10 +5,17 @@
   "category": "agent-runtime",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/coder/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Click ~~README~~ to get started",
       "subheadline": "Developers can instantly launch fully configured cloud development environments and make their first commit in minutes. No need to traverse README files or await onboarding queues.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "6c4fd1c06384011f"
 }

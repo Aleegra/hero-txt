@@ -3,5 +3,13 @@
   "name": "Notion",
   "url": "https://www.notion.com/",
   "category": "dev-work-tools",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/notion/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "91169f348f28db88"
 }

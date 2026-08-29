@@ -3,5 +3,13 @@
   "name": "Daytona",
   "url": "https://www.daytona.io/",
   "category": "agent-runtime",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/daytona/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "0316330d8f4a53f4"
 }

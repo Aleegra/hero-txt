@@ -5,10 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/digitalocean/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Learn here. Dream here. Develop here.",
       "subheadline": "Powerful and production-ready, our cloud platform has the solutions that devs like you need to succeed—whether you're building world-changing AI apps, running a side project, or building a business.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "e50f08c57778c293"
 }

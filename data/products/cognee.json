@@ -3,5 +3,13 @@
   "name": "Cognee",
   "url": "https://www.cognee.ai/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/cognee/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "6d39d862b7866807"
 }

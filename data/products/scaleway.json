@@ -5,10 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/scaleway/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Europe's empowering cloud provider",
       "subheadline": "Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "10cdb01c2d5335c0"
 }

@@ -5,10 +5,17 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/docker/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Develop faster. Run anywhere.",
       "subheadline": "Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "537f307f23abe884"
 }

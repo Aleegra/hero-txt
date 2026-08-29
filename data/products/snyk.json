@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/snyk/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Develop fast. Stay secure.",
       "subheadline": "Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "583802188cc13057"
 }

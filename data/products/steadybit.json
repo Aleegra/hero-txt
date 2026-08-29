@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/steadybit/2026-08-29.webp"
+    },
+    {
       "date": "2024-10-17",
       "headline": "Build reliable systems ready for anything",
       "subheadline": "The Chaos Engineering tool that makes it easy and safe to test System Resilience",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "c15528105b63cad2"
 }

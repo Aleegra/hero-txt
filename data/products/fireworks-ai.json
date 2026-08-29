@@ -3,5 +3,13 @@
   "name": "Fireworks AI",
   "url": "https://fireworks.ai/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/fireworks-ai/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "ac83281727815dec"
 }

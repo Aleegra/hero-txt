@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/chronosphere/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Observability with Control 10x more scalable/ 8x faster MTTR/ 0x overages",
       "subheadline": "Find and fix customer-impacting issues faster and stop paying for data you don’t use with the world’s most reliable observability platform.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "aa9b0b3906a7079f"
 }

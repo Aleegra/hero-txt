@@ -3,5 +3,13 @@
   "name": "Braintrust",
   "url": "https://www.braintrust.dev/",
   "category": "agent-eval",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/braintrust/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "2606622b06444c18"
 }

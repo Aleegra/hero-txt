@@ -3,5 +3,13 @@
   "name": "Raft",
   "url": "https://raft.build/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/raft/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "d35bcbba6441c0d1"
 }

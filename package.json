@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Aleegra/hero-txt#readme",
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.122.0",
     "playwright": "^1.62.1",
     "sharp": "^0.35.4"
   }

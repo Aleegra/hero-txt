@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/coralogix/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Modern architecture. Disruptive value.",
       "subheadline": "Observability and Security that scale with you.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "c24a808cf5ce598e"
 }

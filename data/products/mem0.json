@@ -3,5 +3,13 @@
   "name": "mem0",
   "url": "https://mem0.ai/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/mem0/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "d817579b05ea0887"
 }

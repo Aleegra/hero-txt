@@ -3,5 +3,13 @@
   "name": "Modal",
   "url": "https://modal.com/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/modal/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "b32ade3e4a496c60"
 }

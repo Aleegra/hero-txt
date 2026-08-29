@@ -3,5 +3,13 @@
   "name": "Browser Use",
   "url": "https://browser-use.com/",
   "category": "browser-use",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/browser-use/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "13820c2365b0ae05"
 }

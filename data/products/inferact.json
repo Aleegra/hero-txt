@@ -3,5 +3,13 @@
   "name": "Inferact",
   "url": "https://inferact.ai/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/inferact/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "438f313122fcc0ee"
 }

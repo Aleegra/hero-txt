@@ -3,5 +3,13 @@
   "name": "Vercel",
   "url": "https://vercel.com/",
   "category": "coding-agents",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/vercel/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "4a9c9c81991a3c26"
 }

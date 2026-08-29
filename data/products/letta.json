@@ -3,5 +3,13 @@
   "name": "Letta",
   "url": "https://www.letta.com/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/letta/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "bb3a3a5ebb0be0b0"
 }

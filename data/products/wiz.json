@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/wiz/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Secure Everything You Build and Run in the Cloud",
       "subheadline": "Use the Wiz Cloud Security Platform to build faster in the cloud, enabling security, dev and devops to work together in a self-service model built for the scale and speed of your cloud development.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "3eb35798194ea26f"
 }

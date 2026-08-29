@@ -5,10 +5,17 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/devcycle/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Life's short. Stop building your own feature flags.",
       "subheadline": "Upgrade to DevCycle, the feature flag platform built on the OpenFeature standard and supported by industry experts.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "7e93644cb4f42457"
 }

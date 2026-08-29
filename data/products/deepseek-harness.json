@@ -3,5 +3,13 @@
   "name": "DeepSeek Harness",
   "url": "https://deepseek.com/harness/en/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/deepseek-harness/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "422ecf189899f739"
 }

@@ -5,10 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/solo-io/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Connect, Observe, Secure APIs in the Cloud Native Era",
       "subheadline": "Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "db1d1ef983e1b655"
 }

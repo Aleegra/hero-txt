@@ -3,5 +3,13 @@
   "name": "Dify",
   "url": "https://dify.ai/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "",
+      "subheadline": "",
+      "screenshot": "shots/dify/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "0135d5b11c476fb9"
 }
