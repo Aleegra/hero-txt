@@ -1,0 +1,14 @@
+{
+  "id": "devcycle",
+  "name": "DevCycle",
+  "url": "https://devcycle.com/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Life's short. Stop building your own feature flags.",
+      "subheadline": "Upgrade to DevCycle, the feature flag platform built on the OpenFeature standard and supported by industry experts.",
+      "screenshot": null
+    }
+  ]
+}

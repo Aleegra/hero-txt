@@ -1,0 +1,14 @@
+{
+  "id": "kubecost",
+  "name": "Kubecost",
+  "url": "https://www.kubecost.com/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Monitor & reduce Kubernetes spend",
+      "subheadline": "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs.",
+      "screenshot": null
+    }
+  ]
+}

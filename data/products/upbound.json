@@ -1,0 +1,14 @@
+{
+  "id": "upbound",
+  "name": "Upbound",
+  "url": "https://www.upbound.io/",
+  "category": "platform-eng",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Crossplane reinvented for the enterprise cloud",
+      "subheadline": "Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.",
+      "screenshot": null
+    }
+  ]
+}

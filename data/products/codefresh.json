@@ -1,0 +1,14 @@
+{
+  "id": "codefresh",
+  "name": "codefresh",
+  "url": "https://codefresh.io/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "The GitOps Software Delivery Platform",
+      "subheadline": "Enterprise-ready, Powered by Argo, Secure & scalable",
+      "screenshot": null
+    }
+  ]
+}

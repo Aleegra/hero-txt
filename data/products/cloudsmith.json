@@ -1,0 +1,14 @@
+{
+  "id": "cloudsmith",
+  "name": "cloudsmith",
+  "url": "https://cloudsmith.com/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Liberate DevOps with fully managed, scalable artifact management",
+      "subheadline": "Cut costs + speed up production, all while safeguarding the code teams pull + push. Boost productivity with high performance package distribution.",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "digitalocean",
+  "name": "DigitalOcean",
+  "url": "https://www.digitalocean.com/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Learn here. Dream here. Develop here.",
+      "subheadline": "Powerful and production-ready, our cloud platform has the solutions that devs like you need to succeed—whether you're building world-changing AI apps, running a side project, or building a business.",
+      "screenshot": null
+    }
+  ]
+}

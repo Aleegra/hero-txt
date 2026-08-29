@@ -1,0 +1,14 @@
+{
+  "id": "solo-io",
+  "name": "Solo.io",
+  "url": "https://www.solo.io/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Connect, Observe, Secure APIs in the Cloud Native Era",
+      "subheadline": "Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions",
+      "screenshot": null
+    }
+  ]
+}

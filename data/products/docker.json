@@ -1,0 +1,14 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "url": "https://www.docker.com/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Develop faster. Run anywhere.",
+      "subheadline": "Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.",
+      "screenshot": null
+    }
+  ]
+}

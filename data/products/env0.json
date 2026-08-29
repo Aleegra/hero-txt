@@ -1,0 +1,14 @@
+{
+  "id": "env0",
+  "name": "env0",
+  "url": "https://www.env0.com/",
+  "category": "platform-eng",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Automate and Manage IaC at Scale, With Confidence",
+      "subheadline": "Optimize and unify Infrastructure as Code operations across every framework: OpenTofu, Terraform, Pulumi, CloudFormation, Terragrunt, K8s and more.",
+      "screenshot": null
+    }
+  ]
+}

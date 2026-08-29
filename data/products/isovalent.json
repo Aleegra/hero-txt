@@ -1,0 +1,14 @@
+{
+  "id": "isovalent",
+  "name": "Isovalent",
+  "url": "https://isovalent.com/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "eBPF-based networking, security, and observability",
+      "subheadline": "Isovalent Enterprise for Cilium enables cloud native networking, security, and observability.",
+      "screenshot": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "harness",
+  "name": "Harness",
+  "url": "https://www.harness.io/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "The AI-Native Software Delivery Platform",
+      "subheadline": "Achieve engineering excellence and improve developer experience with the world's first AI-native software delivery platform.",
+      "screenshot": null
+    }
+  ]
+}

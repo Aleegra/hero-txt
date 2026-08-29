@@ -1,0 +1,14 @@
+{
+  "id": "giant-swarm",
+  "name": "Giant Swarm",
+  "url": "https://www.giantswarm.io/",
+  "category": "platform-eng",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Smarter Platform Engineering",
+      "subheadline": "Platform teams of all sizes partner with Giant Swarm to increase developer productivity.",
+      "screenshot": null
+    }
+  ]
+}

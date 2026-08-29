@@ -1,0 +1,14 @@
+{
+  "id": "axiom",
+  "name": "AXIOM",
+  "url": "https://axiom.co/",
+  "category": "observability",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Stop sampling, observe every event.",
+      "subheadline": "100% of your data for every possible need: o11y, security, analytics, and new insights.",
+      "screenshot": null
+    }
+  ]
+}

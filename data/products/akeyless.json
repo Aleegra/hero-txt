@@ -1,0 +1,14 @@
+{
+  "id": "akeyless",
+  "name": "Akeyless",
+  "url": "https://www.akeyless.io/",
+  "category": "security",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Vaultless Secrets Management",
+      "subheadline": "Centralize and secure credentials, certificates, and keys across your CI/CD pipeline, reducing both the cost and complexity of vault management.",
+      "screenshot": null
+    }
+  ]
+}

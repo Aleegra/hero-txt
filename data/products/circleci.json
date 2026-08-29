@@ -1,0 +1,14 @@
+{
+  "id": "circleci",
+  "name": "CircleCI",
+  "url": "https://circleci.com/",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Confidence in every deploy",
+      "subheadline": "Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code.",
+      "screenshot": null
+    }
+  ]
+}

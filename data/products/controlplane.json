@@ -1,0 +1,14 @@
+{
+  "id": "controlplane",
+  "name": "ControlPlane",
+  "url": "https://control-plane.io/",
+  "category": "security",
+  "history": [
+    {
+      "date": "2024-10-11",
+      "headline": "Cybersecurity consulting and advisory",
+      "subheadline": "",
+      "screenshot": null
+    }
+  ]
+}

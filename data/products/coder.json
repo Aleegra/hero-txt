@@ -1,0 +1,14 @@
+{
+  "id": "coder",
+  "name": "Coder",
+  "url": "https://coder.com/",
+  "category": "agent-runtime",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Click ~~README~~ to get started",
+      "subheadline": "Developers can instantly launch fully configured cloud development environments and make their first commit in minutes. No need to traverse README files or await onboarding queues.",
+      "screenshot": null
+    }
+  ]
+}

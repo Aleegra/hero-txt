@@ -1,0 +1,14 @@
+{
+  "id": "zesty",
+  "name": "Zesty",
+  "url": "https://zesty.co/",
+  "category": "k8s-finops",
+  "history": [
+    {
+      "date": "2024-09-26",
+      "headline": "Cut cloud spend, scale smarter.",
+      "subheadline": "One platform to automate & streamline cloud infrastructure optimization.",
+      "screenshot": null
+    }
+  ]
+}
