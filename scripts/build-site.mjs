@@ -243,6 +243,9 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
   transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
 }
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
+/* Presses in under the cursor, so the click that opens the modal is acknowledged
+   before the modal itself arrives. */
+.card:active{transform:translateY(-1px) scale(.994);box-shadow:var(--shadow-md);transition-duration:.06s}
 .shot{
   position:relative;aspect-ratio:16/10;overflow:hidden;
   border-bottom:1px solid var(--line);background:var(--blue-soft);
@@ -295,13 +298,31 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .modal{
   position:fixed;inset:0;z-index:100;display:grid;place-items:center;
   padding:24px;background:rgba(22,22,45,.4);backdrop-filter:blur(4px);overflow:auto;
+  opacity:0;transition:opacity .14s ease-in;
 }
 /* display:grid outranks the hidden attribute's own display:none. */
 .modal[hidden]{display:none}
+.modal.open{opacity:1;transition:opacity .2s ease-out}
 .modal-card{
   position:relative;width:min(880px,100%);max-height:90vh;overflow:auto;
   background:var(--surface);border:1px solid var(--line);
   border-radius:16px;box-shadow:var(--shadow-lg);padding:32px;
+  /* Resting state doubles as the exit state: short, ease-in, no overshoot, so
+     dismissing feels immediate rather than like the entrance played backwards. */
+  /* Mostly scale, barely any travel: the card should look like it pops toward you,
+     not like it slides up from below. */
+  transform:translateY(6px) scale(.92);opacity:0;
+  transition:transform .14s ease-in,opacity .14s ease-in;
+}
+.modal.open .modal-card{
+  transform:none;opacity:1;
+  /* Back-out curve — shoots past full size and springs back. Short duration and a
+     faster opacity ramp so the card is already visible while it is still expanding;
+     fading in over the whole motion is what made it read as a gentle ease. */
+  transition:transform .28s cubic-bezier(.34,1.56,.64,1),opacity .12s ease-out;
+}
+@media (prefers-reduced-motion:reduce){
+  .modal,.modal.open,.modal-card,.modal.open .modal-card{transition:none}
 }
 .modal-close{
   position:absolute;top:16px;right:16px;cursor:pointer;font:inherit;font-weight:600;
@@ -495,13 +516,25 @@ function openModal(id) {
         \${h.subheadline ? \`<p>\${esc(h.subheadline)}</p>\` : ''}
         \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero on \${esc(h.date)}" loading="lazy">\` : ''}
       </div>\`).join('');
-  $('#modal').hidden = false;
+  const m = $('#modal');
+  m.scrollTop = 0;
+  clearTimeout(closeTimer);
+  m.hidden = false;
+  // Read a layout property to flush the un-hidden state to the browser. Without it
+  // the .open class lands in the same frame and there is nothing to animate from.
+  void m.offsetWidth;
+  m.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
+let closeTimer;
 function closeModal() {
-  $('#modal').hidden = true;
+  const m = $('#modal');
+  if (m.hidden) return;
+  m.classList.remove('open');
   document.body.style.overflow = '';
+  // Matches the .14s exit transition; hiding immediately would cut it off.
+  closeTimer = setTimeout(() => { m.hidden = true; }, 150);
 }
 $('#modal-close').onclick = closeModal;
 $('#modal').onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
