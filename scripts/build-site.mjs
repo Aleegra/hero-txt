@@ -75,7 +75,7 @@ const html = `<!doctype html>
   <section class="intro">
     <div class="intro-text">
       <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
-      <p>The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly, so every repositioning is on the record.</p>
+      <p>The headline earns the second line. The sub-headline earns the scroll.<br>Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly,<br>so every repositioning is on the record.</p>
       <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
     </div>
     <div class="intro-deco" aria-hidden="true">
@@ -108,16 +108,24 @@ const html = `<!doctype html>
 `;
 
 const css = `:root{
-  --bg:#F3F6FF;
-  --ink:#15152E;
-  --muted:#6E7191;
-  --line:#15152E;
-  --blue:#2F5BFF;
-  --blue-soft:#CFDBFF;
-  --pink:#FF2E88;
-  --pink-soft:#FFD3E4;
-  --shadow:4px 4px 0 var(--line);
-${categories.map((c, i) => `  --cat-${i}:${c.color};`).join('\n')}
+  --bg:#FBFBFD;
+  --surface:#FFFFFF;
+  --ink:#16161D;
+  --muted:#6B7085;
+  /* Hairlines instead of the old 2px black outlines. At twelve cards a page the
+     heavy borders and hard offset shadows stacked into a very loud grid. */
+  --line:#E9E9F0;
+  --line-strong:#DCDCE6;
+  --blue:#4C6FFF;
+  --blue-soft:#EEF2FF;
+  --pink:#FF4D8D;
+  --pink-soft:#FFE6F0;
+  --r:12px;
+  --r-sm:8px;
+  --r-pill:999px;
+  --shadow-sm:0 1px 2px rgba(22,22,45,.05),0 1px 3px rgba(22,22,45,.04);
+  --shadow-md:0 4px 14px rgba(22,22,45,.07),0 1px 3px rgba(22,22,45,.05);
+  --shadow-lg:0 16px 40px rgba(22,22,45,.14),0 3px 10px rgba(22,22,45,.07);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -133,30 +141,41 @@ a{color:inherit}
 .topbar{
   position:sticky;top:0;z-index:50;
   display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:12px 24px;background:var(--blue);color:#fff;border-bottom:3px solid var(--line);
+  padding:12px 24px;color:var(--ink);
+  /* Translucent rather than a solid blue slab: the bar stays legible while the
+     grid scrolls under it, and it stops competing with the cards for attention. */
+  background:rgba(251,251,253,.82);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
 .logo{
   display:flex;align-items:center;gap:10px;
   font-family:"Space Grotesk",sans-serif;font-weight:700;
-  font-size:20px;letter-spacing:.02em;text-decoration:none;
+  font-size:20px;letter-spacing:-.01em;text-decoration:none;
 }
 .logo-mark{
-  width:22px;height:22px;background:var(--pink);
-  border:2px solid var(--line);transform:rotate(-8deg);display:inline-block;
+  width:22px;height:22px;border-radius:6px;display:inline-block;
+  background:linear-gradient(135deg,var(--pink),var(--blue));
 }
-.dot{color:var(--pink-soft)}
-.topbar-right{display:flex;align-items:center;gap:12px}
+.dot{color:var(--pink)}
+.topbar-right{display:flex;align-items:center;gap:10px}
 #search{
-  font:inherit;font-size:15px;padding:8px 14px;width:min(340px,45vw);color:var(--ink);
-  background:#fff;border:2px solid var(--line);box-shadow:var(--shadow);
+  font:inherit;font-size:14.5px;padding:8px 14px;width:min(340px,45vw);color:var(--ink);
+  background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
+  transition:border-color .15s,box-shadow .15s;
 }
-#search:focus{outline:none;transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
+#search::placeholder{color:#A2A5B8}
+#search:focus{
+  outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(76,111,255,.14);
+}
 .gh{
-  /* Colour is set explicitly: the bar is white-on-blue, and these sit on white. */
-  font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;color:var(--ink);
-  padding:8px 14px;background:#fff;border:2px solid var(--line);box-shadow:var(--shadow);
+  font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;color:var(--ink);
+  padding:8px 14px;background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
+  transition:border-color .15s,box-shadow .15s;
 }
-.gh:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
+.gh:hover{border-color:#C4C4D2;box-shadow:var(--shadow-md)}
 
 /* ---------- intro ---------- */
 main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
@@ -166,35 +185,46 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 }
 .intro h1{
   font-family:"Space Grotesk",sans-serif;font-weight:700;
-  /* The highlight behind <em> is a 5px box-shadow spread, so a tight
-     line-height makes it collide with the line below. */
-  font-size:clamp(34px,4.6vw,56px);line-height:1.24;letter-spacing:-.02em;
+  font-size:clamp(34px,4.6vw,56px);line-height:1.14;letter-spacing:-.025em;
 }
-.intro h1 em{font-style:normal;background:var(--pink-soft);box-shadow:0 0 0 5px var(--pink-soft);border-radius:2px}
-.intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#2B2B45}
+/* An underline band rather than a padded block, so the highlight can never
+   overlap the line beneath it however tight the leading is. */
+.intro h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--pink-soft) 62%)}
+.intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#3A3A52}
 .intro .meta{font-size:15px;color:var(--muted)}
-.intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:12px;padding-top:14px}
-.chip{width:30px;height:30px;border:2px solid var(--line);box-shadow:3px 3px 0 var(--line)}
-.c1{background:var(--pink);transform:rotate(-6deg)}
-.c2{background:var(--blue-soft);transform:rotate(4deg)}
-.c3{background:var(--pink-soft);transform:rotate(-3deg)}
-.c4{background:var(--blue);transform:rotate(5deg)}
-.c5{background:#B388FF;transform:rotate(-5deg)}
-.c6{background:#5BD1F0;transform:rotate(3deg)}
+.intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
+.chip{width:30px;height:30px;border-radius:9px;box-shadow:var(--shadow-sm)}
+.c1{background:var(--pink)}
+.c2{background:var(--blue-soft)}
+.c3{background:var(--pink-soft)}
+.c4{background:var(--blue)}
+.c5{background:#B388FF}
+.c6{background:#5BD1F0}
 
 /* ---------- filters ---------- */
-.filters{display:flex;flex-wrap:wrap;gap:10px;padding:8px 0 20px}
-.filters button{
-  font:inherit;font-weight:500;font-size:14px;cursor:pointer;
-  display:flex;align-items:center;gap:8px;
-  padding:7px 13px;background:#fff;color:var(--ink);
-  border:2px solid var(--line);box-shadow:var(--shadow);
+/* One flat wrap of sixteen pills read as noise. The categories already carry a
+   "group" field, so each group gets its own labelled row and the eye has
+   somewhere to rest between them. */
+.filters{display:flex;flex-direction:column;gap:14px;padding:4px 0 24px}
+.filter-group{display:flex;align-items:flex-start;gap:16px}
+.filter-label{
+  /* Wide enough that the longest group name ("Cloud & DevOps") stays on one line. */
+  flex:none;width:124px;padding-top:7px;
+  font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#9A9DB0;
 }
-.filters button:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
-.filters button[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none;transform:translate(2px,2px)}
-.filters .swatch{width:12px;height:12px;border:1.5px solid var(--line);flex:none}
-.filters button[aria-pressed=true] .swatch{border-color:#fff}
-.filters .n{opacity:.55;font-variant-numeric:tabular-nums}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;flex:1;min-width:0}
+.filters button{
+  font:inherit;font-weight:500;font-size:13.5px;cursor:pointer;
+  display:flex;align-items:center;gap:7px;
+  padding:6px 13px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:var(--r-pill);
+  transition:background .15s,border-color .15s,color .15s;
+}
+.filters button:hover{background:#F4F4F8;border-color:#C9C9D8}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.filters .swatch{width:9px;height:9px;border-radius:50%;flex:none}
+.filters .n{opacity:.5;font-size:12.5px;font-variant-numeric:tabular-nums}
 .count{font-size:14px;color:var(--muted);padding-bottom:18px}
 
 /* ---------- grid ---------- */
@@ -204,94 +234,99 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
   grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .card{
-  display:flex;flex-direction:column;cursor:pointer;
-  background:#fff;border:2.5px solid var(--line);box-shadow:6px 6px 0 var(--line);
-  transition:transform .12s,box-shadow .12s;
+  display:flex;flex-direction:column;cursor:pointer;overflow:hidden;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);box-shadow:var(--shadow-sm);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
 }
-.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--line)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
 .shot{
   position:relative;aspect-ratio:16/10;overflow:hidden;
-  border-bottom:2.5px solid var(--line);background:var(--blue-soft);
+  border-bottom:1px solid var(--line);background:var(--blue-soft);
 }
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .badge{
-  font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
-  padding:3px 7px;border:2px solid var(--line);
+  font-size:10.5px;font-weight:600;letter-spacing:.02em;
+  padding:3px 9px;border-radius:var(--r-pill);
   /* Category names run long; shrink and ellipsise rather than push the row wide. */
   min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 .versions{
-  position:absolute;top:10px;right:10px;background:#fff;
-  font-size:11px;font-weight:700;padding:4px 8px;
-  border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
+  position:absolute;top:10px;right:10px;
+  background:rgba(255,255,255,.9);backdrop-filter:blur(6px);color:var(--muted);
+  font-size:11px;font-weight:600;padding:3px 9px;
+  border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
 }
 .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
 .name-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .name{
-  font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.03em;text-transform:uppercase;color:var(--muted);flex:none;
+  font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--muted);flex:none;
 }
 .headline{
   font-family:"Space Grotesk",sans-serif;font-weight:700;
-  font-size:19px;line-height:1.2;letter-spacing:-.01em;
+  font-size:19px;line-height:1.22;letter-spacing:-.015em;
 }
-.sub{font-size:14px;color:#454565;line-height:1.5}
+.sub{font-size:14px;color:#5A5A74;line-height:1.5}
 .card-foot{
   margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;gap:10px;
-  font-size:12.5px;color:var(--muted);border-top:1.5px dashed #C9D3F0;
+  font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);
 }
-.card-foot a{font-weight:700;text-decoration:none}
+.card-foot a{font-weight:600;text-decoration:none;color:var(--blue)}
 .card-foot a:hover{text-decoration:underline}
 .empty{padding:48px 0;font-size:17px;color:var(--muted)}
 
 /* ---------- pager ---------- */
 .pager{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;padding:36px 0 0}
 .pager button{
-  font:inherit;font-weight:700;font-size:14px;cursor:pointer;
-  min-width:40px;padding:7px 12px;background:#fff;color:var(--ink);
-  border:2px solid var(--line);box-shadow:var(--shadow);
+  font:inherit;font-weight:600;font-size:14px;cursor:pointer;
+  min-width:38px;padding:7px 12px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--line-strong);border-radius:var(--r-sm);
+  transition:background .15s,border-color .15s;
 }
-.pager button:hover:not(:disabled){transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
-.pager button[aria-current=page]{background:var(--pink);color:#fff;box-shadow:none;transform:translate(2px,2px)}
-.pager button:disabled{opacity:.35;cursor:default;box-shadow:none;transform:translate(2px,2px)}
+.pager button:hover:not(:disabled){background:#F4F4F8;border-color:#C9C9D8}
+.pager button[aria-current=page]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pager button:disabled{opacity:.4;cursor:default}
 
 /* ---------- modal ---------- */
 .modal{
   position:fixed;inset:0;z-index:100;display:grid;place-items:center;
-  padding:24px;background:rgba(17,17,17,.55);overflow:auto;
+  padding:24px;background:rgba(22,22,45,.4);backdrop-filter:blur(4px);overflow:auto;
 }
 /* display:grid outranks the hidden attribute's own display:none. */
 .modal[hidden]{display:none}
 .modal-card{
   position:relative;width:min(880px,100%);max-height:90vh;overflow:auto;
-  background:var(--bg);border:3px solid var(--line);box-shadow:10px 10px 0 var(--line);
-  padding:30px;
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--shadow-lg);padding:32px;
 }
 .modal-close{
-  position:absolute;top:14px;right:14px;cursor:pointer;font:inherit;font-weight:700;
-  width:34px;height:34px;background:var(--pink-soft);border:2px solid var(--line);box-shadow:3px 3px 0 var(--line);
+  position:absolute;top:16px;right:16px;cursor:pointer;font:inherit;font-weight:600;
+  width:32px;height:32px;color:var(--muted);
+  background:var(--surface);border:1px solid var(--line-strong);border-radius:50%;
+  transition:background .15s,color .15s;
 }
-.modal-close:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--line)}
-.modal h2{font-family:"Space Grotesk",sans-serif;font-size:28px;letter-spacing:-.01em}
+.modal-close:hover{background:#F4F4F8;color:var(--ink)}
+.modal h2{font-family:"Space Grotesk",sans-serif;font-size:28px;letter-spacing:-.02em}
 .modal .url{font-size:14px;color:var(--muted);word-break:break-all}
-.version{margin-top:26px;padding-top:22px;border-top:2px solid var(--line)}
+.version{margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
 .version:first-of-type{border-top:none}
 .version-date{
-  display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;
-  letter-spacing:.04em;padding:3px 9px;margin-bottom:12px;
-  border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
+  display:inline-block;font-size:11.5px;font-weight:600;
+  letter-spacing:.04em;padding:3px 10px;margin-bottom:12px;
+  border-radius:var(--r-pill);
 }
-.version h3{font-family:"Space Grotesk",sans-serif;font-size:22px;line-height:1.22;margin-bottom:8px}
-.version p{font-size:15px;color:#454565;max-width:62ch}
+.version h3{font-family:"Space Grotesk",sans-serif;font-size:22px;line-height:1.24;margin-bottom:8px}
+.version p{font-size:15px;color:#5A5A74;max-width:62ch}
 .version img{
   width:100%;margin-top:16px;display:block;
-  border:2.5px solid var(--line);box-shadow:5px 5px 0 var(--line);
+  border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--shadow-md);
 }
-.current{font-size:12px;font-weight:700;color:var(--pink);margin-left:8px}
+.current{font-size:12px;font-weight:600;color:var(--pink);margin-left:8px}
 
 footer{
-  border-top:3px solid var(--line);background:var(--pink-soft);
-  padding:26px 24px;font-size:14px;
+  border-top:1px solid var(--line);background:var(--surface);
+  padding:26px 24px;font-size:14px;color:var(--muted);
 }
 footer p{max-width:1400px;margin:0 auto}
 
@@ -301,6 +336,9 @@ footer p{max-width:1400px;margin:0 auto}
   .intro{grid-template-columns:1fr}
   .intro-deco{grid-template-columns:repeat(6,26px)}
   .topbar{flex-wrap:wrap}
+  /* The label gutter costs too much of a narrow screen: stack instead. */
+  .filter-group{flex-direction:column;gap:8px}
+  .filter-label{width:auto;padding-top:0}
 }
 @media (max-width:620px){.grid{grid-template-columns:1fr}}
 `;
@@ -315,12 +353,22 @@ fetch('data.json').then((r) => r.json()).then((d) => { DATA = d; renderFilters()
 
 function catOf(id) { return DATA.categories.find((c) => c.id === id) || { name: id, color: '#ddd' }; }
 
-// Category colours span pale pink to navy, so a fixed ink-on-colour label is
-// unreadable at the dark end. Pick the text colour from the swatch instead.
-function textOn(hex) {
+// Category colours span pale pink to navy. Filling a label with the raw colour
+// meant some badges came out white-on-dark and others black-on-pale, which made
+// a grid of twelve look scattered. Every label now gets the same treatment: a
+// heavily lightened tint behind text of the same hue, darkened until it reads.
+function tag(hex) {
   const n = parseInt(hex.slice(1), 16);
-  const lum = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
-  return lum > 0.6 ? '#15152E' : '#FFFFFF';
+  const rgb = [n >> 16, (n >> 8) & 255, n & 255];
+  const lum = (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+  // Darken by however much this particular hue needs, not a fixed amount: the
+  // navy is already dark enough, the pale pink needs halving.
+  // 0.30 rather than a rounder number: it is the point at which the lightest
+  // category (K8s & FinOps) clears WCAG AA against its own tint.
+  const k = Math.min(1, 0.3 / lum);
+  const tint = rgb.map((v) => Math.round(v + (255 - v) * 0.87)).join(',');
+  const text = rgb.map((v) => Math.round(v * k)).join(',');
+  return \`background:rgb(\${tint});color:rgb(\${text})\`;
 }
 
 function matches(p) {
@@ -334,15 +382,31 @@ function matches(p) {
 function renderFilters() {
   const counts = {};
   for (const p of DATA.products) counts[p.category] = (counts[p.category] || 0) + 1;
-  const btn = (id, label, color, n) =>
-    \`<button data-cat="\${id}" aria-pressed="\${active === id}">\` +
+  const btn = (id, label, title, color, n) =>
+    \`<button data-cat="\${id}" title="\${esc(title)}" aria-pressed="\${active === id}">\` +
     (color ? \`<span class="swatch" style="background:\${color}"></span>\` : '') +
     \`\${esc(label)} <span class="n">\${n}</span></button>\`;
 
+  const row = (label, buttons) =>
+    \`<div class="filter-group"><span class="filter-label">\${esc(label)}</span>\` +
+    \`<div class="filter-row">\${buttons}</div></div>\`;
+
+  // Group in the order the groups first appear in categories.json rather than
+  // alphabetically, so the file stays the single place that decides the order.
+  const shown = DATA.categories.filter((c) => counts[c.id]);
+  const groups = [];
+  for (const c of shown) {
+    let g = groups.find((x) => x.name === c.group);
+    if (!g) groups.push((g = { name: c.group, cats: [] }));
+    g.cats.push(c);
+  }
+
   $('#filters').innerHTML =
-    btn('all', 'All', '', DATA.products.length) +
-    DATA.categories.filter((c) => counts[c.id])
-      .map((c) => btn(c.id, c.name, c.color, counts[c.id])).join('');
+    row('Browse', btn('all', 'All products', 'Every product in the library', '', DATA.products.length)) +
+    groups.map((g) =>
+      // short labels keep the pills to a scannable width; the full name is the tooltip
+      row(g.name, g.cats.map((c) => btn(c.id, c.short || c.name, c.name, c.color, counts[c.id])).join(''))
+    ).join('');
 
   $('#filters').onclick = (e) => {
     const b = e.target.closest('button');
@@ -377,7 +441,7 @@ function render() {
       <div class="body">
         <div class="name-row">
           <div class="name">\${esc(p.name)}</div>
-          <span class="badge" style="background:\${c.color};color:\${textOn(c.color)}" title="\${esc(c.name)}">\${esc(c.short || c.name)}</span>
+          <span class="badge" style="\${tag(c.color)}" title="\${esc(c.name)}">\${esc(c.short || c.name)}</span>
         </div>
         <div class="headline">\${esc(h.headline)}</div>
         \${h.subheadline ? \`<div class="sub">\${esc(h.subheadline)}</div>\` : ''}
@@ -423,7 +487,7 @@ function openModal(id) {
     \`<h2>\${esc(p.name)}</h2>
      <p class="url"><a href="\${esc(p.url)}" target="_blank" rel="noopener">\${esc(p.url)}</a> · \${esc(c.name)}</p>\` +
     p.history.map((h, i) => \`<div class="version">
-        <span class="version-date" style="background:\${c.color};color:\${textOn(c.color)}">\${esc(h.date)}</span>\${i === 0 ? '<span class="current">CURRENT</span>' : ''}
+        <span class="version-date" style="\${tag(c.color)}">\${esc(h.date)}</span>\${i === 0 ? '<span class="current">CURRENT</span>' : ''}
         <h3>\${esc(h.headline)}</h3>
         \${h.subheadline ? \`<p>\${esc(h.subheadline)}</p>\` : ''}
         \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero on \${esc(h.date)}" loading="lazy">\` : ''}
