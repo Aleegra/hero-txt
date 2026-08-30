@@ -1,12 +1,26 @@
-# hero-txt
+# hero-txt: How your top competitors attract their target audience
 
-The headline and sub-headline in a hero section are the first thing a visitor reads — they decide whether someone understands what you do, and whether they stay. **This is a library of real hero-section copy, collected from live product websites,** kept as a reference for anyone writing or redesigning one.
+A library of hero section copy collected from live product websites.
 
-**87 products** across **15 categories**. Each entry keeps its **three most recent** versions, so you can see how positioning shifts over time. Last updated **2026-08-30**.
+Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-> Browse with screenshots at **[the site](https://aleegra.github.io/hero-txt/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.
+Currently 87 products across 15 categories. Last updated 2026-08-30.
 
-Spotted a site we are missing? Open an issue.
+## Browsing
+The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
+
+## Data
+Entries live in data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot path, and previous versions.
+
+This `README` is generated from that data. Edit the JSON, not the Markdown.
+
+## Contributing
+To suggest a product that is missing, open an issue with the product name and its homepage URL.
+
+## Attribution
+Screenshots belong to their respective owners and are included here for reference and commentary.
+
+<!-- The generated category sections and product entries follow below. -->
 
 ## Contents
 
@@ -726,7 +740,7 @@ _Run Kubernetes well and stop overpaying for it._
 </details>
 
 ### [ScaleOps](https://scaleops.com/)
-- **Headline:** /
+- **Headline:** The Autonomous Compute Orchestration Layer Powering Cloud&AI Infrastructure
 - **Sub-headline:** Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.
 - **Updated:** 2026-08-30
 
