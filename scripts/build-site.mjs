@@ -190,7 +190,7 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 }
 /* An underline band rather than a padded block, so the highlight can never
    overlap the line beneath it however tight the leading is. */
-.intro h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--pink-soft) 62%)}
+.intro h1 em{font-style:normal;background:linear-gradient(transparent 62%,#FF8DA1 62%)}
 .intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#3A3A52}
 .intro .meta{font-size:15px;color:var(--muted)}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
