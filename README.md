@@ -1,10 +1,10 @@
-# hero-txt
+# hero-txt: How your top competitors attract their target audience
 
 The headline and sub-headline in a hero section are the first thing a visitor reads — they decide whether someone understands what you do, and whether they stay. **This is a library of real hero-section copy, collected from live product websites,** kept as a reference for anyone writing or redesigning one.
 
 **87 products** across **15 categories**. Each entry keeps its **three most recent** versions, so you can see how positioning shifts over time. Last updated **2026-08-30**.
 
-> Browse with screenshots at **[the site](https://aleegra.github.io/hero-txt/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.
+> Browse with screenshots at **[the site](https://www.herotxt.page/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.
 
 Spotted a site we are missing? Open an issue.
 
