@@ -35,11 +35,7 @@ jobs:
           node-version: '22'
       # build-site.mjs only reads JSON and copies files, so no install needed.
       - run: node scripts/build-site.mjs
-      # enablement creates the Pages site on first run; without it the action
-      # errors out with "Get Pages site failed" on a repo that never had Pages on.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
