@@ -53,7 +53,7 @@ const html = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>hero-txt — a library of real hero-section copy</title>
+<title>Track Your Competitors Reposition | Hero Section Library</title>
 <meta name="description" content="The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${esc(products.length)} live product sites, screenshotted and refreshed weekly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
