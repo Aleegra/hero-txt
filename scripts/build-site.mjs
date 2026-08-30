@@ -64,7 +64,7 @@ const html = `<!doctype html>
 <body>
 
 <header class="topbar">
-  <a class="logo" href="./"><span class="logo-mark"></span>HERO<span class="dot">·</span>TXT</a>
+  <a class="logo" href="./"><span class="logo-mark"></span>Hero Section Library</a>
   <div class="topbar-right">
     <input id="search" type="search" placeholder="Search headlines, products…" autocomplete="off" spellcheck="false">
     <a class="gh" href="https://github.com/Aleegra/hero-txt" target="_blank" rel="noopener">GitHub ↗</a>
@@ -108,7 +108,9 @@ const html = `<!doctype html>
 `;
 
 const css = `:root{
-  --bg:#FBFBFD;
+  /* Tinted blue rather than near-white, so the white cards read as objects
+     sitting on the page instead of dissolving into it. */
+  --bg:#EFF4FD;
   --surface:#FFFFFF;
   --ink:#16161D;
   --muted:#6B7085;
@@ -144,7 +146,7 @@ a{color:inherit}
   padding:12px 24px;color:var(--ink);
   /* Translucent rather than a solid blue slab: the bar stays legible while the
      grid scrolls under it, and it stops competing with the cards for attention. */
-  background:rgba(251,251,253,.82);backdrop-filter:blur(12px);
+  background:rgba(239,244,253,.82);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
 }
 .logo{
@@ -156,7 +158,6 @@ a{color:inherit}
   width:22px;height:22px;border-radius:6px;display:inline-block;
   background:linear-gradient(135deg,var(--pink),var(--blue));
 }
-.dot{color:var(--pink)}
 .topbar-right{display:flex;align-items:center;gap:10px}
 #search{
   font:inherit;font-size:14.5px;padding:8px 14px;width:min(340px,45vw);color:var(--ink);
@@ -195,7 +196,9 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
 .chip{width:30px;height:30px;border-radius:9px;box-shadow:var(--shadow-sm)}
 .c1{background:var(--pink)}
-.c2{background:var(--blue-soft)}
+/* Not --blue-soft: on the tinted blue page it is the same colour as the
+   background and the chip disappears. */
+.c2{background:#C3D4FF}
 .c3{background:var(--pink-soft)}
 .c4{background:var(--blue)}
 .c5{background:#B388FF}
