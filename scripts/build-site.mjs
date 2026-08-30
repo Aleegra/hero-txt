@@ -14,6 +14,10 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
+// Deploying through Actions replaces the whole site, and GitHub reads the
+// custom domain back out of this file. Without it the domain setting gets
+// cleared on a deploy and the site starts 404ing at its own address.
+const DOMAIN = 'www.herotxt.page';
 const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 
 const categories = read('data/categories.json');
@@ -34,6 +38,7 @@ mkdirSync(DIST, { recursive: true });
 if (existsSync(join(ROOT, 'shots')))
   cpSync(join(ROOT, 'shots'), join(DIST, 'shots'), { recursive: true });
 
+writeFileSync(join(DIST, 'CNAME'), DOMAIN + '\n');
 writeFileSync(
   join(DIST, 'data.json'),
   JSON.stringify({ categories, products, lastUpdated })
