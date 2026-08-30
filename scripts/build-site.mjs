@@ -53,7 +53,7 @@ const html = `<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23FFD84D'/><rect x='14' y='38' width='72' height='10' fill='%23111'/><rect x='14' y='56' width='44' height='10' fill='%23111'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232F5BFF'/><rect x='14' y='38' width='72' height='10' fill='%23FF2E88'/><rect x='14' y='56' width='44' height='10' fill='%23FFFFFF'/></svg>">
 </head>
 <body>
 
@@ -82,6 +82,7 @@ const html = `<!doctype html>
   <p class="count" id="count"></p>
   <section class="grid" id="grid"></section>
   <p class="empty" id="empty" hidden>Nothing matches that search.</p>
+  <nav class="pager" id="pager" aria-label="Pagination"></nav>
 </main>
 
 <footer>
@@ -101,17 +102,21 @@ const html = `<!doctype html>
 `;
 
 const css = `:root{
-  --cream:#FDF6E9;
-  --ink:#111111;
-  --muted:#6B6355;
-  --line:#111111;
+  --bg:#F3F6FF;
+  --ink:#15152E;
+  --muted:#6E7191;
+  --line:#15152E;
+  --blue:#2F5BFF;
+  --blue-soft:#CFDBFF;
+  --pink:#FF2E88;
+  --pink-soft:#FFD3E4;
   --shadow:4px 4px 0 var(--line);
 ${categories.map((c, i) => `  --cat-${i}:${c.color};`).join('\n')}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  background:var(--cream);color:var(--ink);
+  background:var(--bg);color:var(--ink);
   font-family:"DM Sans",system-ui,sans-serif;
   font-size:16px;line-height:1.55;
   -webkit-font-smoothing:antialiased;
@@ -122,7 +127,7 @@ a{color:inherit}
 .topbar{
   position:sticky;top:0;z-index:50;
   display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:12px 24px;background:#FFD84D;border-bottom:3px solid var(--line);
+  padding:12px 24px;background:var(--blue);color:#fff;border-bottom:3px solid var(--line);
 }
 .logo{
   display:flex;align-items:center;gap:10px;
@@ -130,24 +135,25 @@ a{color:inherit}
   font-size:20px;letter-spacing:.02em;text-decoration:none;
 }
 .logo-mark{
-  width:22px;height:22px;background:#FF9BC0;
+  width:22px;height:22px;background:var(--pink);
   border:2px solid var(--line);transform:rotate(-8deg);display:inline-block;
 }
-.dot{color:#E4356E}
+.dot{color:var(--pink-soft)}
 .topbar-right{display:flex;align-items:center;gap:12px}
 #search{
-  font:inherit;font-size:15px;padding:8px 14px;width:min(340px,45vw);
+  font:inherit;font-size:15px;padding:8px 14px;width:min(340px,45vw);color:var(--ink);
   background:#fff;border:2px solid var(--line);box-shadow:var(--shadow);
 }
 #search:focus{outline:none;transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
 .gh{
-  font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;
+  /* Colour is set explicitly: the bar is white-on-blue, and these sit on white. */
+  font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;color:var(--ink);
   padding:8px 14px;background:#fff;border:2px solid var(--line);box-shadow:var(--shadow);
 }
 .gh:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
 
 /* ---------- intro ---------- */
-main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
+main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro{
   display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;
   align-items:start;padding:56px 0 40px;
@@ -156,17 +162,17 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
   font-family:"Space Grotesk",sans-serif;font-weight:700;
   font-size:clamp(34px,5.2vw,60px);line-height:1.03;letter-spacing:-.02em;
 }
-.intro h1 em{font-style:normal;background:#FFD84D;box-shadow:0 0 0 5px #FFD84D;border-radius:2px}
-.intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#33302B}
+.intro h1 em{font-style:normal;background:var(--pink-soft);box-shadow:0 0 0 5px var(--pink-soft);border-radius:2px}
+.intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#2B2B45}
 .intro .meta{font-size:15px;color:var(--muted)}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:12px;padding-top:14px}
 .chip{width:30px;height:30px;border:2px solid var(--line);box-shadow:3px 3px 0 var(--line)}
-.c1{background:#FFD84D;transform:rotate(-6deg)}
-.c2{background:#4DD8F5;transform:rotate(4deg)}
-.c3{background:#FF9BC0;transform:rotate(-3deg)}
-.c4{background:#A8D178;transform:rotate(5deg)}
-.c5{background:#F5A06B;transform:rotate(-5deg)}
-.c6{background:#B79BFF;transform:rotate(3deg)}
+.c1{background:var(--pink);transform:rotate(-6deg)}
+.c2{background:var(--blue-soft);transform:rotate(4deg)}
+.c3{background:var(--pink-soft);transform:rotate(-3deg)}
+.c4{background:var(--blue);transform:rotate(5deg)}
+.c5{background:#B388FF;transform:rotate(-5deg)}
+.c6{background:#5BD1F0;transform:rotate(3deg)}
 
 /* ---------- filters ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:10px;padding:8px 0 20px}
@@ -177,16 +183,17 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
   border:2px solid var(--line);box-shadow:var(--shadow);
 }
 .filters button:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
-.filters button[aria-pressed=true]{background:var(--ink);color:var(--cream);box-shadow:none;transform:translate(2px,2px)}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff;box-shadow:none;transform:translate(2px,2px)}
 .filters .swatch{width:12px;height:12px;border:1.5px solid var(--line);flex:none}
-.filters button[aria-pressed=true] .swatch{border-color:var(--cream)}
+.filters button[aria-pressed=true] .swatch{border-color:#fff}
 .filters .n{opacity:.55;font-variant-numeric:tabular-nums}
 .count{font-size:14px;color:var(--muted);padding-bottom:18px}
 
 /* ---------- grid ---------- */
+/* Fixed 4 columns so a page is always a tidy 4x3 block of 12. */
 .grid{
-  display:grid;gap:26px;
-  grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  display:grid;gap:24px;
+  grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .card{
   display:flex;flex-direction:column;cursor:pointer;
@@ -196,14 +203,17 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
 .card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--line)}
 .shot{
   position:relative;aspect-ratio:16/10;overflow:hidden;
-  border-bottom:2.5px solid var(--line);background:#EEE;
+  border-bottom:2.5px solid var(--line);background:var(--blue-soft);
 }
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .badge{
   position:absolute;top:10px;left:10px;
   font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
   padding:4px 8px;border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
+  /* Long category names would otherwise run under the version count and clip. */
+  max-width:calc(100% - 116px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
+.card:not(.has-versions) .badge{max-width:calc(100% - 20px)}
 .versions{
   position:absolute;top:10px;right:10px;background:#fff;
   font-size:11px;font-weight:700;padding:4px 8px;
@@ -216,16 +226,27 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
 }
 .headline{
   font-family:"Space Grotesk",sans-serif;font-weight:700;
-  font-size:20px;line-height:1.2;letter-spacing:-.01em;
+  font-size:19px;line-height:1.2;letter-spacing:-.01em;
 }
-.sub{font-size:14.5px;color:#4A453D;line-height:1.5}
+.sub{font-size:14px;color:#454565;line-height:1.5}
 .card-foot{
   margin-top:auto;padding-top:12px;display:flex;justify-content:space-between;gap:10px;
-  font-size:12.5px;color:var(--muted);border-top:1.5px dashed #D6CDB9;
+  font-size:12.5px;color:var(--muted);border-top:1.5px dashed #C9D3F0;
 }
 .card-foot a{font-weight:700;text-decoration:none}
 .card-foot a:hover{text-decoration:underline}
 .empty{padding:48px 0;font-size:17px;color:var(--muted)}
+
+/* ---------- pager ---------- */
+.pager{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;padding:36px 0 0}
+.pager button{
+  font:inherit;font-weight:700;font-size:14px;cursor:pointer;
+  min-width:40px;padding:7px 12px;background:#fff;color:var(--ink);
+  border:2px solid var(--line);box-shadow:var(--shadow);
+}
+.pager button:hover:not(:disabled){transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--line)}
+.pager button[aria-current=page]{background:var(--pink);color:#fff;box-shadow:none;transform:translate(2px,2px)}
+.pager button:disabled{opacity:.35;cursor:default;box-shadow:none;transform:translate(2px,2px)}
 
 /* ---------- modal ---------- */
 .modal{
@@ -236,12 +257,12 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
 .modal[hidden]{display:none}
 .modal-card{
   position:relative;width:min(880px,100%);max-height:90vh;overflow:auto;
-  background:var(--cream);border:3px solid var(--line);box-shadow:10px 10px 0 var(--line);
+  background:var(--bg);border:3px solid var(--line);box-shadow:10px 10px 0 var(--line);
   padding:30px;
 }
 .modal-close{
   position:absolute;top:14px;right:14px;cursor:pointer;font:inherit;font-weight:700;
-  width:34px;height:34px;background:#FF9BC0;border:2px solid var(--line);box-shadow:3px 3px 0 var(--line);
+  width:34px;height:34px;background:var(--pink-soft);border:2px solid var(--line);box-shadow:3px 3px 0 var(--line);
 }
 .modal-close:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--line)}
 .modal h2{font-family:"Space Grotesk",sans-serif;font-size:28px;letter-spacing:-.01em}
@@ -254,28 +275,31 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
   border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
 }
 .version h3{font-family:"Space Grotesk",sans-serif;font-size:22px;line-height:1.22;margin-bottom:8px}
-.version p{font-size:15px;color:#4A453D;max-width:62ch}
+.version p{font-size:15px;color:#454565;max-width:62ch}
 .version img{
   width:100%;margin-top:16px;display:block;
   border:2.5px solid var(--line);box-shadow:5px 5px 0 var(--line);
 }
-.current{font-size:12px;font-weight:700;color:#1F7A4D;margin-left:8px}
+.current{font-size:12px;font-weight:700;color:var(--pink);margin-left:8px}
 
 footer{
-  border-top:3px solid var(--line);background:#FFD84D;
+  border-top:3px solid var(--line);background:var(--pink-soft);
   padding:26px 24px;font-size:14px;
 }
-footer p{max-width:1280px;margin:0 auto}
+footer p{max-width:1400px;margin:0 auto}
 
+@media (max-width:1180px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:720px){
   .intro{grid-template-columns:1fr}
   .intro-deco{grid-template-columns:repeat(6,26px)}
   .topbar{flex-wrap:wrap}
-  .grid{grid-template-columns:1fr}
 }
+@media (max-width:620px){.grid{grid-template-columns:1fr}}
 `;
 
-const js = `let DATA, active = 'all', query = '';
+const js = `const PAGE_SIZE = 12;
+let DATA, active = 'all', query = '', page = 1;
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -283,6 +307,14 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'
 fetch('data.json').then((r) => r.json()).then((d) => { DATA = d; renderFilters(); render(); });
 
 function catOf(id) { return DATA.categories.find((c) => c.id === id) || { name: id, color: '#ddd' }; }
+
+// Category colours span pale pink to navy, so a fixed ink-on-colour label is
+// unreadable at the dark end. Pick the text colour from the swatch instead.
+function textOn(hex) {
+  const n = parseInt(hex.slice(1), 16);
+  const lum = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255;
+  return lum > 0.6 ? '#15152E' : '#FFFFFF';
+}
 
 function matches(p) {
   if (active !== 'all' && p.category !== active) return false;
@@ -309,26 +341,31 @@ function renderFilters() {
     const b = e.target.closest('button');
     if (!b) return;
     active = b.dataset.cat;
+    page = 1;
     renderFilters();
     render();
   };
 }
 
 function render() {
-  const list = DATA.products.filter(matches);
+  const all = DATA.products.filter(matches);
+  const pages = Math.max(1, Math.ceil(all.length / PAGE_SIZE));
+  if (page > pages) page = pages;
+  const list = all.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
   const cat = active === 'all' ? null : catOf(active);
-  $('#count').textContent = cat
-    ? \`\${list.length} product\${list.length === 1 ? '' : 's'} — \${cat.blurb}\`
-    : \`\${list.length} product\${list.length === 1 ? '' : 's'}\`;
-  $('#empty').hidden = list.length > 0;
+  const total = \`\${all.length} product\${all.length === 1 ? '' : 's'}\`;
+  $('#count').textContent =
+    (cat ? \`\${total} — \${cat.blurb}\` : total) + (pages > 1 ? \`  ·  page \${page} of \${pages}\` : '');
+  $('#empty').hidden = all.length > 0;
 
   $('#grid').innerHTML = list.map((p) => {
     const h = p.history[0];
     const c = catOf(p.category);
-    return \`<article class="card" data-id="\${p.id}">
+    return \`<article class="card\${p.history.length > 1 ? ' has-versions' : ''}" data-id="\${p.id}">
       <div class="shot">
         \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero section" loading="lazy" width="1440" height="900">\` : ''}
-        <span class="badge" style="background:\${c.color}">\${esc(c.name)}</span>
+        <span class="badge" style="background:\${c.color};color:\${textOn(c.color)}">\${esc(c.name)}</span>
         \${p.history.length > 1 ? \`<span class="versions">\${p.history.length} versions</span>\` : ''}
       </div>
       <div class="body">
@@ -347,6 +384,27 @@ function render() {
     const card = e.target.closest('.card');
     if (card) openModal(card.dataset.id);
   };
+
+  renderPager(pages);
+}
+
+function renderPager(pages) {
+  const el = $('#pager');
+  // 87 products at 12 a page tops out around 8 buttons, so no ellipsis logic.
+  el.innerHTML = pages < 2 ? '' :
+    \`<button data-go="\${page - 1}" \${page === 1 ? 'disabled' : ''}>← Prev</button>\` +
+    Array.from({ length: pages }, (_, i) =>
+      \`<button data-go="\${i + 1}" \${page === i + 1 ? 'aria-current="page"' : ''}>\${i + 1}</button>\`).join('') +
+    \`<button data-go="\${page + 1}" \${page === pages ? 'disabled' : ''}>Next →</button>\`;
+
+  el.onclick = (e) => {
+    const b = e.target.closest('button');
+    if (!b || b.disabled) return;
+    page = Number(b.dataset.go);
+    render();
+    // Land on the first card rather than wherever the old page was scrolled to.
+    $('#grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 }
 
 function openModal(id) {
@@ -356,7 +414,7 @@ function openModal(id) {
     \`<h2>\${esc(p.name)}</h2>
      <p class="url"><a href="\${esc(p.url)}" target="_blank" rel="noopener">\${esc(p.url)}</a> · \${esc(c.name)}</p>\` +
     p.history.map((h, i) => \`<div class="version">
-        <span class="version-date" style="background:\${c.color}">\${esc(h.date)}</span>\${i === 0 ? '<span class="current">CURRENT</span>' : ''}
+        <span class="version-date" style="background:\${c.color};color:\${textOn(c.color)}">\${esc(h.date)}</span>\${i === 0 ? '<span class="current">CURRENT</span>' : ''}
         <h3>\${esc(h.headline)}</h3>
         \${h.subheadline ? \`<p>\${esc(h.subheadline)}</p>\` : ''}
         \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero on \${esc(h.date)}" loading="lazy">\` : ''}
@@ -373,7 +431,7 @@ $('#modal-close').onclick = closeModal;
 $('#modal').onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-$('#search').oninput = (e) => { query = e.target.value.trim().toLowerCase(); render(); };
+$('#search').oninput = (e) => { query = e.target.value.trim().toLowerCase(); page = 1; render(); };
 `;
 
 writeFileSync(join(DIST, 'index.html'), html);
