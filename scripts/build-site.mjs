@@ -11,6 +11,7 @@ import {
 } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -57,7 +58,7 @@ const html = `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="__CSS__">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232F5BFF'/><rect x='14' y='38' width='72' height='10' fill='%23FF2E88'/><rect x='14' y='56' width='44' height='10' fill='%23FFFFFF'/></svg>">
 </head>
 <body>
@@ -101,7 +102,7 @@ const html = `<!doctype html>
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="__JS__"></script>
 </body>
 </html>
 `;
@@ -442,8 +443,21 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal
 $('#search').oninput = (e) => { query = e.target.value.trim().toLowerCase(); page = 1; render(); };
 `;
 
-writeFileSync(join(DIST, 'index.html'), html);
-writeFileSync(join(DIST, 'styles.css'), css);
-writeFileSync(join(DIST, 'app.js'), js);
+// index.html is served uncached but the CDN in front of the site holds CSS and
+// JS for four hours, so a deploy hands visitors new markup with stale styles.
+// Naming these by content hash means an edit produces a new URL and there is
+// never a same-named old copy to serve.
+const hash = (s) => createHash('sha256').update(s).digest('hex').slice(0, 8);
+const cssFile = `styles.${hash(css)}.css`;
+const jsFile = `app.${hash(js)}.js`;
 
-console.log(`dist/: ${products.length} products, ${categories.length} categories, updated ${lastUpdated}`);
+writeFileSync(join(DIST, cssFile), css);
+writeFileSync(join(DIST, jsFile), js);
+writeFileSync(
+  join(DIST, 'index.html'),
+  html.replace('__CSS__', cssFile).replace('__JS__', jsFile)
+);
+
+console.log(
+  `dist/: ${products.length} products, ${categories.length} categories, updated ${lastUpdated} (${cssFile}, ${jsFile})`
+);
