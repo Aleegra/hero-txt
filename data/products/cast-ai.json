@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Application Performance and Kubernetes Automation. On autopilot.",
+      "subheadline": "Cast AI turns Kubernetes workload, infrastructure, cost, and SLO signals into safe automated actions: rightsizing pods, scaling nodes, optimizing GPUs and Spot, and fixing issues without manual tuning.",
       "screenshot": "shots/cast-ai/2026-08-29.webp"
     },
     {

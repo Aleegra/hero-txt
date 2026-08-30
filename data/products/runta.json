@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Runta is your execution layer for AI agents.",
+      "subheadline": "Catch your agents wasting tokens. Never hand them your real credentials.",
       "screenshot": "shots/runta/2026-08-29.webp"
     }
   ],

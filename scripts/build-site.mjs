@@ -232,6 +232,8 @@ main{max-width:1280px;margin:0 auto;padding:0 24px 64px}
   position:fixed;inset:0;z-index:100;display:grid;place-items:center;
   padding:24px;background:rgba(17,17,17,.55);overflow:auto;
 }
+/* display:grid outranks the hidden attribute's own display:none. */
+.modal[hidden]{display:none}
 .modal-card{
   position:relative;width:min(880px,100%);max-height:90vh;overflow:auto;
   background:var(--cream);border:3px solid var(--line);box-shadow:10px 10px 0 var(--line);

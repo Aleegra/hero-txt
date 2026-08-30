@@ -1,5 +1,12 @@
 node_modules/
 .DS_Store
 *.log
-site/dist/
-site/.astro/
+.claude/
+
+# Generated: `node scripts/build-site.mjs` rebuilds this from data/ + shots/.
+dist/
+
+# Run logs from scripts/capture.mjs, useful locally, noise in history.
+capture-report.json
+capture-failures.json
+probe.tmp.mjs

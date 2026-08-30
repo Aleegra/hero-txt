@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Validate everything. Assume nothing.",
+      "subheadline": "Validate before you push. Spend less. Ship more.",
       "screenshot": "shots/circleci/2026-08-29.webp"
     },
     {

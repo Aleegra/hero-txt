@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "The modern machine data platform.",
+      "subheadline": "Petabyte-scale, schema-less ingest on a fully managed event store, so you keep every byte without the operational cost of running it yourself.",
       "screenshot": "shots/axiom/2026-08-29.webp"
     },
     {

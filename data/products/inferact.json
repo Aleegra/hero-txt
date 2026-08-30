@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Today, we're proud to announce Inferact, a startup founded by creators and core maintainers of vLLM, the most popular open-source LLM inference engine.",
+      "subheadline": "Our mission is to grow vLLM as the world's AI inference engine and accelerate AI progress by making inference cheaper and faster.",
       "screenshot": "shots/inferact/2026-08-29.webp"
     }
   ],

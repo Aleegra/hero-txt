@@ -5,10 +5,10 @@
   "category": "k8s-finops",
   "history": [
     {
-      "date": "2026-08-29",
+      "date": "2026-08-30",
       "headline": "",
-      "subheadline": "",
-      "screenshot": "shots/scaleops/2026-08-29.webp"
+      "subheadline": "Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.",
+      "screenshot": "shots/scaleops/2026-08-30.webp"
     },
     {
       "date": "2024-10-17",
@@ -17,5 +17,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "e3f035f4cd1b16b2"
+  "fingerprint": "5f9ac0c2e70de7c1"
 }

@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Run your AI cloud like a hyperscaler.",
+      "subheadline": "One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.",
       "screenshot": "shots/loft/2026-08-29.webp"
     },
     {

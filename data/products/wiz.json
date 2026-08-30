@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Protect Everything You Build and Run",
+      "subheadline": "Wiz connects code, cloud, and runtime into a single security graph that provides the end-to-end context required to automate risk reduction and threat response, enabling security teams to operate at AI speed. AI alone doesn't make security faster. Context does.",
       "screenshot": "shots/wiz/2026-08-29.webp"
     },
     {
@@ -17,5 +17,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "3eb35798194ea26f"
+  "fingerprint": "8b1b0164ff1f2b22"
 }

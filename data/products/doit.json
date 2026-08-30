@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Attribute Every AI Token to the Customer, Feature, and Agent Behind It",
+      "subheadline": "AI spend is a black box. LLM Gateways show token totals but can't tell you who burned them. Attribute™ traces every token, inference, and training run back to the team, product, and customer that drove it.",
       "screenshot": "shots/doit/2026-08-29.webp"
     },
     {

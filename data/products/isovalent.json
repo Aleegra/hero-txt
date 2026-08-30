@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Connect and Secure Kubernetes. And Beyond.",
+      "subheadline": "Enterprise-grade Kubernetes networking and security",
       "screenshot": "shots/isovalent/2026-08-29.webp"
     },
     {
@@ -17,5 +17,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "672c528f3ba375c5"
+  "fingerprint": "9e68d01764697b4b"
 }

@@ -5,11 +5,11 @@
   "category": "agent-eval",
   "history": [
     {
-      "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
-      "screenshot": "shots/langfuse/2026-08-29.webp"
+      "date": "2026-08-30",
+      "headline": "Open Source Agent Evals & Observability",
+      "subheadline": "Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency.",
+      "screenshot": "shots/langfuse/2026-08-30.webp"
     }
   ],
-  "fingerprint": "c668ca23c4ce0bd8"
+  "fingerprint": "ffd318250a38fc5b"
 }

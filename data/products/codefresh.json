@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "Codefresh and Octopus",
+      "subheadline": "In February 2024, Octopus acquired Codefresh. Since then, we've brought together the best of both teams to tackle the hardest Continuous Delivery challenges for Kubernetes and Argo CD at enterprise scale.",
       "screenshot": "shots/codefresh/2026-08-29.webp"
     },
     {

@@ -6,8 +6,8 @@
   "history": [
     {
       "date": "2026-08-29",
-      "headline": "",
-      "subheadline": "",
+      "headline": "AI memory that persists across sessions and agents",
+      "subheadline": "Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.",
       "screenshot": "shots/mem0/2026-08-29.webp"
     }
   ],
