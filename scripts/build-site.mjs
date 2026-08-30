@@ -75,7 +75,7 @@ const html = `<!doctype html>
   <section class="intro">
     <div class="intro-text">
       <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
-      <p>The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly, so every repositioning is on the record.</p>
+      <p>The headline earns the second line. The sub-headline earns the scroll.<br>Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly,<br>so every repositioning is on the record.</p>
       <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
     </div>
     <div class="intro-deco" aria-hidden="true">
@@ -209,7 +209,7 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .filter-group{display:flex;align-items:flex-start;gap:16px}
 .filter-label{
   /* Wide enough that the longest group name ("Cloud & DevOps") stays on one line. */
-  flex:none;width:124px;padding-top:7px;text-align:right;
+  flex:none;width:124px;padding-top:7px;
   font-size:11px;font-weight:600;letter-spacing:.08em;
   text-transform:uppercase;color:#9A9DB0;
 }
@@ -338,7 +338,7 @@ footer p{max-width:1400px;margin:0 auto}
   .topbar{flex-wrap:wrap}
   /* The label gutter costs too much of a narrow screen: stack instead. */
   .filter-group{flex-direction:column;gap:8px}
-  .filter-label{width:auto;text-align:left;padding-top:0}
+  .filter-label{width:auto;padding-top:0}
 }
 @media (max-width:620px){.grid{grid-template-columns:1fr}}
 `;
