@@ -30,7 +30,7 @@ lines.push(
 );
 lines.push('');
 lines.push(
-  '> Browse with screenshots at **[the site](https://aleegra.github.io/hero-txt/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.'
+  '> Browse with screenshots at **[herotxt.page](https://www.herotxt.page/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.'
 );
 lines.push('');
 lines.push('Spotted a site we are missing? Open an issue.');

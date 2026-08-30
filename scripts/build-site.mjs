@@ -53,7 +53,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>hero-txt — a library of real hero-section copy</title>
-<meta name="description" content="${esc(products.length)} product websites, their hero headlines, and how that copy has changed over time.">
+<meta name="description" content="The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${esc(products.length)} live product sites, screenshotted and refreshed weekly.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -73,9 +73,9 @@ const html = `<!doctype html>
 <main>
   <section class="intro">
     <div class="intro-text">
-      <h1>The hero copy of<br><em>${products.length} products</em>,<br>in one place.</h1>
-      <p>Your headline and sub-headline are the first thing anyone reads — they decide whether a visitor understands what you do, and whether they stay. This is a library of that copy, screenshotted from live product sites.</p>
-      <p class="meta">Every entry keeps its <strong>three most recent</strong> versions, so you can watch positioning shift. Last updated <strong>${lastUpdated}</strong>.</p>
+      <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
+      <p>The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly, so every repositioning is on the record.</p>
+      <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
     </div>
     <div class="intro-deco" aria-hidden="true">
       <span class="chip c1"></span><span class="chip c2"></span><span class="chip c3"></span>
@@ -165,7 +165,9 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 }
 .intro h1{
   font-family:"Space Grotesk",sans-serif;font-weight:700;
-  font-size:clamp(34px,5.2vw,60px);line-height:1.03;letter-spacing:-.02em;
+  /* The highlight behind <em> is a 5px box-shadow spread, so a tight
+     line-height makes it collide with the line below. */
+  font-size:clamp(34px,4.6vw,56px);line-height:1.24;letter-spacing:-.02em;
 }
 .intro h1 em{font-style:normal;background:var(--pink-soft);box-shadow:0 0 0 5px var(--pink-soft);border-radius:2px}
 .intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#2B2B45}
@@ -212,22 +214,21 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 }
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .badge{
-  position:absolute;top:10px;left:10px;
-  font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
-  padding:4px 8px;border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
-  /* Long category names would otherwise run under the version count and clip. */
-  max-width:calc(100% - 116px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  padding:3px 7px;border:2px solid var(--line);
+  /* Category names run long; shrink and ellipsise rather than push the row wide. */
+  min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
-.card:not(.has-versions) .badge{max-width:calc(100% - 20px)}
 .versions{
   position:absolute;top:10px;right:10px;background:#fff;
   font-size:11px;font-weight:700;padding:4px 8px;
   border:2px solid var(--line);box-shadow:2px 2px 0 var(--line);
 }
 .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.name-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .name{
   font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:14px;
-  letter-spacing:.03em;text-transform:uppercase;color:var(--muted);
+  letter-spacing:.03em;text-transform:uppercase;color:var(--muted);flex:none;
 }
 .headline{
   font-family:"Space Grotesk",sans-serif;font-weight:700;
@@ -367,14 +368,16 @@ function render() {
   $('#grid').innerHTML = list.map((p) => {
     const h = p.history[0];
     const c = catOf(p.category);
-    return \`<article class="card\${p.history.length > 1 ? ' has-versions' : ''}" data-id="\${p.id}">
+    return \`<article class="card" data-id="\${p.id}">
       <div class="shot">
         \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero section" loading="lazy" width="1440" height="900">\` : ''}
-        <span class="badge" style="background:\${c.color};color:\${textOn(c.color)}">\${esc(c.name)}</span>
         \${p.history.length > 1 ? \`<span class="versions">\${p.history.length} versions</span>\` : ''}
       </div>
       <div class="body">
-        <div class="name">\${esc(p.name)}</div>
+        <div class="name-row">
+          <div class="name">\${esc(p.name)}</div>
+          <span class="badge" style="background:\${c.color};color:\${textOn(c.color)}" title="\${esc(c.name)}">\${esc(c.short || c.name)}</span>
+        </div>
         <div class="headline">\${esc(h.headline)}</div>
         \${h.subheadline ? \`<div class="sub">\${esc(h.subheadline)}</div>\` : ''}
         <div class="card-foot">
