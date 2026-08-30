@@ -49,7 +49,7 @@ _Run open models as an API — throughput, latency, and cost per token._
 
 ### [Baseten](https://www.baseten.co/)
 - **Headline:** Inference is everything
-- **Sub-headline:** /
+- **Sub-headline:** The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack.
 - **Updated:** 2026-08-29
 
 ### [DeepInfra](https://deepinfra.com/)
