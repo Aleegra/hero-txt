@@ -4,7 +4,10 @@
   "description": "A library of real hero-section copy from live product websites",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node scripts/build-readme.mjs && node scripts/build-site.mjs",
+    "shot": "node scripts/shot.mjs",
+    "capture": "node scripts/capture.mjs",
+    "extract": "node scripts/extract.mjs"
   },
   "repository": {
     "type": "git",
