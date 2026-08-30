@@ -4,7 +4,8 @@ name: Deploy site
 
 on:
   push:
-    branches: [v2]
+    # main is listed so the site keeps deploying once v2 merges down.
+    branches: [v2, main]
     paths:
       - 'data/**'
       - 'shots/**'
