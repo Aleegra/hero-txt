@@ -104,7 +104,7 @@ _Rent the machines that training and inference run on._
 - **Updated:** 2026-08-29
 
 ### [GMI Cloud](https://www.gmicloud.ai/)
-- **Headline:** One cloud for
+- **Headline:** One cloud for compute, inference, and agents.
 - **Sub-headline:** AI infrastructure built for production scale — GPU clusters, optimized inference, and agent runtime on one unified cloud.
 - **Updated:** 2026-08-30
 
