@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Stop Paying for Resources You Don't Use.",
+      "subheadline": "Zesty automatically rightsizes Kubernetes resources to match real-time workload demand, cutting infrastructure costs without risking your SLOs.",
+      "screenshot": "shots/zesty/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Cut cloud spend, scale smarter.",
       "subheadline": "One platform to automate & streamline cloud infrastructure optimization.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "afb2c63e5505e584"
 }

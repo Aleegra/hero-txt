@@ -3,5 +3,13 @@
   "name": "Cursor",
   "url": "https://cursor.com/",
   "category": "coding-agents",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Cursor is your coding agent for building ambitious software.",
+      "subheadline": "",
+      "screenshot": "shots/cursor/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "258d9a3ed914f0ce"
 }

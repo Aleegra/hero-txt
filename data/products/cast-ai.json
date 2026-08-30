@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Application Performance and Kubernetes Automation. On autopilot.",
+      "subheadline": "Cast AI turns Kubernetes workload, infrastructure, cost, and SLO signals into safe automated actions: rightsizing pods, scaling nodes, optimizing GPUs and Spot, and fixing issues without manual tuning.",
+      "screenshot": "shots/cast-ai/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Cut your cloud cost in half",
       "subheadline": "CAST AI is the leading Kubernetes automation platform that cuts AWS, Azure, and GCP customers’ cloud costs by over 50%.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "232751d03276af14"
 }

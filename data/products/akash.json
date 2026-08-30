@@ -5,10 +5,17 @@
   "category": "ai-cloud",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "The Open Cloud for AI's Next Frontier",
+      "subheadline": "Tap into global GPU power at a fraction of the cost.",
+      "screenshot": "shots/akash/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "The World's Premier Decentralized Compute Marketplace",
       "subheadline": "Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "0471ba78285f3b22"
 }

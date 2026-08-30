@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Secure-by-default open source software",
+      "subheadline": "Hardened, secure, and production-ready builds that prevent AI attacks.",
+      "screenshot": "shots/chainguard/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "~~Shift Left.~~ Start Left.",
       "subheadline": "Chainguard builds secure container images that eliminate CVEs from the start. Java, Python, and Go. Postgres, Redis and Nginx. And everything in between.Build faster? Or be more secure? Why not both.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "4f84b435ee18fb36"
 }

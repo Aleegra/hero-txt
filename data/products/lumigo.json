@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Intelligent AI-Powered Observability",
+      "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting.",
+      "screenshot": "shots/lumigo/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Solve complex microservice issues 80% faster",
       "subheadline": "The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "4ef8204271be04b9"
 }

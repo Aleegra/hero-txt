@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-30",
+      "headline": "",
+      "subheadline": "Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.",
+      "screenshot": "shots/scaleops/2026-08-30.webp"
+    },
+    {
       "date": "2024-10-17",
       "headline": "Automated Kubernetes Resource Optimization",
       "subheadline": "Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "5f9ac0c2e70de7c1"
 }

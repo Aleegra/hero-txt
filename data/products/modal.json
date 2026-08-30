@@ -3,5 +3,13 @@
   "name": "Modal",
   "url": "https://modal.com/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "AI infrastructure that developers love",
+      "subheadline": "Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local.",
+      "screenshot": "shots/modal/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "b32ade3e4a496c60"
 }

@@ -3,5 +3,13 @@
   "name": "SkyPilot",
   "url": "https://skypilot.ai/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Your AI infrastructure, frontier velocity",
+      "subheadline": "One platform for all your AI compute – Kubernetes, Slurm, 20+ clouds",
+      "screenshot": "shots/skypilot/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "b20d7e9e0dbfcc91"
 }

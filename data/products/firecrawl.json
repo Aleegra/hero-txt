@@ -3,5 +3,13 @@
   "name": "Firecrawl",
   "url": "https://www.firecrawl.dev/",
   "category": "browser-use",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Power AI agents with clean web data",
+      "subheadline": "The context API to search, scrape, and interact with the web at scale. It's also open source.",
+      "screenshot": "shots/firecrawl/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "cccee9883c706b8a"
 }

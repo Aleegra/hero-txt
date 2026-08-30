@@ -3,5 +3,13 @@
   "name": "RadixArk",
   "url": "https://www.radixark.com/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "SHIP AI FOR ALL",
+      "subheadline": "",
+      "screenshot": "shots/radixark/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "0c982af1ef409bca"
 }

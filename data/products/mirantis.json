@@ -5,10 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE",
+      "subheadline": "",
+      "screenshot": "shots/mirantis/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "CONTROL YOUR STRATEGIC INFRASTRUCTURE WITH OPEN SOURCE",
       "subheadline": "Move from VMware to truly open and flexible infrastructure that radically lowers your IT costs",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "e5e0f27da089d294"
 }

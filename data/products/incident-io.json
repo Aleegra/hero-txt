@@ -5,10 +5,17 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "With great product, comes great reliability",
+      "subheadline": "The software reliability platform built to investigate, respond and prevent incidents, powered by AI that deeply understands your organization.",
+      "screenshot": "shots/incident-io/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Move fast when you break things",
       "subheadline": "On-call, incident response and status pages all under one roof. So good, you'll break things on purpose.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "8b55a16450977618"
 }

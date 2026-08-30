@@ -3,5 +3,13 @@
   "name": "Nebius",
   "url": "https://nebius.com/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-30",
+      "headline": "The Ultimate AI Cloud",
+      "subheadline": "Build and scale AI faster on a cloud engineered from silicon to API.",
+      "screenshot": "shots/nebius/2026-08-30.webp"
+    }
+  ],
+  "fingerprint": "9a13cf12cd1c6760"
 }

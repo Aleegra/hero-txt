@@ -5,10 +5,17 @@
   "category": "dev-work-tools",
   "history": [
     {
+      "date": "2026-08-30",
+      "headline": "Building the Integral Development Experience",
+      "subheadline": "An open platform for agentic software development — with you in control",
+      "screenshot": "shots/jetbrains/2026-08-30.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Make Your Software Vision a Reality",
       "subheadline": "Pro tools created with {developers}, teams, and  businesses in mind",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "4b689a984d3a831b"
 }

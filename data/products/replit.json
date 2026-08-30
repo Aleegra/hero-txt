@@ -3,5 +3,13 @@
   "name": "Replit",
   "url": "https://replit.com/",
   "category": "coding-agents",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "What will you build?",
+      "subheadline": "Turn ideas into apps in minutes — no coding needed",
+      "screenshot": "shots/replit/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "43b1b81dbe5356bc"
 }

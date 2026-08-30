@@ -5,10 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Cloud & AI Security from the Inside-Out.",
+      "subheadline": "By combining agentless scanning and runtime sensors Upwind enables security developers and devops teams to see their Cloud & AI infrastructure in the same operating picture, remediate exactly what matters and stop attacks in real-time.",
+      "screenshot": "shots/upwind/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "The Future of Cloud Security is Runtime",
       "subheadline": "Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "316e772adf8e9083"
 }

@@ -3,5 +3,13 @@
   "name": "Baseten",
   "url": "https://www.baseten.co/",
   "category": "inference",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Inference is everything",
+      "subheadline": "",
+      "screenshot": "shots/baseten/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "fb06986d23d32c89"
 }

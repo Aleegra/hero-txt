@@ -3,5 +3,13 @@
   "name": "Braintrust",
   "url": "https://www.braintrust.dev/",
   "category": "agent-eval",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Ship quality agents at scale",
+      "subheadline": "Surface patterns in production, turn them into evals, and improve quality with every release.",
+      "screenshot": "shots/braintrust/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "2606622b06444c18"
 }

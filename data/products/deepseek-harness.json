@@ -3,5 +3,13 @@
   "name": "DeepSeek Harness",
   "url": "https://deepseek.com/harness/en/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Everything is a plugin",
+      "subheadline": "DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included.",
+      "screenshot": "shots/deepseek-harness/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "422ecf189899f739"
 }

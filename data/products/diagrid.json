@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "DURABLE EXECUTION, NOW BUILT FOR AGENTS.",
+      "subheadline": "Durable workflows and verifiable execution — workflows are always carried to completion: agents recover without losing state. Every step is cryptographically attested. Works with any agent framework.",
+      "screenshot": "shots/diagrid/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "APIs for building secure & reliable microservices",
       "subheadline": "dapr allows you to build state-of-the-art apps in half the time and never worry about missing a deadline or delivering insecure & unreliable code",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "82aee8a8993a5501"
 }

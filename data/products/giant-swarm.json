@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-30",
+      "headline": "The Curated Platform Stack",
+      "subheadline": "10+ Years of Production Experience, Ready in a Day",
+      "screenshot": "shots/giant-swarm/2026-08-30.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Smarter Platform Engineering",
       "subheadline": "Platform teams of all sizes partner with Giant Swarm to increase developer productivity.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "6cd3ec8b997a22be"
 }

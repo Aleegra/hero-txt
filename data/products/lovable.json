@@ -3,5 +3,13 @@
   "name": "Lovable",
   "url": "https://lovable.dev/",
   "category": "coding-agents",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Build something Lovable",
+      "subheadline": "Bring a new product, internal tool, or entire company to life.",
+      "screenshot": "shots/lovable/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "50f3ef791cb41bf3"
 }

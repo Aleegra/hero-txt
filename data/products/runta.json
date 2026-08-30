@@ -3,5 +3,13 @@
   "name": "Runta",
   "url": "https://runta.com/",
   "category": "agent-runtime",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Runta is your execution layer for AI agents.",
+      "subheadline": "Catch your agents wasting tokens. Never hand them your real credentials.",
+      "screenshot": "shots/runta/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "1569d7856bd87267"
 }

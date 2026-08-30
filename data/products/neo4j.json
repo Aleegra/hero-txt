@@ -5,10 +5,17 @@
   "category": "agent-memory",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "The knowledge layer that makes AI trustworthy",
+      "subheadline": "Lower cost. Reduce risk. Inform decisions.",
+      "screenshot": "shots/neo4j/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "GenAI apps, grounded in your data",
       "subheadline": "Power your applications with knowledge graphs. Backed by the only graph database with vector search.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "ec4212537b0568e3"
 }

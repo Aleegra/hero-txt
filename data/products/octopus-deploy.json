@@ -5,10 +5,17 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "AI is accelerating development. Can your governance keep up?",
+      "subheadline": "Octopus Deploy is the CD platform built for enterprise scale. When change accelerates, knowing who deployed what, where, and when isn't optional.",
+      "screenshot": "shots/octopus-deploy/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Deploy your software to multi-cloud, hybrid, and on-premises environments with ease",
       "subheadline": "Make your complex deployments simple, reliable, and auditable with Octopus Deploy.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "555f0afbf8f1af32"
 }

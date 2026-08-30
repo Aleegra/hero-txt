@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Ship infrastructure as fast as developers code",
+      "subheadline": "Modern development moves too fast for IaC. Spacelift fuses AI, IaC, and GitOps pipelines, so developers ship fast, and platform teams stay in control.",
+      "screenshot": "shots/spacelift/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Govern/Provision/Configure with a single automated workflow",
       "subheadline": "Orchestrate Terraform, OpenTofu, Ansible and more to deliver secure, cost-effective, and high-performance infrastructure. Fast.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "673cd4c4706d2cf0"
 }

@@ -3,5 +3,13 @@
   "name": "Keycard",
   "url": "https://www.keycard.ai/",
   "category": "security",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Control agent access to tools, APIs, and data",
+      "subheadline": "See every action your agents take. Know exactly who authorized it.",
+      "screenshot": "shots/keycard/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "4aca952f0d525178"
 }

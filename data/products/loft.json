@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Run your AI cloud like a hyperscaler.",
+      "subheadline": "One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.",
+      "screenshot": "shots/loft/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Building Blocks for Platform Creators",
       "subheadline": "Reduce Kubernetes cost with virtual K8s clusters",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "6efe3d6b88af3fac"
 }

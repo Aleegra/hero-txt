@@ -3,5 +3,13 @@
   "name": "Browser Use",
   "url": "https://browser-use.com/",
   "category": "browser-use",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Agents that use the browser.",
+      "subheadline": "Browser Use Agents finish the task. Browser Infrastructure powers your own agents.",
+      "screenshot": "shots/browser-use/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "13820c2365b0ae05"
 }

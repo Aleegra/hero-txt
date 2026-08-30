@@ -5,10 +5,17 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "The Autonomous AI SRE Platform For Your Entire Cloud-Native Stack",
+      "subheadline": "Komodor detects, resolves, and prevents production issues in large-scale environments with 97%+ accuracy, while proactively eliminating the structural cloud waste other tools can't reach.",
+      "screenshot": "shots/komodor/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Kubernetes for Developers/DevOps/SREs/Teams/Humans/",
       "subheadline": "Simplify cluster management and troubleshooting to unlock the full value of K8s, and drive innovation at scale.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "5737f123d325f482"
 }

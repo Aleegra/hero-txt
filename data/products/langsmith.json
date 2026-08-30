@@ -3,5 +3,13 @@
   "name": "LangSmith",
   "url": "https://www.langchain.com/langsmith",
   "category": "agent-eval",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Know what your agents are really doing",
+      "subheadline": "LangSmith Observability gives you complete visibility into agent behavior.",
+      "screenshot": "shots/langsmith/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "22b0fb3fd95abb11"
 }

@@ -5,10 +5,17 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Validate everything. Assume nothing.",
+      "subheadline": "Validate before you push. Spend less. Ship more.",
+      "screenshot": "shots/circleci/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Confidence in every deploy",
       "subheadline": "Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "5ec760e91fe5f4dd"
 }

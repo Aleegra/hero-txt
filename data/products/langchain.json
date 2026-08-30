@@ -3,5 +3,13 @@
   "name": "LangChain",
   "url": "https://www.langchain.com/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Meet LangSmith Engine Smarter after every launch",
+      "subheadline": "",
+      "screenshot": "shots/langchain/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "561187df3afaeffe"
 }

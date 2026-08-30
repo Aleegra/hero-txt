@@ -3,5 +3,13 @@
   "name": "Composio",
   "url": "https://composio.dev/",
   "category": "agent-harness",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Everything your agents need to take action",
+      "subheadline": "1,000+ integrations with just-in-time tool calls, secure delegated auth, sandboxed environments, and parallel execution.",
+      "screenshot": "shots/composio/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "6004f02e93325a29"
 }

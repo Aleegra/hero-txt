@@ -3,5 +3,13 @@
   "name": "Browserbase",
   "url": "https://www.browserbase.com/",
   "category": "browser-use",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Give your agents access to the whole web.",
+      "subheadline": "Browserbase makes the web as reliable and programmable as APIs",
+      "screenshot": "shots/browserbase/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "29be9e0645d377af"
 }

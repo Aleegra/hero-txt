@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "Govern Your Cloud at the Speed of AI.",
+      "subheadline": "Continuously unify declared state and discovered state into a single context lake where agents can reason and take deterministic action.",
+      "screenshot": "shots/env0/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Automate and Manage IaC at Scale, With Confidence",
       "subheadline": "Optimize and unify Infrastructure as Code operations across every framework: OpenTofu, Terraform, Pulumi, CloudFormation, Terragrunt, K8s and more.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "5b6a9475ad71861a"
 }

@@ -3,5 +3,13 @@
   "name": "Letta",
   "url": "https://www.letta.com/",
   "category": "agent-memory",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Letta is an AI research lab in San Francisco building machines that learn.",
+      "subheadline": "We envision a future where humans coexist with digital people: experiential agents that remember everything, learn continuously, and improve themselves over time.",
+      "screenshot": "shots/letta/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "bb3a3a5ebb0be0b0"
 }

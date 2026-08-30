@@ -5,10 +5,17 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-08-30",
+      "headline": "Accelerate agent adoption, safely.",
+      "subheadline": "Full autonomy for any agent. Full confidence for your security team.",
+      "screenshot": "shots/docker/2026-08-30.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Develop faster. Run anywhere.",
       "subheadline": "Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "3a62c55f52698c58"
 }

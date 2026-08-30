@@ -3,5 +3,13 @@
   "name": "GMI Cloud",
   "url": "https://www.gmicloud.ai/",
   "category": "ai-cloud",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-30",
+      "headline": "One cloud for",
+      "subheadline": "AI infrastructure built for production scale — GPU clusters, optimized inference, and agent runtime on one unified cloud.",
+      "screenshot": "shots/gmi-cloud/2026-08-30.webp"
+    }
+  ],
+  "fingerprint": "12ef63fdb94a3b6a"
 }

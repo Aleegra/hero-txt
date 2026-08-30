@@ -5,10 +5,17 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-08-29",
+      "headline": "The infrastructure platform that runs itself.",
+      "subheadline": "One AI-native platform to build, run, and govern control planes across your entire estate, ready to serve both the engineers who run it and the AI systems increasingly acting on it.",
+      "screenshot": "shots/upbound/2026-08-29.webp"
+    },
+    {
       "date": "2024-09-26",
       "headline": "Crossplane reinvented for the enterprise cloud",
       "subheadline": "Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.",
       "screenshot": null
     }
-  ]
+  ],
+  "fingerprint": "50360f3ec9abbf14"
 }

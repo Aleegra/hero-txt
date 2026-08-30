@@ -3,5 +3,13 @@
   "name": "Tinyfish",
   "url": "https://www.tinyfish.ai/",
   "category": "browser-use",
-  "history": []
+  "history": [
+    {
+      "date": "2026-08-29",
+      "headline": "Everything AI needs to use the web.",
+      "subheadline": "Search the web, fetch clean content from any URL, run a real browser, and deploy agents. All from one API.",
+      "screenshot": "shots/tinyfish/2026-08-29.webp"
+    }
+  ],
+  "fingerprint": "0b42a8928319f663"
 }

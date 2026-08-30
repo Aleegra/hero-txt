@@ -2,7 +2,7 @@
 
 The headline and sub-headline in a hero section are the first thing a visitor reads — they decide whether someone understands what you do, and whether they stay. **This is a library of real hero-section copy, collected from live product websites,** kept as a reference for anyone writing or redesigning one.
 
-**87 products** across **15 categories**. Each entry keeps its **three most recent** versions, so you can see how positioning shifts over time. Last updated **2024-10-17**.
+**87 products** across **15 categories**. Each entry keeps its **three most recent** versions, so you can see how positioning shifts over time. Last updated **2026-08-30**.
 
 > Browse with screenshots at **[the site](https://aleegra.github.io/hero-txt/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.
 
@@ -34,414 +34,826 @@ Spotted a site we are missing? Open an issue.
 _Run open models as an API — throughput, latency, and cost per token._
 
 ### [Baseten](https://www.baseten.co/)
-- _Not captured yet._
+- **Headline:** Inference is everything
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
 
 ### [DeepInfra](https://deepinfra.com/)
-- _Not captured yet._
+- **Headline:** LOW-COST AI Inference
+- **Sub-headline:** Accelerate your AI with developer-friendly APIs designed for performance and cost-efficiency.
+- **Updated:** 2026-08-29
 
 ### [Fireworks AI](https://fireworks.ai/)
-- _Not captured yet._
+- **Headline:** Own your model. Own your future.
+- **Sub-headline:** Fireworks' SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence.
+- **Updated:** 2026-08-30
 
 ### [Inferact](https://inferact.ai/)
-- _Not captured yet._
+- **Headline:** Today, we're proud to announce Inferact, a startup founded by creators and core maintainers of vLLM, the most popular open-source LLM inference engine.
+- **Sub-headline:** Our mission is to grow vLLM as the world's AI inference engine and accelerate AI progress by making inference cheaper and faster.
+- **Updated:** 2026-08-29
 
 ### [Modal](https://modal.com/)
-- _Not captured yet._
+- **Headline:** AI infrastructure that developers love
+- **Sub-headline:** Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local.
+- **Updated:** 2026-08-29
 
 ### [OpenRouter](https://openrouter.ai/)
-- _Not captured yet._
+- **Headline:** The Unified Interface For Every Model
+- **Sub-headline:** Better prices, better uptime, no subscriptions.
+- **Updated:** 2026-08-29
 
 ### [RadixArk](https://www.radixark.com/)
-- _Not captured yet._
+- **Headline:** SHIP AI FOR ALL
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
 
 ## AI Cloud & GPU Infrastructure
 
 _Rent the machines that training and inference run on._
 
 ### [Akash](https://akash.network/)
-- **Headline:** The World's Premier Decentralized Compute Marketplace
-- **Sub-headline:** Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.
-- **Updated:** 2024-09-26
+- **Headline:** The Open Cloud for AI's Next Frontier
+- **Sub-headline:** Tap into global GPU power at a fraction of the cost.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — The World's Premier Decentralized Compute Marketplace
+  Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.
+
+</details>
 
 ### [CoreWeave](https://coreweave.com/)
-- _Not captured yet._
+- **Headline:** CoreWeave Cloud: The Essential Cloud for AI
+- **Sub-headline:** The force multiplier for AI. Trusted by the world's leading AI pioneers.
+- **Updated:** 2026-08-29
 
 ### [GMI Cloud](https://www.gmicloud.ai/)
-- _Not captured yet._
+- **Headline:** One cloud for
+- **Sub-headline:** AI infrastructure built for production scale — GPU clusters, optimized inference, and agent runtime on one unified cloud.
+- **Updated:** 2026-08-30
 
 ### [Nebius](https://nebius.com/)
-- _Not captured yet._
+- **Headline:** The Ultimate AI Cloud
+- **Sub-headline:** Build and scale AI faster on a cloud engineered from silicon to API.
+- **Updated:** 2026-08-30
 
 ### [SkyPilot](https://skypilot.ai/)
-- _Not captured yet._
+- **Headline:** Your AI infrastructure, frontier velocity
+- **Sub-headline:** One platform for all your AI compute – Kubernetes, Slurm, 20+ clouds
+- **Updated:** 2026-08-29
 
 ### [Together AI](https://www.together.ai/)
-- _Not captured yet._
+- **Headline:** Build what's next on the AI Native Cloud
+- **Sub-headline:** Full-stack AI platform, powered by cutting-edge research.
+- **Updated:** 2026-08-29
 
 ## Agent Runtime & Dev Sandboxes
 
 _Isolated environments where agents (and developers) execute untrusted code._
 
 ### [Coder](https://coder.com/)
-- **Headline:** Click ~~README~~ to get started
-- **Sub-headline:** Developers can instantly launch fully configured cloud development environments and make their first commit in minutes. No need to traverse README files or await onboarding queues.
-- **Updated:** 2024-09-26
+- **Headline:** Your developers have guardrails. Your AI doesn't.
+- **Sub-headline:** Safely run your favorite AI, agents, and enterprise development on your own infrastructure.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Click ~~README~~ to get started
+  Developers can instantly launch fully configured cloud development environments and make their first commit in minutes. No need to traverse README files or await onboarding queues.
+
+</details>
 
 ### [Daytona](https://www.daytona.io/)
-- _Not captured yet._
+- **Headline:** Run AI Code.
+- **Sub-headline:** Secure and Elastic Infrastructure for Running Your AI-Generated Code.
+- **Updated:** 2026-08-29
 
 ### [E2B](https://e2b.dev/)
-- _Not captured yet._
+- **Headline:** AI SANDBOXES FOR DEEP RESEARCH AGENTS
+- **Sub-headline:** Open-source, secure environment with real-world tools for enterprise-grade agents.
+- **Updated:** 2026-08-29
 
 ### [Runta](https://runta.com/)
-- _Not captured yet._
+- **Headline:** Runta is your execution layer for AI agents.
+- **Sub-headline:** Catch your agents wasting tokens. Never hand them your real credentials.
+- **Updated:** 2026-08-29
 
 ## Agent Harness & Frameworks
 
 _The scaffolding that turns a model into an agent: loops, tools, orchestration._
 
 ### [Composio](https://composio.dev/)
-- _Not captured yet._
+- **Headline:** Everything your agents need to take action
+- **Sub-headline:** 1,000+ integrations with just-in-time tool calls, secure delegated auth, sandboxed environments, and parallel execution.
+- **Updated:** 2026-08-29
 
 ### [DeepSeek Harness](https://deepseek.com/harness/en/)
-- _Not captured yet._
+- **Headline:** Everything is a plugin
+- **Sub-headline:** DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included.
+- **Updated:** 2026-08-29
 
 ### [Dify](https://dify.ai/)
-- _Not captured yet._
+- **Headline:** The Platform for Production-Ready Agentic Workflows.
+- **Sub-headline:** Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.
+- **Updated:** 2026-08-29
 
 ### [LangChain](https://www.langchain.com/)
-- _Not captured yet._
+- **Headline:** Meet LangSmith Engine Smarter after every launch
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
 
 ### [Raft](https://raft.build/)
-- _Not captured yet._
+- **Headline:** Where humans and AI agents build together.
+- **Sub-headline:** For agent-native builders and teams. Build with Raft. Build with fun.
+- **Updated:** 2026-08-29
 
 ## Coding Agents & App Builders
 
 _Describe software in English, get software back._
 
 ### [Cursor](https://cursor.com/)
-- _Not captured yet._
+- **Headline:** Cursor is your coding agent for building ambitious software.
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
 
 ### [Lovable](https://lovable.dev/)
-- _Not captured yet._
+- **Headline:** Build something Lovable
+- **Sub-headline:** Bring a new product, internal tool, or entire company to life.
+- **Updated:** 2026-08-29
 
 ### [Replit](https://replit.com/)
-- _Not captured yet._
+- **Headline:** What will you build?
+- **Sub-headline:** Turn ideas into apps in minutes — no coding needed
+- **Updated:** 2026-08-29
 
 ### [Vercel](https://vercel.com/)
-- _Not captured yet._
+- **Headline:** Agentic Infrastructure
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
 
 ## Agent Memory & Knowledge
 
 _Give agents something to remember between runs._
 
 ### [Cognee](https://www.cognee.ai/)
-- _Not captured yet._
+- **Headline:** Open Source Memory Platform for Agents
+- **Sub-headline:** Connect Slack, GitHub, Linear to Cognee and help agents recall what your company knows.
+- **Updated:** 2026-08-29
 
 ### [Evermind](https://evermind.ai/)
-- _Not captured yet._
+- **Headline:** EverOS : Give Your AI Agent Self-evolving Memory.
+- **Sub-headline:** Turn stateless LLMs into intelligent agents that can truly remember. Maintain context across days, sessions, and platforms.
+- **Updated:** 2026-08-29
 
 ### [Letta](https://www.letta.com/)
-- _Not captured yet._
+- **Headline:** Letta is an AI research lab in San Francisco building machines that learn.
+- **Sub-headline:** We envision a future where humans coexist with digital people: experiential agents that remember everything, learn continuously, and improve themselves over time.
+- **Updated:** 2026-08-29
 
 ### [mem0](https://mem0.ai/)
-- _Not captured yet._
+- **Headline:** AI memory that persists across sessions and agents
+- **Sub-headline:** Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
+- **Updated:** 2026-08-29
 
 ### [neo4j](https://neo4j.com/)
-- **Headline:** GenAI apps, grounded in your data
-- **Sub-headline:** Power your applications with knowledge graphs. Backed by the only graph database with vector search.
-- **Updated:** 2024-09-26
+- **Headline:** The knowledge layer that makes AI trustworthy
+- **Sub-headline:** Lower cost. Reduce risk. Inform decisions.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — GenAI apps, grounded in your data
+  Power your applications with knowledge graphs. Backed by the only graph database with vector search.
+
+</details>
 
 ### [Zep](https://www.getzep.com/)
-- _Not captured yet._
+- **Headline:** Agent memory, at enterprise scale.
+- **Sub-headline:** Memory of users, the business, and work done. Managed, governed, and served at scale.
+- **Updated:** 2026-08-30
 
 ## Browser Use & Web Agents
 
 _Let agents drive a real browser and read the live web._
 
 ### [Browser Use](https://browser-use.com/)
-- _Not captured yet._
+- **Headline:** Agents that use the browser.
+- **Sub-headline:** Browser Use Agents finish the task. Browser Infrastructure powers your own agents.
+- **Updated:** 2026-08-29
 
 ### [Browserbase](https://www.browserbase.com/)
-- _Not captured yet._
+- **Headline:** Give your agents access to the whole web.
+- **Sub-headline:** Browserbase makes the web as reliable and programmable as APIs
+- **Updated:** 2026-08-29
 
 ### [Firecrawl](https://www.firecrawl.dev/)
-- _Not captured yet._
+- **Headline:** Power AI agents with clean web data
+- **Sub-headline:** The context API to search, scrape, and interact with the web at scale. It's also open source.
+- **Updated:** 2026-08-29
 
 ### [Tinyfish](https://www.tinyfish.ai/)
-- _Not captured yet._
+- **Headline:** Everything AI needs to use the web.
+- **Sub-headline:** Search the web, fetch clean content from any URL, run a real browser, and deploy agents. All from one API.
+- **Updated:** 2026-08-29
 
 ## Agent Eval & LLM Observability
 
 _Trace, score, and debug what the agent actually did._
 
 ### [Arize AI](https://arize.com/)
-- _Not captured yet._
+- **Headline:** The continual learning platform for agents.
+- **Sub-headline:** The AI engineering platform for self-improving agents. Observe. Evaluate. Learn.
+- **Updated:** 2026-08-29
 
 ### [Braintrust](https://www.braintrust.dev/)
-- _Not captured yet._
+- **Headline:** Ship quality agents at scale
+- **Sub-headline:** Surface patterns in production, turn them into evals, and improve quality with every release.
+- **Updated:** 2026-08-29
 
 ### [Langfuse](https://langfuse.com/)
-- _Not captured yet._
+- **Headline:** Open Source Agent Evals & Observability
+- **Sub-headline:** Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency.
+- **Updated:** 2026-08-30
 
 ### [LangSmith](https://www.langchain.com/langsmith)
-- _Not captured yet._
+- **Headline:** Know what your agents are really doing
+- **Sub-headline:** LangSmith Observability gives you complete visibility into agent behavior.
+- **Updated:** 2026-08-29
 
 ## Cloud, App & Agent Security
 
 _Find and fix risk across code, containers, cloud, and now agent identity._
 
 ### [Akeyless](https://www.akeyless.io/)
-- **Headline:** Vaultless Secrets Management
-- **Sub-headline:** Centralize and secure credentials, certificates, and keys across your CI/CD pipeline, reducing both the cost and complexity of vault management.
-- **Updated:** 2024-09-26
+- **Headline:** Runtime Identity Security at Agentic Scale
+- **Sub-headline:** Securing 220B+ machine interactions, the Akeyless platform is built for the AI-driven era
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Vaultless Secrets Management
+  Centralize and secure credentials, certificates, and keys across your CI/CD pipeline, reducing both the cost and complexity of vault management.
+
+</details>
 
 ### [ARMO](https://www.armosec.io/)
-- **Headline:** Unifying AppSec, CloudSec and DevSec
-- **Sub-headline:** The only runtime-driven, open-source first, cloud security platform Powered by Kubescape & eBPF
-- **Updated:** 2024-09-26
+- **Headline:** Connecting the Dots Between {} Security
+- **Sub-headline:** Zero-day and every day protection for your cloud applications with the first runtime behavioral Cloud Application Detection and Response (CADR) solution. A fully explainable & traceable runtime security story spanning the entire cloud technology stack.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Unifying AppSec, CloudSec and DevSec
+  The only runtime-driven, open-source first, cloud security platform Powered by Kubescape & eBPF
+
+</details>
 
 ### [Chainguard](https://www.chainguard.dev/)
-- **Headline:** ~~Shift Left.~~ Start Left.
-- **Sub-headline:** Chainguard builds secure container images that eliminate CVEs from the start. Java, Python, and Go. Postgres, Redis and Nginx. And everything in between.Build faster? Or be more secure? Why not both.
-- **Updated:** 2024-09-26
+- **Headline:** Secure-by-default open source software
+- **Sub-headline:** Hardened, secure, and production-ready builds that prevent AI attacks.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — ~~Shift Left.~~ Start Left.
+  Chainguard builds secure container images that eliminate CVEs from the start. Java, Python, and Go. Postgres, Redis and Nginx. And everything in between.Build faster? Or be more secure? Why not both.
+
+</details>
 
 ### [ControlPlane](https://control-plane.io/)
-- **Headline:** Cybersecurity consulting and advisory
+- **Headline:** CYBERSECURITY CONSULTING AND ADVISORY
 - **Sub-headline:** /
-- **Updated:** 2024-10-11
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-11** — Cybersecurity consulting and advisory
+
+</details>
 
 ### [Keycard](https://www.keycard.ai/)
-- _Not captured yet._
+- **Headline:** Control agent access to tools, APIs, and data
+- **Sub-headline:** See every action your agents take. Know exactly who authorized it.
+- **Updated:** 2026-08-29
 
 ### [Snyk](https://snyk.io/)
-- **Headline:** Develop fast. Stay secure.
-- **Sub-headline:** Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk.
-- **Updated:** 2024-09-26
+- **Headline:** Unleash AI Innovators — Securely
+- **Sub-headline:** An independent security layer that continuously validates AI-generated code, governs development agents, and secures AI-native applications—so organizations can move fast with AI without losing control.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Develop fast. Stay secure.
+  Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk.
+
+</details>
 
 ### [Upwind](https://www.upwind.io/)
-- **Headline:** The Future of Cloud Security is Runtime
-- **Sub-headline:** Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks.
-- **Updated:** 2024-09-26
+- **Headline:** Cloud & AI Security from the Inside-Out.
+- **Sub-headline:** By combining agentless scanning and runtime sensors Upwind enables security developers and devops teams to see their Cloud & AI infrastructure in the same operating picture, remediate exactly what matters and stop attacks in real-time.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — The Future of Cloud Security is Runtime
+  Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks.
+
+</details>
 
 ### [Wiz](https://www.wiz.io/)
-- **Headline:** Secure Everything You Build and Run in the Cloud
-- **Sub-headline:** Use the Wiz Cloud Security Platform to build faster in the cloud, enabling security, dev and devops to work together in a self-service model built for the scale and speed of your cloud development.
-- **Updated:** 2024-09-26
+- **Headline:** Protect Everything You Build and Run
+- **Sub-headline:** Wiz connects code, cloud, and runtime into a single security graph that provides the end-to-end context required to automate risk reduction and threat response, enabling security teams to operate at AI speed. AI alone doesn't make security faster. Context does.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Secure Everything You Build and Run in the Cloud
+  Use the Wiz Cloud Security Platform to build faster in the cloud, enabling security, dev and devops to work together in a self-service model built for the scale and speed of your cloud development.
+
+</details>
 
 ## Observability & Incident Response
 
 _Know when production breaks, and why._
 
 ### [AXIOM](https://axiom.co/)
-- **Headline:** Stop sampling, observe every event.
-- **Sub-headline:** 100% of your data for every possible need: o11y, security, analytics, and new insights.
-- **Updated:** 2024-09-26
+- **Headline:** The modern machine data platform.
+- **Sub-headline:** Petabyte-scale, schema-less ingest on a fully managed event store, so you keep every byte without the operational cost of running it yourself.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Stop sampling, observe every event.
+  100% of your data for every possible need: o11y, security, analytics, and new insights.
+
+</details>
 
 ### [chronosphere](https://chronosphere.io/)
-- **Headline:** Observability with Control 10x more scalable/ 8x faster MTTR/ 0x overages
-- **Sub-headline:** Find and fix customer-impacting issues faster and stop paying for data you don’t use with the world’s most reliable observability platform.
-- **Updated:** 2024-09-26
+- **Headline:** Observability Built for Control
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Observability with Control 10x more scalable/ 8x faster MTTR/ 0x overages
+  Find and fix customer-impacting issues faster and stop paying for data you don’t use with the world’s most reliable observability platform.
+
+</details>
 
 ### [Coralogix](https://coralogix.com/)
-- **Headline:** Modern architecture. Disruptive value.
-- **Sub-headline:** Observability and Security that scale with you.
-- **Updated:** 2024-09-26
+- **Headline:** You can't observe the future with yesterday's architecture
+- **Sub-headline:** Go beyond dashboards with a true AI-native platform and a data lake built for observability. Turn agents into operators, and engineers into architects.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Modern architecture. Disruptive value.
+  Observability and Security that scale with you.
+
+</details>
 
 ### [incident.io](https://incident.io/)
-- **Headline:** Move fast when you break things
-- **Sub-headline:** On-call, incident response and status pages all under one roof. So good, you'll break things on purpose.
-- **Updated:** 2024-09-26
+- **Headline:** With great product, comes great reliability
+- **Sub-headline:** The software reliability platform built to investigate, respond and prevent incidents, powered by AI that deeply understands your organization.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Move fast when you break things
+  On-call, incident response and status pages all under one roof. So good, you'll break things on purpose.
+
+</details>
 
 ### [logz.io](https://logz.io/)
-- **Headline:** Modern Observability Powered by AI
-- **Sub-headline:** /
-- **Updated:** 2024-09-26
+- **Headline:** Innovate Faster, Recover Quicker, Get Automated Insights
+- **Sub-headline:** with Smarter Observability Powered by Open 360 AI
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Modern Observability Powered by AI
+
+</details>
 
 ### [Lumigo](https://lumigo.io/)
-- **Headline:** Solve complex microservice issues 80% faster
-- **Sub-headline:** The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds
-- **Updated:** 2024-09-26
+- **Headline:** Intelligent AI-Powered Observability
+- **Sub-headline:** Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Solve complex microservice issues 80% faster
+  The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds
+
+</details>
 
 ### [OpenSearch](https://opensearch.org/)
-- **Headline:** Find the meaning in your data
-- **Sub-headline:** OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale
-- **Updated:** 2024-09-26
+- **Headline:** OpenSearchCon North America
+- **Sub-headline:** Where the future of open source search and observability is forged
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Find the meaning in your data
+  OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale
+
+</details>
 
 ### [Steadybit](https://steadybit.com/)
-- **Headline:** Build reliable systems ready for anything
-- **Sub-headline:** The Chaos Engineering tool that makes it easy and safe to test System Resilience
-- **Updated:** 2024-10-17
+- **Headline:** The Enterprise Reliability Testing Platform
+- **Sub-headline:** Find and fix reliability issues before they become a problem. Channel the power of Agentic Chaos Engineering at scale to protect revenue and ensure your apps are always on.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-17** — Build reliable systems ready for anything
+  The Chaos Engineering tool that makes it easy and safe to test System Resilience
+
+</details>
 
 ## CI/CD & Software Delivery
 
 _Build, test, package, and ship code to production._
 
 ### [CircleCI](https://circleci.com/)
-- **Headline:** Confidence in every deploy
-- **Sub-headline:** Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code.
-- **Updated:** 2024-09-26
+- **Headline:** Validate everything. Assume nothing.
+- **Sub-headline:** Validate before you push. Spend less. Ship more.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Confidence in every deploy
+  Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code.
+
+</details>
 
 ### [cloudsmith](https://cloudsmith.com/)
-- **Headline:** Liberate DevOps with fully managed, scalable artifact management
-- **Sub-headline:** Cut costs + speed up production, all while safeguarding the code teams pull + push. Boost productivity with high performance package distribution.
-- **Updated:** 2024-09-26
+- **Headline:** Control and security for your AI-driven software supply chain
+- **Sub-headline:** Your developers pull packages, containers, and ML models from registries you don't fully control. Cloudsmith checks every one for known vulnerabilities, malware, and license violations, blocks anything that fails your policy, and logs exactly what shipped where.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Liberate DevOps with fully managed, scalable artifact management
+  Cut costs + speed up production, all while safeguarding the code teams pull + push. Boost productivity with high performance package distribution.
+
+</details>
 
 ### [codefresh](https://codefresh.io/)
-- **Headline:** The GitOps Software Delivery Platform
-- **Sub-headline:** Enterprise-ready, Powered by Argo, Secure & scalable
-- **Updated:** 2024-09-26
+- **Headline:** Codefresh and Octopus
+- **Sub-headline:** In February 2024, Octopus acquired Codefresh. Since then, we've brought together the best of both teams to tackle the hardest Continuous Delivery challenges for Kubernetes and Argo CD at enterprise scale.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — The GitOps Software Delivery Platform
+  Enterprise-ready, Powered by Argo, Secure & scalable
+
+</details>
 
 ### [DevCycle](https://devcycle.com/)
-- **Headline:** Life's short. Stop building your own feature flags.
-- **Sub-headline:** Upgrade to DevCycle, the feature flag platform built on the OpenFeature standard and supported by industry experts.
-- **Updated:** 2024-09-26
+- **Headline:** Speed Up Feature Releases
+- **Sub-headline:** The first open standards feature management platform built to help developers ship faster
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Life's short. Stop building your own feature flags.
+  Upgrade to DevCycle, the feature flag platform built on the OpenFeature standard and supported by industry experts.
+
+</details>
 
 ### [Docker](https://www.docker.com/)
-- **Headline:** Develop faster. Run anywhere.
-- **Sub-headline:** Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
-- **Updated:** 2024-09-26
+- **Headline:** Accelerate agent adoption, safely.
+- **Sub-headline:** Full autonomy for any agent. Full confidence for your security team.
+- **Updated:** 2026-08-30
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Develop faster. Run anywhere.
+  Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
+
+</details>
 
 ### [Harness](https://www.harness.io/)
-- **Headline:** The AI-Native Software Delivery Platform
-- **Sub-headline:** Achieve engineering excellence and improve developer experience with the world's first AI-native software delivery platform.
-- **Updated:** 2024-09-26
+- **Headline:** Your harness for the autonomous SDLC
+- **Sub-headline:** Harness is the Autonomous SDLC Platform — it ships AI code as fast as it's written, catches risk before it ships, and governs every pipeline.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — The AI-Native Software Delivery Platform
+  Achieve engineering excellence and improve developer experience with the world's first AI-native software delivery platform.
+
+</details>
 
 ### [Octopus Deploy](https://octopus.com/)
-- **Headline:** Deploy your software to multi-cloud, hybrid, and on-premises environments with ease
-- **Sub-headline:** Make your complex deployments simple, reliable, and auditable with Octopus Deploy.
-- **Updated:** 2024-09-26
+- **Headline:** AI is accelerating development. Can your governance keep up?
+- **Sub-headline:** Octopus Deploy is the CD platform built for enterprise scale. When change accelerates, knowing who deployed what, where, and when isn't optional.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Deploy your software to multi-cloud, hybrid, and on-premises environments with ease
+  Make your complex deployments simple, reliable, and auditable with Octopus Deploy.
+
+</details>
 
 ## Platform Engineering & IaC
 
 _Paved paths and declarative infrastructure for internal developer platforms._
 
 ### [Cortex](https://www.cortex.io/)
-- **Headline:** Unblock Engineers. Unlock Productivity.
-- **Sub-headline:** Cortex is the Internal Developer Portal eliminating “developer tax” with paved paths to production. Create, catalog, score, and drive action to continuously improve software.
-- **Updated:** 2024-09-26
+- **Headline:** Code is no longer the bottleneck. Everything else is.
+- **Sub-headline:** The Engineering Operations Platform engineering leaders trust to ship faster as AI multiplies output, without risk to reliability and security.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Unblock Engineers. Unlock Productivity.
+  Cortex is the Internal Developer Portal eliminating “developer tax” with paved paths to production. Create, catalog, score, and drive action to continuously improve software.
+
+</details>
 
 ### [Diagrid](https://www.diagrid.io/)
-- **Headline:** APIs for building secure & reliable microservices
-- **Sub-headline:** dapr allows you to build state-of-the-art apps in half the time and never worry about missing a deadline or delivering insecure & unreliable code
-- **Updated:** 2024-09-26
+- **Headline:** DURABLE EXECUTION, NOW BUILT FOR AGENTS.
+- **Sub-headline:** Durable workflows and verifiable execution — workflows are always carried to completion: agents recover without losing state. Every step is cryptographically attested. Works with any agent framework.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — APIs for building secure & reliable microservices
+  dapr allows you to build state-of-the-art apps in half the time and never worry about missing a deadline or delivering insecure & unreliable code
+
+</details>
 
 ### [env0](https://www.env0.com/)
-- **Headline:** Automate and Manage IaC at Scale, With Confidence
-- **Sub-headline:** Optimize and unify Infrastructure as Code operations across every framework: OpenTofu, Terraform, Pulumi, CloudFormation, Terragrunt, K8s and more.
-- **Updated:** 2024-09-26
+- **Headline:** Govern Your Cloud at the Speed of AI.
+- **Sub-headline:** Continuously unify declared state and discovered state into a single context lake where agents can reason and take deterministic action.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Automate and Manage IaC at Scale, With Confidence
+  Optimize and unify Infrastructure as Code operations across every framework: OpenTofu, Terraform, Pulumi, CloudFormation, Terragrunt, K8s and more.
+
+</details>
 
 ### [Giant Swarm](https://www.giantswarm.io/)
-- **Headline:** Smarter Platform Engineering
-- **Sub-headline:** Platform teams of all sizes partner with Giant Swarm to increase developer productivity.
-- **Updated:** 2024-09-26
+- **Headline:** The Curated Platform Stack
+- **Sub-headline:** 10+ Years of Production Experience, Ready in a Day
+- **Updated:** 2026-08-30
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Smarter Platform Engineering
+  Platform teams of all sizes partner with Giant Swarm to increase developer productivity.
+
+</details>
 
 ### [Loft](https://www.loft.sh/)
-- **Headline:** Building Blocks for Platform Creators
-- **Sub-headline:** Reduce Kubernetes cost with virtual K8s clusters
-- **Updated:** 2024-09-26
+- **Headline:** Run your AI cloud like a hyperscaler.
+- **Sub-headline:** One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Building Blocks for Platform Creators
+  Reduce Kubernetes cost with virtual K8s clusters
+
+</details>
 
 ### [Spacelift](https://spacelift.io/)
-- **Headline:** Govern/Provision/Configure with a single automated workflow
-- **Sub-headline:** Orchestrate Terraform, OpenTofu, Ansible and more to deliver secure, cost-effective, and high-performance infrastructure. Fast.
-- **Updated:** 2024-09-26
+- **Headline:** Ship infrastructure as fast as developers code
+- **Sub-headline:** Modern development moves too fast for IaC. Spacelift fuses AI, IaC, and GitOps pipelines, so developers ship fast, and platform teams stay in control.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Govern/Provision/Configure with a single automated workflow
+  Orchestrate Terraform, OpenTofu, Ansible and more to deliver secure, cost-effective, and high-performance infrastructure. Fast.
+
+</details>
 
 ### [Upbound](https://www.upbound.io/)
-- **Headline:** Crossplane reinvented for the enterprise cloud
-- **Sub-headline:** Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.
-- **Updated:** 2024-09-26
+- **Headline:** The infrastructure platform that runs itself.
+- **Sub-headline:** One AI-native platform to build, run, and govern control planes across your entire estate, ready to serve both the engineers who run it and the AI systems increasingly acting on it.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Crossplane reinvented for the enterprise cloud
+  Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.
+
+</details>
 
 ## Kubernetes Ops & Cloud FinOps
 
 _Run Kubernetes well and stop overpaying for it._
 
 ### [CAST AI](https://cast.ai/)
-- **Headline:** Cut your cloud cost in half
-- **Sub-headline:** CAST AI is the leading Kubernetes automation platform that cuts AWS, Azure, and GCP customers’ cloud costs by over 50%.
-- **Updated:** 2024-09-26
+- **Headline:** Application Performance and Kubernetes Automation. On autopilot.
+- **Sub-headline:** Cast AI turns Kubernetes workload, infrastructure, cost, and SLO signals into safe automated actions: rightsizing pods, scaling nodes, optimizing GPUs and Spot, and fixing issues without manual tuning.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Cut your cloud cost in half
+  CAST AI is the leading Kubernetes automation platform that cuts AWS, Azure, and GCP customers’ cloud costs by over 50%.
+
+</details>
 
 ### [DoiT](https://www.doit.com/)
-- **Headline:** Intelligence to optimize your cloud
-- **Sub-headline:** DoiT’s cloud development platform ensures your AWS, Google Cloud, and Microsoft Azure infrastructure is working optimally for your business – from planning to production.
-- **Updated:** 2024-10-11
+- **Headline:** Attribute Every AI Token to the Customer, Feature, and Agent Behind It
+- **Sub-headline:** AI spend is a black box. LLM Gateways show token totals but can't tell you who burned them. Attribute™ traces every token, inference, and training run back to the team, product, and customer that drove it.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-11** — Intelligence to optimize your cloud
+  DoiT’s cloud development platform ensures your AWS, Google Cloud, and Microsoft Azure infrastructure is working optimally for your business – from planning to production.
+
+</details>
 
 ### [komodor](https://komodor.com/)
-- **Headline:** Kubernetes for Developers/DevOps/SREs/Teams/Humans/
-- **Sub-headline:** Simplify cluster management and troubleshooting to unlock the full value of K8s, and drive innovation at scale.
-- **Updated:** 2024-09-26
+- **Headline:** The Autonomous AI SRE Platform For Your Entire Cloud-Native Stack
+- **Sub-headline:** Komodor detects, resolves, and prevents production issues in large-scale environments with 97%+ accuracy, while proactively eliminating the structural cloud waste other tools can't reach.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Kubernetes for Developers/DevOps/SREs/Teams/Humans/
+  Simplify cluster management and troubleshooting to unlock the full value of K8s, and drive innovation at scale.
+
+</details>
 
 ### [Kubecost](https://www.kubecost.com/)
-- **Headline:** Monitor & reduce Kubernetes spend
-- **Sub-headline:** Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs.
-- **Updated:** 2024-09-26
+- **Headline:** IBM Kubecost
+- **Sub-headline:** Run fast. Spend smart.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Monitor & reduce Kubernetes spend
+  Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs.
+
+</details>
 
 ### [nOps](https://www.nops.io/)
-- **Headline:** Al-Powered AWS FinOps Platform
-- **Sub-headline:** Discover how much you can save in just 10 minutes!
-- **Updated:** 2024-10-17
+- **Headline:** Automated AI & Cloud Cost Optimization
+- **Sub-headline:** Industry-leading cloud savings without operational overhead or long-term commitment risk
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-17** — Al-Powered AWS FinOps Platform
+  Discover how much you can save in just 10 minutes!
+
+</details>
 
 ### [Portworx](https://portworx.com/)
-- **Headline:** Kubernetes Storage & Data Management
+- **Headline:** Leading Kubernetes Data Management
 - **Sub-headline:** Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment
-- **Updated:** 2024-09-26
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Kubernetes Storage & Data Management
+  Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment
+
+</details>
 
 ### [ScaleOps](https://scaleops.com/)
-- **Headline:** Automated Kubernetes Resource Optimization
-- **Sub-headline:** Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance.
-- **Updated:** 2024-10-17
+- **Headline:** /
+- **Sub-headline:** Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.
+- **Updated:** 2026-08-30
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-17** — Automated Kubernetes Resource Optimization
+  Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance.
+
+</details>
 
 ### [Zesty](https://zesty.co/)
-- **Headline:** Cut cloud spend, scale smarter.
-- **Sub-headline:** One platform to automate & streamline cloud infrastructure optimization.
-- **Updated:** 2024-09-26
+- **Headline:** Stop Paying for Resources You Don't Use.
+- **Sub-headline:** Zesty automatically rightsizes Kubernetes resources to match real-time workload demand, cutting infrastructure costs without risking your SLOs.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Cut cloud spend, scale smarter.
+  One platform to automate & streamline cloud infrastructure optimization.
+
+</details>
 
 ## Cloud Platforms & Networking
 
 _The compute underneath, and the traffic routed across it._
 
 ### [DigitalOcean](https://www.digitalocean.com/)
-- **Headline:** Learn here. Dream here. Develop here.
-- **Sub-headline:** Powerful and production-ready, our cloud platform has the solutions that devs like you need to succeed—whether you're building world-changing AI apps, running a side project, or building a business.
-- **Updated:** 2024-09-26
+- **Headline:** AI-Native Cloud
+- **Sub-headline:** One integrated platform, silicon to agent, with economics that improve as you scale.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Learn here. Dream here. Develop here.
+  Powerful and production-ready, our cloud platform has the solutions that devs like you need to succeed—whether you're building world-changing AI apps, running a side project, or building a business.
+
+</details>
 
 ### [Isovalent](https://isovalent.com/)
-- **Headline:** eBPF-based networking, security, and observability
-- **Sub-headline:** Isovalent Enterprise for Cilium enables cloud native networking, security, and observability.
-- **Updated:** 2024-09-26
+- **Headline:** Connect and Secure Kubernetes. And Beyond.
+- **Sub-headline:** Enterprise-grade Kubernetes networking and security
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — eBPF-based networking, security, and observability
+  Isovalent Enterprise for Cilium enables cloud native networking, security, and observability.
+
+</details>
 
 ### [Mirantis](https://www.mirantis.com/)
-- **Headline:** CONTROL YOUR STRATEGIC INFRASTRUCTURE WITH OPEN SOURCE
-- **Sub-headline:** Move from VMware to truly open and flexible infrastructure that radically lowers your IT costs
-- **Updated:** 2024-09-26
+- **Headline:** FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE
+- **Sub-headline:** /
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — CONTROL YOUR STRATEGIC INFRASTRUCTURE WITH OPEN SOURCE
+  Move from VMware to truly open and flexible infrastructure that radically lowers your IT costs
+
+</details>
 
 ### [Scaleway](https://www.scaleway.com/en/)
-- **Headline:** Europe's empowering cloud provider
-- **Sub-headline:** Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem.
-- **Updated:** 2024-09-26
+- **Headline:** European Cloud & AI.
+- **Sub-headline:** Build on a secure, transparent, and fast-moving cloud & AI platform built for what's next.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Europe's empowering cloud provider
+  Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem.
+
+</details>
 
 ### [Solo.io](https://www.solo.io/)
-- **Headline:** Connect, Observe, Secure APIs in the Cloud Native Era
-- **Sub-headline:** Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions
-- **Updated:** 2024-09-26
+- **Headline:** Reimagining infrastructure for cloud & AI
+- **Sub-headline:** Solo is the unified platform for secure, seamless cloud operations — built to power the next generation of intelligent AI agents.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Connect, Observe, Secure APIs in the Cloud Native Era
+  Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions
+
+</details>
 
 ### [Traefik](https://traefik.io/)
-- **Headline:** Run APIs Easily. Anywhere.
-- **Sub-headline:** Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models.
-- **Updated:** 2024-09-26
+- **Headline:** Unified Control Plane for APIs, Models, and Agents
+- **Sub-headline:** Eliminate fragmentation and unify governance for any workload, anywhere.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Run APIs Easily. Anywhere.
+  Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models.
+
+</details>
 
 ## Developer & Work Tools
 
 _Everyday software for building and running a business._
 
 ### [JetBrains](https://www.jetbrains.com/)
-- **Headline:** Make Your Software Vision a Reality
-- **Sub-headline:** Pro tools created with {developers}, teams, and  businesses in mind
-- **Updated:** 2024-09-26
+- **Headline:** Building the Integral Development Experience
+- **Sub-headline:** An open platform for agentic software development — with you in control
+- **Updated:** 2026-08-30
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Make Your Software Vision a Reality
+  Pro tools created with {developers}, teams, and  businesses in mind
+
+</details>
 
 ### [Notion](https://www.notion.com/)
-- _Not captured yet._
+- **Headline:** Where teams and agents Think together.
+- **Sub-headline:** Capture context, find answers, and automate tasks with AI built for your team.
+- **Updated:** 2026-08-29
 
 ### [Shopify](https://www.shopify.com/)
-- **Headline:** Be the next big thing/one to watch/category creator/unicorn startup/household name/global empire/solo flier/store they line up for/
-- **Sub-headline:** Dream big, build fast, and grow far on Shopify.
-- **Updated:** 2024-10-17
+- **Headline:** Be the next household name
+- **Sub-headline:** Dream big and build fast on Shopify. The world's best commerce platform.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-10-17** — Be the next big thing/one to watch/category creator/unicorn startup/household name/global empire/solo flier/store they line up for/
+  Dream big, build fast, and grow far on Shopify.
+
+</details>
