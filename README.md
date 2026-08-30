@@ -26,7 +26,7 @@ Screenshots belong to their respective owners and are included here for referenc
 
 **AI & Agents**  
 - [Inference & Model Serving](#inference--model-serving) (7)
-- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (6)
+- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (7)
 - [Agent Runtime & Dev Sandboxes](#agent-runtime--dev-sandboxes) (4)
 - [Agent Harness & Frameworks](#agent-harness--frameworks) (5)
 - [Coding Agents & App Builders](#coding-agents--app-builders) (4)
@@ -38,7 +38,7 @@ Screenshots belong to their respective owners and are included here for referenc
 - [Cloud, App & Agent Security](#cloud-app--agent-security) (8)
 - [Observability & Incident Response](#observability--incident-response) (8)
 - [CI/CD & Software Delivery](#cicd--software-delivery) (7)
-- [Platform Engineering & IaC](#platform-engineering--iac) (7)
+- [Platform Engineering & IaC](#platform-engineering--iac) (6)
 - [Kubernetes Ops & Cloud FinOps](#kubernetes-ops--cloud-finops) (8)
 - [Cloud Platforms & Networking](#cloud-platforms--networking) (6)
 - [Developer & Work Tools](#developer--work-tools) (3)
@@ -62,11 +62,6 @@ _Run open models as an API — throughput, latency, and cost per token._
 - **Sub-headline:** Fireworks' SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence.
 - **Updated:** 2026-08-30
 
-### [Inferact](https://inferact.ai/)
-- **Headline:** Today, we're proud to announce Inferact, a startup founded by creators and core maintainers of vLLM, the most popular open-source LLM inference engine.
-- **Sub-headline:** Our mission is to grow vLLM as the world's AI inference engine and accelerate AI progress by making inference cheaper and faster.
-- **Updated:** 2026-08-29
-
 ### [Modal](https://modal.com/)
 - **Headline:** AI infrastructure that developers love
 - **Sub-headline:** Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local.
@@ -81,6 +76,11 @@ _Run open models as an API — throughput, latency, and cost per token._
 - **Headline:** SHIP AI FOR ALL
 - **Sub-headline:** /
 - **Updated:** 2026-08-29
+
+### [vLLM by Inferact](https://vllm.ai/)
+- **Headline:** The High-Throughput and Memory-Efficient inference and serving engine for LLMs
+- **Sub-headline:** Easy, fast, and cost-efficient LLM serving for everyone.
+- **Updated:** 2026-08-30
 
 ## AI Cloud & GPU Infrastructure
 
@@ -123,6 +123,18 @@ _Rent the machines that training and inference run on._
 - **Sub-headline:** Full-stack AI platform, powered by cutting-edge research.
 - **Updated:** 2026-08-29
 
+### [vCluster](https://www.vcluster.com/)
+- **Headline:** Run your AI cloud like a hyperscaler.
+- **Sub-headline:** One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.
+- **Updated:** 2026-08-30
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — Building Blocks for Platform Creators
+  Reduce Kubernetes cost with virtual K8s clusters
+
+</details>
+
 ## Agent Runtime & Dev Sandboxes
 
 _Isolated environments where agents (and developers) execute untrusted code._
@@ -145,7 +157,7 @@ _Isolated environments where agents (and developers) execute untrusted code._
 - **Updated:** 2026-08-29
 
 ### [E2B](https://e2b.dev/)
-- **Headline:** AI SANDBOXES FOR DEEP RESEARCH AGENTS
+- **Headline:** AI Sandboxes for Deep Research Agents
 - **Sub-headline:** Open-source, secure environment with real-world tools for enterprise-grade agents.
 - **Updated:** 2026-08-29
 
@@ -174,8 +186,8 @@ _The scaffolding that turns a model into an agent: loops, tools, orchestration._
 - **Updated:** 2026-08-29
 
 ### [LangChain](https://www.langchain.com/)
-- **Headline:** Meet LangSmith Engine Smarter after every launch
-- **Sub-headline:** /
+- **Headline:** Meet LangSmith Engine
+- **Sub-headline:** Smarter after every launch
 - **Updated:** 2026-08-29
 
 ### [Raft](https://raft.build/)
@@ -204,7 +216,7 @@ _Describe software in English, get software back._
 
 ### [Vercel](https://vercel.com/)
 - **Headline:** Agentic Infrastructure
-- **Sub-headline:** /
+- **Sub-headline:** For coding agents · To ship apps and agents · Automated by agents
 - **Updated:** 2026-08-29
 
 ## Agent Memory & Knowledge
@@ -337,15 +349,9 @@ _Find and fix risk across code, containers, cloud, and now agent identity._
 </details>
 
 ### [ControlPlane](https://control-plane.io/)
-- **Headline:** CYBERSECURITY CONSULTING AND ADVISORY
+- **Headline:** Cybersecurity consulting and advisory
 - **Sub-headline:** /
 - **Updated:** 2026-08-29
-
-<details><summary>Previous versions</summary>
-
-- **2024-10-11** — Cybersecurity consulting and advisory
-
-</details>
 
 ### [Keycard](https://www.keycard.ai/)
 - **Headline:** Control agent access to tools, APIs, and data
@@ -592,7 +598,7 @@ _Paved paths and declarative infrastructure for internal developer platforms._
 </details>
 
 ### [Diagrid](https://www.diagrid.io/)
-- **Headline:** DURABLE EXECUTION, NOW BUILT FOR AGENTS.
+- **Headline:** Durable execution, now built for agents.
 - **Sub-headline:** Durable workflows and verifiable execution — workflows are always carried to completion: agents recover without losing state. Every step is cryptographically attested. Works with any agent framework.
 - **Updated:** 2026-08-29
 
@@ -624,18 +630,6 @@ _Paved paths and declarative infrastructure for internal developer platforms._
 
 - **2024-09-26** — Smarter Platform Engineering
   Platform teams of all sizes partner with Giant Swarm to increase developer productivity.
-
-</details>
-
-### [Loft](https://www.loft.sh/)
-- **Headline:** Run your AI cloud like a hyperscaler.
-- **Sub-headline:** One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.
-- **Updated:** 2026-08-29
-
-<details><summary>Previous versions</summary>
-
-- **2024-09-26** — Building Blocks for Platform Creators
-  Reduce Kubernetes cost with virtual K8s clusters
 
 </details>
 
@@ -740,7 +734,7 @@ _Run Kubernetes well and stop overpaying for it._
 </details>
 
 ### [ScaleOps](https://scaleops.com/)
-- **Headline:** /
+- **Headline:** The Autonomous Compute Orchestration Layer Powering Cloud&AI Infrastructure
 - **Sub-headline:** Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.
 - **Updated:** 2026-08-30
 

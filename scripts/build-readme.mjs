@@ -19,21 +19,41 @@ const latestDate = tracked
   .at(-1);
 
 const lines = [];
-lines.push('# hero-txt');
+lines.push('# hero-txt: How your top competitors attract their target audience');
+lines.push('');
+lines.push('A library of hero section copy collected from live product websites.');
 lines.push('');
 lines.push(
-  "The headline and sub-headline in a hero section are the first thing a visitor reads — they decide whether someone understands what you do, and whether they stay. **This is a library of real hero-section copy, collected from live product websites,** kept as a reference for anyone writing or redesigning one."
+  "Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning."
 );
 lines.push('');
 lines.push(
-  `**${products.length} products** across **${categories.length} categories**. Each entry keeps its **three most recent** versions, so you can see how positioning shifts over time. Last updated **${latestDate}**.`
+  `Currently ${products.length} products across ${categories.length} categories. Last updated ${latestDate}.`
 );
 lines.push('');
+lines.push('## Browsing');
 lines.push(
-  '> Browse with screenshots at **[the site](https://aleegra.github.io/hero-txt/)**. Data lives in [`data/products/`](data/products/) — this README is generated from it, so edit the JSON, not the Markdown.'
+  'The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.'
 );
 lines.push('');
-lines.push('Spotted a site we are missing? Open an issue.');
+lines.push('## Data');
+lines.push(
+  'Entries live in data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot path, and previous versions.'
+);
+lines.push('');
+lines.push('This `README` is generated from that data. Edit the JSON, not the Markdown.');
+lines.push('');
+lines.push('## Contributing');
+lines.push(
+  'To suggest a product that is missing, open an issue with the product name and its homepage URL.'
+);
+lines.push('');
+lines.push('## Attribution');
+lines.push(
+  'Screenshots belong to their respective owners and are included here for reference and commentary.'
+);
+lines.push('');
+lines.push('<!-- The generated category sections and product entries follow below. -->');
 lines.push('');
 
 lines.push('## Contents');

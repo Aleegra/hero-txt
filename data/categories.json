@@ -4,104 +4,119 @@
     "name": "Inference & Model Serving",
     "group": "AI & Agents",
     "blurb": "Run open models as an API \u2014 throughput, latency, and cost per token.",
-    "color": "#FF2E88"
+    "color": "#FF2E88",
+    "short": "Inference"
   },
   {
     "id": "ai-cloud",
     "name": "AI Cloud & GPU Infrastructure",
     "group": "AI & Agents",
     "blurb": "Rent the machines that training and inference run on.",
-    "color": "#FF80B5"
+    "color": "#FF80B5",
+    "short": "AI Cloud"
   },
   {
     "id": "agent-runtime",
     "name": "Agent Runtime & Dev Sandboxes",
     "group": "AI & Agents",
     "blurb": "Isolated environments where agents (and developers) execute untrusted code.",
-    "color": "#C2185B"
+    "color": "#C2185B",
+    "short": "Agent Runtime"
   },
   {
     "id": "agent-harness",
     "name": "Agent Harness & Frameworks",
     "group": "AI & Agents",
     "blurb": "The scaffolding that turns a model into an agent: loops, tools, orchestration.",
-    "color": "#FFB3D2"
+    "color": "#FFB3D2",
+    "short": "Agent Harness"
   },
   {
     "id": "coding-agents",
     "name": "Coding Agents & App Builders",
     "group": "AI & Agents",
     "blurb": "Describe software in English, get software back.",
-    "color": "#8B3DFF"
+    "color": "#8B3DFF",
+    "short": "Coding Agents"
   },
   {
     "id": "agent-memory",
     "name": "Agent Memory & Knowledge",
     "group": "AI & Agents",
     "blurb": "Give agents something to remember between runs.",
-    "color": "#D14DFF"
+    "color": "#D14DFF",
+    "short": "Agent Memory"
   },
   {
     "id": "browser-use",
     "name": "Browser Use & Web Agents",
     "group": "AI & Agents",
     "blurb": "Let agents drive a real browser and read the live web.",
-    "color": "#B388FF"
+    "color": "#B388FF",
+    "short": "Browser Use"
   },
   {
     "id": "agent-eval",
     "name": "Agent Eval & LLM Observability",
     "group": "AI & Agents",
     "blurb": "Trace, score, and debug what the agent actually did.",
-    "color": "#6A1B9A"
+    "color": "#6A1B9A",
+    "short": "Agent Eval"
   },
   {
     "id": "security",
     "name": "Cloud, App & Agent Security",
     "group": "Cloud & DevOps",
     "blurb": "Find and fix risk across code, containers, cloud, and now agent identity.",
-    "color": "#1E3A8A"
+    "color": "#1E3A8A",
+    "short": "Security"
   },
   {
     "id": "observability",
     "name": "Observability & Incident Response",
     "group": "Cloud & DevOps",
     "blurb": "Know when production breaks, and why.",
-    "color": "#2F5BFF"
+    "color": "#2F5BFF",
+    "short": "Observability"
   },
   {
     "id": "cicd",
     "name": "CI/CD & Software Delivery",
     "group": "Cloud & DevOps",
     "blurb": "Build, test, package, and ship code to production.",
-    "color": "#6C93FF"
+    "color": "#6C93FF",
+    "short": "CI/CD"
   },
   {
     "id": "platform-eng",
     "name": "Platform Engineering & IaC",
     "group": "Cloud & DevOps",
     "blurb": "Paved paths and declarative infrastructure for internal developer platforms.",
-    "color": "#4338CA"
+    "color": "#4338CA",
+    "short": "Platform Eng"
   },
   {
     "id": "k8s-finops",
     "name": "Kubernetes Ops & Cloud FinOps",
     "group": "Cloud & DevOps",
     "blurb": "Run Kubernetes well and stop overpaying for it.",
-    "color": "#00A6C7"
+    "color": "#00A6C7",
+    "short": "K8s & FinOps"
   },
   {
     "id": "cloud-network",
     "name": "Cloud Platforms & Networking",
     "group": "Cloud & DevOps",
     "blurb": "The compute underneath, and the traffic routed across it.",
-    "color": "#5BD1F0"
+    "color": "#5BD1F0",
+    "short": "Cloud & Network"
   },
   {
     "id": "dev-work-tools",
     "name": "Developer & Work Tools",
     "group": "Cloud & DevOps",
     "blurb": "Everyday software for building and running a business.",
-    "color": "#94A3B8"
+    "color": "#94A3B8",
+    "short": "Dev Tools"
   }
 ]
