@@ -1,14 +1,14 @@
 {
-  "id": "loft",
-  "name": "Loft",
-  "url": "https://www.loft.sh/",
-  "category": "platform-eng",
+  "id": "vcluster",
+  "name": "vCluster",
+  "url": "https://www.vcluster.com/",
+  "category": "ai-cloud",
   "history": [
     {
-      "date": "2026-08-29",
+      "date": "2026-08-30",
       "headline": "Run your AI cloud like a hyperscaler.",
       "subheadline": "One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more.",
-      "screenshot": "shots/loft/2026-08-29.webp"
+      "screenshot": "shots/vcluster/2026-08-30.webp"
     },
     {
       "date": "2024-09-26",
