@@ -1,0 +1,15 @@
+{
+  "id": "lightfield",
+  "name": "Lightfield",
+  "url": "https://lightfield.app/",
+  "category": "gtm",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Agentic CRM for forward-deployed companies",
+      "subheadline": "",
+      "screenshot": "shots/lightfield/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "b939d4abd4f64923"
+}

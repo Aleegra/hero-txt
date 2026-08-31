@@ -1,0 +1,15 @@
+{
+  "id": "trigger-dev",
+  "name": "Trigger.dev",
+  "url": "https://trigger.dev/",
+  "category": "agent-harness",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Build and deploy fully-managed AI agents and workflows",
+      "subheadline": "Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling.",
+      "screenshot": "shots/trigger-dev/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "1f46ad1f79ffb938"
+}

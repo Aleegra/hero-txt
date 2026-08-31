@@ -1,0 +1,15 @@
+{
+  "id": "ramp",
+  "name": "Ramp",
+  "url": "https://ramp.com/",
+  "category": "fintech",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Time is money. Save both.",
+      "subheadline": "Cards, expenses, bill payments, and banking* – in the blink of AI.",
+      "screenshot": "shots/ramp/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "18517e377bde111e"
+}

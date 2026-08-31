@@ -1,0 +1,15 @@
+{
+  "id": "apify",
+  "name": "Apify",
+  "url": "https://apify.com/",
+  "category": "browser-use",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "65,824 tools for your AI",
+      "subheadline": "Apify is the largest marketplace of trusted tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents.",
+      "screenshot": "shots/apify/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "0377d2c4a7abfd43"
+}

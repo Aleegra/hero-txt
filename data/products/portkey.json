@@ -1,0 +1,15 @@
+{
+  "id": "portkey",
+  "name": "Portkey",
+  "url": "https://portkey.ai/",
+  "category": "ai-gateway",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Portkey is now PRISMA AIRS AI Gateway",
+      "subheadline": "Observe, govern, and secure every AI interaction across your enterprise. Now generally available.",
+      "screenshot": "shots/portkey/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "94842728323d0142"
+}

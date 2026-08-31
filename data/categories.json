@@ -53,7 +53,23 @@
     "group": "AI & Agents",
     "blurb": "Let agents drive a real browser and read the live web.",
     "color": "#B388FF",
-    "short": "Browser Use"
+    "short": "Browser Infra"
+  },
+  {
+    "id": "ai-gateway",
+    "name": "AI Gateway & Routing",
+    "group": "AI & Agents",
+    "blurb": "One endpoint in front of many models \u2014 routing, fallbacks, keys, and spend.",
+    "color": "#E040A0",
+    "short": "AI Gateway"
+  },
+  {
+    "id": "search",
+    "name": "Search & Retrieval APIs",
+    "group": "AI & Agents",
+    "blurb": "Web-scale search built to be read by a model rather than a person.",
+    "color": "#7C4DFF",
+    "short": "Search"
   },
   {
     "id": "agent-eval",
@@ -112,11 +128,35 @@
     "short": "Cloud & Network"
   },
   {
+    "id": "database",
+    "name": "Databases & Vector Stores",
+    "group": "Cloud & DevOps",
+    "blurb": "Where the application state \u2014 and increasingly the embeddings \u2014 lives.",
+    "color": "#0F766E",
+    "short": "Database"
+  },
+  {
     "id": "dev-work-tools",
     "name": "Developer & Work Tools",
     "group": "Cloud & DevOps",
     "blurb": "Everyday software for building and running a business.",
     "color": "#94A3B8",
     "short": "Dev Tools"
+  },
+  {
+    "id": "fintech",
+    "name": "Payments & Spend",
+    "group": "Business & GTM",
+    "blurb": "Moving money: checkout, cards, and the ledger behind them.",
+    "color": "#B45309",
+    "short": "Payment"
+  },
+  {
+    "id": "gtm",
+    "name": "GTM & Revenue Tools",
+    "group": "Business & GTM",
+    "blurb": "Finding buyers and getting found \u2014 pipeline, enrichment, and AI-era visibility.",
+    "color": "#D97706",
+    "short": "GTM"
   }
 ]

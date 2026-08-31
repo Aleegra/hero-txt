@@ -1,0 +1,15 @@
+{
+  "id": "conductor",
+  "name": "Conductor",
+  "url": "https://www.conductor.build/",
+  "category": "agent-harness",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Run a team of coding agents in the cloud.",
+      "subheadline": "",
+      "screenshot": "shots/conductor/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "2b2ba1ca38407073"
+}

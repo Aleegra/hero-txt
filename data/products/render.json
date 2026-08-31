@@ -1,0 +1,15 @@
+{
+  "id": "render",
+  "name": "Render",
+  "url": "https://render.com/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Your fastest path to production for APIs & web apps",
+      "subheadline": "Intuitive infrastructure to scale any app or agent from your first user to your billionth.",
+      "screenshot": "shots/render/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "6eefdfdaa4ef57f3"
+}

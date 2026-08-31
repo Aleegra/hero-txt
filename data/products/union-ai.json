@@ -1,0 +1,15 @@
+{
+  "id": "union-ai",
+  "name": "Union AI",
+  "url": "https://www.union.ai/",
+  "category": "agent-harness",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The durable AI runtime that runs in your cloud, not ours.",
+      "subheadline": "One platform to build indestructible AI workflows, serve models, and orchestrate compute. Zero trust security guarantees your data and models never leave your infrastructure.",
+      "screenshot": "shots/union-ai/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "1c74c13fbff2870b"
+}

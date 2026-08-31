@@ -1,0 +1,15 @@
+{
+  "id": "multica",
+  "name": "Multica",
+  "url": "https://multica.ai/",
+  "category": "agent-harness",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Your next 10 hires won't be human.",
+      "subheadline": "Multica is an open-source platform that turns coding agents into real teammates. Assign tasks, track progress, compound skills — manage your human + agent workforce in one place.",
+      "screenshot": "shots/multica/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "03069f01139bfdd1"
+}

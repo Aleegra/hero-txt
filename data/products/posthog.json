@@ -1,0 +1,15 @@
+{
+  "id": "posthog",
+  "name": "PostHog",
+  "url": "https://posthog.com/",
+  "category": "dev-work-tools",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Shift your product into self-driving mode",
+      "subheadline": "PostHog already knows your customers, which features they use, and the issues they have.",
+      "screenshot": "shots/posthog/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "e23777d794d5fed6"
+}

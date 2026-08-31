@@ -1,0 +1,15 @@
+{
+  "id": "agentmail",
+  "name": "AgentMail",
+  "url": "https://www.agentmail.to/",
+  "category": "dev-work-tools",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Email Inboxes for AI Agents",
+      "subheadline": "AgentMail is the email inbox API for AI agents. It gives agents their own email inboxes, like Gmail does for humans.",
+      "screenshot": "shots/agentmail/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "51d5349082097906"
+}

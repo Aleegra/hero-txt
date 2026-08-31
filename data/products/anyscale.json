@@ -1,0 +1,15 @@
+{
+  "id": "anyscale",
+  "name": "Anyscale",
+  "url": "https://www.anyscale.com/",
+  "category": "ai-cloud",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Foundation Model builders scale and training workloads on Anyscale",
+      "subheadline": "Powered by Ray, the world's most widely adopted AI compute engine.",
+      "screenshot": "shots/anyscale/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "64ef891b12b5a518"
+}

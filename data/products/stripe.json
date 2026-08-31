@@ -1,0 +1,15 @@
+{
+  "id": "stripe",
+  "name": "Stripe",
+  "url": "https://stripe.com/",
+  "category": "fintech",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Financial infrastructure to grow your revenue.",
+      "subheadline": "Accept payments, offer financial services, and implement custom revenue models—from your first transaction to your billionth.",
+      "screenshot": "shots/stripe/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "5619fc0e2b10d165"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "railway",
+  "name": "Railway",
+  "url": "https://railway.com/",
+  "category": "cloud-network",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Ship software peacefully",
+      "subheadline": "With the all-in-one intelligent cloud provider",
+      "screenshot": "shots/railway/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "1a3323e9d79bee24"
+}

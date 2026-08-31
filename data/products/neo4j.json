@@ -2,7 +2,7 @@
   "id": "neo4j",
   "name": "neo4j",
   "url": "https://neo4j.com/",
-  "category": "agent-memory",
+  "category": "database",
   "history": [
     {
       "date": "2026-08-29",
