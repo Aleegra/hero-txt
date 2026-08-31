@@ -1,0 +1,356 @@
+{
+  "agentmail": [
+    "dev-work-tools"
+  ],
+  "akash": [
+    "ai-cloud"
+  ],
+  "akeyless": [
+    "security"
+  ],
+  "anyscale": [
+    "ai-cloud"
+  ],
+  "apify": [
+    "browser-use"
+  ],
+  "apollo": [
+    "gtm"
+  ],
+  "arize-ai": [
+    "agent-eval"
+  ],
+  "armo": [
+    "security"
+  ],
+  "axiom": [
+    "observability"
+  ],
+  "baseten": [
+    "inference"
+  ],
+  "braintrust": [
+    "agent-eval"
+  ],
+  "browser-use": [
+    "browser-use"
+  ],
+  "browserbase": [
+    "browser-use"
+  ],
+  "cast-ai": [
+    "k8s-finops"
+  ],
+  "chainguard": [
+    "security"
+  ],
+  "chronosphere": [
+    "observability"
+  ],
+  "circleci": [
+    "cicd"
+  ],
+  "clay": [
+    "gtm"
+  ],
+  "cloudsmith": [
+    "cicd"
+  ],
+  "codefresh": [
+    "cicd"
+  ],
+  "coder": [
+    "agent-runtime"
+  ],
+  "cognee": [
+    "agent-memory"
+  ],
+  "composio": [
+    "agent-harness"
+  ],
+  "conductor": [
+    "agent-harness"
+  ],
+  "controlplane": [
+    "security"
+  ],
+  "coralogix": [
+    "observability"
+  ],
+  "coreweave": [
+    "ai-cloud"
+  ],
+  "cortex": [
+    "platform-eng"
+  ],
+  "cursor": [
+    "coding-agents"
+  ],
+  "daytona": [
+    "agent-runtime"
+  ],
+  "deepinfra": [
+    "inference"
+  ],
+  "deepseek-harness": [
+    "agent-harness"
+  ],
+  "devcycle": [
+    "cicd"
+  ],
+  "diagrid": [
+    "platform-eng"
+  ],
+  "dify": [
+    "agent-harness"
+  ],
+  "digitalocean": [
+    "cloud-network"
+  ],
+  "docker": [
+    "cicd"
+  ],
+  "doit": [
+    "k8s-finops"
+  ],
+  "e2b": [
+    "agent-runtime"
+  ],
+  "env0": [
+    "platform-eng"
+  ],
+  "evermind": [
+    "agent-memory"
+  ],
+  "exa": [
+    "search"
+  ],
+  "firecrawl": [
+    "browser-use"
+  ],
+  "fireworks-ai": [
+    "inference"
+  ],
+  "giant-swarm": [
+    "platform-eng"
+  ],
+  "glean": [
+    "agent-memory"
+  ],
+  "gmi-cloud": [
+    "ai-cloud"
+  ],
+  "harness": [
+    "cicd"
+  ],
+  "incident-io": [
+    "observability"
+  ],
+  "isovalent": [
+    "cloud-network"
+  ],
+  "jetbrains": [
+    "dev-work-tools"
+  ],
+  "keycard": [
+    "security"
+  ],
+  "kimchi": [
+    "coding-agents"
+  ],
+  "komodor": [
+    "k8s-finops"
+  ],
+  "kubecost": [
+    "k8s-finops"
+  ],
+  "langchain": [
+    "agent-harness"
+  ],
+  "langfuse": [
+    "agent-eval"
+  ],
+  "langsmith": [
+    "agent-eval"
+  ],
+  "letta": [
+    "agent-memory"
+  ],
+  "lightfield": [
+    "gtm"
+  ],
+  "litellm": [
+    "ai-gateway"
+  ],
+  "logz-io": [
+    "observability"
+  ],
+  "lovable": [
+    "coding-agents"
+  ],
+  "lumigo": [
+    "observability"
+  ],
+  "mem0": [
+    "agent-memory"
+  ],
+  "mesh-pay": [
+    "fintech"
+  ],
+  "milestone": [
+    "agent-eval"
+  ],
+  "milvus": [
+    "database"
+  ],
+  "mirantis": [
+    "cloud-network"
+  ],
+  "modal": [
+    "inference"
+  ],
+  "multica": [
+    "agent-harness"
+  ],
+  "n8n": [
+    "agent-harness"
+  ],
+  "nebius": [
+    "ai-cloud"
+  ],
+  "neo4j": [
+    "database"
+  ],
+  "nops": [
+    "k8s-finops"
+  ],
+  "notion": [
+    "dev-work-tools"
+  ],
+  "octopus-deploy": [
+    "cicd"
+  ],
+  "openrouter": [
+    "ai-gateway"
+  ],
+  "opensearch": [
+    "observability"
+  ],
+  "pinecone": [
+    "database"
+  ],
+  "portkey": [
+    "ai-gateway"
+  ],
+  "portworx": [
+    "k8s-finops"
+  ],
+  "posthog": [
+    "dev-work-tools"
+  ],
+  "profound": [
+    "gtm"
+  ],
+  "radixark": [
+    "inference"
+  ],
+  "raft": [
+    "agent-harness"
+  ],
+  "railway": [
+    "cloud-network"
+  ],
+  "ramp": [
+    "fintech"
+  ],
+  "reducto": [
+    "agent-memory"
+  ],
+  "render": [
+    "cloud-network"
+  ],
+  "replit": [
+    "coding-agents"
+  ],
+  "resend": [
+    "dev-work-tools"
+  ],
+  "runta": [
+    "agent-runtime"
+  ],
+  "scaleops": [
+    "k8s-finops"
+  ],
+  "scaleway": [
+    "cloud-network"
+  ],
+  "shopify": [
+    "dev-work-tools"
+  ],
+  "skypilot": [
+    "ai-cloud"
+  ],
+  "snyk": [
+    "security"
+  ],
+  "solo-io": [
+    "cloud-network"
+  ],
+  "spacelift": [
+    "platform-eng"
+  ],
+  "steadybit": [
+    "observability"
+  ],
+  "stripe": [
+    "fintech"
+  ],
+  "supabase": [
+    "database"
+  ],
+  "tavily": [
+    "search"
+  ],
+  "tensorpool": [
+    "ai-cloud"
+  ],
+  "tinyfish": [
+    "browser-use"
+  ],
+  "together-ai": [
+    "ai-cloud"
+  ],
+  "traefik": [
+    "cloud-network"
+  ],
+  "trigger-dev": [
+    "agent-harness"
+  ],
+  "union-ai": [
+    "agent-harness"
+  ],
+  "upbound": [
+    "platform-eng"
+  ],
+  "upwind": [
+    "security"
+  ],
+  "vcluster": [
+    "ai-cloud"
+  ],
+  "vercel": [
+    "coding-agents"
+  ],
+  "inferact": [
+    "inference"
+  ],
+  "wiz": [
+    "security"
+  ],
+  "zep": [
+    "agent-memory"
+  ],
+  "zesty": [
+    "k8s-finops"
+  ]
+}
