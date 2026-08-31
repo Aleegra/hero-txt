@@ -1,0 +1,15 @@
+{
+  "id": "kimchi",
+  "name": "Kimchi",
+  "url": "https://kimchi.dev/",
+  "category": "coding-agents",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The governed AI coding platform",
+      "subheadline": "Give engineers autonomous coding agents without losing control of models, data, quality, or spend. Start serverless. Deploy in your VPC when ready.",
+      "screenshot": "shots/kimchi/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "199f6376b42d14f1"
+}

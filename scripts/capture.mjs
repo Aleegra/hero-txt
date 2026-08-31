@@ -123,15 +123,26 @@ async function cdpShot(page) {
 async function shoot(context, product) {
   const page = await context.newPage();
   try {
-    // Prefer waiting for 'load': a number of sites gate their reveal on the
-    // load event and paint a blank page until it fires. Some marketing sites
-    // keep long-polling connections open forever and never get there, so fall
-    // back to "document committed" and wait on real content instead.
-    await page
-      .goto(product.url, { waitUntil: 'load', timeout: 30000 })
-      .catch(() => page.goto(product.url, { waitUntil: 'commit', timeout: 45000 }));
+    await page.goto(product.url, { waitUntil: 'commit', timeout: 45000 });
+    // Still prefer 'load' to fire before shooting, because a number of sites gate
+    // their reveal on it and paint a blank page until then. But a page that never
+    // loads is not a failed capture: some marketing sites hold a connection open
+    // forever while the hero has been on screen for twenty seconds. Waiting on the
+    // already-committed document lets those through, where re-issuing goto() threw
+    // away the progress and guaranteed the second attempt timed out too.
+    await page.waitForLoadState('load', { timeout: 30000 }).catch(() => {});
     await page
       .waitForSelector('h1, [class*="hero" i]', { timeout: 20000, state: 'attached' })
+      .catch(() => {});
+    // A client-rendered hero can have its h1 attached while the text is still
+    // empty, and the run then dies on "no readable text". Wait for the body to
+    // actually say something. Sites that reached 'load' already have their text,
+    // so this resolves on the first poll and costs them nothing.
+    await page
+      .waitForFunction(() => document.body?.innerText.trim().length > 200, null, {
+        timeout: 25000,
+        polling: 500,
+      })
       .catch(() => {});
     await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {});
     await dismissBanners(page);

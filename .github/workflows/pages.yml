@@ -9,6 +9,7 @@ on:
     paths:
       - 'data/**'
       - 'shots/**'
+      - 'assets/**'
       - 'scripts/build-site.mjs'
       - '.github/workflows/pages.yml'
   workflow_dispatch:

@@ -1,0 +1,15 @@
+{
+  "id": "exa",
+  "name": "Exa",
+  "url": "https://exa.ai/",
+  "category": "search",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The world's data for AI agents",
+      "subheadline": "Search the largest index of public web and private information.",
+      "screenshot": "shots/exa/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "43c9f7a107193b8e"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "apollo",
+  "name": "Apollo",
+  "url": "https://www.apollo.io/",
+  "category": "gtm",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The AI sales platform for smarter, faster revenue growth",
+      "subheadline": "Build pipeline smarter, close deals faster, and simplify your tech stack with a unified platform built for modern sales and marketing teams.",
+      "screenshot": "shots/apollo/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "0745605e362b8330"
+}

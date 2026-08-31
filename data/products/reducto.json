@@ -1,0 +1,15 @@
+{
+  "id": "reducto",
+  "name": "Reducto",
+  "url": "https://reducto.ai/",
+  "category": "agent-memory",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Turn documents into data.",
+      "subheadline": "The agentic document platform for leading AI teams who demand enterprise performance at scale. One platform for every document task.",
+      "screenshot": "shots/reducto/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "1247c38301061d37"
+}

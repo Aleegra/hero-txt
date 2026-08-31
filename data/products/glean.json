@@ -1,0 +1,15 @@
+{
+  "id": "glean",
+  "name": "Glean",
+  "url": "https://www.glean.com/",
+  "category": "agent-memory",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Elevate your AI expertise",
+      "subheadline": "See how teams are deploying agents and building AI-native workflows to run real work.",
+      "screenshot": "shots/glean/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "8c964218d493d10c"
+}

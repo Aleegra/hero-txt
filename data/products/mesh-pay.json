@@ -1,0 +1,15 @@
+{
+  "id": "mesh-pay",
+  "name": "Mesh Pay",
+  "url": "https://www.meshpay.com/",
+  "category": "fintech",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The first global crypto payments network",
+      "subheadline": "Accept crypto from 300+ wallets and exchanges. Settle in stablecoins or local currency. One integration.",
+      "screenshot": "shots/mesh-pay/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "7f0b80aee59effa6"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tensorpool",
+  "name": "TensorPool",
+  "url": "https://tensorpool.dev/",
+  "category": "ai-cloud",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "You focus on the models. We handle the infrastructure.",
+      "subheadline": "Train foundation models without thinking about infrastructure.",
+      "screenshot": "shots/tensorpool/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "bc40e0c88a99e2bf"
+}

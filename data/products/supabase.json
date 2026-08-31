@@ -1,0 +1,15 @@
+{
+  "id": "supabase",
+  "name": "Supabase",
+  "url": "https://supabase.com/",
+  "category": "database",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Build in a weekend Scale to millions",
+      "subheadline": "Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings.",
+      "screenshot": "shots/supabase/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "7b055b58fa87744d"
+}

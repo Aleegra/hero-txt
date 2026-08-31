@@ -1,0 +1,15 @@
+{
+  "id": "pinecone",
+  "name": "Pinecone",
+  "url": "https://www.pinecone.io/",
+  "category": "database",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Give agents knowledge",
+      "subheadline": "The knowledge platform for AI agents. Fast, accurate retrieval that doesn't get more expensive as it scales.",
+      "screenshot": "shots/pinecone/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "672160ff6cab7485"
+}

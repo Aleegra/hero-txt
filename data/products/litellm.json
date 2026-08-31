@@ -1,0 +1,15 @@
+{
+  "id": "litellm",
+  "name": "LiteLLM",
+  "url": "https://www.litellm.ai/",
+  "category": "ai-gateway",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "The AI Gateway for platform teams",
+      "subheadline": "Put your full AI stack behind one key. See who is driving spend, cap it before it runs, and send each request to the model that should handle it.",
+      "screenshot": "shots/litellm/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "27cbc7d88778be75"
+}

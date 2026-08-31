@@ -1,0 +1,15 @@
+{
+  "id": "tavily",
+  "name": "Tavily",
+  "url": "https://www.tavily.com/",
+  "category": "search",
+  "history": [
+    {
+      "date": "2026-08-31",
+      "headline": "Connect your AI agents to the web",
+      "subheadline": "One secure API for real-time web access.",
+      "screenshot": "shots/tavily/2026-08-31.webp"
+    }
+  ],
+  "fingerprint": "872805cee4bcd303"
+}
