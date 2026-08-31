@@ -8,7 +8,9 @@
 // the browser." The screenshot is what a visitor actually sees, which is
 // precisely what this library documents.
 //
-// Requires ANTHROPIC_API_KEY.
+// Requires ANTHROPIC_API_KEY. Any Anthropic-compatible endpoint works: the SDK
+// reads ANTHROPIC_BASE_URL itself, so pointing HERO_MODEL at a vision model on
+// another provider is the whole of the configuration.
 //
 //   node scripts/extract.mjs                 # every blank entry
 //   node scripts/extract.mjs wiz e2b         # specific products
@@ -19,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const PRODUCTS = join(ROOT, 'data', 'products');
-const MODEL = 'claude-sonnet-4-6';
+const MODEL = process.env.HERO_MODEL || 'claude-sonnet-4-6';
 const CONCURRENCY = 4;
 
 const PROMPT = `You are cataloguing the hero section of a product website for a copywriting reference library.
@@ -38,7 +40,14 @@ const anthropic = new Anthropic();
 async function readHero(file) {
   const res = await anthropic.messages.create({
     model: MODEL,
-    max_tokens: 1000,
+    // Transcription, not writing. At the default temperature the same screenshot
+    // came back with the sub-headline present on one run and empty on the next,
+    // which would land in the history as a copy change the site never made.
+    temperature: 0,
+    // Reasoning models spend this budget on a thinking block before they emit any
+    // text. 1000 was enough for Sonnet but a busy hero can exhaust it, and the
+    // response then contains thinking and nothing else.
+    max_tokens: 4000,
     messages: [
       {
         role: 'user',
@@ -56,7 +65,14 @@ async function readHero(file) {
       },
     ],
   });
-  const text = res.content.find((c) => c.type === 'text').text;
+  const block = res.content.find((c) => c.type === 'text');
+  // Name the actual failure. Without this the caller sees "cannot read properties
+  // of undefined", which points at this line rather than at the token budget.
+  if (!block)
+    throw new Error(
+      `no text block (stop_reason=${res.stop_reason}, blocks=${res.content.map((c) => c.type).join()})`
+    );
+  const text = block.text;
   const { headline, subheadline } = JSON.parse(
     text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1)
   );
