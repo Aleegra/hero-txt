@@ -4,7 +4,7 @@ A library of hero section copy collected from live product websites.
 
 Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-Currently 87 products across 15 categories. Last updated 2026-08-30.
+Currently 118 products across 20 categories. Last updated 2026-08-31.
 
 ## Browsing
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
@@ -25,14 +25,16 @@ Screenshots belong to their respective owners and are included here for referenc
 ## Contents
 
 **AI & Agents**  
-- [Inference & Model Serving](#inference--model-serving) (7)
-- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (7)
+- [Inference & Model Serving](#inference--model-serving) (6)
+- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (9)
 - [Agent Runtime & Dev Sandboxes](#agent-runtime--dev-sandboxes) (4)
-- [Agent Harness & Frameworks](#agent-harness--frameworks) (5)
-- [Coding Agents & App Builders](#coding-agents--app-builders) (4)
-- [Agent Memory & Knowledge](#agent-memory--knowledge) (6)
-- [Browser Use & Web Agents](#browser-use--web-agents) (4)
-- [Agent Eval & LLM Observability](#agent-eval--llm-observability) (4)
+- [Agent Harness & Frameworks](#agent-harness--frameworks) (10)
+- [Coding Agents & App Builders](#coding-agents--app-builders) (5)
+- [Agent Memory & Knowledge](#agent-memory--knowledge) (7)
+- [Browser Use & Web Agents](#browser-use--web-agents) (5)
+- [AI Gateway & Routing](#ai-gateway--routing) (3)
+- [Search & Retrieval APIs](#search--retrieval-apis) (2)
+- [Agent Eval & LLM Observability](#agent-eval--llm-observability) (5)
 
 **Cloud & DevOps**  
 - [Cloud, App & Agent Security](#cloud-app--agent-security) (8)
@@ -40,8 +42,13 @@ Screenshots belong to their respective owners and are included here for referenc
 - [CI/CD & Software Delivery](#cicd--software-delivery) (7)
 - [Platform Engineering & IaC](#platform-engineering--iac) (6)
 - [Kubernetes Ops & Cloud FinOps](#kubernetes-ops--cloud-finops) (8)
-- [Cloud Platforms & Networking](#cloud-platforms--networking) (6)
-- [Developer & Work Tools](#developer--work-tools) (3)
+- [Cloud Platforms & Networking](#cloud-platforms--networking) (8)
+- [Databases & Vector Stores](#databases--vector-stores) (4)
+- [Developer & Work Tools](#developer--work-tools) (6)
+
+**Business & GTM**  
+- [Payments & Spend](#payments--spend) (3)
+- [GTM & Revenue Tools](#gtm--revenue-tools) (4)
 
 ## Inference & Model Serving
 
@@ -65,11 +72,6 @@ _Run open models as an API — throughput, latency, and cost per token._
 ### [Modal](https://modal.com/)
 - **Headline:** AI infrastructure that developers love
 - **Sub-headline:** Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local.
-- **Updated:** 2026-08-29
-
-### [OpenRouter](https://openrouter.ai/)
-- **Headline:** The Unified Interface For Every Model
-- **Sub-headline:** Better prices, better uptime, no subscriptions.
 - **Updated:** 2026-08-29
 
 ### [RadixArk](https://www.radixark.com/)
@@ -98,6 +100,11 @@ _Rent the machines that training and inference run on._
 
 </details>
 
+### [Anyscale](https://www.anyscale.com/)
+- **Headline:** Foundation Model builders scale and training workloads on Anyscale
+- **Sub-headline:** Powered by Ray, the world's most widely adopted AI compute engine.
+- **Updated:** 2026-08-31
+
 ### [CoreWeave](https://coreweave.com/)
 - **Headline:** CoreWeave Cloud: The Essential Cloud for AI
 - **Sub-headline:** The force multiplier for AI. Trusted by the world's leading AI pioneers.
@@ -117,6 +124,11 @@ _Rent the machines that training and inference run on._
 - **Headline:** Your AI infrastructure, frontier velocity
 - **Sub-headline:** One platform for all your AI compute – Kubernetes, Slurm, 20+ clouds
 - **Updated:** 2026-08-29
+
+### [TensorPool](https://tensorpool.dev/)
+- **Headline:** You focus on the models. We handle the infrastructure.
+- **Sub-headline:** Train foundation models without thinking about infrastructure.
+- **Updated:** 2026-08-31
 
 ### [Together AI](https://www.together.ai/)
 - **Headline:** Build what's next on the AI Native Cloud
@@ -175,6 +187,11 @@ _The scaffolding that turns a model into an agent: loops, tools, orchestration._
 - **Sub-headline:** 1,000+ integrations with just-in-time tool calls, secure delegated auth, sandboxed environments, and parallel execution.
 - **Updated:** 2026-08-29
 
+### [Conductor](https://www.conductor.build/)
+- **Headline:** Run a team of coding agents in the cloud.
+- **Sub-headline:** /
+- **Updated:** 2026-08-31
+
 ### [DeepSeek Harness](https://deepseek.com/harness/en/)
 - **Headline:** Everything is a plugin
 - **Sub-headline:** DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included.
@@ -190,10 +207,30 @@ _The scaffolding that turns a model into an agent: loops, tools, orchestration._
 - **Sub-headline:** Smarter after every launch
 - **Updated:** 2026-08-29
 
+### [Multica](https://multica.ai/)
+- **Headline:** Your next 10 hires won't be human.
+- **Sub-headline:** Multica is an open-source platform that turns coding agents into real teammates. Assign tasks, track progress, compound skills — manage your human + agent workforce in one place.
+- **Updated:** 2026-08-31
+
+### [n8n](https://n8n.io/)
+- **Headline:** AI agents and workflows you can see and control
+- **Sub-headline:** Build visually, go deep with code, connect to anything. Every step of your agents' reasoning, traceable on the canvas. Deploy on your infrastructure or ours.
+- **Updated:** 2026-08-31
+
 ### [Raft](https://raft.build/)
 - **Headline:** Where humans and AI agents build together.
 - **Sub-headline:** For agent-native builders and teams. Build with Raft. Build with fun.
 - **Updated:** 2026-08-29
+
+### [Trigger.dev](https://trigger.dev/)
+- **Headline:** Build and deploy fully-managed AI agents and workflows
+- **Sub-headline:** Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling.
+- **Updated:** 2026-08-31
+
+### [Union AI](https://www.union.ai/)
+- **Headline:** The durable AI runtime that runs in your cloud, not ours.
+- **Sub-headline:** One platform to build indestructible AI workflows, serve models, and orchestrate compute. Zero trust security guarantees your data and models never leave your infrastructure.
+- **Updated:** 2026-08-31
 
 ## Coding Agents & App Builders
 
@@ -203,6 +240,11 @@ _Describe software in English, get software back._
 - **Headline:** Cursor is your coding agent for building ambitious software.
 - **Sub-headline:** /
 - **Updated:** 2026-08-29
+
+### [Kimchi](https://kimchi.dev/)
+- **Headline:** The governed AI coding platform
+- **Sub-headline:** Give engineers autonomous coding agents without losing control of models, data, quality, or spend. Start serverless. Deploy in your VPC when ready.
+- **Updated:** 2026-08-31
 
 ### [Lovable](https://lovable.dev/)
 - **Headline:** Build something Lovable
@@ -233,6 +275,11 @@ _Give agents something to remember between runs._
 - **Sub-headline:** Turn stateless LLMs into intelligent agents that can truly remember. Maintain context across days, sessions, and platforms.
 - **Updated:** 2026-08-29
 
+### [Glean](https://www.glean.com/)
+- **Headline:** Elevate your AI expertise
+- **Sub-headline:** See how teams are deploying agents and building AI-native workflows to run real work.
+- **Updated:** 2026-08-31
+
 ### [Letta](https://www.letta.com/)
 - **Headline:** Letta is an AI research lab in San Francisco building machines that learn.
 - **Sub-headline:** We envision a future where humans coexist with digital people: experiential agents that remember everything, learn continuously, and improve themselves over time.
@@ -243,17 +290,10 @@ _Give agents something to remember between runs._
 - **Sub-headline:** Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production.
 - **Updated:** 2026-08-29
 
-### [neo4j](https://neo4j.com/)
-- **Headline:** The knowledge layer that makes AI trustworthy
-- **Sub-headline:** Lower cost. Reduce risk. Inform decisions.
-- **Updated:** 2026-08-29
-
-<details><summary>Previous versions</summary>
-
-- **2024-09-26** — GenAI apps, grounded in your data
-  Power your applications with knowledge graphs. Backed by the only graph database with vector search.
-
-</details>
+### [Reducto](https://reducto.ai/)
+- **Headline:** Turn documents into data.
+- **Sub-headline:** The agentic document platform for leading AI teams who demand enterprise performance at scale. One platform for every document task.
+- **Updated:** 2026-08-31
 
 ### [Zep](https://www.getzep.com/)
 - **Headline:** Agent memory, at enterprise scale.
@@ -263,6 +303,11 @@ _Give agents something to remember between runs._
 ## Browser Use & Web Agents
 
 _Let agents drive a real browser and read the live web._
+
+### [Apify](https://apify.com/)
+- **Headline:** 65,824 tools for your AI
+- **Sub-headline:** Apify is the largest marketplace of trusted tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents.
+- **Updated:** 2026-08-31
 
 ### [Browser Use](https://browser-use.com/)
 - **Headline:** Agents that use the browser.
@@ -283,6 +328,39 @@ _Let agents drive a real browser and read the live web._
 - **Headline:** Everything AI needs to use the web.
 - **Sub-headline:** Search the web, fetch clean content from any URL, run a real browser, and deploy agents. All from one API.
 - **Updated:** 2026-08-29
+
+## AI Gateway & Routing
+
+_One endpoint in front of many models — routing, fallbacks, keys, and spend._
+
+### [LiteLLM](https://www.litellm.ai/)
+- **Headline:** The AI Gateway for platform teams
+- **Sub-headline:** Put your full AI stack behind one key. See who is driving spend, cap it before it runs, and send each request to the model that should handle it.
+- **Updated:** 2026-08-31
+
+### [OpenRouter](https://openrouter.ai/)
+- **Headline:** The Unified Interface For Every Model
+- **Sub-headline:** Better prices, better uptime, no subscriptions.
+- **Updated:** 2026-08-29
+
+### [Portkey](https://portkey.ai/)
+- **Headline:** Portkey is now PRISMA AIRS AI Gateway
+- **Sub-headline:** Observe, govern, and secure every AI interaction across your enterprise. Now generally available.
+- **Updated:** 2026-08-31
+
+## Search & Retrieval APIs
+
+_Web-scale search built to be read by a model rather than a person._
+
+### [Exa](https://exa.ai/)
+- **Headline:** The world's data for AI agents
+- **Sub-headline:** Search the largest index of public web and private information.
+- **Updated:** 2026-08-31
+
+### [Tavily](https://www.tavily.com/)
+- **Headline:** Connect your AI agents to the web
+- **Sub-headline:** One secure API for real-time web access.
+- **Updated:** 2026-08-31
 
 ## Agent Eval & LLM Observability
 
@@ -307,6 +385,11 @@ _Trace, score, and debug what the agent actually did._
 - **Headline:** Know what your agents are really doing
 - **Sub-headline:** LangSmith Observability gives you complete visibility into agent behavior.
 - **Updated:** 2026-08-29
+
+### [Milestone](https://mstone.ai/)
+- **Headline:** The intelligence platform for AI native engineering
+- **Sub-headline:** Connect AI spend, engineering output, quality, and governance to understand where AI creates value — and where it does not.
+- **Updated:** 2026-08-31
 
 ## Cloud, App & Agent Security
 
@@ -797,6 +880,16 @@ _The compute underneath, and the traffic routed across it._
 
 </details>
 
+### [Railway](https://railway.com/)
+- **Headline:** Ship software peacefully
+- **Sub-headline:** With the all-in-one intelligent cloud provider
+- **Updated:** 2026-08-31
+
+### [Render](https://render.com/)
+- **Headline:** Your fastest path to production for APIs & web apps
+- **Sub-headline:** Intuitive infrastructure to scale any app or agent from your first user to your billionth.
+- **Updated:** 2026-08-31
+
 ### [Scaleway](https://www.scaleway.com/en/)
 - **Headline:** European Cloud & AI.
 - **Sub-headline:** Build on a secure, transparent, and fast-moving cloud & AI platform built for what's next.
@@ -833,9 +926,45 @@ _The compute underneath, and the traffic routed across it._
 
 </details>
 
+## Databases & Vector Stores
+
+_Where the application state — and increasingly the embeddings — lives._
+
+### [Milvus](https://milvus.io/)
+- **Headline:** The High-Performance Vector Database Built for Scale
+- **Sub-headline:** Milvus is an open-source vector database built for GenAI applications. Install with pip, perform high-speed searches, and scale to tens of billions of vectors with minimal performance loss.
+- **Updated:** 2026-08-31
+
+### [neo4j](https://neo4j.com/)
+- **Headline:** The knowledge layer that makes AI trustworthy
+- **Sub-headline:** Lower cost. Reduce risk. Inform decisions.
+- **Updated:** 2026-08-29
+
+<details><summary>Previous versions</summary>
+
+- **2024-09-26** — GenAI apps, grounded in your data
+  Power your applications with knowledge graphs. Backed by the only graph database with vector search.
+
+</details>
+
+### [Pinecone](https://www.pinecone.io/)
+- **Headline:** Give agents knowledge
+- **Sub-headline:** The knowledge platform for AI agents. Fast, accurate retrieval that doesn't get more expensive as it scales.
+- **Updated:** 2026-08-31
+
+### [Supabase](https://supabase.com/)
+- **Headline:** Build in a weekend Scale to millions
+- **Sub-headline:** Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings.
+- **Updated:** 2026-08-31
+
 ## Developer & Work Tools
 
 _Everyday software for building and running a business._
+
+### [AgentMail](https://www.agentmail.to/)
+- **Headline:** Email Inboxes for AI Agents
+- **Sub-headline:** AgentMail is the email inbox API for AI agents. It gives agents their own email inboxes, like Gmail does for humans.
+- **Updated:** 2026-08-31
 
 ### [JetBrains](https://www.jetbrains.com/)
 - **Headline:** Building the Integral Development Experience
@@ -854,6 +983,16 @@ _Everyday software for building and running a business._
 - **Sub-headline:** Capture context, find answers, and automate tasks with AI built for your team.
 - **Updated:** 2026-08-29
 
+### [PostHog](https://posthog.com/)
+- **Headline:** Shift your product into self-driving mode
+- **Sub-headline:** PostHog already knows your customers, which features they use, and the issues they have.
+- **Updated:** 2026-08-31
+
+### [Resend](https://resend.com/)
+- **Headline:** Email for developers
+- **Sub-headline:** The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale.
+- **Updated:** 2026-08-31
+
 ### [Shopify](https://www.shopify.com/)
 - **Headline:** Be the next household name
 - **Sub-headline:** Dream big and build fast on Shopify. The world's best commerce platform.
@@ -865,3 +1004,46 @@ _Everyday software for building and running a business._
   Dream big, build fast, and grow far on Shopify.
 
 </details>
+
+## Payments & Spend
+
+_Moving money: checkout, cards, and the ledger behind them._
+
+### [Mesh Pay](https://www.meshpay.com/)
+- **Headline:** The first global crypto payments network
+- **Sub-headline:** Accept crypto from 300+ wallets and exchanges. Settle in stablecoins or local currency. One integration.
+- **Updated:** 2026-08-31
+
+### [Ramp](https://ramp.com/)
+- **Headline:** Time is money. Save both.
+- **Sub-headline:** Cards, expenses, bill payments, and banking* – in the blink of AI.
+- **Updated:** 2026-08-31
+
+### [Stripe](https://stripe.com/)
+- **Headline:** Financial infrastructure to grow your revenue.
+- **Sub-headline:** Accept payments, offer financial services, and implement custom revenue models—from your first transaction to your billionth.
+- **Updated:** 2026-08-31
+
+## GTM & Revenue Tools
+
+_Finding buyers and getting found — pipeline, enrichment, and AI-era visibility._
+
+### [Apollo](https://www.apollo.io/)
+- **Headline:** The AI sales platform for smarter, faster revenue growth
+- **Sub-headline:** Build pipeline smarter, close deals faster, and simplify your tech stack with a unified platform built for modern sales and marketing teams.
+- **Updated:** 2026-08-31
+
+### [Clay](https://www.clay.com/)
+- **Headline:** Build systems to grow revenue
+- **Sub-headline:** Infrastructure to get any data, run agentic workflows, and launch GTM plays.
+- **Updated:** 2026-08-31
+
+### [Lightfield](https://lightfield.app/)
+- **Headline:** Agentic CRM for forward-deployed companies
+- **Sub-headline:** /
+- **Updated:** 2026-08-31
+
+### [Profound](https://www.tryprofound.com/)
+- **Headline:** Marketing agents to win in Perplexity
+- **Sub-headline:** Reach millions of consumers who are using AI to discover new products and brands
+- **Updated:** 2026-08-31
