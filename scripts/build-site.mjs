@@ -38,6 +38,8 @@ rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
 if (existsSync(join(ROOT, 'shots')))
   cpSync(join(ROOT, 'shots'), join(DIST, 'shots'), { recursive: true });
+if (existsSync(join(ROOT, 'assets')))
+  cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
 writeFileSync(join(DIST, 'CNAME'), DOMAIN + '\n');
 writeFileSync(
@@ -59,12 +61,14 @@ const html = `<!doctype html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="__CSS__">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%232F5BFF'/><rect x='14' y='38' width='72' height='10' fill='%23FF2E88'/><rect x='14' y='56' width='44' height='10' fill='%23FFFFFF'/></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./assets/favicon-512.png">
+<link rel="apple-touch-icon" href="./assets/favicon-180.png">
 </head>
 <body>
 
 <header class="topbar">
-  <a class="logo" href="./"><span class="logo-mark"></span>Hero Section Library</a>
+  <a class="logo" href="./"><img class="logo-mark" src="./assets/favicon-512.png" alt="">Hero Section Library</a>
   <div class="topbar-right">
     <input id="search" type="search" placeholder="Search headlines, products…" autocomplete="off" spellcheck="false">
     <a class="gh" href="https://github.com/Aleegra/hero-txt" target="_blank" rel="noopener">GitHub ↗</a>
@@ -155,8 +159,9 @@ a{color:inherit}
   font-size:20px;letter-spacing:-.01em;text-decoration:none;
 }
 .logo-mark{
-  width:22px;height:22px;border-radius:6px;display:inline-block;
-  background:linear-gradient(135deg,var(--pink),var(--blue));
+  /* The 512 source rather than the 32: this renders at 44 device pixels on a
+     retina screen, and the small file's bars come out visibly soft. */
+  width:22px;height:22px;border-radius:6px;display:block;
 }
 .topbar-right{display:flex;align-items:center;gap:10px}
 #search{
