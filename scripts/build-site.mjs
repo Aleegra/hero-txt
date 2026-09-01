@@ -96,6 +96,16 @@ function tagStyle(hex) {
 // would only show up as a bounced pageview for a URL that no longer exists.
 const GA_ID = 'G-BMSKD0DM3T';
 
+// Apps Script web app bound to the waitlist spreadsheet. The site is static, so
+// this is the only piece of server the signup form has; the script itself lives
+// in scripts/waitlist.gs and is deployed from the sheet, not from this repo.
+// Not a secret — it ships in the client JS either way — so it is checked in
+// rather than threaded through the workflow as a repository secret.
+// Empty means the form is left out of the build entirely: shipping a signup box
+// that silently discards addresses is worse than shipping no box.
+const WAITLIST_ENDPOINT =
+  'https://script.google.com/macros/s/AKfycbxG2LnbcrLrkZSLUqxpevypm5N-6HR8onM8CV4C_T8dt8hOItnUZycVQh8nilNlCHY7/exec';
+
 // Search results cut the title around 60 characters, so the brand suffix is only
 // worth adding when it survives the cut. On the handful of pages with a long
 // category name the page's own subject wins the space.
@@ -262,6 +272,29 @@ const html = page({
       <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
       <p>The headline earns the second line. The sub-headline earns the scroll.<br>Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly,<br>so every repositioning is on the record.</p>
       <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
+      ${
+        WAITLIST_ENDPOINT
+          ? `<!-- novalidate so the browser's own bubble does not fight the inline
+           message; the check still runs, it is just reported in one place. -->
+      <form class="waitlist" id="waitlist" novalidate>
+        <div class="waitlist-row">
+          <input id="waitlist-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" aria-label="Email address">
+          <button type="submit" id="waitlist-submit">Join the Waitlist</button>
+        </div>
+        <!-- Honeypot. Named "company" because a bot fills every field it finds,
+             and a real visitor never sees this one. Hidden in CSS rather than
+             with type=hidden, which bots know to skip. tabindex and aria-hidden
+             keep it out of the keyboard order and off the accessibility tree so
+             nobody reaches it by accident, and autocomplete=off stops the
+             browser from helpfully filling it in. -->
+        <div class="waitlist-hp" aria-hidden="true">
+          <label for="waitlist-company">Company</label>
+          <input id="waitlist-company" name="company" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <p class="waitlist-note" id="waitlist-note" role="status">Be the first to explore new collections.</p>
+      </form>`
+          : ''
+      }
     </div>
     <div class="intro-deco" aria-hidden="true">
       <span class="chip c1"></span><span class="chip c2"></span><span class="chip c3"></span>
@@ -492,6 +525,41 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro h1 em{font-style:normal;background:linear-gradient(transparent 62%,#FF8DA1 62%)}
 .intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#3A3A52}
 .intro .meta{font-size:15px;color:var(--muted)}
+.waitlist{margin-top:26px}
+.waitlist-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+#waitlist-email{
+  font:inherit;font-size:15px;padding:11px 16px;width:min(300px,100%);color:var(--ink);
+  background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
+  transition:border-color .15s,box-shadow .15s;
+}
+#waitlist-email::placeholder{color:#A2A5B8}
+#waitlist-email:focus{
+  outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(76,111,255,.14);
+}
+/* Only after a failed submit, so the field is not red while it is still being
+   typed into. */
+.waitlist.invalid #waitlist-email{border-color:#D92D584D;box-shadow:0 0 0 3px rgba(217,45,88,.12)}
+#waitlist-submit{
+  font:inherit;font-weight:600;font-size:15px;cursor:pointer;white-space:nowrap;
+  padding:11px 20px;color:#fff;background:var(--ink);
+  border:1px solid var(--ink);border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
+  transition:transform .15s,box-shadow .15s,opacity .15s;
+}
+#waitlist-submit:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+#waitlist-submit:active{transform:none;transition-duration:.06s}
+#waitlist-submit:disabled{cursor:default;opacity:.55;transform:none;box-shadow:var(--shadow-sm)}
+/* Moved out of view rather than display:none, which the better bots check for
+   and skip. The field stays laid out and fillable, it is just nowhere a person
+   can see it. */
+.waitlist-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.waitlist-note{font-size:14px;color:var(--muted)}
+/* margin-top rather than the .intro p rule's 22px: this line belongs to the
+   field above it, not to the prose. */
+.waitlist .waitlist-note{margin-top:10px}
+.waitlist.ok .waitlist-note{color:#0F766E;font-weight:500}
+.waitlist.invalid .waitlist-note,.waitlist.error .waitlist-note{color:#C2185B}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
 .chip{width:30px;height:30px;border-radius:9px;box-shadow:var(--shadow-sm)}
 .c1{background:var(--pink)}
@@ -718,7 +786,8 @@ footer p{max-width:1400px;margin:0 auto}
 @media (max-width:620px){.grid{grid-template-columns:1fr}}
 `;
 
-const js = `const PAGE_SIZE = 12;
+const js = `const WAITLIST_ENDPOINT = '${WAITLIST_ENDPOINT}';
+const PAGE_SIZE = 12;
 let DATA, active = 'all', query = '', page = 1;
 
 const $ = (s) => document.querySelector(s);
@@ -903,6 +972,69 @@ $('#modal').onclick = (e) => { if (e.target.id === 'modal') closeModal(); };
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
 $('#search').oninput = (e) => { query = e.target.value.trim().toLowerCase(); page = 1; render(); };
+
+/* ---------- waitlist ---------- */
+// Absent when no endpoint is configured, in which case the form was never built.
+if ($('#waitlist')) {
+const form = $('#waitlist');
+const note = $('#waitlist-note');
+const emailField = $('#waitlist-email');
+const submit = $('#waitlist-submit');
+const IDLE = 'Be the first to explore new collections.';
+
+function setState(cls, msg) {
+  form.className = 'waitlist' + (cls ? ' ' + cls : '');
+  note.textContent = msg;
+}
+
+// Deliberately loose. The only thing worth catching here is a typo like a
+// missing @; anything stricter starts rejecting addresses that are real.
+const looksLikeEmail = (v) => /^[^@\\s]+@[^@\\s.]+\\.[^@\\s]+$/.test(v);
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = emailField.value.trim();
+  if (!looksLikeEmail(email)) {
+    setState('invalid', 'That does not look like an email address.');
+    emailField.focus();
+    return;
+  }
+
+  submit.disabled = true;
+  setState('', 'Adding you…');
+  try {
+    await fetch(WAITLIST_ENDPOINT, {
+      method: 'POST',
+      // no-cors keeps Apps Script from having to answer a preflight, which it
+      // does not do reliably. The trade is that the response is opaque, so a
+      // server-side failure cannot be told apart from a success — acceptable
+      // for a waitlist, where the cost of a wrong "you're in" is low and the
+      // cost of a scary error on a working signup is not.
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      // The honeypot is passed straight through rather than checked here. The
+      // server decides, so the rule is not sitting in readable client code.
+      body: JSON.stringify({
+        email,
+        company: $('#waitlist-company').value,
+        source: location.pathname + location.search,
+      }),
+    });
+    form.reset();
+    setState('ok', 'You are on the list. We will be in touch.');
+  } catch {
+    // Only a genuinely dead network reaches here.
+    setState('error', 'Could not reach the server. Please try again.');
+  } finally {
+    submit.disabled = false;
+  }
+});
+
+// Clear the failed-validation state as soon as the field is being fixed.
+emailField.addEventListener('input', () => {
+  if (form.classList.contains('invalid')) setState('', IDLE);
+});
+}
 `;
 
 // index.html is served uncached but the CDN in front of the site holds CSS and
