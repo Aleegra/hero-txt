@@ -295,7 +295,7 @@ const html = page({
         <div class="waitlist-row">
           <input id="waitlist-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" aria-label="Email address">
           <p class="waitlist-note" id="waitlist-note" role="status">Be the first to explore new collections.</p>
-          <button type="submit" id="waitlist-submit">Join the Waitlist</button>
+          <button type="submit" id="waitlist-submit">Get Notified</button>
         </div>
         <!-- Honeypot. Named "company" because a bot fills every field it finds,
              and a real visitor never sees this one. Hidden in CSS rather than
@@ -543,28 +543,44 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
    grid, so the form's right edge lands on the same line the chips end at rather
    than stopping where the text column does. Wrapping rather than a media query:
    the two fall into one column exactly when they stop fitting, which depends on
-   the copy's length as much as on the viewport. */
-.intro-lead{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 40px}
+   the copy's length as much as on the viewport.
+   stretch rather than flex-start so the copy and the form end up the same height:
+   the shorter of the two is what gets stretched, and each distributes the slack
+   internally so its last line lands on the block's bottom edge. That is what puts
+   the button's baseline on the stats line's, whichever side happens to be taller
+   at a given width. */
+.intro-lead{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:stretch;gap:4px 40px}
 /* Grows into whatever the form leaves, which is what pins the form to the right
    edge. 400px is the narrowest the prose stays comfortable at 17px, and it sets
    where the row wraps. The paragraph inside stays at its own max-width, so the
-   growth shows up as space before the form rather than as a longer line. */
-.intro-copy{flex:1 1 400px;min-width:0}
+   growth shows up as space before the form rather than as a longer line.
+   A column with space-between so that when the form is the taller of the two, the
+   extra height opens up between the sub-headline and the stats line and the stats
+   line sinks to the bottom, instead of leaving dead space under it. The 22px top
+   margins stay as the minimum; space-between only ever adds to them. */
+.intro-copy{flex:1 1 400px;min-width:0;display:flex;flex-direction:column;justify-content:space-between}
 /* Sets the field's width, and with it where the row falls under the copy. The
    field only needs to hold an address, so it stops well short of the copy rather
    than stretching to meet it. */
 .intro-lead .waitlist{flex:0 1 300px}
 /* Matches the sub-headline's own margin-top, so the field and the first line of
-   copy start on the same baseline when they sit side by side. */
-.waitlist{margin-top:22px}
-/* flex-end puts the button under the right-hand end of the field, on the same
-   line the field and the chips above both end on. The field itself is unaffected:
-   it takes the full width, so there is nothing for it to be pushed against. */
-.waitlist-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+   copy start on the same baseline when they sit side by side.
+   A column only so the row below can take the whole of the stretched height; the
+   honeypot is positioned out of flow and is not a second item here. */
+.waitlist{margin-top:22px;display:flex;flex-direction:column}
+/* flex-end pins the row's right edge to the line the chips above end on. It only
+   has an effect once the row wraps on a narrow screen; at full width the field
+   grows to fill, so there is no free space to distribute.
+   align-content is the vertical counterpart, and the reason the button can reach
+   the bottom edge: the field, the note and the button each take a line of their
+   own, and any height the copy has over them is shared out between those lines.
+   The 10px row gap stays as the minimum, so a narrow screen — where the form is
+   alone on its line and there is no slack — spaces them exactly as before. */
+.waitlist-row{display:flex;flex:1;gap:10px;flex-wrap:wrap;align-content:space-between;align-items:center;justify-content:flex-end}
 #waitlist-email{
   /* A full-width basis, so the field takes the whole first line and the button
-     always falls to the second. The row's flex-wrap does the break, which keeps
-     the two on separate lines without a second container. */
+     always falls below it. The row's flex-wrap does the break, which keeps the
+     two on separate lines without a second container. */
   font:inherit;font-size:15px;padding:11px 16px;flex:1 1 100%;min-width:0;color:var(--ink);
   background:var(--surface);border:1px solid var(--line-strong);
   border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
@@ -592,14 +608,18 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
    can see it. */
 .waitlist-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 /* Two classes deep on purpose. This is a <p> inside .intro, so the .intro p rule
-   would otherwise win on specificity and set it in 17px prose with a 22px top
-   margin — which is how it once ended up larger than the stats line beside it.
-   The margin has to be cleared for the same reason: spacing here comes from the
-   row's gap, and the inherited one would stack on top of it.
+   would otherwise win on specificity and set it in 17px prose — which is how it
+   once ended up larger than the stats line beside it. Two more of that rule's
+   declarations have to be overridden here: its 22px top margin, which would stack
+   on top of the row's gap, and its 60ch measure cap, which at 13px is narrower
+   than the block and would wrap the note early inside a box the wrong width.
+   The top margin lands on -2px rather than 0 because the row's gap applies to
+   both sides of the note and this side wants 2px less — it reads as a caption on
+   the field above it, not as something sitting between two controls.
    A full-width basis keeps it on its own line between the field and the button.
    Without it the note is only as wide as its text, and the short states —
    "Adding you…" — would fit beside the button and sit on the same line. */
-.waitlist .waitlist-note{flex:1 1 100%;margin:0;font-size:13px;color:var(--muted);text-align:right}
+.waitlist .waitlist-note{flex:1 1 100%;max-width:none;margin:-2px 0 0;font-size:13px;color:var(--muted);text-align:right}
 .waitlist.ok .waitlist-note{color:#0F766E;font-weight:500}
 .waitlist.invalid .waitlist-note,.waitlist.error .waitlist-note{color:#C2185B}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
@@ -1095,6 +1115,17 @@ emailField.addEventListener('input', () => {
 // Naming these by content hash means an edit produces a new URL and there is
 // never a same-named old copy to serve.
 const hash = (s) => createHash('sha256').update(s).digest('hex').slice(0, 8);
+// An unbalanced comment marker in the stylesheet above is silent: the browser
+// swallows whatever follows the stray token, so a rule simply stops applying and
+// the page still builds and loads. Cheaper to catch it here than to find it by
+// wondering why a layout changed.
+for (let i = 0, depth = 0; i < css.length - 1; i++) {
+  if (css[i] === '/' && css[i + 1] === '*') depth++;
+  else if (css[i] === '*' && css[i + 1] === '/' && depth-- <= 0) {
+    throw new Error(`css: comment closed but never opened, near "${css.slice(Math.max(0, i - 90), i + 2)}"`);
+  }
+}
+
 const cssFile = `styles.${hash(css)}.css`;
 const jsFile = `app.${hash(js)}.js`;
 
