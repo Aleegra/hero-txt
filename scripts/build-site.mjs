@@ -268,10 +268,25 @@ const html = page({
   ],
   body: `<main>
   <section class="intro">
-    <div class="intro-text">
-      <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
-      <p>The headline earns the second line. The sub-headline earns the scroll.<br>Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly,<br>so every repositioning is on the record.</p>
-      <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
+    <h1>How your <em>top competitors</em> attract<br>your target audience</h1>
+    <!-- Sits here rather than after the copy so the grid puts it in the right-hand
+         cell alongside the headline. It is decorative, so the reading order it
+         takes is of no consequence. -->
+    <div class="intro-deco" aria-hidden="true">
+      <span class="chip c1"></span><span class="chip c2"></span><span class="chip c3"></span>
+      <span class="chip c4"></span><span class="chip c5"></span><span class="chip c6"></span>
+    </div>
+    <!-- Spans both columns, which is what lets the form reach the right-hand edge
+         the chips end at. Inside the old text column it could only ever stop
+         short of them. -->
+    <div class="intro-lead">
+        <div class="intro-copy">
+          <!-- No hard line breaks: the column is narrower now that the form sits
+               beside it, and fixed breaks left an orphaned word at some widths.
+               max-width on .intro p keeps the measure readable instead. -->
+          <p>The headline earns the second line. The sub-headline earns the scroll. Here are both, from ${products.length} live product sites, screenshotted and refreshed weekly, so every repositioning is on the record.</p>
+          <p class="meta">${products.length} products · ${categories.length} categories · last updated ${lastUpdated}</p>
+        </div>
       ${
         WAITLIST_ENDPOINT
           ? `<!-- novalidate so the browser's own bubble does not fight the inline
@@ -279,6 +294,7 @@ const html = page({
       <form class="waitlist" id="waitlist" novalidate>
         <div class="waitlist-row">
           <input id="waitlist-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" aria-label="Email address">
+          <p class="waitlist-note" id="waitlist-note" role="status">Be the first to explore new collections.</p>
           <button type="submit" id="waitlist-submit">Join the Waitlist</button>
         </div>
         <!-- Honeypot. Named "company" because a bot fills every field it finds,
@@ -291,14 +307,9 @@ const html = page({
           <label for="waitlist-company">Company</label>
           <input id="waitlist-company" name="company" type="text" tabindex="-1" autocomplete="off">
         </div>
-        <p class="waitlist-note" id="waitlist-note" role="status">Be the first to explore new collections.</p>
       </form>`
           : ''
       }
-    </div>
-    <div class="intro-deco" aria-hidden="true">
-      <span class="chip c1"></span><span class="chip c2"></span><span class="chip c3"></span>
-      <span class="chip c4"></span><span class="chip c5"></span><span class="chip c6"></span>
     </div>
   </section>
 
@@ -513,7 +524,9 @@ a{color:inherit}
 /* ---------- intro ---------- */
 main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro{
-  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;
+  /* No row gap: the headline's row and the one below it are spaced by the copy's
+     and the form's own top margins, which is what keeps the two aligned. */
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 32px;
   align-items:start;padding:56px 0 40px;
 }
 .intro h1{
@@ -525,10 +538,34 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro h1 em{font-style:normal;background:linear-gradient(transparent 62%,#FF8DA1 62%)}
 .intro p{max-width:60ch;margin-top:22px;font-size:17px;color:#3A3A52}
 .intro .meta{font-size:15px;color:var(--muted)}
-.waitlist{margin-top:26px}
-.waitlist-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+/* The form sits beside the sub-headline instead of under the stats line, where it
+   read as an afterthought and pushed the grid below the fold. Spanning the whole
+   grid, so the form's right edge lands on the same line the chips end at rather
+   than stopping where the text column does. Wrapping rather than a media query:
+   the two fall into one column exactly when they stop fitting, which depends on
+   the copy's length as much as on the viewport. */
+.intro-lead{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 40px}
+/* Grows into whatever the form leaves, which is what pins the form to the right
+   edge. 400px is the narrowest the prose stays comfortable at 17px, and it sets
+   where the row wraps. The paragraph inside stays at its own max-width, so the
+   growth shows up as space before the form rather than as a longer line. */
+.intro-copy{flex:1 1 400px;min-width:0}
+/* Sets the field's width, and with it where the row falls under the copy. The
+   field only needs to hold an address, so it stops well short of the copy rather
+   than stretching to meet it. */
+.intro-lead .waitlist{flex:0 1 300px}
+/* Matches the sub-headline's own margin-top, so the field and the first line of
+   copy start on the same baseline when they sit side by side. */
+.waitlist{margin-top:22px}
+/* flex-end puts the button under the right-hand end of the field, on the same
+   line the field and the chips above both end on. The field itself is unaffected:
+   it takes the full width, so there is nothing for it to be pushed against. */
+.waitlist-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
 #waitlist-email{
-  font:inherit;font-size:15px;padding:11px 16px;width:min(300px,100%);color:var(--ink);
+  /* A full-width basis, so the field takes the whole first line and the button
+     always falls to the second. The row's flex-wrap does the break, which keeps
+     the two on separate lines without a second container. */
+  font:inherit;font-size:15px;padding:11px 16px;flex:1 1 100%;min-width:0;color:var(--ink);
   background:var(--surface);border:1px solid var(--line-strong);
   border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
   transition:border-color .15s,box-shadow .15s;
@@ -554,10 +591,15 @@ main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
    and skip. The field stays laid out and fillable, it is just nowhere a person
    can see it. */
 .waitlist-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.waitlist-note{font-size:14px;color:var(--muted)}
-/* margin-top rather than the .intro p rule's 22px: this line belongs to the
-   field above it, not to the prose. */
-.waitlist .waitlist-note{margin-top:10px}
+/* Two classes deep on purpose. This is a <p> inside .intro, so the .intro p rule
+   would otherwise win on specificity and set it in 17px prose with a 22px top
+   margin — which is how it once ended up larger than the stats line beside it.
+   The margin has to be cleared for the same reason: spacing here comes from the
+   row's gap, and the inherited one would stack on top of it.
+   A full-width basis keeps it on its own line between the field and the button.
+   Without it the note is only as wide as its text, and the short states —
+   "Adding you…" — would fit beside the button and sit on the same line. */
+.waitlist .waitlist-note{flex:1 1 100%;margin:0;font-size:13px;color:var(--muted);text-align:right}
 .waitlist.ok .waitlist-note{color:#0F766E;font-weight:500}
 .waitlist.invalid .waitlist-note,.waitlist.error .waitlist-note{color:#C2185B}
 .intro-deco{display:grid;grid-template-columns:repeat(3,30px);gap:10px;padding-top:14px}
@@ -777,7 +819,11 @@ footer p{max-width:1400px;margin:0 auto}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:720px){
   .intro{grid-template-columns:1fr}
-  .intro-deco{grid-template-columns:repeat(6,26px)}
+  /* One column stacks in source order, which would drop the chips between the
+     headline and the copy. They belong after both, as they did before the form
+     pushed them up the markup. The extra padding stands in for the row gap the
+     two-column layout does not need. */
+  .intro-deco{grid-template-columns:repeat(6,26px);order:1;padding-top:34px}
   .topbar{flex-wrap:wrap}
   /* The label gutter costs too much of a narrow screen: stack instead. */
   .filter-group{flex-direction:column;gap:8px}
