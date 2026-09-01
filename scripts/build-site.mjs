@@ -1020,6 +1020,13 @@ form.addEventListener('submit', async (e) => {
         source: location.pathname + location.search,
       }),
     });
+    // Fired here rather than on click, so the count is signups and not attempts.
+    // The response is opaque, so what this really records is "the request left
+    // the browser" — the closest to a confirmed signup the form can observe.
+    // Guarded because a content blocker can leave gtag undefined, and a blocked
+    // analytics call must not throw into the catch below and tell someone their
+    // signup failed when it went through.
+    if (typeof gtag === 'function') gtag('event', 'waitlist_signup');
     form.reset();
     setState('ok', 'You are on the list. We will be in touch.');
   } catch {
