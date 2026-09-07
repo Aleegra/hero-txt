@@ -4,7 +4,7 @@ A library of hero section copy collected from live product websites.
 
 Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-Currently 118 products across 20 categories. Last updated 2026-08-31.
+Currently 119 products across 20 categories. Last updated 2026-09-07.
 
 ## Browsing
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
@@ -48,7 +48,7 @@ Screenshots belong to their respective owners and are included here for referenc
 
 **Business & GTM**  
 - [Payments & Spend](#payments--spend) (3)
-- [GTM & Revenue Tools](#gtm--revenue-tools) (4)
+- [GTM & Revenue Tools](#gtm--revenue-tools) (5)
 
 ## Inference & Model Serving
 
@@ -1042,6 +1042,11 @@ _Finding buyers and getting found — pipeline, enrichment, and AI-era visibilit
 - **Headline:** Agentic CRM for forward-deployed companies
 - **Sub-headline:** /
 - **Updated:** 2026-08-31
+
+### [Nile](https://nile.app/)
+- **Headline:** Your brand, represented on every AI
+- **Sub-headline:** Nile gives your brand its own AI salesperson — selling inside ChatGPT, Gemini, Perplexity, and every AI your customers ask what to buy.
+- **Updated:** 2026-09-07
 
 ### [Profound](https://www.tryprofound.com/)
 - **Headline:** Marketing agents to win in Perplexity
