@@ -1,0 +1,48 @@
+# Weekly reading list: the week's Product Hunt daily winners plus AI software
+# companies that raised Series A or later. Read-only — it emails a list and
+# commits nothing, so a bad run costs one wrong email rather than bad data.
+name: Weekly scan
+
+on:
+  schedule:
+    # 01:00 UTC Monday is 09:00 Beijing. The script looks back seven days from
+    # yesterday, so a Monday run covers exactly the week that just ended.
+    - cron: '0 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      # Only @anthropic-ai/sdk is actually used here, but ci keeps the lockfile
+      # authoritative; the Playwright browsers are never downloaded.
+      - run: npm ci
+      # e2a is the mail transport, installed globally rather than vendored.
+      # Pinned to a major rather than a version: the API is the moving part and
+      # it drops paths from under old clients. A machine still on 1.1.1 got 404
+      # on every call because /api/send had moved, so a hard pin would rot the
+      # same way — but an unbounded install would take a 3.x breaking change
+      # unattended. Verified against 2.5.1.
+      - run: npm install -g @e2a/cli@2
+
+      - name: Scan and send
+        run: node scripts/weekly-scan.mjs
+        env:
+          # The Anthropic SDK reads these itself, so routing to DeepSeek is
+          # configuration with no code change. See docs/p4-handoff.md.
+          ANTHROPIC_BASE_URL: https://api.deepseek.com/anthropic
+          ANTHROPIC_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          HERO_TEXT_MODEL: DeepSeek-V4-Flash
+          # There is no ~/.e2a/config.json on a runner, so both the key and the
+          # sending identity have to come from here. weekly-scan.mjs passes
+          # --agent explicitly as well, which works whether or not the CLI
+          # version in use honours E2A_AGENT_EMAIL.
+          E2A_API_KEY: ${{ secrets.E2A_API_KEY }}
+          E2A_AGENT_EMAIL: ling@agents.e2a.dev
