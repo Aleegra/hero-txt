@@ -4,7 +4,7 @@ A library of hero section copy collected from live product websites.
 
 Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-Currently 119 products across 20 categories. Last updated 2026-09-07.
+Currently 121 products across 20 categories. Last updated 2026-09-15.
 
 ## Browsing
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
@@ -26,7 +26,7 @@ Screenshots belong to their respective owners and are included here for referenc
 
 **AI & Agents**  
 - [Inference & Model Serving](#inference--model-serving) (6)
-- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (9)
+- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (10)
 - [Agent Runtime & Dev Sandboxes](#agent-runtime--dev-sandboxes) (4)
 - [Agent Harness & Frameworks](#agent-harness--frameworks) (10)
 - [Coding Agents & App Builders](#coding-agents--app-builders) (5)
@@ -37,7 +37,7 @@ Screenshots belong to their respective owners and are included here for referenc
 - [Agent Eval & LLM Observability](#agent-eval--llm-observability) (5)
 
 **Cloud & DevOps**  
-- [Cloud, App & Agent Security](#cloud-app--agent-security) (8)
+- [Cloud, App & Agent Security](#cloud-app--agent-security) (9)
 - [Observability & Incident Response](#observability--incident-response) (8)
 - [CI/CD & Software Delivery](#cicd--software-delivery) (7)
 - [Platform Engineering & IaC](#platform-engineering--iac) (6)
@@ -146,6 +146,11 @@ _Rent the machines that training and inference run on._
   Reduce Kubernetes cost with virtual K8s clusters
 
 </details>
+
+### [Wonderful](https://wonderful.ai/)
+- **Headline:** Applied AI for the enterprise
+- **Sub-headline:** Wonderful helps enterprises accelerate AI adoption to unlock their full potential.
+- **Updated:** 2026-09-15
 
 ## Agent Runtime & Dev Sandboxes
 
@@ -435,6 +440,11 @@ _Find and fix risk across code, containers, cloud, and now agent identity._
 - **Headline:** Cybersecurity consulting and advisory
 - **Sub-headline:** /
 - **Updated:** 2026-08-29
+
+### [HiddenLayer](https://hiddenlayer.com/)
+- **Headline:** The most comprehensive security platform for AI
+- **Sub-headline:** Backed by patented technology and industry-leading adversarial AI research, our platform provides AI Discovery, AI Supply Chain Security, AI Attack Simulation, and AI Runtime Security.
+- **Updated:** 2026-09-15
 
 ### [Keycard](https://www.keycard.ai/)
 - **Headline:** Control agent access to tools, APIs, and data
