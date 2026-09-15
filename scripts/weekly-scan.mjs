@@ -234,6 +234,61 @@ async function classify(candidates) {
     .map((v) => ({ ...v, round: v.stage, article: candidates[v.index].link }));
 }
 
+// --- resolving a company's own website --------------------------------------
+
+// Sites that appear in TechCrunch markup for reasons other than being the
+// subject: share buttons, the publications a story cites, the wire services a
+// funding announcement crosses. reddit.com in particular outranks the real
+// company on link count in every article tested.
+const NOT_A_COMPANY =
+  /(^|\.)(techcrunch|twitter|x|facebook|linkedin|instagram|youtube|reddit|threads|bsky|mstdn\.social|wp|gravatar|google|apple|yahoo|theinformation|businesswire|prnewswire|strictlyvc|gartner|crunchbase)\.[a-z.]+$/i;
+
+function norm(s) {
+  return (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+// The model is told to leave "website" empty unless it is sure, which is the
+// right instruction — a guessed domain would send the screenshotter at a
+// stranger's site — but it leaves most entries blank. The article itself is the
+// missing evidence: TechCrunch normally links the company it is writing about.
+// Matching on the name rather than on link frequency is what keeps this honest;
+// no match means no website, and the digest says so.
+export async function resolveWebsite(company) {
+  let html;
+  try {
+    html = await fetchText(company.article);
+  } catch (err) {
+    console.log(`  ! ${company.name} — ${err.message}`);
+    return '';
+  }
+
+  const wanted = norm(company.name);
+  if (!wanted) return '';
+
+  for (const [, href] of html.matchAll(/href="(https?:\/\/[^"]+)"/g)) {
+    let host;
+    try {
+      host = new URL(href).hostname.replace(/^www\./, '');
+    } catch {
+      continue;
+    }
+    if (NOT_A_COMPANY.test(host)) continue;
+
+    // Compare against the domain's own label only: "wonderful.ai" for
+    // Wonderful, "hiddenlayer.com" for HiddenLayer. A prefix match catches
+    // "Thinking Machines" at thinkingmachines.ai, and the length floor stops
+    // short labels colliding with unrelated hosts.
+    const label = norm(host.split('.')[0]);
+    if (!label) continue;
+    const match =
+      label === wanted ||
+      (label.length > 3 && wanted.startsWith(label)) ||
+      (wanted.length > 3 && label.startsWith(wanted));
+    if (match) return `https://${host}/`;
+  }
+  return '';
+}
+
 // --- de-duplication against the library ------------------------------------
 
 function known() {
@@ -308,6 +363,14 @@ async function main() {
   console.log(`techcrunch: ${candidates.length} funding candidates`);
 
   const classified = await classify(candidates);
+
+  // Before de-duplication, not after: isNew() compares hostnames, and until the
+  // websites are filled in that half of the check has nothing to compare.
+  for (const company of classified) {
+    if (!company.website) company.website = await resolveWebsite(company);
+  }
+  console.log(`techcrunch: ${classified.filter((c) => c.website).length}/${classified.length} with a website`);
+
   const library = known();
   const companies = classified.filter((c) => isNew(library, c));
   console.log(
@@ -325,4 +388,7 @@ async function main() {
   console.log(`\nsent to ${TO}`);
 }
 
-main();
+// inbox-poll.mjs imports resolveWebsite from here to fill in a website that an
+// older digest predates. Without this guard that import would run a full scan
+// and mail it.
+if (process.argv[1] === fileURLToPath(import.meta.url)) main();

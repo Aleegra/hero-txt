@@ -1,0 +1,84 @@
+# Acts on replies to the weekly digest: captures the companies named in one,
+# mails back what it read, and publishes once the answer comes back 发布.
+#
+# Unlike weekly-scan this writes to the repo, so it is the riskier of the two.
+# What bounds the risk is that the script will only ever create products that
+# appeared in a digest we sent — see the header of scripts/inbox-poll.mjs.
+name: Inbox poll
+
+on:
+  schedule:
+    # Every half hour. A reply waits at most that long for its preview, and
+    # again for the site to go up.
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Two runs writing to v2 at once would race on the push.
+concurrency:
+  group: inbox-poll
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v2
+          # push needs somewhere to rebase from if v2 moved under us.
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Identify commits
+        run: |
+          git config user.name 'hero-txt bot'
+          git config user.email 'ling@agents.e2a.dev'
+
+      - run: npm ci
+      # capture.mjs drives a real browser, so unlike weekly-scan this one
+      # genuinely needs the Playwright download.
+      - run: npx playwright install --with-deps chromium
+      # Same major-version pin as weekly-scan.yml, for the same reason: the API
+      # is the moving part and a hard pin rots.
+      - run: npm install -g @e2a/cli@2
+
+      - name: Read mail and act on it
+        id: poll
+        run: node scripts/inbox-poll.mjs
+        env:
+          ANTHROPIC_BASE_URL: https://api.deepseek.com/anthropic
+          ANTHROPIC_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # Two models: the vision one reads hero copy out of a screenshot,
+          # the text one picks a category.
+          HERO_MODEL: deepseek-v4-flash-vision-exp
+          HERO_TEXT_MODEL: DeepSeek-V4-Flash
+          E2A_API_KEY: ${{ secrets.E2A_API_KEY }}
+          E2A_AGENT_EMAIL: ling@agents.e2a.dev
+
+      # The deploy is inlined rather than left to pages.yml because GitHub does
+      # not trigger a workflow from a push made with GITHUB_TOKEN. That is what
+      # makes the staging half work — committing a capture to v2 leaves the site
+      # untouched — so publishing has to be done explicitly, here, and only once
+      # the reply said to.
+      - uses: actions/configure-pages@v5
+        if: steps.poll.outputs.deploy == 'true'
+      - name: Build the site
+        if: steps.poll.outputs.deploy == 'true'
+        run: node scripts/build-site.mjs
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.poll.outputs.deploy == 'true'
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deploy
+        if: steps.poll.outputs.deploy == 'true'
