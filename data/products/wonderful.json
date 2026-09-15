@@ -1,0 +1,15 @@
+{
+  "id": "wonderful",
+  "name": "Wonderful",
+  "url": "https://wonderful.ai/",
+  "category": "platform-eng",
+  "history": [
+    {
+      "date": "2026-09-15",
+      "headline": "Applied AI for the enterprise",
+      "subheadline": "Wonderful helps enterprises accelerate AI adoption to unlock their full potential.",
+      "screenshot": "shots/wonderful/2026-09-15.webp"
+    }
+  ],
+  "fingerprint": "855d34f53c89fd89"
+}
