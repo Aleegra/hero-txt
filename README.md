@@ -26,7 +26,7 @@ Screenshots belong to their respective owners and are included here for referenc
 
 **AI & Agents**  
 - [Inference & Model Serving](#inference--model-serving) (6)
-- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (10)
+- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (9)
 - [Agent Runtime & Dev Sandboxes](#agent-runtime--dev-sandboxes) (4)
 - [Agent Harness & Frameworks](#agent-harness--frameworks) (10)
 - [Coding Agents & App Builders](#coding-agents--app-builders) (5)
@@ -40,7 +40,7 @@ Screenshots belong to their respective owners and are included here for referenc
 - [Cloud, App & Agent Security](#cloud-app--agent-security) (9)
 - [Observability & Incident Response](#observability--incident-response) (8)
 - [CI/CD & Software Delivery](#cicd--software-delivery) (7)
-- [Platform Engineering & IaC](#platform-engineering--iac) (6)
+- [Platform Engineering & IaC](#platform-engineering--iac) (7)
 - [Kubernetes Ops & Cloud FinOps](#kubernetes-ops--cloud-finops) (8)
 - [Cloud Platforms & Networking](#cloud-platforms--networking) (8)
 - [Databases & Vector Stores](#databases--vector-stores) (4)
@@ -146,11 +146,6 @@ _Rent the machines that training and inference run on._
   Reduce Kubernetes cost with virtual K8s clusters
 
 </details>
-
-### [Wonderful](https://wonderful.ai/)
-- **Headline:** Applied AI for the enterprise
-- **Sub-headline:** Wonderful helps enterprises accelerate AI adoption to unlock their full potential.
-- **Updated:** 2026-09-15
 
 ## Agent Runtime & Dev Sandboxes
 
@@ -749,6 +744,11 @@ _Paved paths and declarative infrastructure for internal developer platforms._
   Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud.
 
 </details>
+
+### [Wonderful](https://wonderful.ai/)
+- **Headline:** Applied AI for the enterprise
+- **Sub-headline:** Wonderful helps enterprises accelerate AI adoption to unlock their full potential.
+- **Updated:** 2026-09-15
 
 ## Kubernetes Ops & Cloud FinOps
 
