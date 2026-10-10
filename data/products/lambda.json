@@ -1,0 +1,15 @@
+{
+  "id": "lambda",
+  "name": "Lambda",
+  "url": "https://lambdalabs.com",
+  "category": "ai-cloud",
+  "history": [
+    {
+      "date": "2026-10-10",
+      "headline": "Supercomputers for training and inference",
+      "subheadline": "The Superintelligence Cloud",
+      "screenshot": "shots/lambda/2026-10-10.webp"
+    }
+  ],
+  "fingerprint": "a70a4abe7c886f5f"
+}

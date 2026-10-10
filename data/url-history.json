@@ -362,5 +362,8 @@
   "wonderful": [
     "ai-cloud",
     "platform-eng"
+  ],
+  "lambda": [
+    "ai-cloud"
   ]
 }
