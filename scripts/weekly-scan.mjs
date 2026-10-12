@@ -72,51 +72,103 @@ async function fetchText(url, attempts = 3) {
 
 // --- Product Hunt -----------------------------------------------------------
 
-function ymd(date) {
-  return [date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate()];
+// Scraping the leaderboard is no longer possible: www.producthunt.com now
+// answers every path — the .md rendering, the HTML page, even the homepage —
+// with a Cloudflare interstitial (cf-mitigated: challenge, "Just a moment...").
+// That is a bot check to be respected rather than defeated; the official API
+// sits on api.producthunt.com, is not challenged, and is the supported way in.
+const PH_API = 'https://api.producthunt.com/v2/api/graphql';
+const PH_TOKEN = process.env.PRODUCT_HUNT_TOKEN || '';
+
+// Rank is vote order within one leaderboard day, and Product Hunt runs that day
+// on Pacific time. Slicing by UTC midnight would merge the tail of one board
+// with the head of the next and call the result a winner.
+const PT = 'America/Los_Angeles';
+
+function pacificDay(daysBack) {
+  const at = new Date(Date.now() - daysBack * 86400000);
+  const day = new Intl.DateTimeFormat('en-CA', {
+    timeZone: PT,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(at);
+
+  // Pacific is -07:00 for most of the year and -08:00 in winter. Rather than
+  // track the changeover, try both and keep the one that really lands on
+  // midnight: with the wrong offset the same instant reads as 01:00 or 23:00.
+  const hourAt = (iso) =>
+    new Intl.DateTimeFormat('en-CA', { timeZone: PT, hour: '2-digit', hour12: false }).format(
+      new Date(iso)
+    );
+  for (const offset of ['-07:00', '-08:00']) {
+    const start = `${day}T00:00:00${offset}`;
+    if (hourAt(start).startsWith('00')) {
+      return { day, start, end: `${day}T23:59:59${offset}` };
+    }
+  }
+  throw new Error(`no Pacific midnight for ${day}`);
 }
 
-// Appending .md to a leaderboard URL returns a text/markdown rendering: 9 KB
-// instead of 540 KB, and it carries the score and the product's own homepage,
-// neither of which appears in the server-rendered HTML. It also sidesteps the
-// hashed CSS class names that change on every Product Hunt deploy.
-async function productHuntTop(date) {
-  const [y, m, d] = ymd(date);
-  const md = await fetchText(`https://www.producthunt.com/leaderboard/daily/${y}/${m}/${d}.md`);
+async function phQuery(query, variables) {
+  const res = await fetch(PH_API, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      authorization: `Bearer ${PH_TOKEN}`,
+      'user-agent': UA,
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+  const body = await res.json().catch(() => null);
+  if (!res.ok || body?.errors) {
+    const detail = body?.errors?.[0]?.error_description || body?.errors?.[0]?.message || res.status;
+    throw new Error(`product hunt api: ${detail}`);
+  }
+  return body.data;
+}
 
-  // "1. Kilo Code for JetBrains - Fully native, open-source coding agent"
-  const head = md.match(/^1\.\s+(.+?)(?:\s+-\s+(.*))?$/m);
-  if (!head) throw new Error('no rank-1 entry in leaderboard markdown');
+const TOP_OF_DAY = `query($after: DateTime!, $before: DateTime!) {
+  posts(postedAfter: $after, postedBefore: $before, order: VOTES, first: 1) {
+    edges { node { name tagline votesCount url website } }
+  }
+}`;
 
-  // The indented detail lines belong to this entry until rank 2 begins.
-  const rest = md.slice(head.index + head[0].length);
-  const body = rest.slice(0, rest.search(/^2\.\s/m) + 1 || rest.length);
-  const field = (name) => (body.match(new RegExp(`^\\s*-\\s*${name}:\\s*(.+)$`, 'm')) || [])[1]?.trim();
-
+async function productHuntTop(daysBack) {
+  const { day, start, end } = pacificDay(daysBack);
+  const data = await phQuery(TOP_OF_DAY, { after: start, before: end });
+  const node = data?.posts?.edges?.[0]?.node;
+  if (!node) throw new Error('no posts returned');
   return {
-    date: `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`,
-    name: decode(head[1]),
-    tagline: decode(head[2] || ''),
-    score: field('Score') || '',
-    url: field('Product Hunt page') || `https://www.producthunt.com/leaderboard/daily/${y}/${m}/${d}`,
-    site: field('External URL') || '',
+    date: day,
+    name: decode(node.name || ''),
+    tagline: decode(node.tagline || ''),
+    score: String(node.votesCount ?? ''),
+    url: node.url || '',
+    site: node.website || '',
   };
 }
 
+// Returns the reason alongside the picks. An empty Product Hunt section used to
+// read "nothing retrieved this week", which is the one thing that was already
+// obvious — the mail is the only place this failure is visible, so it carries
+// the cause.
 async function productHuntWeek() {
+  if (!PH_TOKEN) return { picks: [], note: 'PRODUCT_HUNT_TOKEN is not set' };
+
   const picks = [];
+  const errors = [];
   // Yesterday backwards. Today's board is still being voted on and its top
   // slot shuffles through the day, so including it would report a non-result.
   for (let back = WINDOW_DAYS; back >= 1; back--) {
-    const date = new Date(Date.now() - back * 86400000);
     try {
-      picks.push(await productHuntTop(date));
+      picks.push(await productHuntTop(back));
     } catch (err) {
-      const [y, m, d] = ymd(date);
-      console.log(`  ! product hunt ${y}-${m}-${d} — ${err.message}`);
+      console.log(`  ! product hunt ${back}d ago — ${err.message}`);
+      errors.push(err.message);
     }
   }
-  return picks;
+  return { picks, note: picks.length ? '' : errors[0] || 'no reason reported' };
 }
 
 // --- TechCrunch -------------------------------------------------------------
@@ -316,11 +368,11 @@ function isNew({ hosts, names }, company) {
 
 // --- output -----------------------------------------------------------------
 
-function compose(picks, companies, from, to) {
+function compose(picks, phNote, companies, from, to) {
   const lines = [`hero-txt weekly scan — ${from} to ${to}`, ''];
 
   lines.push(`PRODUCT HUNT — #1 of each day (${picks.length})`, '');
-  if (!picks.length) lines.push('  nothing retrieved this week', '');
+  if (!picks.length) lines.push(`  nothing retrieved — ${phNote}`, '');
   for (const p of picks) {
     lines.push(`  ${p.date}  ${p.name}${p.score ? `  (score ${p.score})` : ''}`);
     if (p.tagline) lines.push(`      ${p.tagline}`);
@@ -356,8 +408,8 @@ async function main() {
 
   console.log(`scanning ${from} to ${to}`);
 
-  const picks = await productHuntWeek();
-  console.log(`product hunt: ${picks.length} daily winners`);
+  const { picks, note: phNote } = await productHuntWeek();
+  console.log(`product hunt: ${picks.length} daily winners${phNote ? ` — ${phNote}` : ''}`);
 
   const candidates = await techcrunchCandidates();
   console.log(`techcrunch: ${candidates.length} funding candidates`);
@@ -378,7 +430,7 @@ async function main() {
   );
 
   const subject = `hero-txt weekly — ${picks.length} Product Hunt winners, ${companies.length} funded AI companies (${from} to ${to})`;
-  const body = compose(picks, companies, from, to);
+  const body = compose(picks, phNote, companies, from, to);
 
   if (dryRun) {
     console.log(`\n--- ${subject}\n\n${body}`);
