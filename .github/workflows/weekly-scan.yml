@@ -46,3 +46,8 @@ jobs:
           # version in use honours E2A_AGENT_EMAIL.
           E2A_API_KEY: ${{ secrets.E2A_API_KEY }}
           E2A_AGENT_EMAIL: ling@agents.e2a.dev
+          # www.producthunt.com now answers scrapers with a Cloudflare challenge,
+          # so the leaderboard comes from the official API instead. Without this
+          # the run still succeeds and mails the TechCrunch half, saying in the
+          # log that Product Hunt was skipped.
+          PRODUCT_HUNT_TOKEN: ${{ secrets.PRODUCT_HUNT_TOKEN }}
