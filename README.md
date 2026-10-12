@@ -4,7 +4,7 @@ A library of hero section copy collected from live product websites.
 
 Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-Currently 121 products across 20 categories. Last updated 2026-09-15.
+Currently 122 products across 20 categories. Last updated 2026-10-10.
 
 ## Browsing
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
@@ -26,7 +26,7 @@ Screenshots belong to their respective owners and are included here for referenc
 
 **AI & Agents**  
 - [Inference & Model Serving](#inference--model-serving) (6)
-- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (9)
+- [AI Cloud & GPU Infrastructure](#ai-cloud--gpu-infrastructure) (10)
 - [Agent Runtime & Dev Sandboxes](#agent-runtime--dev-sandboxes) (4)
 - [Agent Harness & Frameworks](#agent-harness--frameworks) (10)
 - [Coding Agents & App Builders](#coding-agents--app-builders) (5)
@@ -114,6 +114,11 @@ _Rent the machines that training and inference run on._
 - **Headline:** One cloud for compute, inference, and agents.
 - **Sub-headline:** AI infrastructure built for production scale — GPU clusters, optimized inference, and agent runtime on one unified cloud.
 - **Updated:** 2026-08-30
+
+### [Lambda](https://lambdalabs.com)
+- **Headline:** Supercomputers for training and inference
+- **Sub-headline:** The Superintelligence Cloud
+- **Updated:** 2026-10-10
 
 ### [Nebius](https://nebius.com/)
 - **Headline:** The Ultimate AI Cloud
