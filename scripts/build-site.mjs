@@ -25,18 +25,103 @@ const DOMAIN = 'www.herotxt.page';
 const SITE = `https://${DOMAIN}`;
 const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 
-const categories = read('data/categories.json');
-const products = readdirSync(join(ROOT, 'data/products'))
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => read(`data/products/${f}`))
-  .filter((p) => p.history.length && p.history[0].headline)
-  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+// Load local .env without adding another dependency. GitHub Actions supplies
+// these variables through repository secrets during the build.
+if (existsSync(join(ROOT, '.env'))) {
+  const envText = readFileSync(join(ROOT, '.env'), 'utf8');
+  for (const line of envText.split(/\r?\n/)) {
+    const match = line.match(/^\s*(SUPABASE_[A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
+    if (match && !process.env[match[1]]) {
+      process.env[match[1]] = match[2].replace(/^(['\"])(.*)\1$/, '$2');
+    }
+  }
+}
+
+const SUPABASE_URL = process.env.SUPABASE_URL?.replace(/\/+$/, '');
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+
+if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+  throw new Error(
+    'Missing SUPABASE_URL or SUPABASE_ANON_KEY. Check your .env file or GitHub Actions configuration.'
+  );
+}
+
+async function fetchTable(table, query) {
+  const url = `${SUPABASE_URL}/rest/v1/${table}?${query}`;
+  const response = await fetch(url, {
+    headers: {
+      apikey: SUPABASE_ANON_KEY,
+    },
+  });
+
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(`Supabase ${table} query failed (${response.status}): ${detail}`);
+  }
+
+  return response.json();
+}
+
+const [categoryRows, entryRows, versionRows] = await Promise.all([
+  fetchTable('categories', 'select=*&order=sort_order.asc'),
+  fetchTable(
+    'hero_entries',
+    'select=*&status=eq.published&order=company_name.asc'
+  ),
+  fetchTable(
+    'hero_versions',
+    'select=*&order=version_date.desc'
+  ),
+]);
+
+// Keep the existing front-end data shape so the page templates remain intact.
+const categories = categoryRows.map((c) => ({
+  id: c.slug,
+  name: c.name,
+  group: c.group,
+  blurb: c.blurb || '',
+  color: c.color || '#CCCCCC',
+  short: c.short || c.name,
+}));
+
+const categoryByUuid = Object.fromEntries(
+  categoryRows.map((c) => [c.id, c.slug])
+);
+
+const versionsByEntry = new Map();
+
+for (const v of versionRows) {
+  if (!versionsByEntry.has(v.entry_id)) {
+    versionsByEntry.set(v.entry_id, []);
+  }
+
+  versionsByEntry.get(v.entry_id).push({
+    date: v.version_date,
+    headline: v.headline || '',
+    subheadline: v.subheadline || '',
+    screenshot: v.screenshot_url || '',
+  });
+}
+
+const products = entryRows
+  .map((p) => ({
+    id: p.source_id || p.slug,
+    name: p.company_name,
+    url: p.website_url,
+    category: categoryByUuid[p.category_id],
+    fingerprint: p.fingerprint || '',
+    history: versionsByEntry.get(p.id) || [],
+  }))
+  .filter((p) => p.category && p.history.length && p.history[0].headline)
+  .sort((a, b) =>
+    a.name.localeCompare(b.name, 'en', { sensitivity: 'base' })
+  );
 
 const catById = Object.fromEntries(categories.map((c) => [c.id, c]));
 const lastUpdated = products
   .map((p) => p.history[0].date)
   .sort()
-  .at(-1);
+  .at(-1) || '';
 
 // Product URLs nest under the category, so recategorising a product moves it and
 // any indexed link to the old address dies. This records every category a product
@@ -123,6 +208,9 @@ const clamp = (s, n = 158) => {
 const page = ({ subject, desc: rawDesc, canonical, image, jsonld = [], body, script = '' }) => {
   const title = withBrand(subject);
   const desc = clamp(rawDesc);
+  const imageUrl = image
+    ? (image.startsWith('http') ? image : SITE + image)
+    : `${SITE}/assets/favicon-512.png`;
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -145,11 +233,11 @@ const page = ({ subject, desc: rawDesc, canonical, image, jsonld = [], body, scr
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${esc(SITE + canonical)}">
-<meta property="og:image" content="${esc(SITE + (image || '/assets/favicon-512.png'))}">
+<meta property="og:image" content="${esc(imageUrl)}">
 <meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
-<meta name="twitter:image" content="${esc(SITE + (image || '/assets/favicon-512.png'))}">
+<meta name="twitter:image" content="${esc(imageUrl)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
@@ -224,7 +312,7 @@ const cardHtml = (p) => {
   return `<article class="card" data-id="${esc(p.id)}">
       <a class="card-link" href="${esc(pathOf(p))}" aria-label="${esc(p.name)}"></a>
       <div class="shot">
-        ${h.screenshot ? `<img src="/${esc(h.screenshot)}" alt="${esc(p.name)} hero section" loading="lazy" width="1440" height="900">` : ''}
+        ${h.screenshot ? `<img src="${esc(h.screenshot)}" alt="${esc(p.name)} hero section" loading="lazy" width="1440" height="900">` : ''}
         ${p.history.length > 1 ? `<span class="versions">${p.history.length} versions</span>` : ''}
       </div>
       <div class="body">
@@ -336,7 +424,7 @@ const categoryHtml = (c) => {
     subject: `${c.name} Hero Sections`,
     desc: `${c.blurb} Headlines and sub-headlines from ${items.length} ${c.name.toLowerCase()} websites, with screenshots and version history.`,
     canonical: `/${c.id}`,
-    image: items[0]?.history[0].screenshot ? `/${items[0].history[0].screenshot}` : null,
+    image: items[0]?.history[0].screenshot || null,
     jsonld: [
       crumbs([
         { name: 'Hero Section Library', path: '/' },
@@ -383,7 +471,7 @@ const productHtml = (p) => {
     subject: `${p.name} Hero Section Copy`,
     desc: `${p.name}'s homepage headline: “${h.headline}”${h.subheadline ? ` — ${h.subheadline}` : ''} Captured ${h.date}${p.history.length > 1 ? `, with ${p.history.length - 1} earlier version${p.history.length > 2 ? 's' : ''}.` : '.'}`,
     canonical: pathOf(p),
-    image: h.screenshot ? `/${h.screenshot}` : null,
+    image: h.screenshot || null,
     jsonld: [
       crumbs([
         { name: 'Hero Section Library', path: '/' },
@@ -415,7 +503,7 @@ const productHtml = (p) => {
       <span class="version-date" style="${tagStyle(c.color)}">${esc(v.date)}</span>${i === 0 ? '<span class="current">CURRENT</span>' : ''}
       <h2>${esc(v.headline)}</h2>
       ${v.subheadline ? `<p>${esc(v.subheadline)}</p>` : ''}
-      ${v.screenshot ? `<img src="/${esc(v.screenshot)}" alt="${esc(p.name)} hero section on ${esc(v.date)}" loading="lazy" width="1440" height="900">` : ''}
+      ${v.screenshot ? `<img src="${esc(v.screenshot)}" alt="${esc(p.name)} hero section on ${esc(v.date)}" loading="lazy" width="1440" height="900">` : ''}
     </article>`
       )
       .join('')}
@@ -961,7 +1049,7 @@ function render() {
     return \`<article class="card" data-id="\${p.id}">
       <a class="card-link" href="/\${p.category}/\${p.id}" aria-label="\${esc(p.name)}"></a>
       <div class="shot">
-        \${h.screenshot ? \`<img src="/\${h.screenshot}" alt="\${esc(p.name)} hero section" loading="lazy" width="1440" height="900">\` : ''}
+        \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero section" loading="lazy" width="1440" height="900">\` : ''}
         \${p.history.length > 1 ? \`<span class="versions">\${p.history.length} versions</span>\` : ''}
       </div>
       <div class="body">
@@ -1011,7 +1099,7 @@ function openModal(id) {
         <span class="version-date" style="\${tag(c.color)}">\${esc(h.date)}</span>\${i === 0 ? '<span class="current">CURRENT</span>' : ''}
         <h3>\${esc(h.headline)}</h3>
         \${h.subheadline ? \`<p>\${esc(h.subheadline)}</p>\` : ''}
-        \${h.screenshot ? \`<img src="/\${h.screenshot}" alt="\${esc(p.name)} hero on \${esc(h.date)}" loading="lazy">\` : ''}
+        \${h.screenshot ? \`<img src="\${h.screenshot}" alt="\${esc(p.name)} hero on \${esc(h.date)}" loading="lazy">\` : ''}
       </div>\`).join('');
   const m = $('#modal');
   m.scrollTop = 0;

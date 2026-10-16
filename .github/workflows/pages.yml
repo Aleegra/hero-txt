@@ -1,10 +1,8 @@
-# dist/ is generated rather than committed, so the site is built here from
-# data/ + shots/ on every push.
+
 name: Deploy site
 
 on:
   push:
-    # main is listed so the site keeps deploying once v2 merges down.
     branches: [v2, main]
     paths:
       - 'data/**'
@@ -19,7 +17,6 @@ permissions:
   pages: write
   id-token: write
 
-# Let a running deploy finish rather than cancelling it midway.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -30,16 +27,26 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      # build-site.mjs only reads JSON and copies files, so no install needed.
-      - run: node scripts/build-site.mjs
+
+      # Build the site using data from Supabase.
+      - name: Build site
+        run: node scripts/build-site.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
       - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
       - uses: actions/deploy-pages@v4
         id: deploy

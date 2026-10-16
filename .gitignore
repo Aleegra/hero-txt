@@ -10,3 +10,7 @@ dist/
 capture-report.json
 capture-failures.json
 probe.tmp.mjs
+
+.env
+.env.*
+!.env.example
