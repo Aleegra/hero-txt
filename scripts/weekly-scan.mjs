@@ -11,12 +11,9 @@
 //   node scripts/weekly-scan.mjs --dry-run   # print the email instead
 import Anthropic from '@anthropic-ai/sdk';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, readdirSync } from 'node:fs';
-import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadLibrary } from './lib/db.mjs';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PRODUCTS = join(ROOT, 'data', 'products');
 const MODEL = process.env.HERO_TEXT_MODEL || 'DeepSeek-V4-Flash';
 const TO = process.env.DIGEST_TO || 'xinxialing@gmail.com';
 const AGENT = process.env.E2A_AGENT || 'ling@agents.e2a.dev';
@@ -343,11 +340,12 @@ export async function resolveWebsite(company) {
 
 // --- de-duplication against the library ------------------------------------
 
-function known() {
+// Every status, so a company staged from last week's digest and not yet
+// answered is not offered a second time.
+async function known() {
   const hosts = new Set();
   const names = new Set();
-  for (const file of readdirSync(PRODUCTS).filter((f) => f.endsWith('.json'))) {
-    const p = JSON.parse(readFileSync(join(PRODUCTS, file), 'utf8'));
+  for (const p of (await loadLibrary()).products) {
     try {
       hosts.add(new URL(p.url).hostname.replace(/^www\./, ''));
     } catch {}
@@ -423,7 +421,7 @@ async function main() {
   }
   console.log(`techcrunch: ${classified.filter((c) => c.website).length}/${classified.length} with a website`);
 
-  const library = known();
+  const library = await known();
   const companies = classified.filter((c) => isNew(library, c));
   console.log(
     `techcrunch: ${classified.length} match the brief, ${companies.length} not already in the library`

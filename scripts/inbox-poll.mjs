@@ -7,9 +7,13 @@
 //
 // Two runs, because approval happens between them:
 //
-//   inbound reply  -> capture, extract, build, commit to v2, mail a preview
-//   inbound 发布   -> deploy the site
-//   inbound 取消   -> delete the products, rebuild, commit
+//   inbound reply  -> stage as 'draft' in Supabase, capture, extract, mail a preview
+//   inbound 发布   -> mark 'published', deploy the site
+//   inbound 取消   -> delete the products and their screenshots
+//
+// Staging works because the site is built only from published rows: a staged
+// product is fully captured in the database and still invisible. Nothing here
+// touches git.
 //
 // Nothing here trusts the reply for anything but names. The set of products
 // that can be created is fixed by the digest we ourselves sent — a reply that
@@ -21,23 +25,30 @@
 //   node scripts/inbox-poll.mjs --dry-run   # print decisions, touch nothing
 import Anthropic from '@anthropic-ai/sdk';
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  createEntry,
+  deleteEntry,
+  dropBatch,
+  loadBatches,
+  loadCategories,
+  loadLibrary,
+  PUBLISHED,
+  saveBatch,
+  setStatus,
+  STAGED,
+} from './lib/db.mjs';
 import { resolveWebsite } from './weekly-scan.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PRODUCTS = join(ROOT, 'data', 'products');
-const PENDING = join(ROOT, 'data', 'pending');
-const SHOTS = join(ROOT, 'shots');
-const CATEGORIES = join(ROOT, 'data', 'categories.json');
 
 const MODEL = process.env.HERO_TEXT_MODEL || 'DeepSeek-V4-Flash';
 const AGENT = process.env.E2A_AGENT || 'ling@agents.e2a.dev';
 const SITE = 'https://www.herotxt.page/';
 
-// An unconfirmed batch is already committed to v2 but absent from the site. Left
-// alone it would sit there forever, so a batch nobody answers is withdrawn.
+// An unconfirmed batch is in the database but absent from the site. Left alone
+// it would sit there forever, so a batch nobody answers is withdrawn.
 const PENDING_DAYS = 7;
 
 const DRY = process.argv.includes('--dry-run');
@@ -75,36 +86,7 @@ function reply(id, text) {
   e2a(['reply', id, '--agent', AGENT, '--body', text], { capture: false });
 }
 
-// --- git --------------------------------------------------------------------
-
-function git(...args) {
-  return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8' });
-}
-
-function commit(message) {
-  if (DRY) {
-    console.log(`would commit: ${message}`);
-    return false;
-  }
-  git('add', 'data', 'shots', 'README.md');
-  if (!git('status', '--porcelain', '--', 'data', 'shots', 'README.md').trim()) {
-    console.log('nothing to commit');
-    return false;
-  }
-  git('commit', '-m', message);
-
-  // Only the runner pushes. The staging half of this script relies on a commit
-  // to v2 not reaching the site, and that holds only for GITHUB_TOKEN — a push
-  // with a personal credential does trigger pages.yml, so running this locally
-  // published two products straight past the confirmation step. Locally the
-  // commit is left for a human to push.
-  if (!process.env.GITHUB_ACTIONS) {
-    console.log('committed but not pushed — run outside CI. push v2 yourself to publish.');
-    return false;
-  }
-  git('push', 'origin', 'v2');
-  return true;
-}
+// --- steps -----------------------------------------------------------------
 
 function run(script, args = []) {
   console.log(`  $ node scripts/${script} ${args.join(' ')}`);
@@ -113,12 +95,6 @@ function run(script, args = []) {
     cwd: ROOT,
     stdio: 'inherit',
   });
-}
-
-function build() {
-  console.log('  $ npm run build');
-  if (DRY) return;
-  execFileSync('npm', ['run', 'build'], { cwd: ROOT, stdio: 'inherit' });
 }
 
 // --- parsing the digest we sent ---------------------------------------------
@@ -253,10 +229,11 @@ async function selection(message, picks) {
   const digest = digestCompanies(body(findDigest(message.conversationId)));
   console.log(`  digest lists ${digest.length} companies`);
 
-  const categories = JSON.parse(readFileSync(CATEGORIES, 'utf8'));
+  const categories = await loadCategories();
   const ids = categories.map((c) => c.id);
   const listing = categories.map((c) => `${c.id} — ${c.name}`).join('\n');
-  const existing = new Set(readdirSync(PRODUCTS).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5)));
+  // Every status: a product staged by an earlier, unanswered reply is taken too.
+  const existing = new Set((await loadLibrary()).products.map((p) => p.id));
 
   const added = [];
   const noWebsite = [];
@@ -293,41 +270,32 @@ async function selection(message, picks) {
     const category = await categorise(company, ids, listing);
     const record = { id, name: company.name, url: company.website, category, history: [] };
     console.log(`  + ${id} (${category}) ${company.website}`);
-    if (!DRY) writeFileSync(join(PRODUCTS, `${id}.json`), `${JSON.stringify(record, null, 2)}\n`);
     existing.add(id);
     added.push(record);
   }
 
   if (added.length) {
     const ids = added.map((p) => p.id);
-    run('capture.mjs', ids);
-    // Skipping this leaves headline empty, and build-site.mjs filters those
-    // out — the product would vanish from the site with no error at all.
-    run('extract.mjs', ids);
-    build();
-
+    // The batch is recorded before any row exists, so a run that dies partway
+    // through still leaves something 取消 or the expiry will clean up — never a
+    // staged product nothing points at.
     if (!DRY) {
-      mkdirSync(PENDING, { recursive: true });
-      writeFileSync(
-        join(PENDING, `${message.conversationId}.json`),
-        `${JSON.stringify(
-          {
-            conversation: message.conversationId,
-            created: new Date().toISOString().slice(0, 10),
-            products: ids,
-          },
-          null,
-          2
-        )}\n`
-      );
+      await saveBatch({
+        conversation: message.conversationId,
+        created: new Date().toISOString().slice(0, 10),
+        products: ids,
+      });
+      for (const record of added) await createEntry({ ...record, status: STAGED });
     }
-    // Committing to v2 does not publish: GitHub does not run one workflow from
-    // another workflow's push, so pages.yml stays asleep until the confirmation
-    // run deploys explicitly.
-    commit(`Stage ${ids.join(', ')} from an emailed selection`);
+    run('capture.mjs', ids);
+    // Without this the versions have no copy and the preview has nothing to
+    // show; publishing them would put nothing on the site.
+    run('extract.mjs', ids);
   }
 
-  reply(message.id, composePreview(added, noWebsite, unknown, already));
+  const library = DRY ? null : (await loadLibrary()).products;
+  const captured = added.map((p) => library?.find((q) => q.id === p.id) || p);
+  reply(message.id, composePreview(captured, noWebsite, unknown, already));
 }
 
 function composePreview(added, noWebsite, unknown, already) {
@@ -335,8 +303,7 @@ function composePreview(added, noWebsite, unknown, already) {
 
   if (added.length) {
     lines.push(`Captured ${added.length} — reply 发布 to publish, 取消 to discard.`, '');
-    for (const p of added) {
-      const record = DRY ? p : JSON.parse(readFileSync(join(PRODUCTS, `${p.id}.json`), 'utf8'));
+    for (const record of added) {
       const entry = record.history?.[0] || {};
       lines.push(`  ${record.name}  [${record.category}]`);
       lines.push(`      ${record.url}`);
@@ -369,28 +336,31 @@ function composePreview(added, noWebsite, unknown, already) {
 
 // --- phase two: publish or withdraw ------------------------------------------
 
-function withdraw(batch) {
+async function withdraw(batch) {
+  const library = (await loadLibrary()).products;
   for (const id of batch.products) {
-    const file = join(PRODUCTS, `${id}.json`);
-    if (existsSync(file) && !DRY) rmSync(file);
-    const shots = join(SHOTS, id);
-    if (existsSync(shots) && !DRY) rmSync(shots, { recursive: true });
+    const product = library.find((p) => p.id === id);
+    // Only ever delete what is still staged. If a product was published some
+    // other way in the meantime, withdrawing this batch must not take it down.
+    if (product && product.status === STAGED && !DRY) await deleteEntry(product);
     console.log(`  - ${id}`);
   }
-  if (!DRY) rmSync(join(PENDING, `${batch.conversation}.json`));
-  build();
+  if (!DRY) await dropBatch(batch.conversation);
 }
 
-function confirm(message, batch, decision) {
+async function confirm(message, batch, decision) {
   if (decision === 'cancel') {
-    withdraw(batch);
-    commit(`Withdraw ${batch.products.join(', ')}`);
+    await withdraw(batch);
     reply(message.id, `Removed ${batch.products.join(', ')}. The site is unchanged.`);
     return false;
   }
 
-  if (!DRY) rmSync(join(PENDING, `${batch.conversation}.json`));
-  commit(`Publish ${batch.products.join(', ')}`);
+  const library = (await loadLibrary()).products;
+  for (const id of batch.products) {
+    const product = library.find((p) => p.id === id);
+    if (product && !DRY) await setStatus(product.uuid, PUBLISHED);
+  }
+  if (!DRY) await dropBatch(batch.conversation);
   reply(
     message.id,
     `Published ${batch.products.join(', ')}.\n\n${SITE}\n\nThe site rebuilds in a couple of minutes.`
@@ -407,25 +377,17 @@ function findDigest(conversationId) {
   return digest.id;
 }
 
-function pendingBatches() {
-  if (!existsSync(PENDING)) return [];
-  return readdirSync(PENDING)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(readFileSync(join(PENDING, f), 'utf8')));
-}
-
-function expire() {
+async function expire(batches) {
   const cutoff = Date.now() - PENDING_DAYS * 86400000;
-  for (const batch of pendingBatches()) {
+  for (const batch of batches) {
     if (Date.parse(batch.created) >= cutoff) continue;
     console.log(`expiring ${batch.conversation} (staged ${batch.created})`);
-    withdraw(batch);
-    commit(`Withdraw ${batch.products.join(', ')} — unconfirmed for ${PENDING_DAYS} days`);
+    await withdraw(batch);
   }
 }
 
 async function main() {
-  expire();
+  await expire(await loadBatches());
 
   // Reading a message marks it read, so a message that has already been looked
   // at is invisible to the poll. --message replays one by id, which is the only
@@ -441,7 +403,7 @@ async function main() {
   for (const message of unread) {
     console.log(`\n${message.id} from ${message.headerFrom}`);
     const lines = replyLines(body(message.id));
-    const batch = pendingBatches().find((b) => b.conversation === message.conversationId);
+    const batch = (await loadBatches()).find((b) => b.conversation === message.conversationId);
 
     if (batch) {
       const decision = verdict(lines);
@@ -450,7 +412,7 @@ async function main() {
         continue;
       }
       console.log(`  ${decision} ${batch.products.join(', ')}`);
-      if (confirm(message, batch, decision)) deploy = true;
+      if (await confirm(message, batch, decision)) deploy = true;
       continue;
     }
 

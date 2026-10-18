@@ -1,9 +1,10 @@
 # Acts on replies to the weekly digest: captures the companies named in one,
 # mails back what it read, and publishes once the answer comes back 发布.
 #
-# Unlike weekly-scan this writes to the repo, so it is the riskier of the two.
-# What bounds the risk is that the script will only ever create products that
-# appeared in a digest we sent — see the header of scripts/inbox-poll.mjs.
+# Unlike weekly-scan this writes to the library in Supabase, so it is the riskier
+# of the two and the only job holding the service-role key. What bounds the risk
+# is that the script will only ever create products that appeared in a digest
+# we sent — see the header of scripts/inbox-poll.mjs. It no longer writes to git.
 name: Inbox poll
 
 on:
@@ -14,11 +15,11 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
-# Two runs writing to v2 at once would race on the push.
+# Two runs acting on the same reply would stage its companies twice.
 concurrency:
   group: inbox-poll
   cancel-in-progress: false
@@ -33,16 +34,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: v2
-          # push needs somewhere to rebase from if v2 moved under us.
-          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
-      - name: Identify commits
-        run: |
-          git config user.name 'hero-txt bot'
-          git config user.email 'ling@agents.e2a.dev'
 
       - run: npm ci
       # capture.mjs drives a real browser, so unlike weekly-scan this one
@@ -64,17 +58,21 @@ jobs:
           HERO_TEXT_MODEL: DeepSeek-V4-Flash
           E2A_API_KEY: ${{ secrets.E2A_API_KEY }}
           E2A_AGENT_EMAIL: ling@agents.e2a.dev
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
-      # The deploy is inlined rather than left to pages.yml because GitHub does
-      # not trigger a workflow from a push made with GITHUB_TOKEN. That is what
-      # makes the staging half work — committing a capture to v2 leaves the site
-      # untouched — so publishing has to be done explicitly, here, and only once
-      # the reply said to.
+      # Staging is a status in the database: the build reads only published
+      # rows, so a staged capture is invisible until 发布 flips it. The site then
+      # has to be rebuilt, which happens here rather than by waiting for
+      # pages.yml's daily run.
       - uses: actions/configure-pages@v5
         if: steps.poll.outputs.deploy == 'true'
       - name: Build the site
         if: steps.poll.outputs.deploy == 'true'
         run: node scripts/build-site.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
       - uses: actions/upload-pages-artifact@v3
         if: steps.poll.outputs.deploy == 'true'
         with:

@@ -1,6 +1,7 @@
 # Weekly reading list: the week's Product Hunt daily winners plus AI software
 # companies that raised Series A or later. Read-only — it emails a list and
-# commits nothing, so a bad run costs one wrong email rather than bad data.
+# writes nothing, so a bad run costs one wrong email rather than bad data. It
+# reads Supabase only to leave out companies already in the library.
 name: Weekly scan
 
 on:
@@ -51,3 +52,5 @@ jobs:
           # the run still succeeds and mails the TechCrunch half, saying in the
           # log that Product Hunt was skipped.
           PRODUCT_HUNT_TOKEN: ${{ secrets.PRODUCT_HUNT_TOKEN }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}

@@ -1,16 +1,16 @@
-// Regenerates README.md from data/. Run after any data change.
-import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
+// Regenerates README.md from the published library in Supabase. The weekly
+// backup workflow runs it alongside scripts/export-backup.mjs and commits both.
+import { writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadLibrary } from './lib/db.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 
-const categories = read('data/categories.json');
-const products = readdirSync(join(ROOT, 'data/products'))
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => read(`data/products/${f}`))
-  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+const library = await loadLibrary({ statuses: ['published'] });
+const { categories } = library;
+// Versions still waiting for extract.mjs have no copy to list.
+const products = library.products.map((p) => ({ ...p, history: p.history.filter((h) => h.headline) }));
 
 const tracked = products.filter((p) => p.history.length > 0);
 const latestDate = tracked
@@ -38,10 +38,10 @@ lines.push(
 lines.push('');
 lines.push('## Data');
 lines.push(
-  'Entries live in data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot path, and previous versions.'
+  'Entries live in a Supabase database, with screenshots in Supabase Storage. A weekly backup exports them to data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot URL, and previous versions.'
 );
 lines.push('');
-lines.push('This `README` is generated from that data. Edit the JSON, not the Markdown.');
+lines.push('This `README` is generated from that data. Edit the database, not the Markdown or the JSON — both are overwritten by the next backup.');
 lines.push('');
 lines.push('## Contributing');
 lines.push(

@@ -4,10 +4,11 @@
   "description": "A library of real hero-section copy from live product websites",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build-readme.mjs && node scripts/build-site.mjs",
+    "build": "node scripts/build-site.mjs",
     "shot": "node scripts/shot.mjs",
     "capture": "node scripts/capture.mjs",
-    "extract": "node scripts/extract.mjs"
+    "extract": "node scripts/extract.mjs",
+    "backup": "node scripts/export-backup.mjs && node scripts/build-readme.mjs"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,5 @@
     "@anthropic-ai/sdk": "^0.122.0",
     "playwright": "^1.62.1",
     "sharp": "^0.35.4"
-  },
-  "dependencies": {
-    "@supabase/supabase-js": "^2.118.0"
   }
 }

@@ -1,17 +1,10 @@
 // Builds the static site into dist/. No framework: the whole thing is a
 // filterable gallery over one JSON file, so a bundler would be pure overhead.
-import {
-  readFileSync,
-  writeFileSync,
-  readdirSync,
-  mkdirSync,
-  rmSync,
-  cpSync,
-  existsSync,
-} from 'node:fs';
+import { writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { loadLibrary, loadUrlHistory } from './lib/db.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -23,99 +16,18 @@ const DOMAIN = 'www.herotxt.page';
 // og:url has to name the www host — pointing them at the apex would make each
 // one a redirect hop.
 const SITE = `https://${DOMAIN}`;
-const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 
-// Load local .env without adding another dependency. GitHub Actions supplies
-// these variables through repository secrets during the build.
-if (existsSync(join(ROOT, '.env'))) {
-  const envText = readFileSync(join(ROOT, '.env'), 'utf8');
-  for (const line of envText.split(/\r?\n/)) {
-    const match = line.match(/^\s*(SUPABASE_[A-Z0-9_]+)\s*=\s*(.*?)\s*$/);
-    if (match && !process.env[match[1]]) {
-      process.env[match[1]] = match[2].replace(/^(['\"])(.*)\1$/, '$2');
-    }
-  }
-}
-
-const SUPABASE_URL = process.env.SUPABASE_URL?.replace(/\/+$/, '');
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
-
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  throw new Error(
-    'Missing SUPABASE_URL or SUPABASE_ANON_KEY. Check your .env file or GitHub Actions configuration.'
-  );
-}
-
-async function fetchTable(table, query) {
-  const url = `${SUPABASE_URL}/rest/v1/${table}?${query}`;
-  const response = await fetch(url, {
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-    },
-  });
-
-  if (!response.ok) {
-    const detail = await response.text();
-    throw new Error(`Supabase ${table} query failed (${response.status}): ${detail}`);
-  }
-
-  return response.json();
-}
-
-const [categoryRows, entryRows, versionRows] = await Promise.all([
-  fetchTable('categories', 'select=*&order=sort_order.asc'),
-  fetchTable(
-    'hero_entries',
-    'select=*&status=eq.published&order=company_name.asc'
-  ),
-  fetchTable(
-    'hero_versions',
-    'select=*&order=version_date.desc'
-  ),
-]);
-
-// Keep the existing front-end data shape so the page templates remain intact.
-const categories = categoryRows.map((c) => ({
-  id: c.slug,
-  name: c.name,
-  group: c.group,
-  blurb: c.blurb || '',
-  color: c.color || '#CCCCCC',
-  short: c.short || c.name,
-}));
-
-const categoryByUuid = Object.fromEntries(
-  categoryRows.map((c) => [c.id, c.slug])
-);
-
-const versionsByEntry = new Map();
-
-for (const v of versionRows) {
-  if (!versionsByEntry.has(v.entry_id)) {
-    versionsByEntry.set(v.entry_id, []);
-  }
-
-  versionsByEntry.get(v.entry_id).push({
-    date: v.version_date,
-    headline: v.headline || '',
-    subheadline: v.subheadline || '',
-    screenshot: v.screenshot_url || '',
-  });
-}
-
-const products = entryRows
-  .map((p) => ({
-    id: p.source_id || p.slug,
-    name: p.company_name,
-    url: p.website_url,
-    category: categoryByUuid[p.category_id],
-    fingerprint: p.fingerprint || '',
-    history: versionsByEntry.get(p.id) || [],
+const library = await loadLibrary({ statuses: ['published'] });
+const categories = library.categories.map(({ uuid, ...c }) => c);
+// A version capture.mjs has shot but extract.mjs has not read yet has no copy.
+// Leave it out and show the previous one, rather than dropping the product —
+// which is what a blank latest headline used to do, silently.
+const products = library.products
+  .map(({ uuid, status, ...p }) => ({
+    ...p,
+    history: p.history.filter((h) => h.headline).map(({ uuid, ...h }) => h),
   }))
-  .filter((p) => p.category && p.history.length && p.history[0].headline)
-  .sort((a, b) =>
-    a.name.localeCompare(b.name, 'en', { sensitivity: 'base' })
-  );
+  .filter((p) => p.category && p.history.length);
 
 const catById = Object.fromEntries(categories.map((c) => [c.id, c]));
 const lastUpdated = products
@@ -124,21 +36,18 @@ const lastUpdated = products
   .at(-1) || '';
 
 // Product URLs nest under the category, so recategorising a product moves it and
-// any indexed link to the old address dies. This records every category a product
-// has been published under; the build then leaves a redirect at each one it has
-// left behind. The file is committed, because the knowledge of where a product
-// used to live cannot be recovered from the current data.
-const HISTORY_FILE = join(ROOT, 'data', 'url-history.json');
-const urlHistory = existsSync(HISTORY_FILE) ? read('data/url-history.json') : {};
-const moved = [];
+// any indexed link to the old address dies. url_history records every category a
+// product has been published under (a trigger on hero_entries keeps it, see
+// supabase/migrations); the build leaves a redirect at each one it has left.
+const urlHistory = await loadUrlHistory();
 for (const p of products) {
-  const seen = urlHistory[p.id] || [];
-  if (!seen.includes(p.category)) {
-    if (seen.length) moved.push(`${p.id}: ${seen.at(-1)} -> ${p.category}`);
-    urlHistory[p.id] = [...seen, p.category];
-  }
+  const seen = (urlHistory[p.id] ||= []);
+  // The trigger records the current category on publish, so this only fires if
+  // the migration has not been run. Keep the page right either way.
+  if (!seen.includes(p.category)) seen.push(p.category);
+  // Current address last, so everything before it is a redirect.
+  seen.push(...seen.splice(seen.indexOf(p.category), 1));
 }
-writeFileSync(HISTORY_FILE, JSON.stringify(urlHistory, null, 2) + '\n');
 
 const pathOf = (p) => `/${p.category}/${p.id}`;
 // Everything except the address the product lives at now.
@@ -146,8 +55,6 @@ const staleP = (p) => (urlHistory[p.id] || []).slice(0, -1).map((c) => `/${c}/${
 
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
-if (existsSync(join(ROOT, 'shots')))
-  cpSync(join(ROOT, 'shots'), join(DIST, 'shots'), { recursive: true });
 if (existsSync(join(ROOT, 'assets')))
   cpSync(join(ROOT, 'assets'), join(DIST, 'assets'), { recursive: true });
 
@@ -1272,7 +1179,6 @@ Sitemap: ${SITE}/sitemap.xml
 `
 );
 
-if (moved.length) console.log(`redirects left behind:\n  ${moved.join('\n  ')}`);
 console.log(
   `dist/: ${products.length} products, ${categories.length} categories, ${urls.length} urls, updated ${lastUpdated} (${cssFile}, ${jsFile})`
 );

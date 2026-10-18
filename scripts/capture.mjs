@@ -6,24 +6,27 @@
 // from the part that needs an API key.
 //
 // A DOM-text fingerprint gates the work: if a page's text is unchanged since
-// the last run, nothing is written. That keeps the weekly job's repo footprint
-// proportional to actual copy churn.
+// the last run, nothing is written. That keeps storage proportional to actual
+// copy churn.
 //
-//   node scripts/capture.mjs                 # everything
-//   node scripts/capture.mjs wiz e2b         # specific products
+// Reads products from Supabase and uploads into it (scripts/lib/db.mjs), so it
+// needs SUPABASE_SERVICE_ROLE_KEY. Captures carry no copy until extract.mjs runs,
+// and the site skips versions without copy, so a capture alone changes nothing
+// visible.
+//
+//   node scripts/capture.mjs                 # every published product
+//   node scripts/capture.mjs wiz e2b         # specific products, any status
 //   node scripts/capture.mjs --missing       # only those with no history
 //   node scripts/capture.mjs --force         # ignore fingerprints
 import { chromium } from 'playwright';
 import sharp from 'sharp';
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { addCapture, loadLibrary, PUBLISHED } from './lib/db.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PRODUCTS = join(ROOT, 'data', 'products');
-const SHOTS = join(ROOT, 'shots');
-const MAX_HISTORY = 3;
 const CONCURRENCY = 4;
 // A 1440px-wide webp of a real hero runs 25-150KB; a blank frame lands near 2KB.
 const MIN_BYTES = 8000;
@@ -242,10 +245,12 @@ async function main() {
   const onlyMissing = args.includes('--missing');
   const names = args.filter((a) => !a.startsWith('--'));
 
-  let products = readdirSync(PRODUCTS)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(readFileSync(join(PRODUCTS, f), 'utf8')));
-  if (names.length) products = products.filter((p) => names.includes(p.id));
+  let { products } = await loadLibrary();
+  // Named products may be staged ones inbox-poll.mjs has just created; a full
+  // run refreshes only what is on the site.
+  products = names.length
+    ? products.filter((p) => names.includes(p.id))
+    : products.filter((p) => p.status === PUBLISHED);
   if (onlyMissing) products = products.filter((p) => p.history.length === 0);
 
   console.log(`capturing ${products.length} products`);
@@ -291,24 +296,7 @@ async function main() {
         // retry below rather than being stored as a valid capture.
         if (webp.length < MIN_BYTES) throw new Error(`blank render (${webp.length}b)`);
 
-        const dir = join(SHOTS, p.id);
-        mkdirSync(dir, { recursive: true });
-        const rel = `shots/${p.id}/${today}.webp`;
-        writeFileSync(join(ROOT, rel), webp);
-
-        p.fingerprint = hash;
-        // Empty copy marks this entry as awaiting extract.mjs. Entries still
-        // awaiting it are not real data points, so replace rather than stack.
-        p.history = [
-          { date: today, headline: '', subheadline: '', screenshot: rel },
-          ...p.history.filter((h) => h.date !== today && h.headline),
-        ].slice(0, MAX_HISTORY);
-
-        const keep = new Set(p.history.map((h) => h.screenshot).filter(Boolean));
-        for (const f of readdirSync(dir))
-          if (!keep.has(`shots/${p.id}/${f}`)) rmSync(join(dir, f));
-
-        writeFileSync(join(PRODUCTS, `${p.id}.json`), JSON.stringify(p, null, 2) + '\n');
+        await addCapture(p, { date: today, webp, fingerprint: hash });
         shot.push(p.id);
         console.log(`  + ${p.id}`);
       } catch (err) {
