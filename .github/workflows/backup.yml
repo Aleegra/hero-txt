@@ -1,0 +1,60 @@
+# Weekly backup of the library out of Supabase. The JSON and README go into git
+# on v2, so every week leaves a diffable record of what changed; the screenshots
+# go into a build artifact, which keeps images out of the repository.
+#
+# Read-only against Supabase — the anon key is enough. The commit is pushed with
+# GITHUB_TOKEN, which does not trigger other workflows, and pages.yml does not
+# watch data/ anyway: a backup never redeploys the site.
+name: Backup
+
+on:
+  schedule:
+    # 02:00 UTC Monday, an hour after the weekly scan.
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Export from Supabase
+        run: |
+          node scripts/export-backup.mjs --shots backup-shots
+          node scripts/build-readme.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Commit what changed
+        run: |
+          git config user.name 'hero-txt bot'
+          git config user.email 'ling@agents.e2a.dev'
+          git add data README.md
+          if git diff --cached --quiet; then
+            echo 'library unchanged since the last backup'
+          else
+            git commit -m "Back up library from Supabase ($(date -u +%F))"
+            git push origin HEAD:v2
+          fi
+
+      # Artifacts expire, so this is a rolling window of weekly copies rather
+      # than an archive: 90 days is the longest GitHub keeps one.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ github.run_number }}
+          path: backup-shots
+          retention-days: 90

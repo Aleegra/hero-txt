@@ -1,17 +1,28 @@
-# dist/ is generated rather than committed, so the site is built here from
-# data/ + shots/ on every push.
+# dist/ is generated rather than committed, so the site is built here from the
+# published rows in Supabase on every run.
+#
+# The data no longer lives in git, so a push is not the only thing that changes
+# the site. Three triggers:
+#   push      code or assets changed
+#   schedule  picks up edits made in the Supabase dashboard within a day
+#   dispatch  Actions → Deploy site → Run workflow, to publish such an edit now
+# Emailed 发布 confirmations deploy themselves, inline in inbox-poll.yml.
 name: Deploy site
 
 on:
   push:
     # main is listed so the site keeps deploying once v2 merges down.
     branches: [v2, main]
+    # data/ is only the weekly backup now; the build never reads it, so a
+    # backup commit must not count as a change to the site.
     paths:
-      - 'data/**'
-      - 'shots/**'
       - 'assets/**'
       - 'scripts/build-site.mjs'
+      - 'scripts/lib/**'
       - '.github/workflows/pages.yml'
+  schedule:
+    # 22:00 UTC is 06:00 Beijing. Scheduled runs use the default branch.
+    - cron: '0 22 * * *'
   workflow_dispatch:
 
 permissions:
@@ -35,8 +46,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      # build-site.mjs only reads JSON and copies files, so no install needed.
+      # build-site.mjs talks to Supabase with plain fetch (scripts/lib/db.mjs),
+      # so no install is needed. The anon key is enough: the build only reads.
       - run: node scripts/build-site.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

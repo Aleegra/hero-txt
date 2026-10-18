@@ -3,10 +3,19 @@ node_modules/
 *.log
 .claude/
 
-# Generated: `node scripts/build-site.mjs` rebuilds this from data/ + shots/.
+# Generated: `node scripts/build-site.mjs` rebuilds this from Supabase.
 dist/
 
 # Run logs from scripts/capture.mjs, useful locally, noise in history.
 capture-report.json
 capture-failures.json
 probe.tmp.mjs
+
+# Screenshots live in Supabase Storage; the backup workflow archives them as an
+# artifact. Local copies (old checkouts, backup downloads) stay out of git.
+shots/
+backup-shots/
+
+.env
+.env.*
+!.env.example

@@ -12,15 +12,15 @@
 // reads ANTHROPIC_BASE_URL itself, so pointing HERO_MODEL at a vision model on
 // another provider is the whole of the configuration.
 //
+// Reads and writes Supabase (scripts/lib/db.mjs), so it also needs
+// SUPABASE_SERVICE_ROLE_KEY. This is the step that makes a capture visible:
+// the site shows only versions with copy.
+//
 //   node scripts/extract.mjs                 # every blank entry
 //   node scripts/extract.mjs wiz e2b         # specific products
 import Anthropic from '@anthropic-ai/sdk';
-import { readFileSync, writeFileSync, readdirSync, rmSync, existsSync } from 'node:fs';
-import { join, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { deleteVersions, downloadShot, loadLibrary, setCopy, settle } from './lib/db.mjs';
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const PRODUCTS = join(ROOT, 'data', 'products');
 const MODEL = process.env.HERO_MODEL || 'claude-sonnet-4-6';
 const CONCURRENCY = 4;
 
@@ -37,7 +37,7 @@ Respond with only a JSON object: {"headline": "...", "subheadline": "..."}`;
 
 const anthropic = new Anthropic();
 
-async function readHero(file) {
+async function readHero(webp) {
   const res = await anthropic.messages.create({
     model: MODEL,
     // Transcription, not writing. At the default temperature the same screenshot
@@ -57,7 +57,7 @@ async function readHero(file) {
             source: {
               type: 'base64',
               media_type: 'image/webp',
-              data: readFileSync(file).toString('base64'),
+              data: webp.toString('base64'),
             },
           },
           { type: 'text', text: PROMPT },
@@ -82,10 +82,9 @@ async function readHero(file) {
 async function main() {
   const names = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 
-  let products = readdirSync(PRODUCTS)
-    .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(readFileSync(join(PRODUCTS, f), 'utf8')))
-    .filter((p) => p.history.some((h) => h.screenshot && !h.headline));
+  let products = (await loadLibrary()).products.filter((p) =>
+    p.history.some((h) => h.screenshot && !h.headline)
+  );
   if (names.length) products = products.filter((p) => names.includes(p.id));
 
   console.log(`extracting ${products.length} products`);
@@ -101,12 +100,11 @@ async function main() {
       try {
         for (const entry of p.history) {
           if (!entry.screenshot || entry.headline) continue;
-          const file = join(ROOT, entry.screenshot);
-          if (!existsSync(file)) throw new Error(`missing ${entry.screenshot}`);
-          const { headline, subheadline } = await readHero(file);
+          const { headline, subheadline } = await readHero(await downloadShot(entry.screenshot));
           if (!headline) throw new Error('model returned no headline');
           entry.headline = headline;
           entry.subheadline = subheadline;
+          await setCopy(entry.uuid, { headline, subheadline });
         }
 
         // If the fresh capture reads identically to the previous version, the
@@ -114,8 +112,7 @@ async function main() {
         // real copy changes rather than of scraper runs.
         const [latest, prev] = p.history;
         if (prev && latest.headline === prev.headline && latest.subheadline === prev.subheadline) {
-          if (latest.screenshot && existsSync(join(ROOT, latest.screenshot)))
-            rmSync(join(ROOT, latest.screenshot));
+          await deleteVersions([latest]);
           p.history = p.history.slice(1);
           noChange.push(p.id);
           console.log(`  = ${p.id}`);
@@ -123,7 +120,9 @@ async function main() {
           done.push(p.id);
           console.log(`  + ${p.id} — ${latest.headline.slice(0, 70)}`);
         }
-        writeFileSync(join(PRODUCTS, `${p.id}.json`), JSON.stringify(p, null, 2) + '\n');
+        // Only now is it known whether the capture was a new version, so this
+        // is where history is cut back to three.
+        await settle(p);
       } catch (err) {
         const msg = err.message.split('\n')[0];
         failed.push({ id: p.id, error: msg });
