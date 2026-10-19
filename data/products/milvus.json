@@ -8,7 +8,7 @@
       "date": "2026-08-31",
       "headline": "The High-Performance Vector Database Built for Scale",
       "subheadline": "Milvus is an open-source vector database built for GenAI applications. Install with pip, perform high-speed searches, and scale to tens of billions of vectors with minimal performance loss.",
-      "screenshot": "shots/milvus/2026-08-31.webp"
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/milvus/2026-08-31.webp"
     }
   ],
   "fingerprint": "0edeb1b5730d7d98"

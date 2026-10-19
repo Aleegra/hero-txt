@@ -8,7 +8,7 @@
       "date": "2026-08-31",
       "headline": "Build and deploy fully-managed AI agents and workflows",
       "subheadline": "Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling.",
-      "screenshot": "shots/trigger-dev/2026-08-31.webp"
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/trigger-dev/2026-08-31.webp"
     }
   ],
   "fingerprint": "1f46ad1f79ffb938"

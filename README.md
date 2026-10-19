@@ -10,9 +10,9 @@ Currently 122 products across 20 categories. Last updated 2026-10-10.
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
 
 ## Data
-Entries live in data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot path, and previous versions.
+Entries live in a Supabase database, with screenshots in Supabase Storage. A weekly backup exports them to data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot URL, and previous versions.
 
-This `README` is generated from that data. Edit the JSON, not the Markdown.
+This `README` is generated from that data. Edit the database, not the Markdown or the JSON — both are overwritten by the next backup.
 
 ## Contributing
 To suggest a product that is missing, open an issue with the product name and its homepage URL.
