@@ -29,6 +29,9 @@
   "baseten": [
     "inference"
   ],
+  "blacksmith": [
+    "cicd"
+  ],
   "braintrust": [
     "agent-eval"
   ],
@@ -247,6 +250,9 @@
   ],
   "opensearch": [
     "observability"
+  ],
+  "otterai": [
+    "dev-work-tools"
   ],
   "pinecone": [
     "database"
