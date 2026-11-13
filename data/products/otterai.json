@@ -1,0 +1,15 @@
+{
+  "id": "otterai",
+  "name": "Otter.ai",
+  "url": "https://otter.ai",
+  "category": "dev-work-tools",
+  "history": [
+    {
+      "date": "2026-10-26",
+      "headline": "Meeting AI that turns talk into action",
+      "subheadline": "Transcription. Pre-call briefs. Live coaching. Automatic follow-ups.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/otterai/2026-10-26.webp?v=mvp8sivg"
+    }
+  ],
+  "fingerprint": "85bbcf533e8aee61"
+}

@@ -1,0 +1,2215 @@
+{
+  "updated": "2026-10-26",
+  "count": 124,
+  "categories": [
+    {
+      "id": "inference",
+      "name": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "blurb": "Run open models as an API — throughput, latency, and cost per token."
+    },
+    {
+      "id": "ai-cloud",
+      "name": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "blurb": "Rent the machines that training and inference run on."
+    },
+    {
+      "id": "agent-runtime",
+      "name": "Agent Runtime & Dev Sandboxes",
+      "group": "AI & Agents",
+      "blurb": "Isolated environments where agents (and developers) execute untrusted code."
+    },
+    {
+      "id": "agent-harness",
+      "name": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "blurb": "The scaffolding that turns a model into an agent: loops, tools, orchestration."
+    },
+    {
+      "id": "coding-agents",
+      "name": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "blurb": "Describe software in English, get software back."
+    },
+    {
+      "id": "agent-memory",
+      "name": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "blurb": "Give agents something to remember between runs."
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "blurb": "Let agents drive a real browser and read the live web."
+    },
+    {
+      "id": "ai-gateway",
+      "name": "AI Gateway & Routing",
+      "group": "AI & Agents",
+      "blurb": "One endpoint in front of many models — routing, fallbacks, keys, and spend."
+    },
+    {
+      "id": "search",
+      "name": "Search & Retrieval APIs",
+      "group": "AI & Agents",
+      "blurb": "Web-scale search built to be read by a model rather than a person."
+    },
+    {
+      "id": "agent-eval",
+      "name": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "blurb": "Trace, score, and debug what the agent actually did."
+    },
+    {
+      "id": "security",
+      "name": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "blurb": "Find and fix risk across code, containers, cloud, and now agent identity."
+    },
+    {
+      "id": "observability",
+      "name": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "blurb": "Know when production breaks, and why."
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "blurb": "Build, test, package, and ship code to production."
+    },
+    {
+      "id": "platform-eng",
+      "name": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "blurb": "Paved paths and declarative infrastructure for internal developer platforms."
+    },
+    {
+      "id": "k8s-finops",
+      "name": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "blurb": "Run Kubernetes well and stop overpaying for it."
+    },
+    {
+      "id": "cloud-network",
+      "name": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "blurb": "The compute underneath, and the traffic routed across it."
+    },
+    {
+      "id": "database",
+      "name": "Databases & Vector Stores",
+      "group": "Cloud & DevOps",
+      "blurb": "Where the application state — and increasingly the embeddings — lives."
+    },
+    {
+      "id": "dev-work-tools",
+      "name": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "blurb": "Everyday software for building and running a business."
+    },
+    {
+      "id": "fintech",
+      "name": "Payments & Spend",
+      "group": "Business & GTM",
+      "blurb": "Moving money: checkout, cards, and the ledger behind them."
+    },
+    {
+      "id": "gtm",
+      "name": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "blurb": "Finding buyers and getting found — pipeline, enrichment, and AI-era visibility."
+    }
+  ],
+  "products": [
+    {
+      "id": "baseten",
+      "name": "Baseten",
+      "url": "https://www.baseten.co/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Inference is everything",
+          "subheadline": "The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack."
+        }
+      ]
+    },
+    {
+      "id": "deepinfra",
+      "name": "DeepInfra",
+      "url": "https://deepinfra.com/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "LOW-COST AI Inference",
+          "subheadline": "Accelerate your AI with developer-friendly APIs designed for performance and cost-efficiency."
+        }
+      ]
+    },
+    {
+      "id": "fireworks-ai",
+      "name": "Fireworks AI",
+      "url": "https://fireworks.ai/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Own your model. Own your future.",
+          "subheadline": "Fireworks' SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence."
+        }
+      ]
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "url": "https://modal.com/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "AI infrastructure that developers love",
+          "subheadline": "Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local."
+        }
+      ]
+    },
+    {
+      "id": "radixark",
+      "name": "RadixArk",
+      "url": "https://www.radixark.com/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "SHIP AI FOR ALL"
+        }
+      ]
+    },
+    {
+      "id": "inferact",
+      "name": "vLLM by Inferact",
+      "url": "https://vllm.ai/",
+      "category": "inference",
+      "categoryName": "Inference & Model Serving",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "The High-Throughput and Memory-Efficient inference and serving engine for LLMs",
+          "subheadline": "Easy, fast, and cost-efficient LLM serving for everyone."
+        }
+      ]
+    },
+    {
+      "id": "akash",
+      "name": "Akash",
+      "url": "https://akash.network/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The Open Cloud for AI's Next Frontier",
+          "subheadline": "Tap into global GPU power at a fraction of the cost."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "The World's Premier Decentralized Compute Marketplace",
+          "subheadline": "Akash is an open network that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility."
+        }
+      ]
+    },
+    {
+      "id": "anyscale",
+      "name": "Anyscale",
+      "url": "https://www.anyscale.com/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Foundation Model builders scale and training workloads on Anyscale",
+          "subheadline": "Powered by Ray, the world's most widely adopted AI compute engine."
+        }
+      ]
+    },
+    {
+      "id": "coreweave",
+      "name": "CoreWeave",
+      "url": "https://coreweave.com/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "CoreWeave Cloud: The Essential Cloud for AI",
+          "subheadline": "The force multiplier for AI. Trusted by the world's leading AI pioneers."
+        }
+      ]
+    },
+    {
+      "id": "gmi-cloud",
+      "name": "GMI Cloud",
+      "url": "https://www.gmicloud.ai/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "One cloud for compute, inference, and agents.",
+          "subheadline": "AI infrastructure built for production scale — GPU clusters, optimized inference, and agent runtime on one unified cloud."
+        }
+      ]
+    },
+    {
+      "id": "lambda",
+      "name": "Lambda",
+      "url": "https://lambdalabs.com",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-10-10",
+          "headline": "Supercomputers for training and inference",
+          "subheadline": "The Superintelligence Cloud"
+        }
+      ]
+    },
+    {
+      "id": "nebius",
+      "name": "Nebius",
+      "url": "https://nebius.com/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "The Ultimate AI Cloud",
+          "subheadline": "Build and scale AI faster on a cloud engineered from silicon to API."
+        }
+      ]
+    },
+    {
+      "id": "skypilot",
+      "name": "SkyPilot",
+      "url": "https://skypilot.ai/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Your AI infrastructure, frontier velocity",
+          "subheadline": "One platform for all your AI compute – Kubernetes, Slurm, 20+ clouds"
+        }
+      ]
+    },
+    {
+      "id": "tensorpool",
+      "name": "TensorPool",
+      "url": "https://tensorpool.dev/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "You focus on the models. We handle the infrastructure.",
+          "subheadline": "Train foundation models without thinking about infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "url": "https://www.together.ai/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Build what's next on the AI Native Cloud",
+          "subheadline": "Full-stack AI platform, powered by cutting-edge research."
+        }
+      ]
+    },
+    {
+      "id": "vcluster",
+      "name": "vCluster",
+      "url": "https://www.vcluster.com/",
+      "category": "ai-cloud",
+      "categoryName": "AI Cloud & GPU Infrastructure",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Run your AI cloud like a hyperscaler.",
+          "subheadline": "One platform to turn raw GPUs into every kind of cluster, from bare metal up to Kubernetes, Slurm, inference, and more."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Building Blocks for Platform Creators",
+          "subheadline": "Reduce Kubernetes cost with virtual K8s clusters"
+        }
+      ]
+    },
+    {
+      "id": "coder",
+      "name": "Coder",
+      "url": "https://coder.com/",
+      "category": "agent-runtime",
+      "categoryName": "Agent Runtime & Dev Sandboxes",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Your developers have guardrails. Your AI doesn't.",
+          "subheadline": "Safely run your favorite AI, agents, and enterprise development on your own infrastructure."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Click ~~README~~ to get started",
+          "subheadline": "Developers can instantly launch fully configured cloud development environments and make their first commit in minutes. No need to traverse README files or await onboarding queues."
+        }
+      ]
+    },
+    {
+      "id": "daytona",
+      "name": "Daytona",
+      "url": "https://www.daytona.io/",
+      "category": "agent-runtime",
+      "categoryName": "Agent Runtime & Dev Sandboxes",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Run AI Code.",
+          "subheadline": "Secure and Elastic Infrastructure for Running Your AI-Generated Code."
+        }
+      ]
+    },
+    {
+      "id": "e2b",
+      "name": "E2B",
+      "url": "https://e2b.dev/",
+      "category": "agent-runtime",
+      "categoryName": "Agent Runtime & Dev Sandboxes",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "AI Sandboxes for Deep Research Agents",
+          "subheadline": "Open-source, secure environment with real-world tools for enterprise-grade agents."
+        }
+      ]
+    },
+    {
+      "id": "runta",
+      "name": "Runta",
+      "url": "https://runta.com/",
+      "category": "agent-runtime",
+      "categoryName": "Agent Runtime & Dev Sandboxes",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Runta is your execution layer for AI agents.",
+          "subheadline": "Catch your agents wasting tokens. Never hand them your real credentials."
+        }
+      ]
+    },
+    {
+      "id": "composio",
+      "name": "Composio",
+      "url": "https://composio.dev/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Everything your agents need to take action",
+          "subheadline": "1,000+ integrations with just-in-time tool calls, secure delegated auth, sandboxed environments, and parallel execution."
+        }
+      ]
+    },
+    {
+      "id": "conductor",
+      "name": "Conductor",
+      "url": "https://www.conductor.build/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Run a team of coding agents in the cloud."
+        }
+      ]
+    },
+    {
+      "id": "deepseek-harness",
+      "name": "DeepSeek Harness",
+      "url": "https://deepseek.com/harness/en/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Everything is a plugin",
+          "subheadline": "DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included."
+        }
+      ]
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "url": "https://dify.ai/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The Platform for Production-Ready Agentic Workflows.",
+          "subheadline": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack."
+        }
+      ]
+    },
+    {
+      "id": "langchain",
+      "name": "LangChain",
+      "url": "https://www.langchain.com/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Meet LangSmith Engine",
+          "subheadline": "Smarter after every launch"
+        }
+      ]
+    },
+    {
+      "id": "multica",
+      "name": "Multica",
+      "url": "https://multica.ai/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Your next 10 hires won't be human.",
+          "subheadline": "Multica is an open-source platform that turns coding agents into real teammates. Assign tasks, track progress, compound skills — manage your human + agent workforce in one place."
+        }
+      ]
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "url": "https://n8n.io/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "AI agents and workflows you can see and control",
+          "subheadline": "Build visually, go deep with code, connect to anything. Every step of your agents' reasoning, traceable on the canvas. Deploy on your infrastructure or ours."
+        }
+      ]
+    },
+    {
+      "id": "raft",
+      "name": "Raft",
+      "url": "https://raft.build/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Where humans and AI agents build together.",
+          "subheadline": "For agent-native builders and teams. Build with Raft. Build with fun."
+        }
+      ]
+    },
+    {
+      "id": "trigger-dev",
+      "name": "Trigger.dev",
+      "url": "https://trigger.dev/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Build and deploy fully-managed AI agents and workflows",
+          "subheadline": "Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling."
+        }
+      ]
+    },
+    {
+      "id": "union-ai",
+      "name": "Union AI",
+      "url": "https://www.union.ai/",
+      "category": "agent-harness",
+      "categoryName": "Agent Harness & Frameworks",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The durable AI runtime that runs in your cloud, not ours.",
+          "subheadline": "One platform to build indestructible AI workflows, serve models, and orchestrate compute. Zero trust security guarantees your data and models never leave your infrastructure."
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com/",
+      "category": "coding-agents",
+      "categoryName": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Cursor is your coding agent for building ambitious software."
+        }
+      ]
+    },
+    {
+      "id": "kimchi",
+      "name": "Kimchi",
+      "url": "https://kimchi.dev/",
+      "category": "coding-agents",
+      "categoryName": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The governed AI coding platform",
+          "subheadline": "Give engineers autonomous coding agents without losing control of models, data, quality, or spend. Start serverless. Deploy in your VPC when ready."
+        }
+      ]
+    },
+    {
+      "id": "lovable",
+      "name": "Lovable",
+      "url": "https://lovable.dev/",
+      "category": "coding-agents",
+      "categoryName": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Build something Lovable",
+          "subheadline": "Bring a new product, internal tool, or entire company to life."
+        }
+      ]
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "url": "https://replit.com/",
+      "category": "coding-agents",
+      "categoryName": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "What will you build?",
+          "subheadline": "Turn ideas into apps in minutes — no coding needed"
+        }
+      ]
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "category": "coding-agents",
+      "categoryName": "Coding Agents & App Builders",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Agentic Infrastructure",
+          "subheadline": "For coding agents · To ship apps and agents · Automated by agents"
+        }
+      ]
+    },
+    {
+      "id": "cognee",
+      "name": "Cognee",
+      "url": "https://www.cognee.ai/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Open Source Memory Platform for Agents",
+          "subheadline": "Connect Slack, GitHub, Linear to Cognee and help agents recall what your company knows."
+        }
+      ]
+    },
+    {
+      "id": "evermind",
+      "name": "Evermind",
+      "url": "https://evermind.ai/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "EverOS : Give Your AI Agent Self-evolving Memory.",
+          "subheadline": "Turn stateless LLMs into intelligent agents that can truly remember. Maintain context across days, sessions, and platforms."
+        }
+      ]
+    },
+    {
+      "id": "glean",
+      "name": "Glean",
+      "url": "https://www.glean.com/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Elevate your AI expertise",
+          "subheadline": "See how teams are deploying agents and building AI-native workflows to run real work."
+        }
+      ]
+    },
+    {
+      "id": "letta",
+      "name": "Letta",
+      "url": "https://www.letta.com/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Letta is an AI research lab in San Francisco building machines that learn.",
+          "subheadline": "We envision a future where humans coexist with digital people: experiential agents that remember everything, learn continuously, and improve themselves over time."
+        }
+      ]
+    },
+    {
+      "id": "mem0",
+      "name": "mem0",
+      "url": "https://mem0.ai/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "AI memory that persists across sessions and agents",
+          "subheadline": "Drop-in memory infrastructure for AI agents and apps. Context that persists. Built for production."
+        }
+      ]
+    },
+    {
+      "id": "reducto",
+      "name": "Reducto",
+      "url": "https://reducto.ai/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Turn documents into data.",
+          "subheadline": "The agentic document platform for leading AI teams who demand enterprise performance at scale. One platform for every document task."
+        }
+      ]
+    },
+    {
+      "id": "zep",
+      "name": "Zep",
+      "url": "https://www.getzep.com/",
+      "category": "agent-memory",
+      "categoryName": "Agent Memory & Knowledge",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Agent memory, at enterprise scale.",
+          "subheadline": "Memory of users, the business, and work done. Managed, governed, and served at scale."
+        }
+      ]
+    },
+    {
+      "id": "apify",
+      "name": "Apify",
+      "url": "https://apify.com/",
+      "category": "browser-use",
+      "categoryName": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "65,824 tools for your AI",
+          "subheadline": "Apify is the largest marketplace of trusted tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents."
+        }
+      ]
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "url": "https://browser-use.com/",
+      "category": "browser-use",
+      "categoryName": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Agents that use the browser.",
+          "subheadline": "Browser Use Agents finish the task. Browser Infrastructure powers your own agents."
+        }
+      ]
+    },
+    {
+      "id": "browserbase",
+      "name": "Browserbase",
+      "url": "https://www.browserbase.com/",
+      "category": "browser-use",
+      "categoryName": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Give your agents access to the whole web.",
+          "subheadline": "Browserbase makes the web as reliable and programmable as APIs"
+        }
+      ]
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "url": "https://www.firecrawl.dev/",
+      "category": "browser-use",
+      "categoryName": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Power AI agents with clean web data",
+          "subheadline": "The context API to search, scrape, and interact with the web at scale. It's also open source."
+        }
+      ]
+    },
+    {
+      "id": "tinyfish",
+      "name": "Tinyfish",
+      "url": "https://www.tinyfish.ai/",
+      "category": "browser-use",
+      "categoryName": "Browser Use & Web Agents",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Everything AI needs to use the web.",
+          "subheadline": "Search the web, fetch clean content from any URL, run a real browser, and deploy agents. All from one API."
+        }
+      ]
+    },
+    {
+      "id": "litellm",
+      "name": "LiteLLM",
+      "url": "https://www.litellm.ai/",
+      "category": "ai-gateway",
+      "categoryName": "AI Gateway & Routing",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The AI Gateway for platform teams",
+          "subheadline": "Put your full AI stack behind one key. See who is driving spend, cap it before it runs, and send each request to the model that should handle it."
+        }
+      ]
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "url": "https://openrouter.ai/",
+      "category": "ai-gateway",
+      "categoryName": "AI Gateway & Routing",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The Unified Interface For Every Model",
+          "subheadline": "Better prices, better uptime, no subscriptions."
+        }
+      ]
+    },
+    {
+      "id": "portkey",
+      "name": "Portkey",
+      "url": "https://portkey.ai/",
+      "category": "ai-gateway",
+      "categoryName": "AI Gateway & Routing",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Portkey is now PRISMA AIRS AI Gateway",
+          "subheadline": "Observe, govern, and secure every AI interaction across your enterprise. Now generally available."
+        }
+      ]
+    },
+    {
+      "id": "exa",
+      "name": "Exa",
+      "url": "https://exa.ai/",
+      "category": "search",
+      "categoryName": "Search & Retrieval APIs",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The world's data for AI agents",
+          "subheadline": "Search the largest index of public web and private information."
+        }
+      ]
+    },
+    {
+      "id": "tavily",
+      "name": "Tavily",
+      "url": "https://www.tavily.com/",
+      "category": "search",
+      "categoryName": "Search & Retrieval APIs",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Connect your AI agents to the web",
+          "subheadline": "One secure API for real-time web access."
+        }
+      ]
+    },
+    {
+      "id": "arize-ai",
+      "name": "Arize AI",
+      "url": "https://arize.com/",
+      "category": "agent-eval",
+      "categoryName": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The continual learning platform for agents.",
+          "subheadline": "The AI engineering platform for self-improving agents. Observe. Evaluate. Learn."
+        }
+      ]
+    },
+    {
+      "id": "braintrust",
+      "name": "Braintrust",
+      "url": "https://www.braintrust.dev/",
+      "category": "agent-eval",
+      "categoryName": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Ship quality agents at scale",
+          "subheadline": "Surface patterns in production, turn them into evals, and improve quality with every release."
+        }
+      ]
+    },
+    {
+      "id": "langfuse",
+      "name": "Langfuse",
+      "url": "https://langfuse.com/",
+      "category": "agent-eval",
+      "categoryName": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Open Source Agent Evals & Observability",
+          "subheadline": "Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency."
+        }
+      ]
+    },
+    {
+      "id": "langsmith",
+      "name": "LangSmith",
+      "url": "https://www.langchain.com/langsmith",
+      "category": "agent-eval",
+      "categoryName": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Know what your agents are really doing",
+          "subheadline": "LangSmith Observability gives you complete visibility into agent behavior."
+        }
+      ]
+    },
+    {
+      "id": "milestone",
+      "name": "Milestone",
+      "url": "https://mstone.ai/",
+      "category": "agent-eval",
+      "categoryName": "Agent Eval & LLM Observability",
+      "group": "AI & Agents",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The intelligence platform for AI native engineering",
+          "subheadline": "Connect AI spend, engineering output, quality, and governance to understand where AI creates value — and where it does not."
+        }
+      ]
+    },
+    {
+      "id": "akeyless",
+      "name": "Akeyless",
+      "url": "https://www.akeyless.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Runtime Identity Security at Agentic Scale",
+          "subheadline": "Securing 220B+ machine interactions, the Akeyless platform is built for the AI-driven era"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Vaultless Secrets Management",
+          "subheadline": "Centralize and secure credentials, certificates, and keys across your CI/CD pipeline, reducing both the cost and complexity of vault management."
+        }
+      ]
+    },
+    {
+      "id": "armo",
+      "name": "ARMO",
+      "url": "https://www.armosec.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Connecting the Dots Between {} Security",
+          "subheadline": "Zero-day and every day protection for your cloud applications with the first runtime behavioral Cloud Application Detection and Response (CADR) solution. A fully explainable & traceable runtime security story spanning the entire cloud technology stack."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Unifying AppSec, CloudSec and DevSec",
+          "subheadline": "The only runtime-driven, open-source first, cloud security platform Powered by Kubescape & eBPF"
+        }
+      ]
+    },
+    {
+      "id": "chainguard",
+      "name": "Chainguard",
+      "url": "https://www.chainguard.dev/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Secure-by-default open source software",
+          "subheadline": "Hardened, secure, and production-ready builds that prevent AI attacks."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "~~Shift Left.~~ Start Left.",
+          "subheadline": "Chainguard builds secure container images that eliminate CVEs from the start. Java, Python, and Go. Postgres, Redis and Nginx. And everything in between.Build faster? Or be more secure? Why not both."
+        }
+      ]
+    },
+    {
+      "id": "controlplane",
+      "name": "ControlPlane",
+      "url": "https://control-plane.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Cybersecurity consulting and advisory"
+        }
+      ]
+    },
+    {
+      "id": "hiddenlayer",
+      "name": "HiddenLayer",
+      "url": "https://hiddenlayer.com/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "headline": "The most comprehensive security platform for AI",
+          "subheadline": "Backed by patented technology and industry-leading adversarial AI research, our platform provides AI Discovery, AI Supply Chain Security, AI Attack Simulation, and AI Runtime Security."
+        }
+      ]
+    },
+    {
+      "id": "keycard",
+      "name": "Keycard",
+      "url": "https://www.keycard.ai/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Control agent access to tools, APIs, and data",
+          "subheadline": "See every action your agents take. Know exactly who authorized it."
+        }
+      ]
+    },
+    {
+      "id": "snyk",
+      "name": "Snyk",
+      "url": "https://snyk.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Unleash AI Innovators — Securely",
+          "subheadline": "An independent security layer that continuously validates AI-generated code, governs development agents, and secures AI-native applications—so organizations can move fast with AI without losing control."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Develop fast. Stay secure.",
+          "subheadline": "Snyk gives you the visibility, context, and control you need to work alongside developers on reducing application risk."
+        }
+      ]
+    },
+    {
+      "id": "upwind",
+      "name": "Upwind",
+      "url": "https://www.upwind.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Cloud & AI Security from the Inside-Out.",
+          "subheadline": "By combining agentless scanning and runtime sensors Upwind enables security developers and devops teams to see their Cloud & AI infrastructure in the same operating picture, remediate exactly what matters and stop attacks in real-time."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "The Future of Cloud Security is Runtime",
+          "subheadline": "Run faster and more securely with Upwind’s next-generation cloud security platform. Combine the power of cloud security posture with runtime context and realtime protection— enabling your security team to prioritize accurately and respond fast to your most critical risks."
+        }
+      ]
+    },
+    {
+      "id": "wiz",
+      "name": "Wiz",
+      "url": "https://www.wiz.io/",
+      "category": "security",
+      "categoryName": "Cloud, App & Agent Security",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Protect Everything You Build and Run",
+          "subheadline": "Wiz connects code, cloud, and runtime into a single security graph that provides the end-to-end context required to automate risk reduction and threat response, enabling security teams to operate at AI speed. AI alone doesn't make security faster. Context does."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Secure Everything You Build and Run in the Cloud",
+          "subheadline": "Use the Wiz Cloud Security Platform to build faster in the cloud, enabling security, dev and devops to work together in a self-service model built for the scale and speed of your cloud development."
+        }
+      ]
+    },
+    {
+      "id": "axiom",
+      "name": "AXIOM",
+      "url": "https://axiom.co/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The modern machine data platform.",
+          "subheadline": "Petabyte-scale, schema-less ingest on a fully managed event store, so you keep every byte without the operational cost of running it yourself."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Stop sampling, observe every event.",
+          "subheadline": "100% of your data for every possible need: o11y, security, analytics, and new insights."
+        }
+      ]
+    },
+    {
+      "id": "chronosphere",
+      "name": "chronosphere",
+      "url": "https://chronosphere.io/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Observability Built for Control"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Observability with Control 10x more scalable/ 8x faster MTTR/ 0x overages",
+          "subheadline": "Find and fix customer-impacting issues faster and stop paying for data you don’t use with the world’s most reliable observability platform."
+        }
+      ]
+    },
+    {
+      "id": "coralogix",
+      "name": "Coralogix",
+      "url": "https://coralogix.com/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "You can't observe the future with yesterday's architecture",
+          "subheadline": "Go beyond dashboards with a true AI-native platform and a data lake built for observability. Turn agents into operators, and engineers into architects."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Modern architecture. Disruptive value.",
+          "subheadline": "Observability and Security that scale with you."
+        }
+      ]
+    },
+    {
+      "id": "incident-io",
+      "name": "incident.io",
+      "url": "https://incident.io/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "With great product, comes great reliability",
+          "subheadline": "The software reliability platform built to investigate, respond and prevent incidents, powered by AI that deeply understands your organization."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Move fast when you break things",
+          "subheadline": "On-call, incident response and status pages all under one roof. So good, you'll break things on purpose."
+        }
+      ]
+    },
+    {
+      "id": "logz-io",
+      "name": "logz.io",
+      "url": "https://logz.io/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Innovate Faster, Recover Quicker, Get Automated Insights",
+          "subheadline": "with Smarter Observability Powered by Open 360 AI"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Modern Observability Powered by AI"
+        }
+      ]
+    },
+    {
+      "id": "lumigo",
+      "name": "Lumigo",
+      "url": "https://lumigo.io/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Intelligent AI-Powered Observability",
+          "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Solve complex microservice issues 80% faster",
+          "subheadline": "The only platform that enriches in-context trace payloads and log correlation to troubleshoot at supersonic speeds"
+        }
+      ]
+    },
+    {
+      "id": "opensearch",
+      "name": "OpenSearch",
+      "url": "https://opensearch.org/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "OpenSearchCon North America",
+          "subheadline": "Where the future of open source search and observability is forged"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Find the meaning in your data",
+          "subheadline": "OpenSearch is an open-source, enterprise-grade search and observability suite that brings order to unstructured data at scale"
+        }
+      ]
+    },
+    {
+      "id": "steadybit",
+      "name": "Steadybit",
+      "url": "https://steadybit.com/",
+      "category": "observability",
+      "categoryName": "Observability & Incident Response",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The Enterprise Reliability Testing Platform",
+          "subheadline": "Find and fix reliability issues before they become a problem. Channel the power of Agentic Chaos Engineering at scale to protect revenue and ensure your apps are always on."
+        },
+        {
+          "date": "2024-10-17",
+          "headline": "Build reliable systems ready for anything",
+          "subheadline": "The Chaos Engineering tool that makes it easy and safe to test System Resilience"
+        }
+      ]
+    },
+    {
+      "id": "blacksmith",
+      "name": "Blacksmith",
+      "url": "https://blacksmith.sh",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-10-26",
+          "headline": "The fastest way to run your GitHub Actions",
+          "subheadline": "A dead simple, drop-in replacement that costs 60% less than GitHub runners:"
+        }
+      ]
+    },
+    {
+      "id": "circleci",
+      "name": "CircleCI",
+      "url": "https://circleci.com/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Validate everything. Assume nothing.",
+          "subheadline": "Validate before you push. Spend less. Ship more."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Confidence in every deploy",
+          "subheadline": "Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code."
+        }
+      ]
+    },
+    {
+      "id": "cloudsmith",
+      "name": "cloudsmith",
+      "url": "https://cloudsmith.com/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Control and security for your AI-driven software supply chain",
+          "subheadline": "Your developers pull packages, containers, and ML models from registries you don't fully control. Cloudsmith checks every one for known vulnerabilities, malware, and license violations, blocks anything that fails your policy, and logs exactly what shipped where."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Liberate DevOps with fully managed, scalable artifact management",
+          "subheadline": "Cut costs + speed up production, all while safeguarding the code teams pull + push. Boost productivity with high performance package distribution."
+        }
+      ]
+    },
+    {
+      "id": "codefresh",
+      "name": "codefresh",
+      "url": "https://codefresh.io/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Codefresh and Octopus",
+          "subheadline": "In February 2024, Octopus acquired Codefresh. Since then, we've brought together the best of both teams to tackle the hardest Continuous Delivery challenges for Kubernetes and Argo CD at enterprise scale."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "The GitOps Software Delivery Platform",
+          "subheadline": "Enterprise-ready, Powered by Argo, Secure & scalable"
+        }
+      ]
+    },
+    {
+      "id": "devcycle",
+      "name": "DevCycle",
+      "url": "https://devcycle.com/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Speed Up Feature Releases",
+          "subheadline": "The first open standards feature management platform built to help developers ship faster"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Life's short. Stop building your own feature flags.",
+          "subheadline": "Upgrade to DevCycle, the feature flag platform built on the OpenFeature standard and supported by industry experts."
+        }
+      ]
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "url": "https://www.docker.com/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Accelerate agent adoption, safely.",
+          "subheadline": "Full autonomy for any agent. Full confidence for your security team."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Develop faster. Run anywhere.",
+          "subheadline": "Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management."
+        }
+      ]
+    },
+    {
+      "id": "harness",
+      "name": "Harness",
+      "url": "https://www.harness.io/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Your harness for the autonomous SDLC",
+          "subheadline": "Harness is the Autonomous SDLC Platform — it ships AI code as fast as it's written, catches risk before it ships, and governs every pipeline."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "The AI-Native Software Delivery Platform",
+          "subheadline": "Achieve engineering excellence and improve developer experience with the world's first AI-native software delivery platform."
+        }
+      ]
+    },
+    {
+      "id": "octopus-deploy",
+      "name": "Octopus Deploy",
+      "url": "https://octopus.com/",
+      "category": "cicd",
+      "categoryName": "CI/CD & Software Delivery",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "AI is accelerating development. Can your governance keep up?",
+          "subheadline": "Octopus Deploy is the CD platform built for enterprise scale. When change accelerates, knowing who deployed what, where, and when isn't optional."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Deploy your software to multi-cloud, hybrid, and on-premises environments with ease",
+          "subheadline": "Make your complex deployments simple, reliable, and auditable with Octopus Deploy."
+        }
+      ]
+    },
+    {
+      "id": "cortex",
+      "name": "Cortex",
+      "url": "https://www.cortex.io/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Code is no longer the bottleneck. Everything else is.",
+          "subheadline": "The Engineering Operations Platform engineering leaders trust to ship faster as AI multiplies output, without risk to reliability and security."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Unblock Engineers. Unlock Productivity.",
+          "subheadline": "Cortex is the Internal Developer Portal eliminating “developer tax” with paved paths to production. Create, catalog, score, and drive action to continuously improve software."
+        }
+      ]
+    },
+    {
+      "id": "diagrid",
+      "name": "Diagrid",
+      "url": "https://www.diagrid.io/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Durable execution, now built for agents.",
+          "subheadline": "Durable workflows and verifiable execution — workflows are always carried to completion: agents recover without losing state. Every step is cryptographically attested. Works with any agent framework."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "APIs for building secure & reliable microservices",
+          "subheadline": "dapr allows you to build state-of-the-art apps in half the time and never worry about missing a deadline or delivering insecure & unreliable code"
+        }
+      ]
+    },
+    {
+      "id": "env0",
+      "name": "env0",
+      "url": "https://www.env0.com/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Govern Your Cloud at the Speed of AI.",
+          "subheadline": "Continuously unify declared state and discovered state into a single context lake where agents can reason and take deterministic action."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Automate and Manage IaC at Scale, With Confidence",
+          "subheadline": "Optimize and unify Infrastructure as Code operations across every framework: OpenTofu, Terraform, Pulumi, CloudFormation, Terragrunt, K8s and more."
+        }
+      ]
+    },
+    {
+      "id": "giant-swarm",
+      "name": "Giant Swarm",
+      "url": "https://www.giantswarm.io/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "The Curated Platform Stack",
+          "subheadline": "10+ Years of Production Experience, Ready in a Day"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Smarter Platform Engineering",
+          "subheadline": "Platform teams of all sizes partner with Giant Swarm to increase developer productivity."
+        }
+      ]
+    },
+    {
+      "id": "spacelift",
+      "name": "Spacelift",
+      "url": "https://spacelift.io/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Ship infrastructure as fast as developers code",
+          "subheadline": "Modern development moves too fast for IaC. Spacelift fuses AI, IaC, and GitOps pipelines, so developers ship fast, and platform teams stay in control."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Govern/Provision/Configure with a single automated workflow",
+          "subheadline": "Orchestrate Terraform, OpenTofu, Ansible and more to deliver secure, cost-effective, and high-performance infrastructure. Fast."
+        }
+      ]
+    },
+    {
+      "id": "upbound",
+      "name": "Upbound",
+      "url": "https://www.upbound.io/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The infrastructure platform that runs itself.",
+          "subheadline": "One AI-native platform to build, run, and govern control planes across your entire estate, ready to serve both the engineers who run it and the AI systems increasingly acting on it."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Crossplane reinvented for the enterprise cloud",
+          "subheadline": "Manage your entire cloud infrastructure — any cloud provider and any abstraction — from one single point of control, harnessing the power of Crossplane for the enterprise cloud."
+        }
+      ]
+    },
+    {
+      "id": "wonderful",
+      "name": "Wonderful",
+      "url": "https://wonderful.ai/",
+      "category": "platform-eng",
+      "categoryName": "Platform Engineering & IaC",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "headline": "Applied AI for the enterprise",
+          "subheadline": "Wonderful helps enterprises accelerate AI adoption to unlock their full potential."
+        }
+      ]
+    },
+    {
+      "id": "cast-ai",
+      "name": "CAST AI",
+      "url": "https://cast.ai/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Application Performance and Kubernetes Automation. On autopilot.",
+          "subheadline": "Cast AI turns Kubernetes workload, infrastructure, cost, and SLO signals into safe automated actions: rightsizing pods, scaling nodes, optimizing GPUs and Spot, and fixing issues without manual tuning."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Cut your cloud cost in half",
+          "subheadline": "CAST AI is the leading Kubernetes automation platform that cuts AWS, Azure, and GCP customers’ cloud costs by over 50%."
+        }
+      ]
+    },
+    {
+      "id": "doit",
+      "name": "DoiT",
+      "url": "https://www.doit.com/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Attribute Every AI Token to the Customer, Feature, and Agent Behind It",
+          "subheadline": "AI spend is a black box. LLM Gateways show token totals but can't tell you who burned them. Attribute™ traces every token, inference, and training run back to the team, product, and customer that drove it."
+        },
+        {
+          "date": "2024-10-11",
+          "headline": "Intelligence to optimize your cloud",
+          "subheadline": "DoiT’s cloud development platform ensures your AWS, Google Cloud, and Microsoft Azure infrastructure is working optimally for your business – from planning to production."
+        }
+      ]
+    },
+    {
+      "id": "komodor",
+      "name": "komodor",
+      "url": "https://komodor.com/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The Autonomous AI SRE Platform For Your Entire Cloud-Native Stack",
+          "subheadline": "Komodor detects, resolves, and prevents production issues in large-scale environments with 97%+ accuracy, while proactively eliminating the structural cloud waste other tools can't reach."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Kubernetes for Developers/DevOps/SREs/Teams/Humans/",
+          "subheadline": "Simplify cluster management and troubleshooting to unlock the full value of K8s, and drive innovation at scale."
+        }
+      ]
+    },
+    {
+      "id": "kubecost",
+      "name": "Kubecost",
+      "url": "https://www.kubecost.com/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "IBM Kubecost",
+          "subheadline": "Run fast. Spend smart."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Monitor & reduce Kubernetes spend",
+          "subheadline": "Kubecost provides real-time cost visibility and insights for teams using Kubernetes, helping you continuously reduce your cloud costs."
+        }
+      ]
+    },
+    {
+      "id": "nops",
+      "name": "nOps",
+      "url": "https://www.nops.io/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Automated AI & Cloud Cost Optimization",
+          "subheadline": "Industry-leading cloud savings without operational overhead or long-term commitment risk"
+        },
+        {
+          "date": "2024-10-17",
+          "headline": "Al-Powered AWS FinOps Platform",
+          "subheadline": "Discover how much you can save in just 10 minutes!"
+        }
+      ]
+    },
+    {
+      "id": "portworx",
+      "name": "Portworx",
+      "url": "https://portworx.com/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Leading Kubernetes Data Management",
+          "subheadline": "Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Kubernetes Storage & Data Management",
+          "subheadline": "Automate, protect, and unify data for modern applications across any on-premises, public, or hybrid cloud environment"
+        }
+      ]
+    },
+    {
+      "id": "scaleops",
+      "name": "ScaleOps",
+      "url": "https://scaleops.com/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "The Autonomous Compute Orchestration Layer Powering Cloud&AI Infrastructure",
+          "subheadline": "Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs."
+        },
+        {
+          "date": "2024-10-17",
+          "headline": "Automated Kubernetes Resource Optimization",
+          "subheadline": "Reduce your K8s costs by up to 80% using automatic optimization to pods and nodes to meet real-time demand without sacrificing performance."
+        }
+      ]
+    },
+    {
+      "id": "zesty",
+      "name": "Zesty",
+      "url": "https://zesty.co/",
+      "category": "k8s-finops",
+      "categoryName": "Kubernetes Ops & Cloud FinOps",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Stop Paying for Resources You Don't Use.",
+          "subheadline": "Zesty automatically rightsizes Kubernetes resources to match real-time workload demand, cutting infrastructure costs without risking your SLOs."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Cut cloud spend, scale smarter.",
+          "subheadline": "One platform to automate & streamline cloud infrastructure optimization."
+        }
+      ]
+    },
+    {
+      "id": "digitalocean",
+      "name": "DigitalOcean",
+      "url": "https://www.digitalocean.com/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "AI-Native Cloud",
+          "subheadline": "One integrated platform, silicon to agent, with economics that improve as you scale."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Learn here. Dream here. Develop here.",
+          "subheadline": "Powerful and production-ready, our cloud platform has the solutions that devs like you need to succeed—whether you're building world-changing AI apps, running a side project, or building a business."
+        }
+      ]
+    },
+    {
+      "id": "isovalent",
+      "name": "Isovalent",
+      "url": "https://isovalent.com/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Connect and Secure Kubernetes. And Beyond.",
+          "subheadline": "Enterprise-grade Kubernetes networking and security"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "eBPF-based networking, security, and observability",
+          "subheadline": "Isovalent Enterprise for Cilium enables cloud native networking, security, and observability."
+        }
+      ]
+    },
+    {
+      "id": "mirantis",
+      "name": "Mirantis",
+      "url": "https://www.mirantis.com/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "CONTROL YOUR STRATEGIC INFRASTRUCTURE WITH OPEN SOURCE",
+          "subheadline": "Move from VMware to truly open and flexible infrastructure that radically lowers your IT costs"
+        }
+      ]
+    },
+    {
+      "id": "railway",
+      "name": "Railway",
+      "url": "https://railway.com/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Ship software peacefully",
+          "subheadline": "With the all-in-one intelligent cloud provider"
+        }
+      ]
+    },
+    {
+      "id": "render",
+      "name": "Render",
+      "url": "https://render.com/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Your fastest path to production for APIs & web apps",
+          "subheadline": "Intuitive infrastructure to scale any app or agent from your first user to your billionth."
+        }
+      ]
+    },
+    {
+      "id": "scaleway",
+      "name": "Scaleway",
+      "url": "https://www.scaleway.com/en/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "European Cloud & AI.",
+          "subheadline": "Build on a secure, transparent, and fast-moving cloud & AI platform built for what's next."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Europe's empowering cloud provider",
+          "subheadline": "Build, train, deploy and scale AI models and intelligent applications on a resilient and sustainable cloud ecosystem."
+        }
+      ]
+    },
+    {
+      "id": "solo-io",
+      "name": "Solo.io",
+      "url": "https://www.solo.io/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Reimagining infrastructure for cloud & AI",
+          "subheadline": "Solo is the unified platform for secure, seamless cloud operations — built to power the next generation of intelligent AI agents."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Connect, Observe, Secure APIs in the Cloud Native Era",
+          "subheadline": "Solo.io is the leading provider of API gateway, service mesh, & internal developer portal solutions"
+        }
+      ]
+    },
+    {
+      "id": "traefik",
+      "name": "Traefik",
+      "url": "https://traefik.io/",
+      "category": "cloud-network",
+      "categoryName": "Cloud Platforms & Networking",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Unified Control Plane for APIs, Models, and Agents",
+          "subheadline": "Eliminate fragmentation and unify governance for any workload, anywhere."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Run APIs Easily. Anywhere.",
+          "subheadline": "Cloud-native, GitOps-driven API runtime solutions for demanding DevOps and Platform Engineers with diverse use-cases, environments, and deployment models."
+        }
+      ]
+    },
+    {
+      "id": "milvus",
+      "name": "Milvus",
+      "url": "https://milvus.io/",
+      "category": "database",
+      "categoryName": "Databases & Vector Stores",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The High-Performance Vector Database Built for Scale",
+          "subheadline": "Milvus is an open-source vector database built for GenAI applications. Install with pip, perform high-speed searches, and scale to tens of billions of vectors with minimal performance loss."
+        }
+      ]
+    },
+    {
+      "id": "neo4j",
+      "name": "neo4j",
+      "url": "https://neo4j.com/",
+      "category": "database",
+      "categoryName": "Databases & Vector Stores",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "The knowledge layer that makes AI trustworthy",
+          "subheadline": "Lower cost. Reduce risk. Inform decisions."
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "GenAI apps, grounded in your data",
+          "subheadline": "Power your applications with knowledge graphs. Backed by the only graph database with vector search."
+        }
+      ]
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "url": "https://www.pinecone.io/",
+      "category": "database",
+      "categoryName": "Databases & Vector Stores",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Give agents knowledge",
+          "subheadline": "The knowledge platform for AI agents. Fast, accurate retrieval that doesn't get more expensive as it scales."
+        }
+      ]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "url": "https://supabase.com/",
+      "category": "database",
+      "categoryName": "Databases & Vector Stores",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Build in a weekend Scale to millions",
+          "subheadline": "Start your project with a Postgres database. Add Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings."
+        }
+      ]
+    },
+    {
+      "id": "agentmail",
+      "name": "AgentMail",
+      "url": "https://www.agentmail.to/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Email Inboxes for AI Agents",
+          "subheadline": "AgentMail is the email inbox API for AI agents. It gives agents their own email inboxes, like Gmail does for humans."
+        }
+      ]
+    },
+    {
+      "id": "jetbrains",
+      "name": "JetBrains",
+      "url": "https://www.jetbrains.com/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-30",
+          "headline": "Building the Integral Development Experience",
+          "subheadline": "An open platform for agentic software development — with you in control"
+        },
+        {
+          "date": "2024-09-26",
+          "headline": "Make Your Software Vision a Reality",
+          "subheadline": "Pro tools created with {developers}, teams, and  businesses in mind"
+        }
+      ]
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "url": "https://www.notion.com/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Where teams and agents Think together.",
+          "subheadline": "Capture context, find answers, and automate tasks with AI built for your team."
+        }
+      ]
+    },
+    {
+      "id": "otterai",
+      "name": "Otter.ai",
+      "url": "https://otter.ai",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-10-26",
+          "headline": "Meeting AI that turns talk into action",
+          "subheadline": "Transcription. Pre-call briefs. Live coaching. Automatic follow-ups."
+        }
+      ]
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "url": "https://posthog.com/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Shift your product into self-driving mode",
+          "subheadline": "PostHog already knows your customers, which features they use, and the issues they have."
+        }
+      ]
+    },
+    {
+      "id": "resend",
+      "name": "Resend",
+      "url": "https://resend.com/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Email for developers",
+          "subheadline": "The best way to reach humans instead of spam folders. Deliver transactional and marketing emails at scale."
+        }
+      ]
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "url": "https://www.shopify.com/",
+      "category": "dev-work-tools",
+      "categoryName": "Developer & Work Tools",
+      "group": "Cloud & DevOps",
+      "history": [
+        {
+          "date": "2026-08-29",
+          "headline": "Be the next household name",
+          "subheadline": "Dream big and build fast on Shopify. The world's best commerce platform."
+        },
+        {
+          "date": "2024-10-17",
+          "headline": "Be the next big thing/one to watch/category creator/unicorn startup/household name/global empire/solo flier/store they line up for/",
+          "subheadline": "Dream big, build fast, and grow far on Shopify."
+        }
+      ]
+    },
+    {
+      "id": "mesh-pay",
+      "name": "Mesh Pay",
+      "url": "https://www.meshpay.com/",
+      "category": "fintech",
+      "categoryName": "Payments & Spend",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The first global crypto payments network",
+          "subheadline": "Accept crypto from 300+ wallets and exchanges. Settle in stablecoins or local currency. One integration."
+        }
+      ]
+    },
+    {
+      "id": "ramp",
+      "name": "Ramp",
+      "url": "https://ramp.com/",
+      "category": "fintech",
+      "categoryName": "Payments & Spend",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Time is money. Save both.",
+          "subheadline": "Cards, expenses, bill payments, and banking* – in the blink of AI."
+        }
+      ]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "url": "https://stripe.com/",
+      "category": "fintech",
+      "categoryName": "Payments & Spend",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Financial infrastructure to grow your revenue.",
+          "subheadline": "Accept payments, offer financial services, and implement custom revenue models—from your first transaction to your billionth."
+        }
+      ]
+    },
+    {
+      "id": "apollo",
+      "name": "Apollo",
+      "url": "https://www.apollo.io/",
+      "category": "gtm",
+      "categoryName": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "The AI sales platform for smarter, faster revenue growth",
+          "subheadline": "Build pipeline smarter, close deals faster, and simplify your tech stack with a unified platform built for modern sales and marketing teams."
+        }
+      ]
+    },
+    {
+      "id": "clay",
+      "name": "Clay",
+      "url": "https://www.clay.com/",
+      "category": "gtm",
+      "categoryName": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Build systems to grow revenue",
+          "subheadline": "Infrastructure to get any data, run agentic workflows, and launch GTM plays."
+        }
+      ]
+    },
+    {
+      "id": "lightfield",
+      "name": "Lightfield",
+      "url": "https://lightfield.app/",
+      "category": "gtm",
+      "categoryName": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Agentic CRM for forward-deployed companies"
+        }
+      ]
+    },
+    {
+      "id": "nile",
+      "name": "Nile",
+      "url": "https://nile.app/",
+      "category": "gtm",
+      "categoryName": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "headline": "Your brand, represented on every AI",
+          "subheadline": "Nile gives your brand its own AI salesperson — selling inside ChatGPT, Gemini, Perplexity, and every AI your customers ask what to buy."
+        }
+      ]
+    },
+    {
+      "id": "profound",
+      "name": "Profound",
+      "url": "https://www.tryprofound.com/",
+      "category": "gtm",
+      "categoryName": "GTM & Revenue Tools",
+      "group": "Business & GTM",
+      "history": [
+        {
+          "date": "2026-08-31",
+          "headline": "Marketing agents to win in Perplexity",
+          "subheadline": "Reach millions of consumers who are using AI to discover new products and brands"
+        }
+      ]
+    }
+  ]
+}

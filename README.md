@@ -4,15 +4,21 @@ A library of hero section copy collected from live product websites.
 
 Each entry records the headline and sub-headline shown on a product's homepage, together with a screenshot of the page at the time of capture. When a site changes its copy, the earlier version is retained. Every entry holds its three most recent versions, which makes it possible to see when and how a product changed its positioning.
 
-Currently 122 products across 20 categories. Last updated 2026-10-10.
+Currently 124 products across 20 categories. Last updated 2026-10-26.
 
 ## Browsing
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
 
-## Data
-Entries live in data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot path, and previous versions.
+## Agent skill
 
-This `README` is generated from that data. Edit the JSON, not the Markdown.
+The library doubles as an agent skill at `.opencode/skills/hero-txt/`. `SKILL.md` explains how to research, draft, and pressure-test hero copy, and the catalog is bundled beside it. Agents that read `SKILL.md` — OpenCode, Claude Code, and compatible tools — can use the folder directly; copy it into `~/.config/opencode/skills/` or `~/.claude/skills/` for global use.
+
+`node scripts/build-skill.mjs` regenerates the bundled data and catalog. The weekly backup runs it with the README build, so the skill stays in step with the library.
+
+## Data
+Entries live in a Supabase database, with screenshots in Supabase Storage. A weekly backup exports them to data/products/ as JSON, one file per product. Each record holds the product name, homepage URL, category, current headline and sub-headline, capture date, screenshot URL, and previous versions.
+
+This `README` is generated from that data. Edit the database, not the Markdown or the JSON — both are overwritten by the next backup.
 
 ## Contributing
 To suggest a product that is missing, open an issue with the product name and its homepage URL.
@@ -39,12 +45,12 @@ Screenshots belong to their respective owners and are included here for referenc
 **Cloud & DevOps**  
 - [Cloud, App & Agent Security](#cloud-app--agent-security) (9)
 - [Observability & Incident Response](#observability--incident-response) (8)
-- [CI/CD & Software Delivery](#cicd--software-delivery) (7)
+- [CI/CD & Software Delivery](#cicd--software-delivery) (8)
 - [Platform Engineering & IaC](#platform-engineering--iac) (7)
 - [Kubernetes Ops & Cloud FinOps](#kubernetes-ops--cloud-finops) (8)
 - [Cloud Platforms & Networking](#cloud-platforms--networking) (8)
 - [Databases & Vector Stores](#databases--vector-stores) (4)
-- [Developer & Work Tools](#developer--work-tools) (6)
+- [Developer & Work Tools](#developer--work-tools) (7)
 
 **Business & GTM**  
 - [Payments & Spend](#payments--spend) (3)
@@ -590,6 +596,11 @@ _Know when production breaks, and why._
 
 _Build, test, package, and ship code to production._
 
+### [Blacksmith](https://blacksmith.sh)
+- **Headline:** The fastest way to run your GitHub Actions
+- **Sub-headline:** A dead simple, drop-in replacement that costs 60% less than GitHub runners:
+- **Updated:** 2026-10-26
+
 ### [CircleCI](https://circleci.com/)
 - **Headline:** Validate everything. Assume nothing.
 - **Sub-headline:** Validate before you push. Spend less. Ship more.
@@ -997,6 +1008,11 @@ _Everyday software for building and running a business._
 - **Headline:** Where teams and agents Think together.
 - **Sub-headline:** Capture context, find answers, and automate tasks with AI built for your team.
 - **Updated:** 2026-08-29
+
+### [Otter.ai](https://otter.ai)
+- **Headline:** Meeting AI that turns talk into action
+- **Sub-headline:** Transcription. Pre-call briefs. Live coaching. Automatic follow-ups.
+- **Updated:** 2026-10-26
 
 ### [PostHog](https://posthog.com/)
 - **Headline:** Shift your product into self-driving mode

@@ -3,7 +3,7 @@
     "id": "inference",
     "name": "Inference & Model Serving",
     "group": "AI & Agents",
-    "blurb": "Run open models as an API \u2014 throughput, latency, and cost per token.",
+    "blurb": "Run open models as an API — throughput, latency, and cost per token.",
     "color": "#FF2E88",
     "short": "Inference"
   },
@@ -59,7 +59,7 @@
     "id": "ai-gateway",
     "name": "AI Gateway & Routing",
     "group": "AI & Agents",
-    "blurb": "One endpoint in front of many models \u2014 routing, fallbacks, keys, and spend.",
+    "blurb": "One endpoint in front of many models — routing, fallbacks, keys, and spend.",
     "color": "#E040A0",
     "short": "AI Gateway"
   },
@@ -131,7 +131,7 @@
     "id": "database",
     "name": "Databases & Vector Stores",
     "group": "Cloud & DevOps",
-    "blurb": "Where the application state \u2014 and increasingly the embeddings \u2014 lives.",
+    "blurb": "Where the application state — and increasingly the embeddings — lives.",
     "color": "#0F766E",
     "short": "Database"
   },
@@ -155,7 +155,7 @@
     "id": "gtm",
     "name": "GTM & Revenue Tools",
     "group": "Business & GTM",
-    "blurb": "Finding buyers and getting found \u2014 pipeline, enrichment, and AI-era visibility.",
+    "blurb": "Finding buyers and getting found — pipeline, enrichment, and AI-era visibility.",
     "color": "#D97706",
     "short": "GTM"
   }

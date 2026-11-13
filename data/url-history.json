@@ -29,6 +29,9 @@
   "baseten": [
     "inference"
   ],
+  "blacksmith": [
+    "cicd"
+  ],
   "braintrust": [
     "agent-eval"
   ],
@@ -143,8 +146,14 @@
   "harness": [
     "cicd"
   ],
+  "hiddenlayer": [
+    "security"
+  ],
   "incident-io": [
     "observability"
+  ],
+  "inferact": [
+    "inference"
   ],
   "isovalent": [
     "cloud-network"
@@ -163,6 +172,9 @@
   ],
   "kubecost": [
     "k8s-finops"
+  ],
+  "lambda": [
+    "ai-cloud"
   ],
   "langchain": [
     "agent-harness"
@@ -221,6 +233,9 @@
   "neo4j": [
     "database"
   ],
+  "nile": [
+    "gtm"
+  ],
   "nops": [
     "k8s-finops"
   ],
@@ -235,6 +250,9 @@
   ],
   "opensearch": [
     "observability"
+  ],
+  "otterai": [
+    "dev-work-tools"
   ],
   "pinecone": [
     "database"
@@ -341,29 +359,17 @@
   "vercel": [
     "coding-agents"
   ],
-  "inferact": [
-    "inference"
-  ],
   "wiz": [
-    "security"
-  ],
-  "zep": [
-    "agent-memory"
-  ],
-  "zesty": [
-    "k8s-finops"
-  ],
-  "nile": [
-    "gtm"
-  ],
-  "hiddenlayer": [
     "security"
   ],
   "wonderful": [
     "ai-cloud",
     "platform-eng"
   ],
-  "lambda": [
-    "ai-cloud"
+  "zep": [
+    "agent-memory"
+  ],
+  "zesty": [
+    "k8s-finops"
   ]
 }

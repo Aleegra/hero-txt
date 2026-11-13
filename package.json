@@ -8,7 +8,9 @@
     "shot": "node scripts/shot.mjs",
     "capture": "node scripts/capture.mjs",
     "extract": "node scripts/extract.mjs",
-    "backup": "node scripts/export-backup.mjs && node scripts/build-readme.mjs"
+    "backup": "node scripts/export-backup.mjs && node scripts/build-readme.mjs && node scripts/build-skill.mjs",
+    "skill": "node scripts/build-skill.mjs",
+    "skill:check": "node scripts/build-skill.mjs --check"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 // Exports the published library from Supabase back into data/, in the format the
 // repo always kept, so git holds a dated, diffable copy of the copy. Supabase is
-// the source of truth; nothing reads these files any more except a human, or a
-// restore.
+// the source of truth; the README and agent-skill builders read these files,
+// and a human can restore from them.
 //
 //   data/categories.json       the taxonomy, in display order
 //   data/products/<id>.json    one per published product, newest version first

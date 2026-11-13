@@ -1,0 +1,15 @@
+{
+  "id": "blacksmith",
+  "name": "Blacksmith",
+  "url": "https://blacksmith.sh",
+  "category": "cicd",
+  "history": [
+    {
+      "date": "2026-10-26",
+      "headline": "The fastest way to run your GitHub Actions",
+      "subheadline": "A dead simple, drop-in replacement that costs 60% less than GitHub runners:",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/blacksmith/2026-10-26.webp?v=mvp8t0l5"
+    }
+  ],
+  "fingerprint": "fba25fe6b725b43b"
+}
