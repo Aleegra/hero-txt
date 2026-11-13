@@ -1,6 +1,7 @@
-# Weekly backup of the library out of Supabase. The JSON and README go into git
-# on v2, so every week leaves a diffable record of what changed; the screenshots
-# go into a build artifact, which keeps images out of the repository.
+# Weekly backup of the library out of Supabase. The JSON, README and bundled
+# agent skill go into git on v2, so every week leaves a diffable record of what
+# changed; the screenshots go into a build artifact, which keeps images out of
+# the repository.
 #
 # Read-only against Supabase — the anon key is enough. The commit is pushed with
 # GITHUB_TOKEN, which does not trigger other workflows, and pages.yml does not
@@ -35,6 +36,7 @@ jobs:
         run: |
           node scripts/export-backup.mjs --shots backup-shots
           node scripts/build-readme.mjs
+          node scripts/build-skill.mjs
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
@@ -43,7 +45,7 @@ jobs:
         run: |
           git config user.name 'hero-txt bot'
           git config user.email 'ling@agents.e2a.dev'
-          git add data README.md
+          git add data README.md .opencode/skills/hero-txt
           if git diff --cached --quiet; then
             echo 'library unchanged since the last backup'
           else

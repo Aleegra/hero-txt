@@ -1,0 +1,64 @@
+# The agent skill in .opencode/skills/hero-txt is generated from data/products.
+# backup.yml rebuilds it as part of the weekly export; this workflow covers
+# changes to the generator itself and verifies that a PR committed its output.
+name: Build skill
+
+on:
+  push:
+    branches: [v2, main]
+    paths:
+      - 'data/**'
+      - 'scripts/build-skill.mjs'
+      - '.opencode/skills/hero-txt/SKILL.md'
+      - '.opencode/skills/hero-txt/references/patterns.md'
+      - '.opencode/skills/hero-txt/scripts/query.mjs'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'scripts/build-skill.mjs'
+      - '.opencode/skills/hero-txt/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-skill-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/build-skill.mjs --check
+
+  rebuild:
+    if: github.event_name != 'pull_request'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Regenerate the skill
+        run: node scripts/build-skill.mjs
+
+      - name: Commit what changed
+        run: |
+          git config user.name 'hero-txt bot'
+          git config user.email 'ling@agents.e2a.dev'
+          git add .opencode/skills/hero-txt
+          if git diff --cached --quiet; then
+            echo 'skill unchanged'
+          else
+            git commit -m "Rebuild hero-txt skill"
+            git push
+          fi
