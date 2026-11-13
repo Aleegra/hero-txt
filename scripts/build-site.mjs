@@ -112,6 +112,49 @@ const clamp = (s, n = 158) => {
   return t.slice(0, t.lastIndexOf(' ', n - 1)).replace(/[,;:—-]$/, '') + '…';
 };
 
+// The agent skill bundled in .opencode/skills/hero-txt. A web page cannot write
+// into a visitor's agent directory, so the button does the closest honest thing:
+// it copies the one-line installer (the `skills` CLI, which reads skills.sh.json
+// at the repo root) and shows it. The script is inline in every page because
+// the category and product pages ship no app script, and the top bar is shared.
+const SKILL_REPO = 'Aleegra/hero-txt';
+const SKILL_URL = 'https://github.com/Aleegra/hero-txt/tree/main/.opencode/skills/hero-txt';
+const SKILL_AGENTS = [
+  ['claude-code', 'Claude Code'],
+  ['codex', 'Codex'],
+  ['cursor', 'Cursor'],
+  ['opencode', 'OpenCode'],
+  ['', 'Other'],
+];
+const skillCommand = (agent) => 'npx skills add ' + SKILL_REPO + ' -g' + (agent ? ' -a ' + agent + ' -y' : '');
+const SKILL_SCRIPT = [
+  '(function(){',
+  'var d=document,btn=d.getElementById("skill-btn"),pop=d.getElementById("skill-pop");',
+  'if(!btn||!pop)return;',
+  'var cmd=d.getElementById("skill-cmd"),note=d.getElementById("skill-note"),copyBtn=d.getElementById("skill-copy");',
+  'var idle=note.textContent,timer;',
+  'btn.setAttribute("role","button");',
+  'function say(t,ok){note.textContent=t;note.className="skill-note"+(ok?" ok":"");clearTimeout(timer);',
+  'if(ok)timer=setTimeout(function(){note.textContent=idle;note.className="skill-note";copyBtn.textContent="Copy";},4000);}',
+  'function select(){var r=d.createRange();r.selectNodeContents(cmd);var s=getSelection();s.removeAllRanges();s.addRange(r);}',
+  'function copy(){var t=cmd.textContent;',
+  'var done=function(){copyBtn.textContent="Copied";say("Copied. Paste it into your terminal to install.",true);',
+  'if(typeof gtag==="function")gtag("event","skill_install_copy",{agent:pop.getAttribute("data-agent")||"other"});};',
+  'var fail=function(){select();say("Select the command and press Ctrl/Cmd+C to copy.",false);};',
+  'if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,fail);else fail();}',
+  'function open(){pop.hidden=false;btn.setAttribute("aria-expanded","true");copy();}',
+  'function close(focus){if(pop.hidden)return;pop.hidden=true;btn.setAttribute("aria-expanded","false");if(focus)btn.focus();}',
+  'btn.addEventListener("click",function(e){e.preventDefault();if(pop.hidden)open();else close();});',
+  'btn.addEventListener("keydown",function(e){if(e.key===" "){e.preventDefault();btn.click();}});',
+  'copyBtn.addEventListener("click",copy);',
+  'pop.addEventListener("click",function(e){var b=e.target.closest("[data-agent-id]");if(!b)return;',
+  'var all=pop.querySelectorAll("[data-agent-id]");for(var i=0;i<all.length;i++)all[i].setAttribute("aria-pressed",all[i]===b?"true":"false");',
+  'pop.setAttribute("data-agent",b.getAttribute("data-agent-id"));cmd.textContent=b.getAttribute("data-cmd");copy();});',
+  'd.addEventListener("click",function(e){if(!pop.hidden&&!e.target.closest(".skill"))close();});',
+  'd.addEventListener("keydown",function(e){if(e.key==="Escape")close(true);});',
+  '})();',
+].join('');
+
 const page = ({ subject, desc: rawDesc, canonical, image, jsonld = [], body, script = '' }) => {
   const title = withBrand(subject);
   const desc = clamp(rawDesc);
@@ -162,6 +205,20 @@ ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</sc
     <!-- A real form so the box still works on the category and product pages,
          which ship no script: submitting lands on the index with ?q= applied. -->
     <form id="search-form" action="/" role="search"><input id="search" name="q" type="search" placeholder="Search headlines, products…" autocomplete="off" spellcheck="false"></form>
+    <!-- Without script the link still leads somewhere useful: the skill folder. -->
+    <div class="skill">
+      <a class="skill-btn" id="skill-btn" href="${SKILL_URL}" aria-haspopup="dialog" aria-expanded="false" aria-controls="skill-pop">Install skill</a>
+      <div class="skill-pop" id="skill-pop" role="dialog" aria-label="Install the hero-txt agent skill" data-agent="${SKILL_AGENTS[0][0]}" hidden>
+        <p class="skill-title">Put this library in your agent</p>
+        <p class="skill-desc">The hero-txt skill lets your agent write and critique hero copy against the real examples collected here. Pick your agent, then run this in a terminal:</p>
+        <div class="skill-agents" role="group" aria-label="Agent">
+          ${SKILL_AGENTS.map(([id, label], i) => `<button type="button" data-agent-id="${id}" data-cmd="${esc(skillCommand(id))}" aria-pressed="${i === 0}">${label}</button>`).join('')}
+        </div>
+        <div class="skill-cmd"><code id="skill-cmd">${esc(skillCommand(SKILL_AGENTS[0][0]))}</code><button type="button" id="skill-copy">Copy</button></div>
+        <p class="skill-note" id="skill-note" role="status">Needs Node.js 18 or newer. Installs for your user account.</p>
+        <p class="skill-alt">Prefer to do it by hand? <a href="${SKILL_URL}" target="_blank" rel="noopener">Copy the folder from GitHub ↗</a></p>
+      </div>
+    </div>
     <a class="gh" href="https://github.com/Aleegra/hero-txt" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </header>
@@ -171,6 +228,7 @@ ${body}
 <footer>
   <p>Built from <a href="https://github.com/Aleegra/hero-txt">github.com/Aleegra/hero-txt</a>. Screenshots belong to their respective owners and are shown here for reference and commentary.</p>
 </footer>
+<script>${SKILL_SCRIPT}</script>
 ${script}
 </body>
 </html>
@@ -516,6 +574,55 @@ a{color:inherit}
 }
 .gh:hover{border-color:#C4C4D2;box-shadow:var(--shadow-md)}
 
+/* ---------- skill install ---------- */
+.skill{position:relative}
+.skill-btn{
+  display:block;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap;cursor:pointer;
+  padding:8px 14px;color:#fff;background:var(--ink);border:1px solid var(--ink);
+  border-radius:var(--r-pill);box-shadow:var(--shadow-sm);
+  transition:transform .15s,box-shadow .15s;
+}
+.skill-btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.skill-btn:active{transform:none;transition-duration:.06s}
+.skill-btn:focus-visible,.skill-pop button:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(76,111,255,.35)}
+.skill-pop{
+  position:absolute;right:0;top:calc(100% + 10px);z-index:60;
+  width:440px;padding:18px;
+  background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:var(--r);box-shadow:var(--shadow-lg);
+}
+.skill-pop[hidden]{display:none}
+.skill-title{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.skill-desc{margin-top:6px;font-size:14px;line-height:1.5;color:var(--muted)}
+.skill-agents{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.skill-agents button{
+  font:inherit;font-size:13px;font-weight:500;cursor:pointer;
+  padding:5px 11px;color:var(--ink);background:var(--surface);
+  border:1px solid var(--line-strong);border-radius:var(--r-pill);
+}
+.skill-agents button:hover{border-color:#C4C4D2}
+.skill-agents button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.skill-cmd{
+  display:flex;align-items:center;gap:8px;margin-top:10px;
+  padding:6px 6px 6px 12px;background:#16161D;border-radius:var(--r-sm);
+}
+.skill-cmd code{
+  flex:1;min-width:0;white-space:pre-wrap;overflow-wrap:anywhere;
+  font:13px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#E8EAF6;
+  padding:4px 0;
+}
+.skill-cmd button{
+  flex:none;font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  min-width:64px;padding:6px 12px;color:var(--ink);background:#fff;
+  border:0;border-radius:6px;
+}
+.skill-cmd button:hover{background:#E8EAF6}
+.skill-note{margin-top:10px;font-size:13px;color:var(--muted)}
+.skill-note.ok{color:#0F766E;font-weight:500}
+.skill-alt{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.skill-alt a{color:var(--ink);font-weight:500}
+@media (prefers-reduced-motion:reduce){.skill-btn{transition:none}}
+
 /* ---------- intro ---------- */
 main{max-width:1400px;margin:0 auto;padding:0 24px 64px}
 .intro{
@@ -840,6 +947,14 @@ footer p{max-width:1400px;margin:0 auto}
      two-column layout does not need. */
   .intro-deco{grid-template-columns:repeat(6,26px);order:1;padding-top:34px}
   .topbar{flex-wrap:wrap}
+  /* Three controls no longer fit beside a 45vw search box: give the row the
+     full width and let the box take what the buttons leave. */
+  .topbar-right{flex:1 1 100%}
+  #search-form{flex:1;min-width:0}
+  #search{width:100%}
+  /* Anchor to the bar, not the button, so the panel cannot run off the left. */
+  .skill{position:static}
+  .skill-pop{left:16px;right:16px;top:calc(100% + 8px);width:auto}
   /* The label gutter costs too much of a narrow screen: stack instead. */
   .filter-group{flex-direction:column;gap:8px}
   .filter-label{width:auto;padding-top:0}
