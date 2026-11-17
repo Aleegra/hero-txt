@@ -1,0 +1,94 @@
+# Every two months, revisit every published product and record its hero copy
+# again if the wording changed.
+#
+#   capture.mjs   screenshots each homepage; a page whose visible text is
+#                 unchanged since the last run is skipped outright
+#   extract.mjs   reads headline and sub-headline off the new screenshots, drops
+#                 a capture that reads the same as the version before it (a
+#                 redesign with the same words is not a new version), and cuts
+#                 each product back to its three most recent dated versions
+#
+# Writes to Supabase, so like inbox-poll it holds the service-role key. The old
+# versions it prunes are still in git: backup.yml exports the library weekly.
+name: Re-check hero copy
+
+on:
+  schedule:
+    # 03:00 UTC (11:00 Beijing) on the 1st of January, March, May, July,
+    # September and November. Scheduled runs come from the default branch, so
+    # this file has to be on main to fire.
+    - cron: '0 3 1 1,3,5,7,9,11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    # ~140 sites, four at a time, comes to about half an hour; the cap is for a
+    # run where many of them hang until their timeouts.
+    timeout-minutes: 120
+    concurrency:
+      group: recheck
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: Screenshot pages whose text changed
+        run: node scripts/capture.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+      # --published leaves alone any draft inbox-poll is staging at the same
+      # time. What changed is written to this run's summary page.
+      - name: Read the copy and keep three versions
+        run: node scripts/extract.mjs --published
+        env:
+          ANTHROPIC_BASE_URL: https://api.deepseek.com/anthropic
+          ANTHROPIC_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          HERO_MODEL: deepseek-v4-flash-vision-exp
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+
+  # Publish the result now rather than at pages.yml's next daily run. A separate
+  # job so it can share that workflow's concurrency group without holding it for
+  # the whole re-check.
+  deploy:
+    needs: recheck
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/build-site.mjs
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deploy

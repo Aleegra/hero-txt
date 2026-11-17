@@ -10,7 +10,6 @@ Currently 124 products across 20 categories. Last updated 2026-10-26.
 The rendered library, with screenshots, is at [herotxt.page](https://www.herotxt.page/). This `README` lists the same entries as plain text.
 
 ## Agent skill
-
 The library doubles as an agent skill at `.opencode/skills/hero-txt/`. `SKILL.md` explains how to research, draft, and pressure-test hero copy, and the catalog is bundled beside it. Agents that read `SKILL.md` — OpenCode, Claude Code, and compatible tools — can use the folder directly; copy it into `~/.config/opencode/skills/` or `~/.claude/skills/` for global use.
 
 `node scripts/build-skill.mjs` regenerates the bundled data and catalog. The weekly backup runs it with the README build, so the skill stays in step with the library.
