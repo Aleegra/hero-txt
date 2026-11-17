@@ -37,6 +37,12 @@ export const MAX_HISTORY = 3;
 // hero_entries_status_check allows draft / published / archived; a staged row
 // is a draft. Withdrawing only ever deletes the rows its own batch lists, so a
 // draft made by hand in the dashboard is never touched.
+// capture.mjs appends this to the fingerprint of a product whose headline was
+// seen cycling through words, and extract.mjs reads it back to compare such a
+// headline loosely. A suffix rather than a column so that it needs no migration;
+// it is part of the fingerprint, so a hero that starts or stops rotating counts
+// as changed and is captured again.
+export const ROTATING = '~';
 export const STAGED = 'draft';
 export const PUBLISHED = 'published';
 

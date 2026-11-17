@@ -24,7 +24,7 @@ import { createHash } from 'node:crypto';
 import { writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { addCapture, loadLibrary, PUBLISHED } from './lib/db.mjs';
+import { addCapture, loadLibrary, PUBLISHED, ROTATING } from './lib/db.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONCURRENCY = 4;
@@ -58,6 +58,62 @@ function domFingerprint() {
   // Some sites build their hero entirely out of divs and spans, so fall back
   // to the raw visible text rather than reporting the page as empty.
   return (headings || document.body.innerText.replace(/\s+/g, ' ').trim()).slice(0, 2000);
+}
+
+// Runs in-page. The text set large enough to be the headline.
+function heroText() {
+  return [...document.querySelectorAll('h1,h2,div,span,p')]
+    .filter((el) => {
+      const r = el.getBoundingClientRect();
+      return (
+        r.top < window.innerHeight &&
+        r.bottom > 0 &&
+        parseFloat(getComputedStyle(el).fontSize) >= 28
+      );
+    })
+    .map((el) => el.innerText?.trim() ?? '')
+    .join('|');
+}
+
+// A headline that cycles through words ("Build for developers / designers /
+// founders") shows a different one on every visit, so a single reading of the
+// page would report a copy change on each run. Watching it for a few seconds
+// tells the two apart. Long enough for a word held three or four seconds to
+// turn over at least once; a carousel slower than that is read as static, which
+// is how every page was read before.
+const WATCH_SAMPLES = 16;
+const WATCH_INTERVAL = 500;
+
+// Reduces the samples to what gates the work:
+//   fingerprint  only the text present in every sample, so whatever rotates or
+//                ticks (the headline's word, a live counter) cannot by itself
+//                make the page look changed. For a page that held still this is
+//                exactly the single reading it always was.
+//   rotating     whether the headline itself moved, for extract.mjs.
+export function summarise(samples) {
+  const [first, ...rest] = samples.map((s) => s.fingerprint.split(' | '));
+  const stable = first.filter((seg) => rest.every((other) => other.includes(seg)));
+  return {
+    // A hero built without headings is one long segment (see domFingerprint),
+    // and if that moved there is nothing stable left to keep. Fall back to the
+    // first reading rather than failing a page that plainly rendered.
+    fingerprint: stable.length ? stable.join(' | ') : samples[0].fingerprint,
+    rotating: new Set(samples.map((s) => s.hero)).size > 1,
+  };
+}
+
+export async function watch(page) {
+  const samples = [];
+  for (let i = 0; i < WATCH_SAMPLES; i++) {
+    if (i) await page.waitForTimeout(WATCH_INTERVAL);
+    const [fingerprint, hero] = await Promise.all([
+      page.evaluate(domFingerprint).catch(() => ''),
+      page.evaluate(heroText).catch(() => ''),
+    ]);
+    // A sample lost to a navigation or a busy page is not evidence of rotation.
+    if (fingerprint) samples.push({ fingerprint, hero });
+  }
+  return samples.length ? summarise(samples) : { fingerprint: '', rotating: false };
 }
 
 // Reveal-on-scroll wrappers occasionally never fire their observer, leaving a
@@ -224,7 +280,7 @@ async function shoot(context, product) {
     await forceHeroVisible(page);
     await page.waitForTimeout(400);
 
-    const fingerprint = await page.evaluate(domFingerprint).catch(() => '');
+    const { fingerprint, rotating } = await watch(page);
     if (!fingerprint) throw new Error('page rendered no readable text');
     // Busy pages can keep the compositor from ever going idle. Falling back to
     // a JPEG capture sidesteps the PNG encoder stalling on those, and a raw CDP
@@ -233,7 +289,7 @@ async function shoot(context, product) {
       .screenshot({ type: 'png', timeout: 30000 })
       .catch(() => page.screenshot({ type: 'jpeg', quality: 92, timeout: 60000 }))
       .catch(() => cdpShot(page));
-    return { fingerprint, png };
+    return { fingerprint, rotating, png };
   } finally {
     await page.close().catch(() => {});
   }
@@ -278,10 +334,15 @@ async function main() {
     while (queue.length) {
       const p = queue.shift();
       try {
-        const { fingerprint, png } = await shoot(context, p);
-        const hash = createHash('sha256').update(fingerprint).digest('hex').slice(0, 16);
+        const { fingerprint, rotating, png } = await shoot(context, p);
+        const hash =
+          createHash('sha256').update(fingerprint).digest('hex').slice(0, 16) +
+          (rotating ? ROTATING : '');
 
-        if (!force && p.fingerprint === hash && p.history.length) {
+        // A rotating headline is left out of the fingerprint (see summarise), so
+        // a match says nothing about whether its fixed words were rewritten.
+        // Those pages are always shot, and extract.mjs decides.
+        if (!force && !rotating && p.fingerprint === hash && p.history.length) {
           unchanged.push(p.id);
           console.log(`  = ${p.id}`);
           continue;
@@ -298,7 +359,7 @@ async function main() {
 
         await addCapture(p, { date: today, webp, fingerprint: hash });
         shot.push(p.id);
-        console.log(`  + ${p.id}`);
+        console.log(`  + ${p.id}${rotating ? ' (rotating headline)' : ''}`);
       } catch (err) {
         const msg = err.message.split('\n')[0];
         failed.push({ id: p.id, url: p.url, error: msg });
@@ -332,4 +393,5 @@ async function main() {
   if (shot.length) console.log(`\nnext: node scripts/extract.mjs`);
 }
 
-main();
+// Guarded so summarise() can be imported without starting a run.
+if (process.argv[1] === fileURLToPath(import.meta.url)) main();
