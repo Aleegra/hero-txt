@@ -5,11 +5,17 @@
   "category": "inference",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The platform for production AI",
+      "subheadline": "Cloud infrastructure for teams that develop, train, and serve AI applications at scale.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/modal/2026-11-17.webp?v=mwkc6ku3"
+    },
+    {
       "date": "2026-08-29",
       "headline": "AI infrastructure that developers love",
       "subheadline": "Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/modal/2026-08-29.webp"
     }
   ],
-  "fingerprint": "b32ade3e4a496c60"
+  "fingerprint": "4487ab4a0f99d4fd"
 }

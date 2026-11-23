@@ -5,6 +5,12 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Mirantis k0rdent AI Takes You FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE",
+      "subheadline": "",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/mirantis/2026-11-17.webp?v=mwkc5zt8"
+    },
+    {
       "date": "2026-08-29",
       "headline": "FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE",
       "subheadline": "",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "e5e0f27da089d294"
+  "fingerprint": "15a273857cb7409f"
 }

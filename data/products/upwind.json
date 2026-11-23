@@ -5,6 +5,12 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The Cloud & AI Security Platform",
+      "subheadline": "Combine the context of your cloud workloads, APIs, and agents with runtime intelligence to identify the most critical risks, build a plan to fix them, and catch new attacks in real time.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/upwind/2026-11-17.webp?v=mwkcczbb"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Cloud & AI Security from the Inside-Out.",
       "subheadline": "By combining agentless scanning and runtime sensors Upwind enables security developers and devops teams to see their Cloud & AI infrastructure in the same operating picture, remediate exactly what matters and stop attacks in real-time.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "316e772adf8e9083"
+  "fingerprint": "5798279318fef9b5"
 }

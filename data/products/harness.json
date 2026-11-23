@@ -5,6 +5,12 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Your software factory from idea to production",
+      "subheadline": "Harness is the Autonomous SDLC Platform that ships AI code as fast as it's written, catches risk before it ships, and governs every pipeline.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/harness/2026-11-17.webp?v=mwkc0m5t"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Your harness for the autonomous SDLC",
       "subheadline": "Harness is the Autonomous SDLC Platform — it ships AI code as fast as it's written, catches risk before it ships, and governs every pipeline.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "bc4a1bf2d7665110"
+  "fingerprint": "8203e3ffe19fbe5d"
 }

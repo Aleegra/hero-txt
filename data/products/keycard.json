@@ -5,11 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Runtime auth for agents",
+      "subheadline": "Give each agent its own identity, authority to act, and access to resources under your policy.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/keycard/2026-11-17.webp?v=mwkc16yb"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Control agent access to tools, APIs, and data",
       "subheadline": "See every action your agents take. Know exactly who authorized it.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/keycard/2026-08-29.webp"
     }
   ],
-  "fingerprint": "4aca952f0d525178"
+  "fingerprint": "1793d972bce7f618"
 }

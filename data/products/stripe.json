@@ -5,11 +5,17 @@
   "category": "fintech",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Financial infrastructure to grow your revenue.",
+      "subheadline": "Accept payments, handle business banking,¹ and implement custom revenue models—from your first transaction to your billionth.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/stripe/2026-11-17.webp?v=mwkcbs46"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Financial infrastructure to grow your revenue.",
       "subheadline": "Accept payments, offer financial services, and implement custom revenue models—from your first transaction to your billionth.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/stripe/2026-08-31.webp"
     }
   ],
-  "fingerprint": "5619fc0e2b10d165"
+  "fingerprint": "9c04e318deb3ea02"
 }

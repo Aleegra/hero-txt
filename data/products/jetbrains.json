@@ -5,6 +5,12 @@
   "category": "dev-work-tools",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "jetbrains air is one system for building software with agents",
+      "subheadline": "",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/jetbrains/2026-11-17.webp?v=mwkc17ei"
+    },
+    {
       "date": "2026-08-30",
       "headline": "Building the Integral Development Experience",
       "subheadline": "An open platform for agentic software development — with you in control",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "4b689a984d3a831b"
+  "fingerprint": "6237263dc13f833e"
 }

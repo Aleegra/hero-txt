@@ -5,11 +5,17 @@
   "category": "dev-work-tools",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Email Inboxes for AI agents",
+      "subheadline": "We're not AI for your email, we're email for your AI",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/agentmail/2026-11-17.webp?v=mwkbtxxp"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Email Inboxes for AI Agents",
       "subheadline": "AgentMail is the email inbox API for AI agents. It gives agents their own email inboxes, like Gmail does for humans.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/agentmail/2026-08-31.webp"
     }
   ],
-  "fingerprint": "51d5349082097906"
+  "fingerprint": "a2961ed110e61bf8"
 }

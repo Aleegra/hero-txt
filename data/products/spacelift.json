@@ -5,6 +5,12 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Ship infrastructure as fast as developers code",
+      "subheadline": "Modern development moves too fast for IaC alone. Spacelift orchestrates deployment and Day 2 operations in one platform, so developers ship fast, and platform teams stay in control.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/spacelift/2026-11-17.webp?v=mwkcba3d"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Ship infrastructure as fast as developers code",
       "subheadline": "Modern development moves too fast for IaC. Spacelift fuses AI, IaC, and GitOps pipelines, so developers ship fast, and platform teams stay in control.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "673cd4c4706d2cf0"
+  "fingerprint": "52e158fcb14b0a99"
 }

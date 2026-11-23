@@ -5,11 +5,17 @@
   "category": "ai-cloud",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "CoreWeave The Essential Cloud for AI™",
+      "subheadline": "One AI Cloud platform, fully integrated, built to turn every pioneers’ most complex AI workloads into shipped products that accelerate human discovery",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/coreweave/2026-11-17.webp?v=mwkby2q8"
+    },
+    {
       "date": "2026-08-29",
       "headline": "CoreWeave Cloud: The Essential Cloud for AI",
       "subheadline": "The force multiplier for AI. Trusted by the world's leading AI pioneers.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/coreweave/2026-08-29.webp"
     }
   ],
-  "fingerprint": "9c1e8862dedfa43c"
+  "fingerprint": "196b1b5d9012d385"
 }

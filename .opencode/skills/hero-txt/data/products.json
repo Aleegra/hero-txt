@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-11-17",
   "count": 124,
   "categories": [
     {
@@ -133,6 +133,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "The open frontier is built on Baseten",
+          "subheadline": "Baseten brings inference, training, and execution together on one platform to power the fastest growing companies in the world."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Inference is everything",
           "subheadline": "The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack."
@@ -163,6 +168,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Intelligence is power. Own yours.",
+          "subheadline": "One platform to run, ensemble, and train open models with world-class researchers and uncompromising quality."
+        },
+        {
           "date": "2026-08-30",
           "headline": "Own your model. Own your future.",
           "subheadline": "Fireworks' SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence."
@@ -178,6 +188,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "The platform for production AI",
+          "subheadline": "Cloud infrastructure for teams that develop, train, and serve AI applications at scale."
+        },
+        {
           "date": "2026-08-29",
           "headline": "AI infrastructure that developers love",
           "subheadline": "Run inference, training, batch processing, and sandboxes with sub-second cold starts, instant autoscaling, and a developer experience that feels local."
@@ -192,6 +207,11 @@
       "categoryName": "Inference & Model Serving",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Serve and train open models at frontier scale",
+          "subheadline": "Serve AI models with high throughput and low latency. Post-train them with RL on your own data. Choose the deployment setup that fits your workload."
+        },
         {
           "date": "2026-08-29",
           "headline": "SHIP AI FOR ALL"
@@ -256,6 +276,11 @@
       "categoryName": "AI Cloud & GPU Infrastructure",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "CoreWeave The Essential Cloud for AI™",
+          "subheadline": "One AI Cloud platform, fully integrated, built to turn every pioneers’ most complex AI workloads into shipped products that accelerate human discovery"
+        },
         {
           "date": "2026-08-29",
           "headline": "CoreWeave Cloud: The Essential Cloud for AI",
@@ -417,6 +442,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "EVERY AGENT GETS A MACHINE",
+          "subheadline": "E2B runs the isolated machine your agent works on. You ship the agent. We run the infrastructure. Our cloud or yours."
+        },
+        {
           "date": "2026-08-29",
           "headline": "AI Sandboxes for Deep Research Agents",
           "subheadline": "Open-source, secure environment with real-world tools for enterprise-grade agents."
@@ -432,6 +462,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Run AI agents with lower costs and tighter control.",
+          "subheadline": "Secure runtimes that reduce token usage, protect credentials, and govern network access."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Runta is your execution layer for AI agents.",
           "subheadline": "Catch your agents wasting tokens. Never hand them your real credentials."
@@ -446,6 +481,10 @@
       "categoryName": "Agent Harness & Frameworks",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Give your AI secure access to sk in minutes"
+        },
         {
           "date": "2026-08-29",
           "headline": "Everything your agents need to take action",
@@ -476,6 +515,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "DeepSeek Harness Ready to use. Right now.",
+          "subheadline": "Everyday tasks, coding, or your own harness—it starts here. DeepSeek Harness is now in public preview worldwide and open source, with composable plugins that extend what agents can do."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Everything is a plugin",
           "subheadline": "DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included."
@@ -490,6 +534,11 @@
       "categoryName": "Agent Harness & Frameworks",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "AI Agent Management Platform that Puts You in Control",
+          "subheadline": "Build an agent with one team, and scale across the enterprise. Choose your models and deployment environment, manage access, and monitor agent activity in real time."
+        },
         {
           "date": "2026-08-29",
           "headline": "The Platform for Production-Ready Agentic Workflows.",
@@ -506,6 +555,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Own your intelligence",
+          "subheadline": "Run, Improve, and Govern Agents with LangSmith"
+        },
+        {
           "date": "2026-08-29",
           "headline": "Meet LangSmith Engine",
           "subheadline": "Smarter after every launch"
@@ -520,6 +574,11 @@
       "categoryName": "Agent Harness & Frameworks",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Turn Claude Code into a teammate.",
+          "subheadline": "One workspace for your team and its agents: assign the work, track it, and review it. You stay in control."
+        },
         {
           "date": "2026-08-31",
           "headline": "Your next 10 hires won't be human.",
@@ -536,6 +595,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Build the agent. Understand its workflow.",
+          "subheadline": "n8n is the platform for agents and workflows you can follow. Open any step, see what it does, and explain to anyone who runs it."
+        },
+        {
           "date": "2026-08-31",
           "headline": "AI agents and workflows you can see and control",
           "subheadline": "Build visually, go deep with code, connect to anything. Every step of your agents' reasoning, traceable on the canvas. Deploy on your infrastructure or ours."
@@ -550,6 +614,11 @@
       "categoryName": "Agent Harness & Frameworks",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Where humans and AI agents build together.",
+          "subheadline": "The agent-native workspace for builders and teams."
+        },
         {
           "date": "2026-08-29",
           "headline": "Where humans and AI agents build together.",
@@ -566,6 +635,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Build and deploy durable AI agents and workflows",
+          "subheadline": "Trigger.dev is the open source platform for building AI agents in TypeScript. Long-running tasks with retries, queues, AI observability, and elastic scaling."
+        },
+        {
           "date": "2026-08-31",
           "headline": "Build and deploy fully-managed AI agents and workflows",
           "subheadline": "Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling."
@@ -580,6 +654,11 @@
       "categoryName": "Agent Harness & Frameworks",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Build Data Factories on your Own Cloud",
+          "subheadline": "Union is the durable AI runtime your team owns. Turn your data into models, agents and apps with plain Python, on infrastructure you control. If a step fails, it picks up where it stopped."
+        },
         {
           "date": "2026-08-31",
           "headline": "The durable AI runtime that runs in your cloud, not ours.",
@@ -609,6 +688,11 @@
       "categoryName": "Coding Agents & App Builders",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "AI Agents, governed at scale",
+          "subheadline": "A single platform to run AI agents across your engineering organization with consistent security, governance and cost controls at every step."
+        },
         {
           "date": "2026-08-31",
           "headline": "The governed AI coding platform",
@@ -655,6 +739,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Agentic Infrastructure",
+          "subheadline": "For coding agents To ship apps and agents Automated by agents"
+        },
+        {
           "date": "2026-08-29",
           "headline": "Agentic Infrastructure",
           "subheadline": "For coding agents · To ship apps and agents · Automated by agents"
@@ -669,6 +758,11 @@
       "categoryName": "Agent Memory & Knowledge",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Memory for Agents, Teams, and People",
+          "subheadline": "Connect Slack, GitHub, Linear to Cognee and help agents recall what your company knows."
+        },
         {
           "date": "2026-08-29",
           "headline": "Open Source Memory Platform for Agents",
@@ -685,6 +779,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "EverMe : Your Memory and Knowledge across agents and devices.",
+          "subheadline": "Open EverMe on another device and pick up where you left off on your project."
+        },
+        {
           "date": "2026-08-29",
           "headline": "EverOS : Give Your AI Agent Self-evolving Memory.",
           "subheadline": "Turn stateless LLMs into intelligent agents that can truly remember. Maintain context across days, sessions, and platforms."
@@ -700,6 +799,10 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Complete context that makes AI work at enterprise scale."
+        },
+        {
           "date": "2026-08-31",
           "headline": "Elevate your AI expertise",
           "subheadline": "See how teams are deploying agents and building AI-native workflows to run real work."
@@ -714,6 +817,10 @@
       "categoryName": "Agent Memory & Knowledge",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Letta is an AI research lab in San Francisco building machines that learn. We envision a future where humans coexist with digital people: experiential agents that remember everything, learn continuously, and improve themselves over time."
+        },
         {
           "date": "2026-08-29",
           "headline": "Letta is an AI research lab in San Francisco building machines that learn.",
@@ -760,6 +867,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Build agents that do the job right",
+          "subheadline": "Zep is the enterprise context layer for reliable agents, providing governed access to company knowledge and skills built from agent tasks."
+        },
+        {
           "date": "2026-08-30",
           "headline": "Agent memory, at enterprise scale.",
           "subheadline": "Memory of users, the business, and work done. Managed, governed, and served at scale."
@@ -775,6 +887,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "123,195 tools for your AI",
+          "subheadline": "Apify is a marketplace of ready-to-run tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents."
+        },
+        {
           "date": "2026-08-31",
           "headline": "65,824 tools for your AI",
           "subheadline": "Apify is the largest marketplace of trusted tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents."
@@ -789,6 +906,11 @@
       "categoryName": "Browser Use & Web Agents",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Browser agents and cloud browsers.",
+          "subheadline": "#1 browser agent on GitHub | Enterprise ready SOC 2, on-prem"
+        },
         {
           "date": "2026-08-29",
           "headline": "Agents that use the browser.",
@@ -820,6 +942,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Give your AI agents web data and beyond",
+          "subheadline": "The web data API to search and scrape with access to more sources through Alexandria. It's also open source."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Power AI agents with clean web data",
           "subheadline": "The context API to search, scrape, and interact with the web at scale. It's also open source."
@@ -834,6 +961,11 @@
       "categoryName": "Browser Use & Web Agents",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Unlock the web for agents.",
+          "subheadline": "TinyFish agents fill out forms, work behind logins, research a topic, and monitor for meaningful changes."
+        },
         {
           "date": "2026-08-29",
           "headline": "Everything AI needs to use the web.",
@@ -864,6 +996,11 @@
       "categoryName": "AI Gateway & Routing",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The future is multi-model",
+          "subheadline": "Run all your AI workloads securely on one neutral platform, with the best model at the best intelligence per dollar."
+        },
         {
           "date": "2026-08-29",
           "headline": "The Unified Interface For Every Model",
@@ -925,6 +1062,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "The agent observability and evaluation platform.",
+          "subheadline": "Turn production signals into continual learning so your agents improve with every interaction."
+        },
+        {
           "date": "2026-08-29",
           "headline": "The continual learning platform for agents.",
           "subheadline": "The AI engineering platform for self-improving agents. Observe. Evaluate. Learn."
@@ -940,6 +1082,11 @@
       "group": "AI & Agents",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Ship quality agents at scale",
+          "subheadline": "Discover patterns in production, turn them into evals, and improve quality with every release."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Ship quality agents at scale",
           "subheadline": "Surface patterns in production, turn them into evals, and improve quality with every release."
@@ -954,6 +1101,11 @@
       "categoryName": "Agent Eval & LLM Observability",
       "group": "AI & Agents",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Open Source Agent Evals & Observability",
+          "subheadline": "Langfuse is one open platform for every AI call your company makes and every agent your teams build. Track usage and costs, trace and evaluate agents, and use production logs to ship better AI. Cloud or self-hosted."
+        },
         {
           "date": "2026-08-30",
           "headline": "Open Source Agent Evals & Observability",
@@ -1000,6 +1152,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Runtime Identity Security at Agentic Scale",
+          "subheadline": "Prevent credential abuse and stop unauthorized actions with unified secrets management, just-in-time access, and real-time AI agent controls"
+        },
+        {
           "date": "2026-08-29",
           "headline": "Runtime Identity Security at Agentic Scale",
           "subheadline": "Securing 220B+ machine interactions, the Akeyless platform is built for the AI-driven era"
@@ -1040,6 +1197,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Prevent AI attacks with trusted open source",
+          "subheadline": "Eliminate malware and vulnerability risk across your containers, dependencies, CI/CD actions, and AI agent skills so your developers can just ship."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Secure-by-default open source software",
           "subheadline": "Hardened, secure, and production-ready builds that prevent AI attacks."
@@ -1059,6 +1221,11 @@
       "categoryName": "Cloud, App & Agent Security",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "We secure the platforms the world runs on",
+          "subheadline": "Security at AI velocity: from threat model to hardened AI systems, without slowing delivery"
+        },
         {
           "date": "2026-08-29",
           "headline": "Cybersecurity consulting and advisory"
@@ -1088,6 +1255,11 @@
       "categoryName": "Cloud, App & Agent Security",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Runtime auth for agents",
+          "subheadline": "Give each agent its own identity, authority to act, and access to resources under your policy."
+        },
         {
           "date": "2026-08-29",
           "headline": "Control agent access to tools, APIs, and data",
@@ -1123,6 +1295,11 @@
       "categoryName": "Cloud, App & Agent Security",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The Cloud & AI Security Platform",
+          "subheadline": "Combine the context of your cloud workloads, APIs, and agents with runtime intelligence to identify the most critical risks, build a plan to fix them, and catch new attacks in real time."
+        },
         {
           "date": "2026-08-29",
           "headline": "Cloud & AI Security from the Inside-Out.",
@@ -1184,6 +1361,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Observability Built for Control",
+          "subheadline": "Chronosphere is the world's most reliable observability platform for microservices and containers. Find and fix"
+        },
+        {
           "date": "2026-08-29",
           "headline": "Observability Built for Control"
         },
@@ -1202,6 +1384,11 @@
       "categoryName": "Observability & Incident Response",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The Telemetry Lake for Observability",
+          "subheadline": "Better, faster, lower cost. Complete Observability and SIEM for humans and agents."
+        },
         {
           "date": "2026-08-29",
           "headline": "You can't observe the future with yesterday's architecture",
@@ -1262,6 +1449,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Intelligent ✦ AI-Powered Observability",
+          "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Intelligent AI-Powered Observability",
           "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting."
@@ -1281,6 +1473,11 @@
       "categoryName": "Observability & Incident Response",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The open engine for AI-powered search and observability",
+          "subheadline": "Index once, then search, retrieve, and analyze across everything you build and run. OpenSearch is open source that stays open: vendor-neutral, fully Apache 2.0 licensed from ingest to dashboard, and a project of the Linux Foundation."
+        },
         {
           "date": "2026-08-29",
           "headline": "OpenSearchCon North America",
@@ -1357,6 +1554,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Artifact management and supply chain security for AI-driven development",
+          "subheadline": "Agents add dependencies faster than teams can review them. Cloudsmith checks every package, container, and model your developers and agents pull from public registries, blocks malicious or non-compliant ones, and logs what shipped where."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Control and security for your AI-driven software supply chain",
           "subheadline": "Your developers pull packages, containers, and ML models from registries you don't fully control. Cloudsmith checks every one for known vulnerabilities, malware, and license violations, blocks anything that fails your policy, and logs exactly what shipped where."
@@ -1417,6 +1619,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Trust Docker for the Agents You Don’t",
+          "subheadline": "Docker securely contains autonomous agents so you can confidently build, ship, and run on trust."
+        },
+        {
           "date": "2026-08-30",
           "headline": "Accelerate agent adoption, safely.",
           "subheadline": "Full autonomy for any agent. Full confidence for your security team."
@@ -1436,6 +1643,11 @@
       "categoryName": "CI/CD & Software Delivery",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Your software factory from idea to production",
+          "subheadline": "Harness is the Autonomous SDLC Platform that ships AI code as fast as it's written, catches risk before it ships, and governs every pipeline."
+        },
         {
           "date": "2026-08-29",
           "headline": "Your harness for the autonomous SDLC",
@@ -1477,6 +1689,10 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Code is no longer the bottleneck. Everything else is."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Code is no longer the bottleneck. Everything else is.",
           "subheadline": "The Engineering Operations Platform engineering leaders trust to ship faster as AI multiplies output, without risk to reliability and security."
@@ -1496,6 +1712,11 @@
       "categoryName": "Platform Engineering & IaC",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Durable Execution for Workflows and Agents",
+          "subheadline": "Add reliability, visibility and automated recovery to your apps, workflows, and AI agents. Runs in the cloud or on-prem. Works with LangGraph, CrewAI, Google ADK, AWS Strands, OpenAI Agents, and more."
+        },
         {
           "date": "2026-08-29",
           "headline": "Durable execution, now built for agents.",
@@ -1517,6 +1738,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Infrastructure that governs itself.",
+          "subheadline": "env zero automatically enforces every policy and guardrail against what is actually running in your cloud. Loved by platform teams, chosen by CISOs."
+        },
+        {
           "date": "2026-08-29",
           "headline": "Govern Your Cloud at the Speed of AI.",
           "subheadline": "Continuously unify declared state and discovered state into a single context lake where agents can reason and take deterministic action."
@@ -1537,6 +1763,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Platforms for your applications. And now for your agents.",
+          "subheadline": "Two products, one team behind them: 12+ years of running enterprise platforms in production."
+        },
+        {
           "date": "2026-08-30",
           "headline": "The Curated Platform Stack",
           "subheadline": "10+ Years of Production Experience, Ready in a Day"
@@ -1556,6 +1787,11 @@
       "categoryName": "Platform Engineering & IaC",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Ship infrastructure as fast as developers code",
+          "subheadline": "Modern development moves too fast for IaC alone. Spacelift orchestrates deployment and Day 2 operations in one platform, so developers ship fast, and platform teams stay in control."
+        },
         {
           "date": "2026-08-29",
           "headline": "Ship infrastructure as fast as developers code",
@@ -1597,6 +1833,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Accelerate AI transformation across the enterprise",
+          "subheadline": "Wonderful helps enterprises drive AI adoption to unlock their full potential."
+        },
+        {
           "date": "2026-09-15",
           "headline": "Applied AI for the enterprise",
           "subheadline": "Wonderful helps enterprises accelerate AI adoption to unlock their full potential."
@@ -1611,6 +1852,11 @@
       "categoryName": "Kubernetes Ops & Cloud FinOps",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Kubernetes workloads, cloud and AI infrastructure, tuned together.",
+          "subheadline": "Cast AI continuously optimizes Kubernetes and the resources beneath it. Start read-only, automate when you're ready, and verify the results in production."
+        },
         {
           "date": "2026-08-29",
           "headline": "Application Performance and Kubernetes Automation. On autopilot.",
@@ -1632,6 +1878,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "www.doit.com",
+          "subheadline": "Performing security verification"
+        },
+        {
           "date": "2026-08-29",
           "headline": "Attribute Every AI Token to the Customer, Feature, and Agent Behind It",
           "subheadline": "AI spend is a black box. LLM Gateways show token totals but can't tell you who burned them. Attribute™ traces every token, inference, and training run back to the team, product, and customer that drove it."
@@ -1651,6 +1902,11 @@
       "categoryName": "Kubernetes Ops & Cloud FinOps",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The Agentic Operations Platform for Production",
+          "subheadline": "Get started instantly with ready-to-run agentic workflows, bring your own agents, and run them all as one governed fleet. Every agent on the platform is continuously optimized to get faster, more accurate and cheaper with every run."
+        },
         {
           "date": "2026-08-29",
           "headline": "The Autonomous AI SRE Platform For Your Entire Cloud-Native Stack",
@@ -1732,6 +1988,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Autonomous Orchestration for AI Infrastructure",
+          "subheadline": "Trusted by 100s of Enterprises to Autonomously Orchestrate Their Production Infrastructure"
+        },
+        {
           "date": "2026-08-30",
           "headline": "The Autonomous Compute Orchestration Layer Powering Cloud&AI Infrastructure",
           "subheadline": "Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs."
@@ -1751,6 +2012,11 @@
       "categoryName": "Kubernetes Ops & Cloud FinOps",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Kubernetes Resource Management on Autopilot.",
+          "subheadline": "Zesty automatically adapts compute, storage, and GPU resources to changing workload demands within your guardrails. Cut costs, protect performance, and free your team from constant resource management."
+        },
         {
           "date": "2026-08-29",
           "headline": "Stop Paying for Resources You Don't Use.",
@@ -1812,6 +2078,10 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Mirantis k0rdent AI Takes You FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE"
+        },
+        {
           "date": "2026-08-29",
           "headline": "FROM ZERO TO AI CLOUD IN DAYS, JUST ADD HARDWARE"
         },
@@ -1831,6 +2101,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Let agents ship products as fast as they write code",
+          "subheadline": "Build, test, deploy, and improve your entire product in one loop, with your agents."
+        },
+        {
           "date": "2026-08-31",
           "headline": "Ship software peacefully",
           "subheadline": "With the all-in-one intelligent cloud provider"
@@ -1845,6 +2120,11 @@
       "categoryName": "Cloud Platforms & Networking",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Your fastest path to production for any workload",
+          "subheadline": "Intuitive infrastructure to scale any app or agent from your first user to your billionth."
+        },
         {
           "date": "2026-08-31",
           "headline": "Your fastest path to production for APIs & web apps",
@@ -1880,6 +2160,11 @@
       "categoryName": "Cloud Platforms & Networking",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Infrastructure for Production-grade AI Agents",
+          "subheadline": "Solo gives enterprises the runtime, connectivity, and governance controls to bring AI agents to production safely."
+        },
         {
           "date": "2026-08-29",
           "headline": "Reimagining infrastructure for cloud & AI",
@@ -1936,6 +2221,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "The knowledge layer that makes AI SCALABLE",
+          "subheadline": "Go ahead. Go big."
+        },
+        {
           "date": "2026-08-29",
           "headline": "The knowledge layer that makes AI trustworthy",
           "subheadline": "Lower cost. Reduce risk. Inform decisions."
@@ -1955,6 +2245,11 @@
       "categoryName": "Databases & Vector Stores",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Give agents memory",
+          "subheadline": "The trusted AI knowledge platform where fast, accurate retrieval doesn't get more expensive as it scales."
+        },
         {
           "date": "2026-08-31",
           "headline": "Give agents knowledge",
@@ -1986,6 +2281,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Email Inboxes for AI agents",
+          "subheadline": "We're not AI for your email, we're email for your AI"
+        },
+        {
           "date": "2026-08-31",
           "headline": "Email Inboxes for AI Agents",
           "subheadline": "AgentMail is the email inbox API for AI agents. It gives agents their own email inboxes, like Gmail does for humans."
@@ -2000,6 +2300,10 @@
       "categoryName": "Developer & Work Tools",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "jetbrains air is one system for building software with agents"
+        },
         {
           "date": "2026-08-30",
           "headline": "Building the Integral Development Experience",
@@ -2036,6 +2340,11 @@
       "group": "Cloud & DevOps",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Your AI notetaker is now also your Conversational Knowledge Engine",
+          "subheadline": "Otter transcribes every meeting, turning it into searchable knowledge that powers your workflow."
+        },
+        {
           "date": "2026-10-26",
           "headline": "Meeting AI that turns talk into action",
           "subheadline": "Transcription. Pre-call briefs. Live coaching. Automatic follow-ups."
@@ -2050,6 +2359,11 @@
       "categoryName": "Developer & Work Tools",
       "group": "Cloud & DevOps",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Your product's context layer",
+          "subheadline": "PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it."
+        },
         {
           "date": "2026-08-31",
           "headline": "Shift your product into self-driving mode",
@@ -2101,6 +2415,11 @@
       "group": "Business & GTM",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "Global money movement. One network.",
+          "subheadline": "Move money instantly between local currencies, stablecoins and crypto. Accept payments, fund accounts, convert and settle across currencies, and send payouts globally over local rails like Pix, SPEI and GCash - connecting 300+ wallets and exchanges to traditional finance through a single integration."
+        },
+        {
           "date": "2026-08-31",
           "headline": "The first global crypto payments network",
           "subheadline": "Accept crypto from 300+ wallets and exchanges. Settle in stablecoins or local currency. One integration."
@@ -2130,6 +2449,11 @@
       "categoryName": "Payments & Spend",
       "group": "Business & GTM",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Financial infrastructure to grow your revenue.",
+          "subheadline": "Accept payments, handle business banking,¹ and implement custom revenue models—from your first transaction to your billionth."
+        },
         {
           "date": "2026-08-31",
           "headline": "Financial infrastructure to grow your revenue.",
@@ -2176,6 +2500,11 @@
       "group": "Business & GTM",
       "history": [
         {
+          "date": "2026-11-17",
+          "headline": "CRM engineered for the future",
+          "subheadline": "Lightfield updates itself from every customer interaction, so its agents can run outbound, flag deals at risk, and tell you where to focus next."
+        },
+        {
           "date": "2026-08-31",
           "headline": "Agentic CRM for forward-deployed companies"
         }
@@ -2189,6 +2518,11 @@
       "categoryName": "GTM & Revenue Tools",
       "group": "Business & GTM",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "Control how AI agents shop your brand",
+          "subheadline": "Nile is the agentic commerce stack: your catalog, pricing, and checkout, served to every AI agent exactly the way you define it."
+        },
         {
           "date": "2026-09-07",
           "headline": "Your brand, represented on every AI",
@@ -2204,6 +2538,11 @@
       "categoryName": "GTM & Revenue Tools",
       "group": "Business & GTM",
       "history": [
+        {
+          "date": "2026-11-17",
+          "headline": "The AI marketing platform to win in",
+          "subheadline": "Multiply what you can accomplish with an AI Marketer trained on what consumers prompt, what agents cite, and the context only your teams have."
+        },
         {
           "date": "2026-08-31",
           "headline": "Marketing agents to win in Perplexity",

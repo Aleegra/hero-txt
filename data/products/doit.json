@@ -5,6 +5,12 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "www.doit.com",
+      "subheadline": "Performing security verification",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/doit/2026-11-17.webp?v=mwkbz6uo"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Attribute Every AI Token to the Customer, Feature, and Agent Behind It",
       "subheadline": "AI spend is a black box. LLM Gateways show token totals but can't tell you who burned them. Attribute™ traces every token, inference, and training run back to the team, product, and customer that drove it.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "63c9b1eace8c9b6a"
+  "fingerprint": "3fba9ceafbc74bf1"
 }

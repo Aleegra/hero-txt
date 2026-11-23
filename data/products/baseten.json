@@ -5,11 +5,17 @@
   "category": "inference",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The open frontier is built on Baseten",
+      "subheadline": "Baseten brings inference, training, and execution together on one platform to power the fastest growing companies in the world.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/baseten/2026-11-17.webp?v=mwkbvpag"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Inference is everything",
       "subheadline": "The fastest model runtimes, cross-cloud high availability, and seamless developer workflows. Powered by the Baseten Inference Stack.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/baseten/2026-08-29.webp"
     }
   ],
-  "fingerprint": "fb06986d23d32c89"
+  "fingerprint": "becb8670f86f0ad3"
 }

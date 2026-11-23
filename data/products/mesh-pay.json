@@ -5,11 +5,17 @@
   "category": "fintech",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Global money movement. One network.",
+      "subheadline": "Move money instantly between local currencies, stablecoins and crypto. Accept payments, fund accounts, convert and settle across currencies, and send payouts globally over local rails like Pix, SPEI and GCash - connecting 300+ wallets and exchanges to traditional finance through a single integration.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/mesh-pay/2026-11-17.webp?v=mwkc5x17"
+    },
+    {
       "date": "2026-08-31",
       "headline": "The first global crypto payments network",
       "subheadline": "Accept crypto from 300+ wallets and exchanges. Settle in stablecoins or local currency. One integration.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/mesh-pay/2026-08-31.webp"
     }
   ],
-  "fingerprint": "7f0b80aee59effa6"
+  "fingerprint": "c53f0b1c4f22d826"
 }

@@ -5,11 +5,17 @@
   "category": "agent-memory",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Build agents that do the job right",
+      "subheadline": "Zep is the enterprise context layer for reliable agents, providing governed access to company knowledge and skills built from agent tasks.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/zep/2026-11-17.webp?v=mwkcdk2b"
+    },
+    {
       "date": "2026-08-30",
       "headline": "Agent memory, at enterprise scale.",
       "subheadline": "Memory of users, the business, and work done. Managed, governed, and served at scale.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/zep/2026-08-30.webp"
     }
   ],
-  "fingerprint": "63cf735cdae3ed5e"
+  "fingerprint": "1e6c6fee2f18e703"
 }

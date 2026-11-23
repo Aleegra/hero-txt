@@ -5,6 +5,12 @@
   "category": "database",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The knowledge layer that makes AI SCALABLE",
+      "subheadline": "Go ahead. Go big.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/neo4j/2026-11-17.webp?v=mwkc6plx"
+    },
+    {
       "date": "2026-08-29",
       "headline": "The knowledge layer that makes AI trustworthy",
       "subheadline": "Lower cost. Reduce risk. Inform decisions.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "ec4212537b0568e3"
+  "fingerprint": "c190d44d6625c747~"
 }

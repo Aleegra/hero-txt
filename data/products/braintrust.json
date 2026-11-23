@@ -5,11 +5,17 @@
   "category": "agent-eval",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Ship quality agents at scale",
+      "subheadline": "Discover patterns in production, turn them into evals, and improve quality with every release.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/braintrust/2026-11-17.webp?v=mwkbv6vd"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Ship quality agents at scale",
       "subheadline": "Surface patterns in production, turn them into evals, and improve quality with every release.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/braintrust/2026-08-29.webp"
     }
   ],
-  "fingerprint": "2606622b06444c18"
+  "fingerprint": "c3a9a20284fe9c9f"
 }

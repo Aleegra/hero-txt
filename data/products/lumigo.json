@@ -5,6 +5,12 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Intelligent ✦ AI-Powered Observability",
+      "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/lumigo/2026-11-17.webp?v=mwkc5fyz"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Intelligent AI-Powered Observability",
       "subheadline": "Better data, smarter AI—the only observability platform capturing payload requests for precise troubleshooting.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "4ef8204271be04b9"
+  "fingerprint": "ba791e1fa8a43713"
 }

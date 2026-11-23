@@ -5,6 +5,12 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Infrastructure for Production-grade AI Agents",
+      "subheadline": "Solo gives enterprises the runtime, connectivity, and governance controls to bring AI agents to production safely.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/solo-io/2026-11-17.webp?v=mwkcb49a"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Reimagining infrastructure for cloud & AI",
       "subheadline": "Solo is the unified platform for secure, seamless cloud operations — built to power the next generation of intelligent AI agents.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "db1d1ef983e1b655"
+  "fingerprint": "5796fd6a4a655367"
 }

@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Build Data Factories on your Own Cloud",
+      "subheadline": "Union is the durable AI runtime your team owns. Turn your data into models, agents and apps with plain Python, on infrastructure you control. If a step fails, it picks up where it stopped.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/union-ai/2026-11-17.webp?v=mwkcch25"
+    },
+    {
       "date": "2026-08-31",
       "headline": "The durable AI runtime that runs in your cloud, not ours.",
       "subheadline": "One platform to build indestructible AI workflows, serve models, and orchestrate compute. Zero trust security guarantees your data and models never leave your infrastructure.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/union-ai/2026-08-31.webp"
     }
   ],
-  "fingerprint": "1c74c13fbff2870b"
+  "fingerprint": "5e3ed1d54563fce3~"
 }

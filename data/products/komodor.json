@@ -5,6 +5,12 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The Agentic Operations Platform for Production",
+      "subheadline": "Get started instantly with ready-to-run agentic workflows, bring your own agents, and run them all as one governed fleet. Every agent on the platform is continuously optimized to get faster, more accurate and cheaper with every run.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/komodor/2026-11-17.webp?v=mwkc1zjg"
+    },
+    {
       "date": "2026-08-29",
       "headline": "The Autonomous AI SRE Platform For Your Entire Cloud-Native Stack",
       "subheadline": "Komodor detects, resolves, and prevents production issues in large-scale environments with 97%+ accuracy, while proactively eliminating the structural cloud waste other tools can't reach.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "5737f123d325f482"
+  "fingerprint": "83e0a0b3f24db7fd"
 }

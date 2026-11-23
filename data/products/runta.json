@@ -5,11 +5,17 @@
   "category": "agent-runtime",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Run AI agents with lower costs and tighter control.",
+      "subheadline": "Secure runtimes that reduce token usage, protect credentials, and govern network access.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/runta/2026-11-17.webp?v=mwkc9sm9"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Runta is your execution layer for AI agents.",
       "subheadline": "Catch your agents wasting tokens. Never hand them your real credentials.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/runta/2026-08-29.webp"
     }
   ],
-  "fingerprint": "1569d7856bd87267"
+  "fingerprint": "075c824112520cd0"
 }

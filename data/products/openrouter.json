@@ -5,11 +5,17 @@
   "category": "ai-gateway",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The future is multi-model",
+      "subheadline": "Run all your AI workloads securely on one neutral platform, with the best model at the best intelligence per dollar.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/openrouter/2026-11-17.webp?v=mwkc7lkq"
+    },
+    {
       "date": "2026-08-29",
       "headline": "The Unified Interface For Every Model",
       "subheadline": "Better prices, better uptime, no subscriptions.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/openrouter/2026-08-29.webp"
     }
   ],
-  "fingerprint": "aaff615e316524dd"
+  "fingerprint": "1325c7d2ce0e87b2"
 }

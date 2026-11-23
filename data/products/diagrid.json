@@ -5,6 +5,12 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Durable Execution for Workflows and Agents",
+      "subheadline": "Add reliability, visibility and automated recovery to your apps, workflows, and AI agents. Runs in the cloud or on-prem. Works with LangGraph, CrewAI, Google ADK, AWS Strands, OpenAI Agents, and more.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/diagrid/2026-11-17.webp?v=mwkbyqm7"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Durable execution, now built for agents.",
       "subheadline": "Durable workflows and verifiable execution — workflows are always carried to completion: agents recover without losing state. Every step is cryptographically attested. Works with any agent framework.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "82aee8a8993a5501"
+  "fingerprint": "ae4ff595bbbd8cb4"
 }

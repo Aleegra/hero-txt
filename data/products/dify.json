@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "AI Agent Management Platform that Puts You in Control",
+      "subheadline": "Build an agent with one team, and scale across the enterprise. Choose your models and deployment environment, manage access, and monitor agent activity in real time.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/dify/2026-11-17.webp?v=mwkbyzg4"
+    },
+    {
       "date": "2026-08-29",
       "headline": "The Platform for Production-Ready Agentic Workflows.",
       "subheadline": "Build Agentic workflows, RAG pipelines, with rich AI model and tool support on one collaborative workspace. Deploy on cloud, VPC, or self-hosted, so teams move from prototype to production without rebuilding the stack.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/dify/2026-08-29.webp"
     }
   ],
-  "fingerprint": "0135d5b11c476fb9"
+  "fingerprint": "f46d163471dfb4bd"
 }

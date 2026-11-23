@@ -5,6 +5,12 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Artifact management and supply chain security for AI-driven development",
+      "subheadline": "Agents add dependencies faster than teams can review them. Cloudsmith checks every package, container, and model your developers and agents pull from public registries, blocks malicious or non-compliant ones, and logs what shipped where.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/cloudsmith/2026-11-17.webp?v=mwkbwr10"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Control and security for your AI-driven software supply chain",
       "subheadline": "Your developers pull packages, containers, and ML models from registries you don't fully control. Cloudsmith checks every one for known vulnerabilities, malware, and license violations, blocks anything that fails your policy, and logs exactly what shipped where.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "62bf03421bf49008"
+  "fingerprint": "e34a90c63fbc1215"
 }

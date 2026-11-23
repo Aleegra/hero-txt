@@ -5,6 +5,12 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Prevent AI attacks with trusted open source",
+      "subheadline": "Eliminate malware and vulnerability risk across your containers, dependencies, CI/CD actions, and AI agent skills so your developers can just ship.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/chainguard/2026-11-17.webp?v=mwkbw4ii"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Secure-by-default open source software",
       "subheadline": "Hardened, secure, and production-ready builds that prevent AI attacks.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "4f84b435ee18fb36"
+  "fingerprint": "2fa49d62098f4c4c"
 }

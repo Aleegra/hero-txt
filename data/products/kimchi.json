@@ -5,11 +5,17 @@
   "category": "coding-agents",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "AI Agents, governed at scale",
+      "subheadline": "A single platform to run AI agents across your engineering organization with consistent security, governance and cost controls at every step.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/kimchi/2026-11-17.webp?v=mwkc1z7m"
+    },
+    {
       "date": "2026-08-31",
       "headline": "The governed AI coding platform",
       "subheadline": "Give engineers autonomous coding agents without losing control of models, data, quality, or spend. Start serverless. Deploy in your VPC when ready.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/kimchi/2026-08-31.webp"
     }
   ],
-  "fingerprint": "199f6376b42d14f1"
+  "fingerprint": "4968504a5ab3f7bc"
 }

@@ -5,11 +5,17 @@
   "category": "agent-eval",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The agent observability and evaluation platform.",
+      "subheadline": "Turn production signals into continual learning so your agents improve with every interaction.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/arize-ai/2026-11-17.webp?v=mwkbud7n"
+    },
+    {
       "date": "2026-08-29",
       "headline": "The continual learning platform for agents.",
       "subheadline": "The AI engineering platform for self-improving agents. Observe. Evaluate. Learn.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/arize-ai/2026-08-29.webp"
     }
   ],
-  "fingerprint": "e0ca5b303da5119b"
+  "fingerprint": "6f022ca705c16e33"
 }

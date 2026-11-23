@@ -5,6 +5,12 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Infrastructure that governs itself.",
+      "subheadline": "env zero automatically enforces every policy and guardrail against what is actually running in your cloud. Loved by platform teams, chosen by CISOs.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/env0/2026-11-17.webp?v=mwkbzej1"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Govern Your Cloud at the Speed of AI.",
       "subheadline": "Continuously unify declared state and discovered state into a single context lake where agents can reason and take deterministic action.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "5b6a9475ad71861a"
+  "fingerprint": "244bef069906a42a"
 }

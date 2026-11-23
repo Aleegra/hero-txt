@@ -5,6 +5,12 @@
   "category": "cicd",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Trust Docker for the Agents You Don’t",
+      "subheadline": "Docker securely contains autonomous agents so you can confidently build, ship, and run on trust.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/docker/2026-11-17.webp?v=mwkbz25e"
+    },
+    {
       "date": "2026-08-30",
       "headline": "Accelerate agent adoption, safely.",
       "subheadline": "Full autonomy for any agent. Full confidence for your security team.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "3a62c55f52698c58"
+  "fingerprint": "8d285ef589cfdb47"
 }

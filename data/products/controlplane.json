@@ -5,11 +5,17 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "We secure the platforms the world runs on",
+      "subheadline": "Security at AI velocity: from threat model to hardened AI systems, without slowing delivery",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/controlplane/2026-11-17.webp?v=mwkbx7ou"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Cybersecurity consulting and advisory",
       "subheadline": "",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/controlplane/2026-08-29.webp"
     }
   ],
-  "fingerprint": "d7dfe02a14be33f5"
+  "fingerprint": "bffbe781ea74a241"
 }

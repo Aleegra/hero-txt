@@ -5,6 +5,12 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Kubernetes Resource Management on Autopilot.",
+      "subheadline": "Zesty automatically adapts compute, storage, and GPU resources to changing workload demands within your guardrails. Cut costs, protect performance, and free your team from constant resource management.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/zesty/2026-11-17.webp?v=mwkcdqf4"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Stop Paying for Resources You Don't Use.",
       "subheadline": "Zesty automatically rightsizes Kubernetes resources to match real-time workload demand, cutting infrastructure costs without risking your SLOs.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "afb2c63e5505e584"
+  "fingerprint": "52d3702ed7d669c8"
 }

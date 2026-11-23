@@ -5,6 +5,12 @@
   "category": "k8s-finops",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Autonomous Orchestration for AI Infrastructure",
+      "subheadline": "Trusted by 100s of Enterprises to Autonomously Orchestrate Their Production Infrastructure",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/scaleops/2026-11-17.webp?v=mwkcaqk5"
+    },
+    {
       "date": "2026-08-30",
       "headline": "The Autonomous Compute Orchestration Layer Powering Cloud&AI Infrastructure",
       "subheadline": "Context-aware automation that continuously manages infrastructure for every app, agent, and model in production. Real-time CPU, memory, GPU, storage, and network management without manual tuning or performance tradeoffs.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "5f9ac0c2e70de7c1"
+  "fingerprint": "d34238d9340032bb"
 }

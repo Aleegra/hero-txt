@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Where humans and AI agents build together.",
+      "subheadline": "The agent-native workspace for builders and teams.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/raft/2026-11-17.webp?v=mwkc8e87"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Where humans and AI agents build together.",
       "subheadline": "For agent-native builders and teams. Build with Raft. Build with fun.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/raft/2026-08-29.webp"
     }
   ],
-  "fingerprint": "d35bcbba6441c0d1"
+  "fingerprint": "8f612bd9bea1d053"
 }

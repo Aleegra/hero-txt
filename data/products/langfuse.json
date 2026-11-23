@@ -5,11 +5,17 @@
   "category": "agent-eval",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Open Source Agent Evals & Observability",
+      "subheadline": "Langfuse is one open platform for every AI call your company makes and every agent your teams build. Track usage and costs, trace and evaluate agents, and use production logs to ship better AI. Cloud or self-hosted.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/langfuse/2026-11-17.webp?v=mwkc3l5c"
+    },
+    {
       "date": "2026-08-30",
       "headline": "Open Source Agent Evals & Observability",
       "subheadline": "Trace, evaluate, and improve AI agents with one open platform. Use production data to understand behavior, collaborate on fixes, and ship better quality at lower cost and latency.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/langfuse/2026-08-30.webp"
     }
   ],
-  "fingerprint": "ffd318250a38fc5b"
+  "fingerprint": "3055811a9e893b41"
 }

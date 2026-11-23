@@ -5,6 +5,12 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The open engine for AI-powered search and observability",
+      "subheadline": "Index once, then search, retrieve, and analyze across everything you build and run. OpenSearch is open source that stays open: vendor-neutral, fully Apache 2.0 licensed from ingest to dashboard, and a project of the Linux Foundation.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/opensearch/2026-11-17.webp?v=mwkc7hx8"
+    },
+    {
       "date": "2026-08-29",
       "headline": "OpenSearchCon North America",
       "subheadline": "Where the future of open source search and observability is forged",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "024aa1b18376f13f"
+  "fingerprint": "c35cd4447ceb3a9e"
 }

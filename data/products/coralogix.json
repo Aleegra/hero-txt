@@ -5,6 +5,12 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "The Telemetry Lake for Observability",
+      "subheadline": "Better, faster, lower cost. Complete Observability and SIEM for humans and agents.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/coralogix/2026-11-17.webp?v=mwkbx7l9"
+    },
+    {
       "date": "2026-08-29",
       "headline": "You can't observe the future with yesterday's architecture",
       "subheadline": "Go beyond dashboards with a true AI-native platform and a data lake built for observability. Turn agents into operators, and engineers into architects.",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "c24a808cf5ce598e"
+  "fingerprint": "b47f73ada4cb7a46"
 }

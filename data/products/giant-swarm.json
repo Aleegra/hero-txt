@@ -5,6 +5,12 @@
   "category": "platform-eng",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Platforms for your applications. And now for your agents.",
+      "subheadline": "Two products, one team behind them: 12+ years of running enterprise platforms in production.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/giant-swarm/2026-11-17.webp?v=mwkc02lu"
+    },
+    {
       "date": "2026-08-30",
       "headline": "The Curated Platform Stack",
       "subheadline": "10+ Years of Production Experience, Ready in a Day",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "6cd3ec8b997a22be"
+  "fingerprint": "8d6d39ce2d8a02ab"
 }

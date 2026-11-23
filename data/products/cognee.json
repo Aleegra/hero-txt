@@ -5,11 +5,17 @@
   "category": "agent-memory",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Memory for Agents, Teams, and People",
+      "subheadline": "Connect Slack, GitHub, Linear to Cognee and help agents recall what your company knows.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/cognee/2026-11-17.webp?v=mwkbwqrw"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Open Source Memory Platform for Agents",
       "subheadline": "Connect Slack, GitHub, Linear to Cognee and help agents recall what your company knows.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/cognee/2026-08-29.webp"
     }
   ],
-  "fingerprint": "6d39d862b7866807"
+  "fingerprint": "261ae8c6d8c16922"
 }

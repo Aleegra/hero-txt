@@ -5,11 +5,17 @@
   "category": "browser-use",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Browser agents and cloud browsers.",
+      "subheadline": "#1 browser agent on GitHub | Enterprise ready SOC 2, on-prem",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/browser-use/2026-11-17.webp?v=mwkbvolz"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Agents that use the browser.",
       "subheadline": "Browser Use Agents finish the task. Browser Infrastructure powers your own agents.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/browser-use/2026-08-29.webp"
     }
   ],
-  "fingerprint": "13820c2365b0ae05"
+  "fingerprint": "19e4262a58639c1e"
 }

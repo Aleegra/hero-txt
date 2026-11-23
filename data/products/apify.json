@@ -5,11 +5,17 @@
   "category": "browser-use",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "123,195 tools for your AI",
+      "subheadline": "Apify is a marketplace of ready-to-run tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/apify/2026-11-17.webp?v=mwkbu7du"
+    },
+    {
       "date": "2026-08-31",
       "headline": "65,824 tools for your AI",
       "subheadline": "Apify is the largest marketplace of trusted tools for AI. Get real-time web data, track competitors, generate leads, monitor social media, and integrate your apps and agents.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/apify/2026-08-31.webp"
     }
   ],
-  "fingerprint": "0377d2c4a7abfd43"
+  "fingerprint": "2543957fe7926956~"
 }

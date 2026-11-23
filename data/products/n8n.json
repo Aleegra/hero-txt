@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Build the agent. Understand its workflow.",
+      "subheadline": "n8n is the platform for agents and workflows you can follow. Open any step, see what it does, and explain to anyone who runs it.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/n8n/2026-11-17.webp?v=mwkc6qkj"
+    },
+    {
       "date": "2026-08-31",
       "headline": "AI agents and workflows you can see and control",
       "subheadline": "Build visually, go deep with code, connect to anything. Every step of your agents' reasoning, traceable on the canvas. Deploy on your infrastructure or ours.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/n8n/2026-08-31.webp"
     }
   ],
-  "fingerprint": "a450dfaabc920143"
+  "fingerprint": "8f03078ac1464504"
 }

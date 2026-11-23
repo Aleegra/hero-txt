@@ -5,6 +5,12 @@
   "category": "security",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Runtime Identity Security at Agentic Scale",
+      "subheadline": "Prevent credential abuse and stop unauthorized actions with unified secrets management, just-in-time access, and real-time AI agent controls",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/akeyless/2026-11-17.webp?v=mwkbtxpl"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Runtime Identity Security at Agentic Scale",
       "subheadline": "Securing 220B+ machine interactions, the Akeyless platform is built for the AI-driven era",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "564d046d47c2c7f6"
+  "fingerprint": "5a60c76c385a0478"
 }

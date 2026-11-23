@@ -5,11 +5,17 @@
   "category": "gtm",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "CRM engineered for the future",
+      "subheadline": "Lightfield updates itself from every customer interaction, so its agents can run outbound, flag deals at risk, and tell you where to focus next.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/lightfield/2026-11-17.webp?v=mwkc4vn1"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Agentic CRM for forward-deployed companies",
       "subheadline": "",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/lightfield/2026-08-31.webp"
     }
   ],
-  "fingerprint": "b939d4abd4f64923"
+  "fingerprint": "17451f03ee8a7a9a"
 }

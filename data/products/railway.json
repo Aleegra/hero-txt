@@ -5,11 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Let agents ship products as fast as they write code",
+      "subheadline": "Build, test, deploy, and improve your entire product in one loop, with your agents.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/railway/2026-11-17.webp?v=mwkc8tdg"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Ship software peacefully",
       "subheadline": "With the all-in-one intelligent cloud provider",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/railway/2026-08-31.webp"
     }
   ],
-  "fingerprint": "1a3323e9d79bee24"
+  "fingerprint": "0b90d2efa0c8d759"
 }

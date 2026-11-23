@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "DeepSeek Harness Ready to use. Right now.",
+      "subheadline": "Everyday tasks, coding, or your own harness—it starts here. DeepSeek Harness is now in public preview worldwide and open source, with composable plugins that extend what agents can do.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/deepseek-harness/2026-11-17.webp?v=mwkbykfz"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Everything is a plugin",
       "subheadline": "DeepSeek Harness is now in developer preview for agent harness developers worldwide — source code included.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/deepseek-harness/2026-08-29.webp"
     }
   ],
-  "fingerprint": "422ecf189899f739"
+  "fingerprint": "f44a08e7a8b05f5b"
 }

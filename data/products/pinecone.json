@@ -5,11 +5,17 @@
   "category": "database",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Give agents memory",
+      "subheadline": "The trusted AI knowledge platform where fast, accurate retrieval doesn't get more expensive as it scales.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/pinecone/2026-11-17.webp?v=mwkc7ogw"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Give agents knowledge",
       "subheadline": "The knowledge platform for AI agents. Fast, accurate retrieval that doesn't get more expensive as it scales.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/pinecone/2026-08-31.webp"
     }
   ],
-  "fingerprint": "672160ff6cab7485"
+  "fingerprint": "010281d75fc9d429~"
 }

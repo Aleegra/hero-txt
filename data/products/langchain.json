@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Own your intelligence",
+      "subheadline": "Run, Improve, and Govern Agents with LangSmith",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/langchain/2026-11-17.webp?v=mwkc41l6"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Meet LangSmith Engine",
       "subheadline": "Smarter after every launch",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/langchain/2026-08-29.webp"
     }
   ],
-  "fingerprint": "561187df3afaeffe"
+  "fingerprint": "d7e7adbbf0fba7ef"
 }

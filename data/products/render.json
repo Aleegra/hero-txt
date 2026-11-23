@@ -5,11 +5,17 @@
   "category": "cloud-network",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Your fastest path to production for any workload",
+      "subheadline": "Intuitive infrastructure to scale any app or agent from your first user to your billionth.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/render/2026-11-17.webp?v=mwkc9dvj"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Your fastest path to production for APIs & web apps",
       "subheadline": "Intuitive infrastructure to scale any app or agent from your first user to your billionth.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/render/2026-08-31.webp"
     }
   ],
-  "fingerprint": "6eefdfdaa4ef57f3"
+  "fingerprint": "e1be8998ca2ceaae"
 }

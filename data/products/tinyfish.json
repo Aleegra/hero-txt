@@ -5,11 +5,17 @@
   "category": "browser-use",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Unlock the web for agents.",
+      "subheadline": "TinyFish agents fill out forms, work behind logins, research a topic, and monitor for meaningful changes.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/tinyfish/2026-11-17.webp?v=mwkcc0wp"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Everything AI needs to use the web.",
       "subheadline": "Search the web, fetch clean content from any URL, run a real browser, and deploy agents. All from one API.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/tinyfish/2026-08-29.webp"
     }
   ],
-  "fingerprint": "0b42a8928319f663"
+  "fingerprint": "ea1104fb6223f9c2"
 }

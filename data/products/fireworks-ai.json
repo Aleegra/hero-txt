@@ -5,11 +5,17 @@
   "category": "inference",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Intelligence is power. Own yours.",
+      "subheadline": "One platform to run, ensemble, and train open models with world-class researchers and uncompromising quality.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/fireworks-ai/2026-11-17.webp?v=mwkc0rke"
+    },
+    {
       "date": "2026-08-30",
       "headline": "Own your model. Own your future.",
       "subheadline": "Fireworks' SoTA training and inference take you beyond the frontier, transforming open models into your specialized intelligence.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/fireworks-ai/2026-08-30.webp"
     }
   ],
-  "fingerprint": "ac83281727815dec"
+  "fingerprint": "0c7752559bb13a3f~"
 }

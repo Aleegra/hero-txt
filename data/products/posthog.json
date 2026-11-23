@@ -5,11 +5,17 @@
   "category": "dev-work-tools",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Your product's context layer",
+      "subheadline": "PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/posthog/2026-11-17.webp?v=mwkc8452"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Shift your product into self-driving mode",
       "subheadline": "PostHog already knows your customers, which features they use, and the issues they have.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/posthog/2026-08-31.webp"
     }
   ],
-  "fingerprint": "e23777d794d5fed6"
+  "fingerprint": "5d17c39dd4d6b7e5"
 }

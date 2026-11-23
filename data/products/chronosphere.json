@@ -5,6 +5,12 @@
   "category": "observability",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Observability Built for Control",
+      "subheadline": "Chronosphere is the world's most reliable observability platform for microservices and containers. Find and fix",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/chronosphere/2026-11-17.webp?v=mwkbw4hy"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Observability Built for Control",
       "subheadline": "",
@@ -17,5 +23,5 @@
       "screenshot": null
     }
   ],
-  "fingerprint": "aa9b0b3906a7079f"
+  "fingerprint": "1fff76979e7a5e6c"
 }

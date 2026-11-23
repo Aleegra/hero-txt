@@ -5,11 +5,17 @@
   "category": "inference",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Serve and train open models at frontier scale",
+      "subheadline": "Serve AI models with high throughput and low latency. Post-train them with RL on your own data. Choose the deployment setup that fits your workload.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/radixark/2026-11-17.webp?v=mwkc8fkq"
+    },
+    {
       "date": "2026-08-29",
       "headline": "SHIP AI FOR ALL",
       "subheadline": "",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/radixark/2026-08-29.webp"
     }
   ],
-  "fingerprint": "0c982af1ef409bca"
+  "fingerprint": "5c5c04348e220864"
 }

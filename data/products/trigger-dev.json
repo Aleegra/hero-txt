@@ -5,11 +5,17 @@
   "category": "agent-harness",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Build and deploy durable AI agents and workflows",
+      "subheadline": "Trigger.dev is the open source platform for building AI agents in TypeScript. Long-running tasks with retries, queues, AI observability, and elastic scaling.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/trigger-dev/2026-11-17.webp?v=mwkcc57a"
+    },
+    {
       "date": "2026-08-31",
       "headline": "Build and deploy fully-managed AI agents and workflows",
       "subheadline": "Trigger.dev is the platform for building AI workflows in TypeScript. Long-running tasks with retries, queues, observability, and elastic scaling.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/trigger-dev/2026-08-31.webp"
     }
   ],
-  "fingerprint": "1f46ad1f79ffb938"
+  "fingerprint": "8155249ab500bf60"
 }

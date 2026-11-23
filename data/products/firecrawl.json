@@ -5,11 +5,17 @@
   "category": "browser-use",
   "history": [
     {
+      "date": "2026-11-17",
+      "headline": "Give your AI agents web data and beyond",
+      "subheadline": "The web data API to search and scrape with access to more sources through Alexandria. It's also open source.",
+      "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/firecrawl/2026-11-17.webp?v=mwkc07gx"
+    },
+    {
       "date": "2026-08-29",
       "headline": "Power AI agents with clean web data",
       "subheadline": "The context API to search, scrape, and interact with the web at scale. It's also open source.",
       "screenshot": "https://ywwwblsnjffkrqzbqvdg.supabase.co/storage/v1/object/public/hero-screenshots/firecrawl/2026-08-29.webp"
     }
   ],
-  "fingerprint": "cccee9883c706b8a"
+  "fingerprint": "68e8065dc1eaf78d"
 }
